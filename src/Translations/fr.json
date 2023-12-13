@@ -1,0 +1,194 @@
+{
+    "app": {
+        "general": {
+            "actions": {
+                "read": "Lire",
+                "read_more": "Lire",
+                "send": "Envoyer",
+                "watch": "Voir"
+            },
+            "hello": "Bonjour",
+            "month": {
+                "january": "Janvier",
+                "february": "Février",
+                "march": "Mars",
+                "april": "Avril",
+                "may": "Mai",
+                "june": "Juin",
+                "july": "Juillet",
+                "august": "Août",
+                "september": "Septembre",
+                "october": "Octobre",
+                "november": "Novembre",
+                "december": "Decembre"
+            }
+        },
+        "menu": {
+            "career": "Parcours",
+            "conferences": "Conférences",
+            "contact": "Me contacter",
+            "home": "Hello World !",
+            "live": "Lives",
+            "mobile_text": " < Hello World ! /> ",
+            "more": "Découvrir",
+            "press": "Presse",
+            "universe": "Univers",
+
+            "profile": {
+                "about": "À propos",
+                "about_text": "Développeuse fullstack depuis plus de 4 ans, Helvira Goma a vécu plusieurs vies - de l'ingéniérie en qualité à l'office management - jusqu'à ce qu'elle trouve sa véritable vocation : la programmation. Après une reconversion réussie, elle partage désormais son temps entre murmurer à l'oreille des ordinateurs et encourager les autres à rejoindre l'autre côté de la force à travers sa communauté en ligne : Motiv'Her."
+            }
+        },
+        "home": {
+            "main": {
+                "animated": {
+                    "computer": "Computer Whisperer",
+                    "web": "Aficionado du Web",
+                    "speaker": "Tech Speaker",
+                    "motivher": "Motiv'Her Original"
+                }
+            }
+        },
+        "career": {
+            "title": "Tech!",
+            "subtitle": "Journey",
+            "description": "My tech path",
+            "type": {
+                "buy": "Achats",
+                "customer": "Service client"
+            },
+            "duration": {
+                "present": "présent",
+                "month": "mois",
+                "year": "an(s)"
+            },
+            "position": {
+                "developer": "Développeur web",
+                "software": "Ingénieur logiciel"
+            },
+            "missions": {
+                "op": {
+                    "first": "- Mise en place d'un moteur de recherche CMD+K (sur le modèle de Slack) [Elasticsearch, Laravel, Architecture modulaire, ReactJS, Material UI, API REST]",
+                    "second": "- Création de 3 librairies back et front [Laravel, Typescript]",
+                    "third": "- Mise à niveau technologique de l'application (de Blade à React)"
+                },
+                "ox": {
+                    "first": "- Préparation des recettes en collaboration avec l'équipe produit, en suivant les spécifications",
+                    "second": "- Maintenance des versions antérieures",
+                    "third": "- Support client"
+                },
+                "re": {
+                    "first": "- Mise en place du centre de notifications pour les utilisateurs de la plateforme [Laravel, Bootstrap, jQuery, MariaDB]",
+                    "second": "- Implémentation d'une fonctionnalité de tagging sur le modèle de Trello [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
+                    "third": "- Mise en place d'une version premium aux fonctionnalités avancées [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
+                    "fourth": "- Adaptation de la plateforme (Responsive Web design)"
+                },
+                "pa": {
+                    "first": "- Intégration des prestataires de services de paiements (REST API) et des interfaces graphiques permettant de les exploiter (PayPal, Stripe, Adyen...) en POO [PHP, C#, HTML/CSS, JavaScript]",
+                    "second": "- Collaboration avec divers partenaires, banques étrangères en vue d'intégrer leurs services de paiement",
+                    "third": "- Rédaction des documentations (technique, utilisateur et d'exploitation)",
+                    "fourth": "- Suivi de maintenance opérationnelle des applications développées",
+                    "fifth": "- Gestion du support, rapport et suivi des tickets d'incidents"
+                }
+            },
+            "technos": {
+                "api": "API REST",
+                "archi": "architecture modulaire",
+                "oop": "POO"
+            }
+        },
+        "confs": {
+            "title": "Talk!",
+            "subtitle": "J'y ai pris le micro",
+            "description": "Retrouvez ici l'ensemble des conférences à (re)voir !"
+        },
+        "contact": {
+            "title": "Chat!",
+            "subtitle": "Poursuivons la conversation",
+            "description": "À quelques clics d'une mise en relation!",
+            "form": {
+                "error": {
+                    "required": "Ce champ est requis."
+                },
+                "name": {
+                    "label": "Votre nom",
+                    "placeholder": ""
+                },
+                "surname": {
+                    "label": "Votre prénom",
+                    "placeholder": ""
+                },
+                "email": {
+                    "label": "Un email auquel vous joindre",
+                    "placeholder": ""
+                }, 
+                "subject": {
+                    "label": "Le sujet de votre message",
+                    "placeholder": ""
+                },
+                "message":  {
+                    "label": "L'objet de votre message",
+                    "placeholder": ""
+                }
+            }
+        },
+        "lives": {
+            "title": "Live!",
+            "subtitle": "Vu sur YouTube",
+            "description": "Retrouvez ici l'ensemble des lives à (re)voir !",
+            "tags": {
+                "all": "toutes",
+                "testimony": "témoignage",
+                "videos": "vidéos"
+            }
+        },
+        "press": {
+            "title": "Read!",
+            "subtitle": "J'y suis mentionnée",
+            "description": "Retrouvez ici l'ensemble des articles me concernant",
+            "tags": {
+                "actuality": "actualié",
+                "conference": "conférence",
+                "retraining": "reconversion",
+                "solidarity": "solidarité"
+            }
+        },
+        "quotes": {
+            "confs": "Speakers who talk about what life has taught them never fail to keep the attention of their listeners | Dale Carnegie",
+            "lives": "A good laugh makes any interview or any conversation, so much better | Barbara Walters",
+            "press_title": "I don't know if I'll ever get used to hearing my name being mentioned alongside all these other legendary artists that have come before me | Gretchen Wilson"
+        },
+        "scroll": {
+            "home": {
+                "first_section": " < Hello World ! /> ",
+                "second_section": "FullStack Developer",
+                "third_section": "Welcome here !",
+                "last_section": "No need to scroll more :)"
+            },
+            "confs": {
+                "first_section": " < Hello World ! /> ",
+                "second_section": "Talk!",
+                "third_section": "Les conférences",
+                "last_section": "The END"
+            },
+            "lives": {
+                "first_section": " < Hello World ! /> ",
+                "second_section": "Live!",
+                "third_section": "Les lives",
+                "last_section": "The END"
+            },
+            "press": {
+                "first_section": " < Hello World ! /> ",
+                "second_section": "Read!",
+                "third_section": "Les articles",
+                "last_section": "The END"
+            },
+            "contact": {
+                "first_section": " < Hello World ! /> ",
+                "second_section": "Chat!",
+                "third_section": "Échangeons!",
+                "last_section": "The END"
+            }
+        }
+    }
+}
