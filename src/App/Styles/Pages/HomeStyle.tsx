@@ -1,4 +1,4 @@
-import { alpha, Box, styled, Typography } from '@mui/material';
+import { alpha, Box, Button, styled, Typography } from '@mui/material';
 
 export const AnimatedTextBox = styled(Box)(({ theme }) => ({
     alignItems: 'center',
@@ -84,4 +84,39 @@ export const WelcomeText = styled(Typography)(({ theme }) => ({
     color: theme.palette.background.paper,
     fontSize: '4rem',
     textShadow: '-2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827, 2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827, 6px 6px #FFC4BC',
+}));
+
+export const HomeCTABox = styled(Box)(({ theme }) => ({
+    alignItems: 'center', 
+    display: 'flex', 
+    justifyContent: 'center', 
+    marginTop: theme.spacing(8), 
+    marginBottom: theme.spacing(5),
+    gap: theme.spacing(2)
+}));
+
+export const HomeCTAButton = styled(Button)(({ theme }) => ({
+    alignSelf: 'center',
+    border: `2px solid #FFC4BC`,
+    boxShadow: 'rgba(0, 0, 0, .2) 15px 28px 25px -18px',
+    color: '#FFC4BC',
+    lineHeight: '23px',
+    outline: 'none',
+    padding: '0.75rem',
+    textDecoration: 'none',
+    transition: 'all 235ms ease-in-out',
+    borderBottomLeftRadius: '15px 255px',
+    borderBottomRightRadius: '225px 15px',
+    borderTopLeftRadius: '255px 15px',
+    borderTopRightRadius: '15px 225px',
+    userSelect: 'none',
+    touchAction: 'manipulation',
+
+    '&:hover': {
+        border: `2px solid ${theme.palette.primary.light}`,
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: 'rgba(0, 0, 0, .3) 2px 8px 8px -5px',
+        color: theme.palette.primary.light,
+        transform: 'translate3d(0, 2px, 0)'
+    }
 }))
