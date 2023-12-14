@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setAppLang } from "../Redux/Slices/StorageSlice";
 
 export default function useLocalStorage<T>(key: string, defaultValue: T) {
+  const dispatch = useDispatch();
+
   const [value, setValue] = useState(() => {
     let currentValue;
 
@@ -16,8 +20,8 @@ export default function useLocalStorage<T>(key: string, defaultValue: T) {
   });
   
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
-  }, [value, key]);
+    dispatch(setAppLang({ key, lang: value }));
+  });
 
   return [value, setValue] as const;
 }
