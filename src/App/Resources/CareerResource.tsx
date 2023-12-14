@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next"
+import { Types } from "./Enums/Types";
 
 export interface IExperience {
     anchor: string;
@@ -32,7 +33,7 @@ export const ListExperiences = () => {
 
     return [
         {
-            "anchor": "left",
+            "anchor": Types.LEFT,
             "company": "Onepilot",
             "companyImg": "https://i.ibb.co/YNqLsxr/onepilot-logo.jpg",
             "companyType": t('app.career.type.customer'),
@@ -49,7 +50,7 @@ export const ListExperiences = () => {
             "darkColor": "#3938EE",
         },
         {
-            "anchor": "right",
+            "anchor": Types.RIGHT,
             "company": "Oxalys Technologies",
             "companyImg": "https://i.ibb.co/Mg05Lpn/oxalys-logo.png",
             "companyType": t('app.career.type.buy'),
@@ -66,7 +67,7 @@ export const ListExperiences = () => {
             "darkColor": "#0A254E"
         },
         {
-            "anchor": "left",
+            "anchor": Types.LEFT,
             "company": "ResearchPool",
             "companyImg": "https://i.ibb.co/tcDg1yN/researchpool-logo.jpg",
             "companyType": "FinTech",
@@ -84,7 +85,7 @@ export const ListExperiences = () => {
             "darkColor": "#02A1DB"
         },
         {
-            "anchor": "right",
+            "anchor": Types.RIGHT,
             "company": "Paytweak",
             "companyImg": "https://i.ibb.co/HCYm8gM/paytweak-logo.png",
             "companyType": "FinTech",

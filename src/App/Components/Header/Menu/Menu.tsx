@@ -13,6 +13,7 @@ import WavingHandRoundedIcon from '@mui/icons-material/WavingHandRounded';
 import { Routes } from '../../../Resources/Enums/Routes';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 import useClickOutside from '../../../../Hooks/useClickOutside';
+import { Types } from '../../../Resources/Enums/Types';
 
 interface MenuProps extends DrawerProps
 {
@@ -30,7 +31,7 @@ export const Menu = ({ openMenu, menuWidth, closeDrawer }: MenuProps) => {
     useClickOutside(drawerRef, closeDrawer);
  
     return (
-        <MenuWrapper anchor="right" open={openMenu} menuWidth={menuWidth} PaperProps={{ ref: drawerRef }}>
+        <MenuWrapper anchor={Types.RIGHT} open={openMenu} menuWidth={menuWidth} PaperProps={{ ref: drawerRef }}>
             <MenuIconBox>
                 <MenuIconButton onClick={closeDrawer}>
                     <HighlightOffRoundedIcon sx={{ color: 'background.default' }} />
