@@ -7,7 +7,7 @@
                 "send": "Send",
                 "watch": "Watch"
             },
-            "hello": "Hello",
+            "hello": "Hello,",
             "month": {
                 "january": "January",
                 "february": "February",
@@ -21,6 +21,11 @@
                 "october": "October",
                 "november": "November",
                 "december": "December"
+            },
+            "welcome": {
+                "p1": "I am <bold>Helvira Goma</bold>, a Paris based <bold>fullstack developer</bold>.",
+                "p2": "When I'm not <bold>transforming ✨</bold> an idea into a functional and interactive project - like this website - I give <bold>conferences</bold> and participate in various <bold>tech events</bold>.",
+                "p3": "Here, my <bold>universe!</bold>"
             }
         },
         "menu": {
@@ -49,13 +54,16 @@
                 }
             },
             "welcome": {
-                
+                "actions": {
+                    "confs": "See my talks",
+                    "contact": "Contact me"
+                }
             }
         },
         "career": {
             "title": "Tech!",
-            "subtitle": "Journey",
-            "description": "My tech path",
+            "subtitle": "Developer Journey",
+            "description": "Here, you can follow my tracks on my tech path",
             "type": {
                 "buy": "Purchasing sofware",
                 "customer": "Customer care"
@@ -101,37 +109,37 @@
             }
         },
         "confs": {
-            "title": "Talk!",
+            "title": "Speak!",
             "subtitle": "Dropped the mic here",
             "description": "You can find here all my conferences!"
         },
         "contact": {
-            "title": "Chat!",
+            "title": "Talk!",
             "subtitle": "Let's talk together",
             "description": "Few clicks away from getting in touch!",
             "form": {
                 "error": {
+                    "message": "Something went wrong. Please try again later!",
+                    "validate": "This email adress is not valid.",
                     "required": "This field is required."
                 },
+                "success": {
+                    "msg": "The message has been successfully sent!"
+                },
                 "name": {
-                    "label": "Your name",
-                    "placeholder": ""
+                    "label": "Your name"
                 },
                 "surname": {
-                    "label": "Your surname",
-                    "placeholder": ""
+                    "label": "Your surname"
                 },
                 "email": {
-                    "label": "An email adress to answer back",
-                    "placeholder": ""
+                    "label": "An email adress to answer back"
                 }, 
                 "subject": {
-                    "label": "What's the matter of your message?",
-                    "placeholder": ""
+                    "label": "What's the matter of your message?"
                 },
                 "message":  {
-                    "label": "What would you like to talk about?",
-                    "placeholder": ""
+                    "label": "What would you like to talk about?"
                 }
             }
         },
@@ -165,32 +173,32 @@
             "home": {
                 "first_section": " < Hello World ! /> ",
                 "second_section": "FullStack Developer",
-                "third_section": "Welcome here !",
-                "last_section": "No need to scroll more"
+                "third_section": "Welcome",
+                "last_section": "That's it, for now"
             },
             "confs": {
                 "first_section": " < Hello World ! /> ",
-                "second_section": "Talk!",
+                "second_section": "Speak!",
                 "third_section": "All the conferences",
-                "last_section": "The END"
+                "last_section": "You've reached the end"
             },
             "lives": {
                 "first_section": " < Hello World ! /> ",
                 "second_section": "Live!",
                 "third_section": "All the lives",
-                "last_section": "The END"
+                "last_section": "You shall not scroll"
             },
             "press": {
                 "first_section": " < Hello World ! /> ",
                 "second_section": "Read!",
                 "third_section": "All the articles",
-                "last_section": "The END"
+                "last_section": "You've scrolled the whole page"
             },
             "contact": {
                 "first_section": " < Hello World ! /> ",
-                "second_section": "Chat!",
+                "second_section": "Talk!",
                 "third_section": "Get in touch!",
-                "last_section": "The END"
+                "last_section": "You can go back to the top"
             }
         }
     }
