@@ -33,7 +33,6 @@ export const AppHeader = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   backgroundColor: theme.palette.background.default,
   borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
-  cursor: 'pointer', 
   display: 'flex', 
   justifyContent: 'space-around', 
   padding: theme.spacing(4),
