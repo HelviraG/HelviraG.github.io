@@ -35,9 +35,14 @@ interface MenuListItemButtonProps extends ListItemButtonProps {
 export const MenuWrapper = styled(Drawer, {
     shouldForwardProp: (prop) => prop !== 'menuWidth',
 })<MenuDrawerProps>(({ menuWidth, theme }) => ({
+    cursor: 'none',
     '.MuiDrawer-paper': { 
         backgroundColor: alpha(theme.palette.text.primary, 0.93),
-        width: `${menuWidth}px` 
+        width: `${menuWidth}px`, 
+
+        [theme.breakpoints.down('md')]: {
+            width: '100%'
+        },
     }
 }));
 
@@ -49,7 +54,8 @@ export const MenuIconBox = styled(Box)(({ theme }) => ({
 
 export const MenuIconButton = styled(IconButton)(({ theme }) => ({
     margin: theme.spacing(2),
-    position: 'fixed'
+    position: 'fixed',
+    zIndex: 3000
 }));
 
 export const MenuList = styled(List)(({ theme }) => ({
@@ -92,6 +98,7 @@ export const MenuItem = styled(ListItem, {
 export const MenuListItemButton = styled(ListItemButton, {
     shouldForwardProp: (prop) => prop !== 'isActive',
 })<MenuListItemButtonProps>(({ isActive, theme }) => ({
+    cursor: 'none',
     transition: 'all 0.4s ease',
     '& .MuiTypography-root': {
         fontWeight: 100,
@@ -109,6 +116,7 @@ export const MenuListItemButton = styled(ListItemButton, {
             color: theme.palette.background.default,
         }
     }),
+
     '&:hover': {
         backgroundColor: alpha(theme.palette.background.default, 0.1),
         borderRadius: '0.4em',
