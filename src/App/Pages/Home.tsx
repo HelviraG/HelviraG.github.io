@@ -7,6 +7,8 @@ import { Box } from '@mui/material';
 import { WelcomeSection } from './Home/WelcomeSection';
 import { useTranslation } from 'react-i18next';
 import useDocumentTitle from '../../Hooks/useDocumentTitle';
+import { Types } from '../Resources/Enums/Types';
+import { HomeCTA } from './Home/HomeCTA';
 
 export const Home = ({ isTablet }: { isTablet: boolean }) => {
     const { t } = useTranslation();
@@ -18,9 +20,10 @@ export const Home = ({ isTablet }: { isTablet: boolean }) => {
             {isTablet ? (
                 <Mobile>
                     <MainSection />
-                    <Masonry />
+                    <Masonry anchor={Types.TOP} />
                     <WelcomeSection />
-                    <Masonry />
+                    <HomeCTA />
+                    <Masonry anchor={Types.BOTTOM} />
                 </Mobile>
             ) : (
                 <Desktop>
@@ -31,9 +34,10 @@ export const Home = ({ isTablet }: { isTablet: boolean }) => {
                             maxWidth: '80%'
                         },
                     })}>
-                        <Masonry />
+                        <Masonry anchor={Types.TOP} />
                         <WelcomeSection />
-                        <Masonry />
+                        <HomeCTA />
+                        <Masonry anchor={Types.BOTTOM} />
                     </Box>
                 </Desktop>
             )}

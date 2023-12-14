@@ -37,6 +37,7 @@ export const TitleBox = styled(Box, {
         color: theme.palette.background.default,
         fontSize: '8em',
         position: 'absolute',
+        left: -53,
         transform: 'translate(-50%, -50%)',
 
         '&:nth-child(1)': {

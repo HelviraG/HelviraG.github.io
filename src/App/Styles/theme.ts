@@ -124,6 +124,7 @@ const theme = createTheme({
                     margin: '0 auto',
                     maxWidth: '100%',
                     color: '#000333',
+                    cursor: 'none',
 
                     '&::-webkit-scrollbar': {
                         borderRadius: '10px',
@@ -145,6 +146,41 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                }
+            }
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    cursor: 'none'
+                }
+            }
+        },
+        MuiIconButton: {
+            styleOverrides: {
+                root: {
+                    cursor: 'none'
+                }
+            }
+        },
+        MuiFab: {
+            styleOverrides: {
+                root: {
+                    cursor: 'none'
+                }
+            }
+        },
+        MuiSwitch: {
+            styleOverrides: {
+                root: {
+                    cursor: 'none'
+                }
+            }
+        },
+        MuiButtonBase: {
+            styleOverrides: {
+                root: {
+                    cursor: 'none'
                 }
             }
         }
