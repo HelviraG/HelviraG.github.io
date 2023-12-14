@@ -87,7 +87,6 @@ export const ExperienceTitleBox = styled(Box, {
     })
 }));
 
-
 export const ExperienceTitle = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
         fontSize: '1.7rem'
@@ -98,4 +97,35 @@ export const ExperienceMission = styled(ListItem)(({ theme }) => ({
     [theme.breakpoints.down('md')]: {
         fontSize: 14
     },
+}));
+
+export const ExperienceTagWrapper = styled(Box)(({ theme }) => ({
+    display: 'flex', 
+    flexWrap: 'wrap', 
+    gap: theme.spacing(1), 
+    marginTop: theme.spacing(1),
+
+    '.MuiChip-root': {
+        '.MuiChip-label': {
+            fontWeight: 'bold',
+        }
+    }
+}));
+
+export const ExperienceSubtitleBox = styled(Box, {
+    shouldForwardProp: (prop) => prop !== 'isRight',
+})<ExperienceDurationBoxProps>(({ isRight, theme }) => ({
+    alignItems: 'center',
+    display: 'flex',
+    gap: theme.spacing(1),
+
+    ...(isRight && {
+        flexDirection: 'row-reverse',
+        justifyContent: 'end'
+    }),
+
+    ...(!isRight && {
+        flexDirection: 'row',
+        justifyContent: 'start'
+    })
 }));
