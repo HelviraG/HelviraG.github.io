@@ -97,11 +97,11 @@ export const SocialMediaWrapper = styled(Box)(({ theme }) => ({
     marginBottom: theme.spacing(2),
     marginTop: theme.spacing(4),
     gap: theme.spacing(2),
+
     '& .MuiButtonBase-root': {
         backgroundColor: alpha(theme.palette.primary.dark, 0.9),
         borderRadius: '20%',
         color: theme.palette.background.default,
-        cursor: 'pointer',
         transition: 'all .4s ease',
         boxShadow: "0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)",
 
@@ -136,9 +136,23 @@ export const SocialMediaWrapper = styled(Box)(({ theme }) => ({
     }
 }));
 
-export const CardBox = styled(Box)(({
+export const CardBox = styled(Box)(({ theme }) => ({
     overflowY: 'auto', 
-    zIndex: 6000
+    zIndex: 6000,
+
+    '&::-webkit-scrollbar': {
+        borderRadius: '10px',
+        width: '4px',
+    },
+        
+    '&::-webkit-scrollbar-track': {
+        background: 'rgb(255 255 255 / 10%)',
+    },
+        
+    '&::-webkit-scrollbar-thumb': {
+        background: alpha(theme.palette.primary.main, 0.3),
+        borderRadius: '50px'
+    }
 }));
 
 export const CardBoxWrapper = styled(Box)(({ theme }) => ({
