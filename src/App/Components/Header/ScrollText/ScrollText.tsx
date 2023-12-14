@@ -36,7 +36,14 @@ export const ScrollText = () => {
 
     return (
         <Box sx={{ textAlign: 'center', width: '50%' }}>
-            <Typography variant="body1">{scrollY ? text : pageScrollText[0].first_section}</Typography>
+            <Typography 
+                variant="body1" 
+                sx={(theme) => ({ 
+                    [theme.breakpoints.down('md')]: {
+                        fontSize: '14px',
+                    },
+                })}
+            >{scrollY ? text : pageScrollText[0].first_section}</Typography>
         </Box>
     )
 }
