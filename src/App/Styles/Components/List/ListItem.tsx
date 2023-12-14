@@ -151,5 +151,11 @@ export const CardContentButton = styled(Button)(({
     backgroundImage: 'linear-gradient(90deg, #f783ac 5%, #7950f2 95%)',
     lineHeight: '1.75',
     letterSpacing: '0.02857em',
-    textTransform: 'uppercase',  
+    marginTop: '20px',
+    textTransform: 'uppercase', 
+    transition: 'transform ease 300ms',
+
+    '&:hover': {
+        transform: 'translate(0, -10px)'
+    }
 }));
