@@ -57,7 +57,12 @@ export const TitleBox = styled(Box, {
             "50%": {
                 clipPath: "polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%)",
             }
-        }
+        },
+
+        [theme.breakpoints.down('md')]: {
+            fontSize: '6em',
+            left: '-1px'
+        },
     },
 
     '&:after': {
