@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typography } from '@mui/material';
-import { WelcomeSectionBox, WelcomeText, WelcomeTextBox, WelcomeTextInnerBox } from '../../Styles/Pages/HomeStyle';
+import { Box, Typography } from '@mui/material';
+import { WelcomeSectionBox, WelcomeText, WelcomeTextBox, WelcomeTextInnerBox } from '@styles/Pages/HomeStyle';
 import { Trans, useTranslation } from 'react-i18next';
 
 export const WelcomeSection = () => {
@@ -8,7 +8,28 @@ export const WelcomeSection = () => {
 
     return (
         <WelcomeSectionBox>
-            <WelcomeText>{t('app.general.hello')}</WelcomeText>
+            <Box sx={(theme) => ({ 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+
+                '& > p': { 
+                    marginTop: '32px',
+
+                    [theme.breakpoints.down('lg')]: {
+                        marginTop: '20px'
+                    },
+                },
+                
+                '& img': {
+                    [theme.breakpoints.down('lg')]: {
+                        width: '100px'
+                    },
+                }
+            })}>
+                <img src="https://od.lk/s/MzRfMzYzODIwMTJf/Copie_de_GIT_INIT__7_-removebg-preview.png" alt="laptop icon" />
+                <WelcomeText>{t('app.general.hello')}</WelcomeText>
+            </Box>
             <WelcomeTextBox>
                 <WelcomeTextInnerBox>
                     <Typography sx={{ fontWeight: 500 }}>

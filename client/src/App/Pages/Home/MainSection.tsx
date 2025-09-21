@@ -1,38 +1,100 @@
-import React from 'react';
-import { TypeAnimation } from 'react-type-animation';
-import { useTranslation } from 'react-i18next';
-import { AnimatedTextBox, AnimatedTextTypography } from '../../Styles/Pages/HomeStyle';
-import { useMediaQuery } from '@mui/material';
+import { Box } from "@mui/material";
+import React from "react";
+import { BuyMeACoffee } from "./BuyMeACoffee";
+import { FirstSection } from "./FirstSection";
+import { SecondSection } from "./SecondSection";
 
 export const MainSection = () => {
-    const { t } = useTranslation();
-    const isMobile = useMediaQuery('(max-width: 425px)');
+  return (
+    <Box sx={{ marginBottom: "8em" }} data-testid={"home-hero-section"}>
+      <FirstSection />
+      <SecondSection />
 
-    return (           
-        <AnimatedTextBox>
-            <AnimatedTextTypography variant="h4">
-                Helvira Goma
-            </AnimatedTextTypography>
-            <TypeAnimation 
-                sequence={[
-                    t('app.home.main.animated.computer'),
-                    1000,
-                    t('app.home.main.animated.web'),
-                    1000,
-                    t('app.home.main.animated.speaker'),
-                    1000,
-                    t('app.home.main.animated.motivher'),
-                    1000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-                style={{ 
-                    fontSize: isMobile ? '1.5rem' : '2.125rem',     
-                    background: 'linear-gradient(120deg, #2E33DB, #6D74DB)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent', 
-                }} 
-            />
-        </AnimatedTextBox>
-    )
-}
+      <Box
+        sx={(theme) => ({
+          display: "flex",
+          marginTop: `${theme.spacing(14)}!important`,
+          gap: 4,
+          maxWidth: "90%",
+          margin: "0 auto",
+
+          [theme.breakpoints.down("md")]: {
+            flexDirection: "column",
+            marginTop: `${theme.spacing(6)}!important`,
+          },
+
+          [theme.breakpoints.up("lg")]: {
+            display: "none",
+          },
+        })}
+      >
+        <Box
+          sx={(theme) => ({
+            background: `${theme.game.special.dark} url("https://i.ibb.co/d7FJhKm/20230531-200845.jpg?w=248&fit=crop&auto=format") no-repeat center`,
+
+            padding: "10px",
+            borderRadius: "20px",
+            alignItems: "center",
+            height: "220px",
+            justifyContent: "center",
+
+            filter: "sepia(1)",
+            backgroundSize: "cover",
+            width: "50%",
+
+            "&:hover": {
+              filter: "none",
+            },
+
+            [theme.breakpoints.down("md")]: {
+              alignSelf: "start",
+              width: "70%",
+            },
+
+            [theme.breakpoints.up(1240)]: {
+              maxHeight: "max-content",
+            },
+
+            [theme.breakpoints.up(1440)]: {
+              height: "320px",
+            },
+          })}
+        ></Box>
+        <Box
+          sx={(theme) => ({
+            background: `${theme.game.special.dark} url("https://od.lk/s/MzRfMzc3OTkyNjFf/1715867189847%20%281%29.jpeg") no-repeat center`,
+
+            padding: "10px",
+            borderRadius: "20px",
+            alignItems: "center",
+            height: "220px",
+            justifyContent: "center",
+
+            filter: "sepia(1)",
+            backgroundSize: "cover",
+            width: "50%",
+
+            "&:hover": {
+              filter: "none",
+            },
+
+            [theme.breakpoints.down("md")]: {
+              alignSelf: "end",
+              width: "70%",
+            },
+
+            [theme.breakpoints.up(1240)]: {
+              maxHeight: "max-content",
+            },
+
+            [theme.breakpoints.up(1440)]: {
+              height: "320px",
+            },
+          })}
+        ></Box>
+      </Box>
+
+      <BuyMeACoffee />
+    </Box>
+  );
+};
