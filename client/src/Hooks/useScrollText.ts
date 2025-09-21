@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { Routes } from "../App/Resources/Enums/Routes";
+import { Routes } from "@resources/Enums/Routes";
 import { useTranslation } from "react-i18next";
 
 export default function useScrollText() {
@@ -51,6 +51,15 @@ export default function useScrollText() {
                         "second_section": t('app.scroll.press.second_section'),
                         "third_section": t('app.scroll.press.third_section'),
                         "last_section": t('app.scroll.press.last_section')
+                    }
+                ];
+            case Routes.EXPLORE:
+                return [
+                    {
+                        "first_section": t('app.scroll.explore.first_section'),
+                        "second_section": t('app.scroll.explore.second_section'),
+                        "third_section": t('app.scroll.explore.third_section'),
+                        "last_section": t('app.scroll.explore.last_section')
                     }
                 ];
             default:
