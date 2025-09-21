@@ -18,9 +18,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@pages/*": ["src/App/Pages/*"],
+      "@fallout/*": ["src/App/Pages/FalloutOnPassion/*"],
+      "@component/*": ["src/App/Components/*"],
+      "@resources/*": ["src/App/Resources/*"],
+      "@styles/*": ["src/App/Styles/*"],
+      "@cursor": ["src/Components/Cursor/Cursor"],
+      "@context/*": ["src/Context/*"],
+      "@dotRing": ["src/Cursor/DotRing.css"],
+      "@hooks/*": ["src/Hooks/*"],
+      "@services/*": ["src/Redux/Services/*"],
+      "@slices/*": ["src/Redux/Slices/*"],
+      "@translations/*": ["src/Translations/*"],
+      "@i18n": ["src/i18n.js"]
+    }
   },
   "include": [
-    "src", "client"
+    "src"
   ]
 }
