@@ -1,205 +1,379 @@
 {
-    "app": {
-        "general": {
-            "actions": {
-                "read": "Read",
-                "read_more": "Read",
-                "send": "Send",
-                "watch": "Watch"
-            },
-            "hello": "Hello,",
-            "month": {
-                "january": "January",
-                "february": "February",
-                "march": "March",
-                "april": "April",
-                "may": "May",
-                "june": "June",
-                "july": "July",
-                "august": "August",
-                "september": "September",
-                "october": "October",
-                "november": "November",
-                "december": "December"
-            },
-            "welcome": {
-                "p1": "I am <bold>Helvira Goma</bold>, a Paris based <bold>fullstack developer</bold>.",
-                "p2": "When I'm not <bold>transforming ✨</bold> an idea into a functional and interactive project - like this website - I give <bold>conferences</bold> and participate in various <bold>tech events</bold>.",
-                "p3": "Here, my <bold>universe!</bold>"
-            }
-        },
-        "menu": {
-            "career": "Career",
-            "conferences": "Conferences",
-            "contact": "Have a talk",
-            "home": "Hello World !",
-            "live": "Lives",
-            "mobile_text": " < Hello World ! /> ",
-            "more": "More",
-            "press": "Press",
-            "universe": "Universe",
-
-            "profile": {
-                "about": "About",
-                "about_text": "Fullstack developer for more than 4 years, Helvira Goma lived multiple lives - from quality engineer to office manager - until she found her true calling: programming. After a successful career change, she now divides her time between whispering in computers' ears and enticing others to join the other side through her community online Motiv'Her."
-            }
-        },
-        "home": {
-            "main": {
-                "animated": {
-                    "computer": "Computer Whisperer",
-                    "web": "Web Enthusiast",
-                    "speaker": "Tech Speaker",
-                    "motivher": "Motiv'Her Original"
-                }
-            },
-            "welcome": {
-                "actions": {
-                    "confs": "See my talks",
-                    "contact": "Contact me"
-                }
-            }
-        },
-        "career": {
-            "title": "Tech!",
-            "subtitle": "Developer Journey",
-            "description": "Here, you can follow my tracks on my tech path",
-            "type": {
-                "buy": "Purchasing sofware",
-                "customer": "Customer care"
-            },
-            "duration": {
-                "present": "now",
-                "month": "mos",
-                "year": "y"
-            },
-            "position": {
-                "developer": "Web developer",
-                "software": "Software Engineer"
-            },
-            "missions": {
-                "op": {
-                    "first": "- Implementation of a CMD+K search engine (based on the Slack model) [Elasticsearch, Laravel, Modular architecture, ReactJS, Material UI, REST API]",
-                    "second": "- Creation of 3 back-end and front-end libraries [Laravel, Typescript]",
-                    "third": "- Application technology upgrade (from Blade to React)"
-                },
-                "ox": {
-                    "first": "- Preparation of new features in collaboration with the product team, following specifications",
-                    "second": "- Maintenance of previous versions",
-                    "third": "- Client support"
-                },
-                "re": {
-                    "first": "- Setting up the notification center for platform users [Laravel, Bootstrap, jQuery, MariaDB]",
-                    "second": "- Implementation of a tagging functionality based on Trello model [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
-                    "third": "- Implementation of a premium version with advanced features [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
-                    "fourth": "- Design adaptation of the platform (Responsive Web design)"
-                },
-                "pa": {
-                    "first": "- Integration of payment service providers (REST API) and graphical interfaces allowing them to be used (PayPal, Stripe, Adyen, etc.) in OOP [PHP, C#, HTML/CSS, JavaScript]",
-                    "second": "- Collaboration with various partners, foreign banks to integrate their payment services",
-                    "third": "- Writing documentation (technical, user and operating)",
-                    "fourth": "- Monitoring of operational maintenance of developed applications",
-                    "fifth": "- Support management, reporting and tracking of incident tickets"
-                }
-            },
-            "technos": {
-                "api": "REST API",
-                "archi": "modular architecture",
-                "oop": "OOP"
-            }
-        },
-        "confs": {
-            "title": "Speak!",
-            "subtitle": "Dropped the mic here",
-            "description": "You can find here all my conferences!"
-        },
-        "contact": {
-            "title": "Talk!",
-            "subtitle": "Let's talk together",
-            "description": "Few clicks away from getting in touch!",
-            "form": {
-                "error": {
-                    "message": "Something went wrong. Please try again later!",
-                    "validate": "This email adress is not valid.",
-                    "required": "This field is required."
-                },
-                "success": {
-                    "msg": "The message has been successfully sent!"
-                },
-                "name": {
-                    "label": "Your name"
-                },
-                "surname": {
-                    "label": "Your surname"
-                },
-                "email": {
-                    "label": "An email adress to answer back"
-                }, 
-                "subject": {
-                    "label": "What's the matter of your message?"
-                },
-                "message":  {
-                    "label": "What would you like to talk about?"
-                }
-            }
-        },
-        "lives": {
-            "title": "Live!",
-            "subtitle": "Seen on YouTube",
-            "description": "You can find here all the lives I was on !",
-            "tags": {
-                "all": "all",
-                "testimony": "testimony",
-                "videos": "videos"
-            }
-        },
-        "press": {
-            "title": "Read!",
-            "subtitle": "All to read about",
-            "description": "You can find here all the article I was mentioned on/wrote !",
-            "tags": {
-                "actuality": "actuality",
-                "conference": "conference",
-                "retraining": "retraining",
-                "solidarity": "solidarity"
-            }
-        },
-        "quotes": {
-            "confs": "Speakers who talk about what life has taught them never fail to keep the attention of their listeners | Dale Carnegie",
-            "lives": "A good laugh makes any interview or any conversation, so much better | Barbara Walters",
-            "press_title": "I don't know if I'll ever get used to hearing my name being mentioned alongside all these other legendary artists that have come before me | Gretchen Wilson"
-        },
-        "scroll": {
-            "home": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "FullStack Developer",
-                "third_section": "Welcome",
-                "last_section": "That's it, for now"
-            },
-            "confs": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Speak!",
-                "third_section": "All the conferences",
-                "last_section": "You've reached the end"
-            },
-            "lives": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Live!",
-                "third_section": "All the lives",
-                "last_section": "You shall not scroll"
-            },
-            "press": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Read!",
-                "third_section": "All the articles",
-                "last_section": "You've scrolled the whole page"
-            },
-            "contact": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Talk!",
-                "third_section": "Get in touch!",
-                "last_section": "You can go back to the top"
-            }
+  "app": {
+    "general": {
+      "actions": {
+        "play": "Play",
+        "read": "Read",
+        "read_more": "Read",
+        "resources": "Resources",
+        "send": "Send",
+        "start": "Start",
+        "watch": "Watch",
+        "params": "Settings",
+        "start_again": "Restart",
+        "resume": "Resume"
+      },
+      "buy_coffee": {
+        "title": "☕ If you like what I do and want to support me and my work 😁"
+      },
+      "hello": "Hello,",
+      "month": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      },
+      "welcome": {
+        "p1": "I am <bold>Helvira Goma</bold>, a Paris based <bold>fullstack developer</bold>.",
+        "p2": "When I'm not <bold>transforming ✨</bold> an idea into a functional and interactive project - like this website - I give <bold>conferences</bold> and participate in various <bold>tech events</bold>.",
+        "p3": "Here, my <bold>universe!</bold> 🪐",
+        "title": "Welcome"
+      }
+    },
+    "menu": {
+      "back_website": "Back Home",
+      "career": "Career",
+      "conferences": "Conferences",
+      "contact": "Have a talk",
+      "home": "Hello World !",
+      "live": "Lives",
+      "mobile_text": " < Hello World ! /> ",
+      "more": "More",
+      "press": "Press",
+      "universe": "Universe",
+      "explorer": "Explore",
+      "passion": "Fallout On Passion",
+      "passion_quiz": {
+        "start": "Back to cover",
+        "test": "To the test",
+        "result": "To the landscape"
+      },
+      "profile": {
+        "about": "About",
+        "about_text": "Fullstack developer (+6 years), Helvira Goma lived multiple lives - from quality engineer to office manager - until she found her true calling: programming. After a successful career change, she now divides her time between whispering in computers' ears and enticing others to join the other side through her community online <0>Motiv'Her</0>."
+      }
+    },
+    "home": {
+      "main": {
+        "animated": {
+          "computer": "A Computer Whisperer",
+          "web": "A Web Enthusiast",
+          "speaker": "A Tech Speaker",
+          "motivher": "A Motiv'Her Original"
         }
+      },
+      "welcome": {
+        "actions": {
+          "confs": "See my talks",
+          "contact": "Contact me",
+          "explore": "Playground"
+        }
+      }
+    },
+    "career": {
+      "title": "Tech!",
+      "subtitle": "Developer Journey",
+      "description": "Here, you can follow my tracks on my tech journey",
+      "type": {
+        "buy": "Purchasing software",
+        "customer": "Customer care"
+      },
+      "duration": {
+        "present": "now",
+        "month": "mos",
+        "year": "y"
+      },
+      "position": {
+        "developer": "Web developer",
+        "software": "Software Engineer"
+      },
+      "missions": {
+        "op": {
+          "first": "- Implementation of a CMD+K search engine (based on the Slack model) [Elasticsearch, Laravel, Modular architecture, ReactJS, Material UI, REST API]",
+          "second": "- Creation of 3 back-end and front-end libraries [Laravel, Typescript]",
+          "third": "- Application technology upgrade (from Blade to React)"
+        },
+        "ox": {
+          "first": "- Preparation of new features in collaboration with the product team, following specifications",
+          "second": "- Maintenance of previous versions",
+          "third": "- Client support"
+        },
+        "re": {
+          "first": "- Setting up the notification center for platform users [Laravel, Bootstrap, jQuery, MariaDB]",
+          "second": "- Implementation of a tagging functionality based on Trello model [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
+          "third": "- Implementation of a premium version with advanced features [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
+          "fourth": "- Design adaptation of the platform (Responsive Web design)"
+        },
+        "pa": {
+          "first": "- Integration of payment service providers (REST API) and graphical interfaces allowing them to be used (PayPal, Stripe, Adyen, etc.) in OOP [PHP, C#, HTML/CSS, JavaScript]",
+          "second": "- Collaboration with various partners, foreign banks to integrate their payment services",
+          "third": "- Writing documentation (technical, user and operating)",
+          "fourth": "- Monitoring of operational maintenance of developed applications",
+          "fifth": "- Support management, reporting and tracking of incident tickets"
+        }
+      },
+      "technos": {
+        "api": "REST API",
+        "archi": "modular architecture",
+        "oop": "OOP"
+      }
+    },
+    "confs": {
+      "title": "Speak!",
+      "subtitle": "Talked these talks",
+      "description": "You can find here all my conferences!"
+    },
+    "contact": {
+      "title": "Talk!",
+      "subtitle": "Let's talk together",
+      "description": "Few clicks away from getting in touch!",
+      "form": {
+        "error": {
+          "message": "Something went wrong. Please try again later!",
+          "validate": "This email address is not valid.",
+          "required": "This field is required."
+        },
+        "success": {
+          "msg": "The message has been successfully sent!"
+        },
+        "name": {
+          "label": "Your name"
+        },
+        "surname": {
+          "label": "Your surname"
+        },
+        "email": {
+          "label": "An email address to answer back"
+        },
+        "subject": {
+          "label": "What's the matter of your message?"
+        },
+        "message": {
+          "label": "What would you like to talk about?"
+        }
+      }
+    },
+    "explore": {
+      "title": "Playground",
+      "subtitle": "Play!",
+      "description": "THE playground. Enjoy :)!",
+      "fallout_on_passion": {
+        "link_article": "https://selfdeterminationtheory.org/SDT/documents/2003_VallerancBlanchardMageauKoesnterRatelleLeonardGagneMacolais_JPSP.pdf",
+        "title": "Which Fallout Faction Reflects Your Passion?",
+        "subtitle": "Fallout on Passion",
+        "miniature": "https://od.lk/s/MzRfMzc1NDk3NTNf/Copie%20de%20GIT%20INIT%20%2821%29.png",
+        "cover": "https://od.lk/s/MzRfMzc1NDk3NTdf/Copie%20de%20GIT%20INIT%20%2817%29.png",
+        "cover_sm": "https://od.lk/s/MzRfMzc1NDk3NTVf/Copie%20de%20GIT%20INIT%20%2819%29.png",
+        "init": "https://od.lk/s/MzRfMzg2ODg0MDlf/fallout_on_passion_init_background.png",
+        "init_sm": "https://od.lk/s/MzRfMzg2OTExOTJf/fallout_on_passion_init_background_sm.png",
+        "link_images": "https://alphacoders.com/fallout-4-wallpapers",
+        "resume": "https://od.lk/s/MzRfMzg2OTA1NDBf/fallout_on_passion_quiz_21.png",
+        "resume_sm": "https://od.lk/s/MzRfMzg2OTA5Nzhf/fallout_on_passion_quiz_sm_21.png",
+        "error": "https://od.lk/s/MzRfMzg2OTE0MTVf/fallout_on_passion_error.png",
+        "tabs": {
+          "tab": {
+            "title_1": "Info",
+            "title_2": "Language",
+            "title_3": "Credits",
+            "title_4": "Exit"
+          },
+          "info": {
+            "title": "What is it",
+            "subTitle": "The Scale of Passion",
+            "first": "Based on this <0>study</0> where Vallerand & al. designed a scale that aims to examine whether or not people are passionate about a given activity.",
+            "first_bis": "And this, with answering to 17 assertions rating impressions on this assertions on a scale going from 0 to 7.",
+            "second": "This is a coded version of it with a twist ! It is based on the game series Fallout.",
+            "third": "So here, not only, would you be able to find out if your passion as a software engineer, web developer or programmer is harmonious or obsessive.",
+            "fourth": "But the result of your test will contribute to a larger purpose.",
+            "fifth": "The faction with the majority will shape an evolving landscape you can find on <0>here</0>.",
+            "sixth": "So get ready !"
+          },
+          "lang": {
+            "title": "Lang",
+            "subTitle": "Set a Language"
+          },
+          "credits": {
+            "title": "Reserved Rights",
+            "subTitle": "All the images credits go to:"
+          },
+          "exit": {
+            "title": "Road Map",
+            "subTitle_1": "",
+            "subTitle_2": "Outside Playground"
+          }
+        },
+        "quiz": {
+          "chip": "Choose a field",
+          "chip_name": "Enter your name",
+          "label": "Pick up the tech field you work in :)",
+          "label_name": "What's your (nick)name :)?",
+          "indicators": {
+            "say_hi": "Hi, {{ userName }} \uD83D\uDC4B!",
+            "press_confirm": "\uD83D\uDC7E Press Enter To Confirm",
+            "error": "\uD83E\uDE84 Please Fix The Error",
+            "error_tip": "Only letters allowed"
+          },
+          "activity": {
+            "fields": {
+              "coding": "coding",
+              "gaming": "gaming",
+              "designing": "design",
+              "machine_learning": "machine learning"
+            },
+            "coding": {
+              "field": [
+                "Coding",
+                "Programming"
+              ],
+              "nameField": [
+                "Coder",
+                "Programmer"
+              ],
+              "longNameField": "programmer/coder"
+            },
+            "gaming": {
+              "field": [
+                "Gaming"
+              ],
+              "nameField": [
+                "Gamer"
+              ],
+              "longNameField": "gaming"
+            },
+            "designing": {
+              "field": [
+                "Designing"
+              ],
+              "nameField": [
+                "Designer"
+              ],
+              "longNameField": "designing"
+            },
+            "machine learning": {
+              "field": [
+                "Machine Learning"
+              ],
+              "nameField": [
+                "Machine Learning Engineer"
+              ],
+              "longNameField": "machine learning"
+            }
+          },
+          "result": {
+            "img": {
+              "citizen": "https://od.lk/s/MzRfMzg2ODg0MjBf/result_citizen_fr.png",
+              "paladin": "https://od.lk/s/MzRfMzg2ODg0MTVf/result_paladin_fr.png",
+              "superMutant": "https://od.lk/s/MzRfMzg2ODg0MjNf/result_supermutant_en.png"
+            },
+            "label": {
+              "coding": {
+                "approach": "Coding Approach",
+                "work_life": "Work-Life Balance",
+                "favorite_tools": "Favorite Tools",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              },
+              "gaming": {
+                "approach": "Gaming Approach",
+                "work_life": "Work-Life Balance",
+                "favorite_tools": "Favorite Games",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              },
+              "designing": {
+                "approach": "Design Approach",
+                "work_life": "Work-Life Balance",
+                "favorite_tools": "Favorite Tools",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              },
+              "machine_learning": {
+                "approach": "Approach to Machine Learning",
+                "work_life": "Work-Life Balance",
+                "favorite_tools": "Favorite Tools",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lives": {
+      "title": "Live!",
+      "subtitle": "Seen on YouTube",
+      "description": "You can find here all the lives I was on !",
+      "tags": {
+        "all": "all",
+        "testimony": "testimony",
+        "videos": "videos",
+        "english": "english talks",
+        "french": "french talks"
+      }
+    },
+    "press": {
+      "title": "Read!",
+      "subtitle": "All to read about",
+      "description": "You can find here all the article I was mentioned on/wrote !",
+      "tags": {
+        "actuality": "actuality",
+        "conference": "conference",
+        "retraining": "retraining",
+        "solidarity": "solidarity"
+      }
+    },
+    "quotes": {
+      "career": "It's not the destination, it's the journey | Ralph Waldo Emerson",
+      "confs": "Speakers who talk about what life has taught them never fail to keep the attention of their listeners | Dale Carnegie",
+      "lives": "A good laugh makes any interview or any conversation, so much better | Barbara Walters",
+      "press_title": "I don't know if I'll ever get used to hearing my name being mentioned alongside all these other legendary artists that have come before me | Gretchen Wilson",
+      "game_title": "Play is training for the unexpected | Marc Bekoff"
+    },
+    "scroll": {
+      "home": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "🖥️ FullStack Developer",
+        "third_section": "✌️ Welcome!",
+        "last_section": "That's it, for now"
+      },
+      "confs": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "🎤 Speak!",
+        "third_section": "🎫 The conferences",
+        "last_section": "You've reached the end"
+      },
+      "lives": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "📼 Live!",
+        "third_section": "🎞️ The lives",
+        "last_section": "You shall not scroll"
+      },
+      "press": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "📰 Read!",
+        "third_section": "📃 The articles",
+        "last_section": "You've scrolled the whole page"
+      },
+      "contact": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "☎️ Talk!",
+        "third_section": "🗨️ Get in touch!",
+        "last_section": "You can go back to the top"
+      },
+      "explore": {
+        "first_section": " < Playground ! /> ",
+        "second_section": "🎮 Game On!",
+        "third_section": "🕹️ SandBox",
+        "last_section": "That's it, for now"
+      }
     }
+  }
 }

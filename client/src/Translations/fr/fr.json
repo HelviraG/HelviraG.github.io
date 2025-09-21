@@ -1,210 +1,384 @@
 {
-    "app": {
-        "general": {
-            "actions": {
-                "read": "Lire",
-                "read_more": "Lire",
-                "send": "Envoyer",
-                "watch": "Voir"
-            },
-            "hello": "Bonjour,",
-            "month": {
-                "january": "Janvier",
-                "february": "Février",
-                "march": "Mars",
-                "april": "Avril",
-                "may": "Mai",
-                "june": "Juin",
-                "july": "Juillet",
-                "august": "Août",
-                "september": "Septembre",
-                "october": "Octobre",
-                "november": "Novembre",
-                "december": "Decembre"
-            },
-            "welcome": {
-                "p1": "Je suis <bold>Helvira Goma</bold>, <bold>fullstack developer</bold> en région parisienne.",
-                "p2": "Lorsque je ne <bold>transforme</bold> ✨ pas une idée en un projet fonctionnel et intéractif - comme ce site - je donne des <bold>conférences</bold> et participe à divers <bold>événements tech</bold>.",
-                "p3": "Ici, mon <bold>univers!</bold>"
-            }
-        },
-        "menu": {
-            "career": "Parcours",
-            "conferences": "Conférences",
-            "contact": "Me contacter",
-            "home": "Hello World !",
-            "live": "Lives",
-            "mobile_text": " < Hello World ! /> ",
-            "more": "Découvrir",
-            "press": "Presse",
-            "universe": "Univers",
-
-            "profile": {
-                "about": "À propos",
-                "about_text": "Développeuse fullstack depuis plus de 4 ans, Helvira Goma a vécu plusieurs vies - de l'ingéniérie en qualité à l'office management - jusqu'à ce qu'elle trouve sa véritable vocation : la programmation. Après une reconversion réussie, elle partage désormais son temps entre murmurer à l'oreille des ordinateurs et encourager les autres à rejoindre l'autre côté de la force à travers sa communauté en ligne : Motiv'Her."
-            }
-        },
-        "home": {
-            "main": {
-                "animated": {
-                    "computer": "Computer Whisperer",
-                    "web": "Aficionado du Web",
-                    "speaker": "Tech Speaker",
-                    "motivher": "Motiv'Her Original"
-                }
-            },
-            "welcome": {
-                "actions": {
-                    "confs": "Voir mes confs",
-                    "contact": "M'écrire"
-                }
-            }
-        },
-        "career": {
-            "title": "Tech!",
-            "subtitle": "Voyage de dev",
-            "description": "Ici, vous pouvez suivre mes pas dans la tech",
-            "type": {
-                "buy": "Achats",
-                "customer": "Service client"
-            },
-            "duration": {
-                "present": "présent",
-                "month": "mois",
-                "year": "an(s)"
-            },
-            "position": {
-                "developer": "Développeur web",
-                "software": "Ingénieur logiciel"
-            },
-            "missions": {
-                "op": {
-                    "first": "- Mise en place d'un moteur de recherche CMD+K (sur le modèle de Slack) [Elasticsearch, Laravel, Architecture modulaire, ReactJS, Material UI, API REST]",
-                    "second": "- Création de 3 librairies back et front [Laravel, Typescript]",
-                    "third": "- Mise à niveau technologique de l'application (de Blade à React)"
-                },
-                "ox": {
-                    "first": "- Préparation des recettes en collaboration avec l'équipe produit, en suivant les spécifications",
-                    "second": "- Maintenance des versions antérieures",
-                    "third": "- Support client"
-                },
-                "re": {
-                    "first": "- Mise en place du centre de notifications pour les utilisateurs de la plateforme [Laravel, Bootstrap, jQuery, MariaDB]",
-                    "second": "- Implémentation d'une fonctionnalité de tagging sur le modèle de Trello [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
-                    "third": "- Mise en place d'une version premium aux fonctionnalités avancées [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
-                    "fourth": "- Adaptation de la plateforme (Responsive Web design)"
-                },
-                "pa": {
-                    "first": "- Intégration des prestataires de services de paiements (REST API) et des interfaces graphiques permettant de les exploiter (PayPal, Stripe, Adyen...) en POO [PHP, C#, HTML/CSS, JavaScript]",
-                    "second": "- Collaboration avec divers partenaires, banques étrangères en vue d'intégrer leurs services de paiement",
-                    "third": "- Rédaction des documentations (technique, utilisateur et d'exploitation)",
-                    "fourth": "- Suivi de maintenance opérationnelle des applications développées",
-                    "fifth": "- Gestion du support, rapport et suivi des tickets d'incidents"
-                }
-            },
-            "technos": {
-                "api": "API REST",
-                "archi": "architecture modulaire",
-                "oop": "POO"
-            }
-        },
-        "confs": {
-            "title": "Speak!",
-            "subtitle": "J'y ai pris le micro",
-            "description": "Retrouvez ici l'ensemble des conférences à (re)voir !"
-        },
-        "contact": {
-            "title": "Talk!",
-            "subtitle": "Poursuivons la conversation",
-            "description": "À quelques clics d'une mise en relation!",
-            "form": {
-                "error": {
-                    "message": "Une erreur s'est produite. Veuillez réessayer plus tard!",
-                    "validate": "Cette adresse email n'est pas valide.",
-                    "required": "Ce champ est requis."
-                },
-                "success": {
-                    "msg": "Le message a bien été envoyé!"
-                },
-                "name": {
-                    "label": "Votre nom",
-                    "placeholder": ""
-                },
-                "surname": {
-                    "label": "Votre prénom",
-                    "placeholder": ""
-                },
-                "email": {
-                    "label": "Un email auquel vous joindre",
-                    "placeholder": ""
-                }, 
-                "subject": {
-                    "label": "Le sujet de votre message",
-                    "placeholder": ""
-                },
-                "message":  {
-                    "label": "L'objet de votre message",
-                    "placeholder": ""
-                }
-            }
-        },
-        "lives": {
-            "title": "Live!",
-            "subtitle": "Vu sur YouTube",
-            "description": "Retrouvez ici l'ensemble des lives à (re)voir !",
-            "tags": {
-                "all": "toutes",
-                "testimony": "témoignage",
-                "videos": "vidéos"
-            }
-        },
-        "press": {
-            "title": "Read!",
-            "subtitle": "J'y suis mentionnée",
-            "description": "Retrouvez ici l'ensemble des articles me concernant",
-            "tags": {
-                "actuality": "actualié",
-                "conference": "conférence",
-                "retraining": "reconversion",
-                "solidarity": "solidarité"
-            }
-        },
-        "quotes": {
-            "confs": "Speakers who talk about what life has taught them never fail to keep the attention of their listeners | Dale Carnegie",
-            "lives": "A good laugh makes any interview or any conversation, so much better | Barbara Walters",
-            "press_title": "I don't know if I'll ever get used to hearing my name being mentioned alongside all these other legendary artists that have come before me | Gretchen Wilson"
-        },
-        "scroll": {
-            "home": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "FullStack Developer",
-                "third_section": "Welcome here !",
-                "last_section": "C'est tout pour l'instant"
-            },
-            "confs": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Talk!",
-                "third_section": "Les conférences",
-                "last_section": "Merci d'avoir scrollé!"
-            },
-            "lives": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Live!",
-                "third_section": "Les lives",
-                "last_section": "Vous avez vu tous les lives"
-            },
-            "press": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Read!",
-                "third_section": "Les articles",
-                "last_section": "Vous avez parcouru la page"
-            },
-            "contact": {
-                "first_section": " < Hello World ! /> ",
-                "second_section": "Chat!",
-                "third_section": "Échangeons!",
-                "last_section": "La fin"
-            }
+  "app": {
+    "general": {
+      "actions": {
+        "play": "Play",
+        "read": "Lire",
+        "read_more": "Lire",
+        "resources": "Ressources",
+        "send": "Envoyer",
+        "start": "Go",
+        "watch": "Voir",
+        "params": "Paramètres",
+        "start_again": "Recommencer",
+        "resume": "Reprendre"
+      },
+      "buy_coffee": {
+        "title": "☕ Vous aimez ce que je fais et souhaitez me soutenir ainsi que mon travail 😁"
+      },
+      "hello": "Bonjour,",
+      "month": {
+        "january": "Janvier",
+        "february": "Février",
+        "march": "Mars",
+        "april": "Avril",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juillet",
+        "august": "Août",
+        "september": "Septembre",
+        "october": "Octobre",
+        "november": "Novembre",
+        "december": "Decembre"
+      },
+      "welcome": {
+        "p1": "Je suis <bold>Helvira Goma</bold>, <bold>fullstack developer</bold> en région parisienne.",
+        "p2": "Lorsque je ne <bold>transforme</bold> ✨ pas une idée en un projet fonctionnel et intéractif - comme ce site - je donne des <bold>conférences</bold> et participe à divers <bold>événements tech</bold>.",
+        "p3": "Ici, mon <bold>univers!</bold> 🪐",
+        "title": "Bienvenue"
+      }
+    },
+    "menu": {
+      "back_website": "Vers le site",
+      "career": "Parcours",
+      "conferences": "Conférences",
+      "contact": "Me contacter",
+      "home": "Hello World !",
+      "live": "Lives",
+      "mobile_text": " < Hello World ! /> ",
+      "more": "Découvrir",
+      "press": "Presse",
+      "universe": "Univers",
+      "explorer": "Explorer",
+      "passion": "Fallout On Passion",
+      "passion_quiz": {
+        "start": "Bienvenue",
+        "test": "Vers le test",
+        "result": "Voir la fresque"
+      },
+      "profile": {
+        "about": "À propos",
+        "about_text": "Développeuse fullstack (+6 ans), Helvira Goma a vécu plusieurs vies - de l'ingéniérie en qualité à l'office management - jusqu'à ce qu'elle trouve sa véritable vocation : la programmation. Après une reconversion réussie, elle partage désormais son temps entre murmurer à l'oreille des ordinateurs et encourager les autres à rejoindre l'autre côté de la force à travers sa communauté en ligne : <0>Motiv'Her</0>."
+      }
+    },
+    "home": {
+      "main": {
+        "animated": {
+          "computer": "Computer Whisperer",
+          "web": "Aficionado du Web",
+          "speaker": "Tech Speaker",
+          "motivher": "Motiv'Her Original"
         }
+      },
+      "welcome": {
+        "actions": {
+          "confs": "Voir mes confs",
+          "contact": "M'écrire",
+          "explore": "Arcade"
+        }
+      }
+    },
+    "career": {
+      "title": "Tech!",
+      "subtitle": "Voyage de dev",
+      "description": "Ici, vous pouvez suivre mes pas dans la tech",
+      "type": {
+        "buy": "Achats",
+        "customer": "Service client"
+      },
+      "duration": {
+        "present": "présent",
+        "month": "mois",
+        "year": "an(s)"
+      },
+      "position": {
+        "developer": "Développeur web",
+        "software": "Ingénieur logiciel"
+      },
+      "missions": {
+        "op": {
+          "first": "- Mise en place d'un moteur de recherche CMD+K (sur le modèle de Slack) [Elasticsearch, Laravel, Architecture modulaire, ReactJS, Material UI, API REST]",
+          "second": "- Création de 3 librairies back et front [Laravel, Typescript]",
+          "third": "- Mise à niveau technologique de l'application (de Blade à React)"
+        },
+        "ox": {
+          "first": "- Préparation des recettes en collaboration avec l'équipe produit, en suivant les spécifications",
+          "second": "- Maintenance des versions antérieures",
+          "third": "- Support client"
+        },
+        "re": {
+          "first": "- Mise en place du centre de notifications pour les utilisateurs de la plateforme [Laravel, Bootstrap, jQuery, MariaDB]",
+          "second": "- Implémentation d'une fonctionnalité de tagging sur le modèle de Trello [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
+          "third": "- Mise en place d'une version premium aux fonctionnalités avancées [Laravel, Bootstrap, jQuery, MariaDB, AJAX]",
+          "fourth": "- Adaptation de la plateforme (Responsive Web design)"
+        },
+        "pa": {
+          "first": "- Intégration des prestataires de services de paiements (REST API) et des interfaces graphiques permettant de les exploiter (PayPal, Stripe, Adyen...) en POO [PHP, C#, HTML/CSS, JavaScript]",
+          "second": "- Collaboration avec divers partenaires, banques étrangères en vue d'intégrer leurs services de paiement",
+          "third": "- Rédaction des documentations (technique, utilisateur et d'exploitation)",
+          "fourth": "- Suivi de maintenance opérationnelle des applications développées",
+          "fifth": "- Gestion du support, rapport et suivi des tickets d'incidents"
+        }
+      },
+      "technos": {
+        "api": "API REST",
+        "archi": "architecture modulaire",
+        "oop": "POO"
+      }
+    },
+    "confs": {
+      "title": "Speak!",
+      "subtitle": "J'y ai pris le micro",
+      "description": "Retrouvez ici l'ensemble des conférences à (re)voir !"
+    },
+    "contact": {
+      "title": "Talk!",
+      "subtitle": "Poursuivons la conversation",
+      "description": "À quelques clics d'une mise en relation!",
+      "form": {
+        "error": {
+          "message": "Une erreur s'est produite. Veuillez réessayer plus tard!",
+          "validate": "Cette adresse email n'est pas valide.",
+          "required": "Ce champ est requis."
+        },
+        "success": {
+          "msg": "Le message a bien été envoyé!"
+        },
+        "name": {
+          "label": "Votre nom",
+          "placeholder": ""
+        },
+        "surname": {
+          "label": "Votre prénom",
+          "placeholder": ""
+        },
+        "email": {
+          "label": "Un email auquel vous joindre",
+          "placeholder": ""
+        },
+        "subject": {
+          "label": "Le sujet de votre message",
+          "placeholder": ""
+        },
+        "message": {
+          "label": "L'objet de votre message",
+          "placeholder": ""
+        }
+      }
+    },
+    "explore": {
+      "title": "Playground",
+      "subtitle": "Play!",
+      "description": "Ici, mon terrain de jeu. Enjoy :)!",
+      "fallout_on_passion": {
+        "link_article": "https://selfdeterminationtheory.org/SDT/documents/2003_VallerancBlanchardMageauKoesnterRatelleLeonardGagneMacolais_JPSP.pdf",
+        "title": "Passion Obsessionnelle ou Harmonieuse ? Votre Faction Fallout le révèle",
+        "subtitle": "Fallout on Passion",
+        "miniature": "https://od.lk/s/MzRfMzc1NDk3NTRf/Copie%20de%20GIT%20INIT%20%2820%29.png",
+        "cover": "https://od.lk/s/MzRfMzc1NDk3NThf/Copie%20de%20GIT%20INIT%20%2816%29.png",
+        "cover_sm": "https://od.lk/s/MzRfMzc1NDk3NTZf/Copie%20de%20GIT%20INIT%20%2818%29.png",
+        "init": "https://od.lk/s/MzRfMzg2ODg0MDlf/fallout_on_passion_init_background.png",
+        "init_sm": "https://od.lk/s/MzRfMzg2OTExOTJf/fallout_on_passion_init_background_sm.png",
+        "link_images": "https://alphacoders.com/fallout-4-wallpapers",
+        "resume": "https://od.lk/s/MzRfMzg2OTA1NDBf/fallout_on_passion_quiz_21.png",
+        "resume_sm": "https://od.lk/s/MzRfMzg2OTA5Nzhf/fallout_on_passion_quiz_sm_21.png",
+        "error": "https://od.lk/s/MzRfMzg2OTE0MTVf/fallout_on_passion_error.png",
+        "tabs": {
+          "tab": {
+            "title_1": "Info",
+            "title_2": "Langue",
+            "title_3": "Copyright",
+            "title_4": "Sortie"
+          },
+          "info": {
+            "title": "Qu'est-ce donc",
+            "subTitle": "L'Échelle de la Passion",
+            "first": "Basée sur cette <0>étude,</0> dans laquelle Vallerand & al. ont conçu une échelle qui vise à déterminer la passion d'une personne pour une actiivté donnée",
+            "first_bis": "Et ce, en répondant à 17 assertions à noter sur une échelle de 0 à 7.",
+            "second": "Ceci est une version codée de celui-ci avec une touche d'originalité ! Il est basé sur la série de jeux Fallout.",
+            "third": "Non seulement, vous seriez en mesure de savoir si votre passion en tant qu'ingénieur logiciel, développeur(euse) web ou encore programmeur(euse) est harmonieuse ou obsessionnelle.",
+            "fourth": "Mais le résultat de votre test participera à une fresque plus large.",
+            "fifth": "La faction majoritaire façonnera un paysage évolutif que vous pouvez trouver <0>ici</0>.",
+            "sixth": "À vos tests !"
+          },
+          "lang": {
+            "title": "Langue",
+            "subTitle": "Choisir une langue"
+          },
+          "credits": {
+            "title": "Droits réservés",
+            "subTitle": "Toutes les images sont soumis au copyright de:"
+          },
+          "exit": {
+            "title": "Carte",
+            "subTitle_1": "",
+            "subTitle_2": "En dehors de la sandbox"
+          }
+        },
+        "quiz": {
+          "chip": "Sélectionner une industrie",
+          "label": "Choisis ta spécialité tech :)",
+          "chip_name": "Entrer son identité",
+          "label_name": "Ton (sur)nom :)",
+          "indicators": {
+            "say_hi": "Salut, {{ userName }} \uD83D\uDC4B!",
+            "press_confirm": "\uD83D\uDC7E Appuies Sur Entrer",
+            "error": "\uD83E\uDE84 Une Erreur À Réparer",
+            "error_tip": "Seules les lettres comptent"
+          },
+          "activity": {
+            "fields": {
+              "coding": "coding",
+              "gaming": "gaming",
+              "designing": "designing",
+              "machine_learning": "machine learning"
+            },
+            "coding": {
+              "field": [
+                "Coding",
+                "Programming"
+              ],
+              "nameField": [
+                "Coder",
+                "Programmer"
+              ],
+              "longNameField": "programmer/coder"
+            },
+            "gaming": {
+              "field": [
+                "Gaming"
+              ],
+              "nameField": [
+                "Gamer"
+              ],
+              "longNameField": "gaming"
+            },
+            "designing": {
+              "field": [
+                "Designing"
+              ],
+              "nameField": [
+                "Designer"
+              ],
+              "longNameField": "designing"
+            },
+            "machine learning": {
+              "field": [
+                "Machine Learning"
+              ],
+              "nameField": [
+                "Machine Learning Engineer"
+              ],
+              "longNameField": "machine learning"
+            }
+          },
+          "result": {
+            "img": {
+              "citizen": "https://od.lk/s/MzRfMzg3MDAyNDlf/result_citizen_fr.png",
+              "paladin": "https://od.lk/s/MzRfMzg2ODg0MTVf/result_paladin_fr.png",
+              "superMutant": "https://od.lk/s/MzRfMzg2ODg0MjRf/result_supermutant_fr.png"
+            },
+            "label": {
+              "coding": {
+                "approach": "Vision",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Outils favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              },
+              "gaming": {
+                "approach": "Gaming Approach",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Jeux favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              },
+              "designing": {
+                "approach": "Design Approach",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Outils favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              },
+              "machine_learning": {
+                "approach": "Approach to Machine Learning",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Outils favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lives": {
+      "title": "Live!",
+      "subtitle": "Vu sur YouTube",
+      "description": "Retrouvez ici l'ensemble des lives à (re)voir !",
+      "tags": {
+        "all": "toutes",
+        "testimony": "témoignage",
+        "videos": "vidéos",
+        "english": "en anglais",
+        "french": "en français"
+      }
+    },
+    "press": {
+      "title": "Read!",
+      "subtitle": "J'y suis mentionnée",
+      "description": "Retrouvez ici l'ensemble des articles me concernant",
+      "tags": {
+        "actuality": "actualié",
+        "conference": "conférence",
+        "retraining": "reconversion",
+        "solidarity": "solidarité"
+      }
+    },
+    "quotes": {
+      "career": "It's not the destination, it's the journey | Ralph Waldo Emerson",
+      "confs": "Speakers who talk about what life has taught them never fail to keep the attention of their listeners | Dale Carnegie",
+      "lives": "A good laugh makes any interview or any conversation, so much better | Barbara Walters",
+      "press_title": "I don't know if I'll ever get used to hearing my name being mentioned alongside all these other legendary artists that have come before me | Gretchen Wilson",
+      "game_title": "Play is training for the unexpected | Marc Bekoff"
+    },
+    "scroll": {
+      "home": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "🖥️ FullStack Developer",
+        "third_section": "✌️ Welcome here !",
+        "last_section": "C'est tout pour l'instant"
+      },
+      "confs": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "🎤 Talk!",
+        "third_section": "🎫 Les conférences",
+        "last_section": "Merci d'avoir scrollé!"
+      },
+      "lives": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "📼 Live!",
+        "third_section": "🎞️ Les lives",
+        "last_section": "Vous avez vu tous les lives"
+      },
+      "press": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "📰 Read!",
+        "third_section": "📃 Les articles",
+        "last_section": "Vous avez parcouru la page"
+      },
+      "contact": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "☎️ Chat!",
+        "third_section": "🗨️ Échangeons!",
+        "last_section": "La fin"
+      },
+      "explore": {
+        "first_section": " < Playground ! /> ",
+        "second_section": "🎮 Game On!",
+        "third_section": "🕹️ Bac à Sable",
+        "last_section": "C'est tout pour l'instant"
+      }
     }
+  }
 }
