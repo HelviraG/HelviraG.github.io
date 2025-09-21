@@ -1,0 +1,8 @@
+/client/.vite
+/client/build
+/client/node_modules
+/server/database
+/server/node_modules
+/server/dist
+/client/public/_redirects
+.env
