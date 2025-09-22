@@ -24,38 +24,51 @@ export const FooterClock = styled(Box)(({
   flex: 1
 }));
 
-export const FooterLang = styled(Box)(({
+export const FooterLang = styled(Box)(({ theme }) => ({
   display: 'flex', 
   flex: 1, 
   gap: 10, 
-  justifyContent: 'center'
+  justifyContent: 'center',
+
+  '& .MuiTypography-root': {
+    color: theme.game.special.dark,
+    fontWeight: 800,
+  }
 }));
 
 export const LangSwitch = styled(Switch)(({ theme }) => ({
-  width: 28,
-  height: 16,
+  width: 47,
+  height: 18,
   padding: 0,
   display: 'flex',
+
   '&:active': {
     '& .MuiSwitch-thumb': {
       width: 15,
     },
+
     '& .MuiSwitch-switchBase.Mui-checked': {
       transform: 'translateX(9px)',
     },
   },
+
   '& .MuiSwitch-switchBase': {
     padding: 2,
+
     '&.Mui-checked': {
-      transform: 'translateX(12px)',
+      transform: 'translateX(29px)',
       color: theme.palette.background.default,
+
       '& + .MuiSwitch-track': {
         opacity: 1,
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: '#E74C3C',
+        border: `4px solid ${theme.game.special.dark}`,
       },
     },
   },
+
   '& .MuiSwitch-thumb': {
+    border: `1px solid ${theme.game.special.dark}`,
     boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
     width: 12,
     height: 12,
@@ -68,8 +81,9 @@ export const LangSwitch = styled(Switch)(({ theme }) => ({
   '& .MuiSwitch-track': {
     borderRadius: 16 / 2,
     opacity: 1,
-    backgroundColor: 'rgba(0, 0, 0, .25)',
+    backgroundColor: theme.game.warning.dark,
     boxSizing: 'border-box',
+    border: `4px solid ${theme.game.special.dark}`,
   },
 }));
 
