@@ -28,7 +28,7 @@ export const DrawerWrapper = styled(Drawer)(({ theme }) => ({
         },
 
         '&:before': {
-            background: 'url(https://i.ibb.co/Tq5fDZj/left-side-bg-2.jpg) no-repeat center center',
+            background: 'url(https://i.ibb.co/pJk93fF/helvira-g-a-computer-related-background-usable-as-a-wallpaper-i-46c333e3-7496-4ffb-bf64-1969c5a32f68.png) no-repeat center center',
             backgroundSize: 'cover',
             content: '""',
             display: 'block',
@@ -46,14 +46,15 @@ export const DrawerCloseWrapper = styled(Box)(({ theme }) => ({
     top: 0,
     borderRadius: '0% 0% 0% 134%',
     border: '2px solid transparent',
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: alpha('#E74C3C', 0.5),
     color: 'background.default',
     padding: '8px 2px 14px 16px',
 
     '&:hover': {
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: alpha(theme.palette.background.default, 0.5),
+
         '& .MuiSvgIcon-root': {
-            color: theme.palette.primary.main,
+            color: '#E74C3C'
         }
     }
 }));
@@ -71,9 +72,14 @@ export const DrawerAvatarWrapper = styled(Box)(({ theme }) => ({
 
 export const DrawerAvatar = styled(Avatar)(({ theme }) => ({
     border: '0.15em solid white',
-    boxShadow: `inset 0 0 0 0.2em ${theme.palette.primary.dark}, inset 0 0 1em 0.3em ${theme.palette.primary.dark}, inset 1em 1em 0.4em rgba(0, 0, 0, 0.6), 0 0 0 0.2em ${theme.palette.primary.dark}, 0 0 1em 0.3em ${theme.palette.primary.dark}, 1em 1em 0.4em rgba(0, 0, 0, 0.6)`,
-    height: 150, 
-    width: 150 
+    boxShadow: `inset 0 0 0 0.2em #E74C3C, inset 0 0 1em 0.3em #E74C3C, inset 1em 1em 0.4em rgba(0, 0, 0, 0.6), 0 0 0 0.2em #E74C3C, 0 0 1em 0.3em #E74C3C, 1em 1em 0.4em rgba(0, 0, 0, 0.6)`,
+    height: 150,
+    width: 150,
+
+    '& img': {
+        transform: 'scale(1.6)',
+        objectPosition: '1px 22px',
+    }
 }));
 
 export const DrawerChipWrapper = styled(Box)(({ theme }) => ({
@@ -84,7 +90,7 @@ export const DrawerChipWrapper = styled(Box)(({ theme }) => ({
 
 export const DrawerChip = styled(Chip)(({ theme }) => ({
     border: "0.15em solid white",
-    boxShadow: "inset 0 0 0 0.2em #2E33DB, inset 0 0 1em 0.3em #2E33DB, inset 1em 1em 0.4em rgba(0, 0, 0, 0.6), 0 0 0 0.2em #2E33DB, 0 0 1em 0.3em #2E33DB, 1em 1em 0.4em rgba(0, 0, 0, 0.6)",
+    boxShadow: "inset 0 0 0 0.2em #E74C3C, inset 0 0 1em 0.3em #E74C3C, inset 1em 1em 0.4em rgba(0, 0, 0, 0.6), 0 0 0 0.2em #E74C3C, 0 0 1em 0.3em #E74C3C, 1em 1em 0.4em rgba(0, 0, 0, 0.6)",
     color: theme.palette.background.default, 
     fontWeight: 100, 
     fontSize: 16,
@@ -99,7 +105,7 @@ export const SocialMediaWrapper = styled(Box)(({ theme }) => ({
     gap: theme.spacing(2),
 
     '& .MuiButtonBase-root': {
-        backgroundColor: alpha(theme.palette.primary.dark, 0.9),
+        backgroundColor: alpha('#E74C3C', 0.9),
         borderRadius: '20%',
         color: theme.palette.background.default,
         transition: 'all .4s ease',
@@ -141,7 +147,7 @@ export const CardBox = styled(Box)(({ theme }) => ({
     zIndex: 6000,
 
     '&::-webkit-scrollbar': {
-        borderRadius: '10px',
+        borderRadius: '20px',
         width: '4px',
     },
         
@@ -163,12 +169,13 @@ export const CardBoxWrapper = styled(Box)(({ theme }) => ({
 }));
 
 export const CardWrapper = styled(Card)(({ theme }) => ({
-    backgroundColor: alpha(theme.palette.primary.dark, 0.7),
+    backgroundColor: alpha('#E74C3C', 0.7),
     border: '0.15em solid white',
-    boxShadow: '0 0 0 0.2em #2E33DB, 0 0 1em 0.3em #2E33DB, 1em 1em 0.4em rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 0 0 0.2em #E74C3C, 0 0 1em 0.3em #E74C3C, 1em 1em 0.4em rgba(0, 0, 0, 0.1)',
     margin: '0 auto',
     marginTop: 2,
     maxWidth: '80%',
+
     '& .MuiTypography-root': {
         color: theme.palette.background.default,
         fontWeight: 100,
