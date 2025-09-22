@@ -7,6 +7,7 @@ import {
     List,
     ListItem, 
     ListItemIcon, 
+    ListItemIconProps,
     ListItemButton, 
     ListItemButtonProps, 
     ListItemProps, 
@@ -16,7 +17,8 @@ import {
 } from '@mui/material';
 
 interface MenuDrawerProps extends DrawerProps {
-    menuWidth?: number
+    menuWidth?: number;
+    menuColor?: string;
 }
 
 interface MenuItemProps extends ListItemTextProps {
@@ -32,12 +34,19 @@ interface MenuListItemButtonProps extends ListItemButtonProps {
     isActive?: boolean;
 }
 
+interface MenuListIconProps extends ListItemIconProps {
+    iconColor?: string;
+}
+
 export const MenuWrapper = styled(Drawer, {
-    shouldForwardProp: (prop) => prop !== 'menuWidth',
-})<MenuDrawerProps>(({ menuWidth, theme }) => ({
+    shouldForwardProp: (prop) => prop !== 'menuWidth' && prop !== 'menuColor',
+})<MenuDrawerProps>(({ menuWidth, menuColor, theme }) => ({
     cursor: 'none',
     '.MuiDrawer-paper': { 
         backgroundColor: alpha(theme.palette.text.primary, 0.93),
+        ...(menuColor !== '' && menuColor && {
+            backgroundColor: alpha(menuColor, 0.93),
+        }),
         width: `${menuWidth}px`, 
 
         [theme.breakpoints.down('md')]: {
@@ -132,8 +141,13 @@ export const MenuListItemButton = styled(ListItemButton, {
     }
 })) as typeof ListItemButton;
 
-export const MenuListIcon = styled(ListItemIcon)(({ theme }) => ({
+export const MenuListIcon = styled(ListItemIcon, {
+    shouldForwardProp: (prop) => prop !== 'iconColor',
+})<MenuListIconProps>(({ iconColor, theme }) => ({
     '.MuiSvgIcon-root': {
         color: alpha(theme.palette.background.default, 0.5),
+        ...(iconColor && {
+            color: iconColor,
+        })
     }
 }));
