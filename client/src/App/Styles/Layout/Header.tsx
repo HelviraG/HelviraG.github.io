@@ -1,10 +1,23 @@
-import { alpha, Badge, Box, styled } from '@mui/material';
+import { alpha, Badge, BadgeProps, Box, styled } from '@mui/material';
 
-export const StyledBadge = styled(Badge)(({ theme }) => ({
+interface StyledBadgeProps extends BadgeProps {
+  isRedDot?: boolean;
+}
+
+export const StyledBadge = styled(Badge, {
+  shouldForwardProp: (prop) => prop !== 'isRedDot',
+})<StyledBadgeProps>(({ theme, isRedDot }) => ({
   '& .MuiBadge-badge': {
-    backgroundColor: theme.palette.primary.dark,
-    color: theme.palette.primary.dark,
+    backgroundColor: '#E74C3C',
+    color: '#E74C3C',
+
+    ...(isRedDot && {
+      backgroundColor: theme.palette.error.dark,
+      color: theme.palette.error.dark,
+    }),
+
     boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+
     '&::after': {
       position: 'absolute',
       top: 0,
@@ -17,6 +30,7 @@ export const StyledBadge = styled(Badge)(({ theme }) => ({
       content: '""',
     },
   },
+
   '@keyframes ripple': {
     '0%': {
       transform: 'scale(.8)',
