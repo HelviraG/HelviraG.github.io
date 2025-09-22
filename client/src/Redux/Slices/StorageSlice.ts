@@ -24,5 +24,5 @@ export const storageSlice = createSlice({
 export default storageSlice.reducer;
 
 export const { setAppLang } = storageSlice.actions;
-
+export const getAppLang = (state: RootState) => state.storage.language;
 export const storageState = (state: RootState) => state.storage;
