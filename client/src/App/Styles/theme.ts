@@ -1,11 +1,14 @@
 import { alpha, createTheme, getContrastRatio } from '@mui/material';
 import { grey } from '@mui/material/colors';
 
-const primaryBase = '#2E33DB';
+const primaryBase = '#E74C3C';
 const primaryMain = alpha(primaryBase, 0.7);
 
 const secondaryBase = '#9499DD';
 const secondaryMain = alpha(secondaryBase, 0.7);
+
+const errorBase = '#FF207A';
+const errorMain = alpha(errorBase, 0.7);
 
 const background = '#FFF';
 
@@ -35,6 +38,44 @@ declare module '@mui/material/styles' {
                 dark: string;
             }
         };
+        game: {
+            primary: {
+                light: string;
+                dark: string;
+            },
+            warning: {
+                light: string;
+                dark: string;
+            },
+            info: {
+                light: string;
+                dark: string;
+            },
+            success: {
+                light: string;
+                dark: string;
+            },
+            purple: {
+                light: string;
+                dark: string;
+            },
+            special: {
+                grey: string;
+                dark: string;
+                blue: string;
+                greeny: string;
+                magenta: string;
+                yellow: string;
+                orange: string;
+                violet: string;
+                red: string;
+                iceBlue: {
+                    light: string;
+                    medium: string;
+                    dark: string;
+                };
+            }
+        }
     }
 
     interface ThemeOptions {
@@ -52,6 +93,44 @@ declare module '@mui/material/styles' {
                 dark: string;
             }
         };
+        game: {
+            primary: {
+                light: string;
+                dark: string;
+            },
+            warning: {
+                light: string;
+                dark: string;
+            },
+            info: {
+                light: string;
+                dark: string;
+            },
+            success: {
+                light: string;
+                dark: string;
+            },
+            purple: {
+                light: string;
+                dark: string;
+            },
+            special: {
+                grey: string;
+                dark: string;
+                blue: string;
+                greeny: string;
+                magenta: string;
+                yellow: string;
+                orange: string;
+                violet: string;
+                red: string;
+                iceBlue: {
+                    light: string;
+                    medium: string;
+                    dark: string;
+                };
+            }
+        }
     }
 }
 
@@ -95,12 +174,21 @@ const theme = createTheme({
         info: {
             main: '#6D74DB'
         },
+        error: {
+            main: errorMain,
+            light: alpha(errorBase, 0.5),
+            dark: alpha(errorBase, 0.9),
+            contrastText: getContrastRatio(errorMain, '#fff') > 4.5 ? '#fff' : '#111',
+        },
         background: {
             paper: background,
         },
         text: {
             primary: '#000333'
         },
+        warning: {
+            main: '#F57A17'
+        }
     },
     event: {
         primary: {
@@ -116,13 +204,50 @@ const theme = createTheme({
             dark: '#17D1BD'
         },
     },
+    game: {
+        primary: {
+            light: '#F03986',
+            dark: '#BD2D69'
+        },
+        warning: {
+            light: '#F2CA3C',
+            dark: '#FFD600'
+        },
+        info: {
+            light: '#3C9BF2',
+            dark: '#2F7ABF'
+        },
+        success: {
+            light: '#43DD65',
+            dark: '#34AB4E'
+        },
+        purple: {
+            light: '#F2E7FF',
+            dark: '#B782F3',
+        },
+        special: {
+            grey: '#E9E9E9',
+            dark: '#000000',
+            blue: '#49DBC8',
+            greeny: '#BEFF6C',
+            magenta: '#FD9FDD',
+            yellow: '#FFF172',
+            orange: '#FC7339',
+            violet: '#AF96FB',
+            red: '#DF1443',
+            iceBlue: {
+                light: '#00CEC9',
+                medium: '#55EFC4',
+                dark: '#0984e3'
+            },
+        }
+    },
     components: {
         MuiCssBaseline: {
             styleOverrides: {
                 body: {
                     backgroundColor: background,
                     margin: '0 auto',
-                    maxWidth: '100%',
                     color: '#000333',
                     cursor: 'none',
 
@@ -130,14 +255,22 @@ const theme = createTheme({
                         borderRadius: '10px',
                         width: '4px',
                     },
-                      
+
                     '&::-webkit-scrollbar-track': {
                         background: 'rgb(255 255 255 / 10%)',
                     },
-                      
+
                     '&::-webkit-scrollbar-thumb': {
                         background: alpha(primaryBase, 0.3),
                         borderRadius: '50px'
+                    },
+
+                    '@media (min-width: 1300px)': {
+                        maxWidth: '80%',
+                    },
+
+                    '@media (max-width: 800px)': {
+                        width: 'fit-content',
                     }
                 }
             }
