@@ -66,10 +66,17 @@ export const CardWrapper = styled(Card, {
     marginTop: "4em",
     padding: 0,
     width: "900px",
+
+    [theme.breakpoints.down("lg")]: {
+      flexDirection: "column",
+      width: "100%",
+      marginTop: "2em",
+    },
   }),
 
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
+    width: "100%",
   },
 
   [theme.breakpoints.between("lg", 1356)]: {
