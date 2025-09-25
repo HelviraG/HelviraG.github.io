@@ -16,7 +16,7 @@ export const FalloutPassionPage = ({ isTablet }: { isTablet: boolean }) => {
       <>
         {isTablet ? (
           <Mobile>
-            <Box sx={{ backgroundColor: 'hotpink' }}>
+            <Box>
               <FalloutPassion />
             </Box>
             
