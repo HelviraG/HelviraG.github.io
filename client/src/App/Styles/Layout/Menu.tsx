@@ -47,7 +47,7 @@ export const MenuWrapper = styled(Drawer, {
         ...(menuColor !== '' && menuColor && {
             backgroundColor: alpha(menuColor, 0.93),
         }),
-        width: `${menuWidth}px`, 
+        width: `60%`, 
 
         [theme.breakpoints.down('md')]: {
             width: '100%'
