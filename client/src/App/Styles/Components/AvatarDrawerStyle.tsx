@@ -93,7 +93,7 @@ export const DrawerChip = styled(Chip)(({ theme }) => ({
     boxShadow: "inset 0 0 0 0.2em #E74C3C, inset 0 0 1em 0.3em #E74C3C, inset 1em 1em 0.4em rgba(0, 0, 0, 0.6), 0 0 0 0.2em #E74C3C, 0 0 1em 0.3em #E74C3C, 1em 1em 0.4em rgba(0, 0, 0, 0.6)",
     color: theme.palette.background.default, 
     fontWeight: 100, 
-    fontSize: 16,
+    fontSize: 18,
     zIndex: 6000 
 }));
 
@@ -112,6 +112,7 @@ export const SocialMediaWrapper = styled(Box)(({ theme }) => ({
         boxShadow: "0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)",
 
         '&:hover': {
+            backgroundColor: "#5170ff",
             '.MuiSvgIcon-root': {
                 animation: 'jelly-move 0.9s both',
                 "@keyframes jelly-move": {
