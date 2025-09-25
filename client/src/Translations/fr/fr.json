@@ -68,6 +68,11 @@
           "web": "Aficionado du Web",
           "speaker": "Tech Speaker",
           "motivher": "Motiv'Her Original"
+        },
+        "subtext": {
+          "part_1": "qui aime le code",
+          "part_2": "back & front",
+          "part_3": "et partager sur scène."
         }
       },
       "welcome": {
@@ -377,6 +382,12 @@
         "first_section": " < Playground ! /> ",
         "second_section": "🎮 Game On!",
         "third_section": "🕹️ Bac à Sable",
+        "last_section": "C'est tout pour l'instant"
+      },
+      "passion": {
+        "first_section": " < Fallout On Passion🔥 ! /> ",
+        "second_section": "🧩 Le Quiz",
+        "third_section": "🧩 Le Quiz",
         "last_section": "C'est tout pour l'instant"
       }
     }

@@ -68,11 +68,15 @@
           "web": "A Web Enthusiast",
           "speaker": "A Tech Speaker",
           "motivher": "A Motiv'Her Original"
+        },
+        "subtext": {
+          "part_1": "who loves coding <span>back</span> & <span>front</span> and shares <span>stories</span> on stage.",
+          "part_2": "I turn complex tech into <span>playful</span>, <span>powerful</span> experiences - whether I'm writing <span>code</span>, leading projects or inspiring audiences."
         }
       },
       "welcome": {
         "actions": {
-          "confs": "See my talks",
+          "confs": "Watch my talks",
           "contact": "Contact me",
           "explore": "Playground"
         }
@@ -372,6 +376,12 @@
         "first_section": " < Playground ! /> ",
         "second_section": "🎮 Game On!",
         "third_section": "🕹️ SandBox",
+        "last_section": "That's it, for now"
+      },
+      "passion": {
+        "first_section": " < Fallout On Passion🔥 ! /> ",
+        "second_section": "🧩 The Test",
+        "third_section": "🧩 The Test",
         "last_section": "That's it, for now"
       }
     }
