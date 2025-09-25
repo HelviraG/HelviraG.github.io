@@ -6,7 +6,7 @@ import './i18n';
 import theme from './App/Styles/theme';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { AppRoutes } from './Routes/Routes';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -22,12 +22,12 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter basename='/'>    
+      <BrowserRouter>    
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <AppRoutes />
         </ThemeProvider>
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
