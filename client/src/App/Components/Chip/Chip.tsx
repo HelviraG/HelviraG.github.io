@@ -1,8 +1,8 @@
 import React from 'react';
 import { Chip, ChipProps } from '@mui/material';
-import { ChipResource } from '../../Resources/ChipResource';
-import { ChipColor } from '../../Styles/Components/ChipColor';
-import { Tags } from '../../Resources/Enums/Tags';
+import { ChipResource } from '@resources/ChipResource';
+import { ChipColor } from '@styles/Components/ChipColor';
+import { Tags } from '@resources/Enums/Tags';
 
 interface AppChipProps extends ChipProps {
     chipBackground?: string;
@@ -32,7 +32,7 @@ export const AppChip = ({
                         textTransform: 'capitalize', 
                         padding: 1 
                     }} 
-                    variant="filled" 
+                    variant='filled'
                     {...rest} 
                     icon={<ChipResource type={type} />} 
                 />
