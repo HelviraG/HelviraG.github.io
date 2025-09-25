@@ -3,6 +3,17 @@ import { Avatar, Box, styled, Tabs } from '@mui/material';
 export const VideoTabs = styled(Tabs)(({ theme }) => ({
     marginBottom: theme.spacing(4),
 
+    '.Mui-selected': {
+        color: '#ff477e !important',
+        fontWeight: 900
+    },
+        
+    '.MuiTabs-indicator': {
+        backgroundColor: '#ff477e',
+        height: 4,
+        borderRadius: 2
+    },
+
     [theme.breakpoints.down('md')]: {
         marginBottom: theme.spacing(8),
     },
