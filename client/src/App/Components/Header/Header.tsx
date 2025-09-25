@@ -1,46 +1,74 @@
-import React, { useState } from 'react';
-import { Box, IconButton, useMediaQuery } from '@mui/material';
-import { AppAvatar } from '../Avatar/Avatar';
-import HdrWeakRoundedIcon from '@mui/icons-material/HdrWeakRounded';
-import { Menu } from './Menu/Menu';
-import { ScrollText } from './ScrollText/ScrollText';
-import { AppHeader } from '../../Styles/Layout/Header';
+import HdrWeakRoundedIcon from "@mui/icons-material/HdrWeakRounded";
+import { Box, IconButton, useMediaQuery } from "@mui/material";
+import { Routes } from "@resources/Enums/Routes";
+import { AppHeader } from "@styles/Layout/Header";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { AppAvatar } from "../Avatar/Avatar";
+import { Menu } from "./Menu/Menu";
+import { ScrollText } from "./ScrollText/ScrollText";
 
 const tabletDrawer = 600;
 const smartphoneDrawer = 320;
 
 export const Header = () => {
-    const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const location = useLocation();
+  const pathname = location.pathname;
 
-    const isSmartphone = useMediaQuery('(max-width: 425px)');
-    
-    const handleOpenMenu = () => {
-        setOpenMenu(true);
-      };
-    
-    const handleCloseMenu = () => {
-        setOpenMenu(false);
-    };
+  const isSmartphone = useMediaQuery("(max-width: 425px)");
 
-    return (
-        <>
-            <AppHeader component="header">
-                <Box>
-                    <AppAvatar />
-                </Box>
-                <ScrollText />
-                <Box>
-                    <IconButton onClick={handleOpenMenu}>
-                        <HdrWeakRoundedIcon sx={{ color: 'primary.dark' }} />
-                    </IconButton>
-                </Box>
-            </AppHeader>
-            <Menu 
-                openMenu={openMenu} 
-                menuWidth={isSmartphone ? smartphoneDrawer : tabletDrawer} 
-                onClose={handleCloseMenu}
-                closeDrawer={handleCloseMenu}
+  const handleOpenMenu = () => {
+    setOpenMenu(true);
+  };
+
+  const handleCloseMenu = () => {
+    setOpenMenu(false);
+  };
+
+  return (
+    <>
+      <AppHeader component="header" isHomePage={pathname === Routes.HOME} data-testid={"app-header"}>
+        <Box>
+          <AppAvatar />
+        </Box>
+        <ScrollText />
+        <Box>
+          <IconButton
+            onClick={handleOpenMenu}
+            sx={{
+              "&:hover": {
+                backgroundColor: "#1E1E40",
+
+                "& .MuiSvgIcon-root": {
+                  color: "background.default",
+                },
+
+                ...(pathname === Routes.EXPLORE && {
+                  color: "background.default",
+                  backgroundColor: "error.dark",
+                }),
+              },
+            }}
+          >
+            <HdrWeakRoundedIcon
+              sx={{
+                color: "#1E1E40",
+
+                ...(pathname === Routes.EXPLORE && {
+                  color: "error.dark",
+                }),
+              }}
             />
-        </>
-    )
+          </IconButton>
+        </Box>
+      </AppHeader>
+      <Menu
+        openMenu={openMenu}
+        menuWidth={isSmartphone ? smartphoneDrawer : tabletDrawer}
+        onClose={handleCloseMenu}
+        closeDrawer={handleCloseMenu}
+      />
+    </>
+  );
 };
