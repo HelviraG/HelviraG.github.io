@@ -6,6 +6,7 @@ export const BuyMeACoffee = () => {
   return (
     <Box
       sx={(theme) => ({
+        backgroundColor: theme.palette.background.default,
         display: "flex",
         alignItems: "center",
 
@@ -18,7 +19,7 @@ export const BuyMeACoffee = () => {
         },
 
         [theme.breakpoints.up("lg")]: {
-          marginTop: "22em",
+          paddingTop: "2em",
         },
       })}
     >
