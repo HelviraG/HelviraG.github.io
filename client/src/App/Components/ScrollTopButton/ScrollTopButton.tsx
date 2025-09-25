@@ -28,7 +28,7 @@ export const ScrollTopButton = () => {
                     size="small" 
                     color="primary" 
                     sx={{
-                        bottom: '10%',
+                        bottom: '100px',
                         boxShadow: '0px 4px 32px rgba(46, 51, 219, 0.4)',
                         position: 'sticky',
                         left: '5%'
