@@ -23,7 +23,7 @@ interface HeroTitleBoxProps extends BoxProps {
 }
 
 export const TitleWrapper = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
+  backgroundColor: "#00c79a",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -48,11 +48,11 @@ export const TitleBox = styled(Box, {
 
     "&:nth-of-type(1)": {
       color: "transparent",
-      WebkitTextStroke: `2px ${theme.palette[titleColor as PaletteKey].main}`,
+      WebkitTextStroke: `2px #1E1E40`,
     },
 
     "&:nth-of-type(2)": {
-      color: `${theme.palette[titleColor as PaletteKey].main}`,
+      color: '#1E1E40',
       animation: "wave 4s ease-in-out infinite",
     },
 
@@ -68,8 +68,8 @@ export const TitleBox = styled(Box, {
     },
 
     [theme.breakpoints.down("md")]: {
-      fontSize: "8em",
-      left: "34px!important",
+      fontSize: "6em",
+      left: "-1em!important",
     },
 
     [theme.breakpoints.down("lg")]: {
@@ -104,7 +104,6 @@ export const HeroImgBox = styled(Box, {
   margin: "30px 30px 30px 0px",
   borderRadius: "20px",
   alignItems: "center",
-  height: "520px",
   justifyContent: "center",
   backgroundSize: "cover",
   position: "relative",
@@ -119,6 +118,7 @@ export const HeroImgBox = styled(Box, {
     margin: "30px 0px 30px 0px",
 
     width: "100%",
+    height: "600px",
 
     "& span": {
       left: "25%",
@@ -127,10 +127,6 @@ export const HeroImgBox = styled(Box, {
 
   [theme.breakpoints.up(1240)]: {
     maxHeight: "-webkit-fill-available",
-  },
-
-  [theme.breakpoints.up(1440)]: {
-    height: "720px",
   },
 
   [theme.breakpoints.up(20000)]: {
@@ -162,7 +158,7 @@ export const SubTitleBox = styled(Box)(({ theme }) => ({
 export const SubTiTleDivider = styled(Divider)(({ theme }) => ({
   paddingBottom: theme.spacing(8),
   marginBottom: theme.spacing(4),
-  borderColor: theme.palette.primary.main,
+  borderColor: "#cbef85",
 
   [theme.breakpoints.down("md")]: {
     paddingBottom: theme.spacing(4),
