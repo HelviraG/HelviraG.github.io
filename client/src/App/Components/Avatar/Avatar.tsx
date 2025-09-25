@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { Avatar } from '@mui/material';
-import { StyledBadge } from '../../Styles/Layout/Header';
+import { StyledBadge } from '@styles/Layout/Header';
 import { AvatarDrawer } from '../Drawer/AvatarDrawer';
+import { useLocation } from 'react-router-dom';
+import { Routes } from '@resources/Enums/Routes';
 
 export const AppAvatar = () => {
     const [expandAvatar, setExpandAvatar] = useState<boolean>(false);
+    const location = useLocation();
+
+    const pathname = location.pathname;
 
     const handleClickAvatar = () => {
         setExpandAvatar(true);
@@ -20,8 +25,11 @@ export const AppAvatar = () => {
                 overlap="circular"
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                 variant="dot"
-                onClick={handleClickAvatar}>
-                <Avatar alt="Helvira Goma" src="https://i.ibb.co/fdH9J4F/ww0u-V-EZ-400x400.jpg" />
+                onClick={handleClickAvatar}
+                isRedDot={pathname === Routes.EXPLORE}
+                isHomePage={pathname === Routes.HOME}
+            >
+                <Avatar alt="Helvira Goma Avatar" src="https://i.ibb.co/qMnXS5Vx/Design-sans-titre-20-removebg-preview.png" />
             </StyledBadge>
             <AvatarDrawer expandAvatar={expandAvatar} handleCloseAvatar={handleCloseAvatar} />
         </>   
