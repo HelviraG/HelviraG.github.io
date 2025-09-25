@@ -1,49 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
-import useScrollText from '../../../../Hooks/useScrollText';
+import useScrollText from "@hooks/useScrollText";
+import { Box, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 
 export const ScrollText = () => {
-    const [scrollY, setScrollY] = useState<number>(0);
-    const [text, setText] = useState<string>('');
+  const [scrollY, setScrollY] = useState<number>(0);
 
-    const { pageScrollText } = useScrollText(); 
+  const [text, setText] = useState<string>("");
 
-    const handleScrollText = () => {
-        const offsetHeight = document.documentElement.offsetHeight;
-        const innerHeight = window.innerHeight;
-        const scrollTop = document.documentElement.scrollTop;
+  const { pageScrollText } = useScrollText();
 
-        const hasReachedBottom = offsetHeight - (innerHeight + scrollTop) <= 10;
+  const handleScrollText = () => {
+    const offsetHeight = document.documentElement.offsetHeight;
+    const innerHeight = window.innerHeight;
+    const scrollTop = document.documentElement.scrollTop;
 
-        setScrollY(window.scrollY);
-        
-        if (pageScrollText && pageScrollText[0]) {
-            if (hasReachedBottom) {
-                setText(pageScrollText[0].last_section);
-            } else if (window.scrollY < 2) {
-                setText(pageScrollText[0].first_section);
-            } else if (window.scrollY >= 2 && window.scrollY <= 230) {
-                setText(pageScrollText[0].second_section);
-            } else {
-                setText(pageScrollText[0].third_section);
-            }
-        }
-    };
+    const hasReachedBottom = offsetHeight - (innerHeight + scrollTop) <= 10;
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScrollText);
-    });
+    setScrollY(window.scrollY);
 
-    return (
-        <Box sx={{ textAlign: 'center', width: '50%' }}>
-            <Typography 
-                variant="body1" 
-                sx={(theme) => ({ 
-                    [theme.breakpoints.down('md')]: {
-                        fontSize: '14px',
-                    },
-                })}
-            >{scrollY ? text : pageScrollText[0].first_section}</Typography>
-        </Box>
-    )
-}
+    if (pageScrollText && pageScrollText[0]) {
+      if (hasReachedBottom) {
+        setText(pageScrollText[0].last_section);
+      } else if (window.scrollY < 2) {
+        setText(pageScrollText[0].first_section);
+      } else if (window.scrollY >= 2 && window.scrollY <= 230) {
+        setText(pageScrollText[0].second_section);
+      } else {
+        setText(pageScrollText[0].third_section);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollText);
+  });
+
+  return (
+    <Box sx={{ textAlign: "center", width: "50%", color: "#1E1E40" }}>
+      <Typography
+        variant="body1"
+        sx={(theme) => ({
+          [theme.breakpoints.down("md")]: {
+            fontSize: "14px",
+          },
+        })}
+      >
+        {scrollY ? text : pageScrollText[0].first_section}
+      </Typography>
+    </Box>
+  );
+};
