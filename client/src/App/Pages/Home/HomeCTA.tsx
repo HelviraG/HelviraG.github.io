@@ -13,10 +13,7 @@ export const HomeCTA = () => {
             <HomeCTAButton startIcon={<PlayCircleOutlineRoundedIcon />} href={`${Routes.CONFS}`}>
                 {t('app.home.welcome.actions.confs')}
             </HomeCTAButton>
-            <HomeCTAButton startIcon={<ForwardToInboxRoundedIcon />} href={`${Routes.CONTACT}`}>
-                {t('app.home.welcome.actions.contact')}
-            </HomeCTAButton>
-            <HomeCTAButton startIcon={<VideogameAssetIcon />} href={`${Routes.EXPLORE}`}>
+            <HomeCTAButton startIcon={<VideogameAssetIcon />} href={`${Routes.EXPLORE}`} isSecondary>
                 {t('app.home.welcome.actions.explore')}
             </HomeCTAButton>
         </HomeCTABox>
