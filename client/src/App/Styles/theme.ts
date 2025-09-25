@@ -1,5 +1,6 @@
 import { alpha, createTheme, getContrastRatio } from '@mui/material';
 import { grey } from '@mui/material/colors';
+import { Routes } from '../Resources/Enums/Routes';
 
 const primaryBase = '#E74C3C';
 const primaryMain = alpha(primaryBase, 0.7);
@@ -11,6 +12,7 @@ const errorBase = '#FF207A';
 const errorMain = alpha(errorBase, 0.7);
 
 const background = '#FFF';
+const pathname = window.location.pathname;
 
 declare module '@mui/material/styles' {
     interface BreakpointOverrides {
@@ -227,7 +229,7 @@ const theme = createTheme({
         },
         special: {
             grey: '#E9E9E9',
-            dark: '#000000',
+            dark: '#1E1E40',
             blue: '#49DBC8',
             greeny: '#BEFF6C',
             magenta: '#FD9FDD',
@@ -266,7 +268,7 @@ const theme = createTheme({
                     },
 
                     '@media (min-width: 1300px)': {
-                        maxWidth: '80%',
+                        maxWidth: '100%',
                     },
 
                     '@media (max-width: 800px)': {
