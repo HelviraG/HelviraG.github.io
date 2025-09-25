@@ -8,7 +8,6 @@ import { MainSection } from "./Home/MainSection";
 
 export const Home = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();
-  const listConfs = useListConferencesQuery();
 
   useDocumentTitle(`Helvira Goma | 🖲️ ${t("app.menu.home")}`);
 
