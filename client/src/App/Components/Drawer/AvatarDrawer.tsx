@@ -1,79 +1,105 @@
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-    CardActions,
-    IconButton, 
-    Typography 
-} from '@mui/material';
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import { 
-    CardBox,
-    CardBoxWrapper, 
-    CardContentBox, 
-    CardContentTypography, 
-    CardWrapper, 
-    DrawerAvatar, 
-    DrawerAvatarWrapper, 
-    DrawerChip, 
-    DrawerChipWrapper, 
-    DrawerClose, 
-    DrawerCloseWrapper, 
-    DrawerWrapper, 
-    SocialMediaWrapper 
-} from '../../Styles/Components/AvatarDrawerStyle';
-import { useTranslation } from 'react-i18next';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import useClickOutside from '../../../Hooks/useClickOutside';
-import { Routes } from '../../Resources/Enums/Routes';
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import { CardActions, IconButton, Link, Typography } from "@mui/material";
+import { Routes } from "@resources/Enums/Routes";
+import {
+  CardBox,
+  CardBoxWrapper,
+  CardContentBox,
+  CardContentTypography,
+  CardWrapper,
+  DrawerAvatar,
+  DrawerAvatarWrapper,
+  DrawerChip,
+  DrawerChipWrapper,
+  DrawerClose,
+  DrawerCloseWrapper,
+  DrawerWrapper,
+  SocialMediaWrapper,
+} from "@styles/Components/AvatarDrawerStyle";
+import { useRef } from "react";
+import { Trans, useTranslation } from "react-i18next";
+import { Link as RouterLink } from "react-router-dom";
+import useClickOutside from "../../../Hooks/useClickOutside";
 
 interface AvatarDrawerProps {
-    expandAvatar: boolean;
-    handleCloseAvatar: () => void;
+  expandAvatar: boolean;
+  handleCloseAvatar: () => void;
 }
 
 export const AvatarDrawer = ({
-    expandAvatar,
-    handleCloseAvatar
+  expandAvatar,
+  handleCloseAvatar,
 }: AvatarDrawerProps) => {
-    const { t } = useTranslation();
-    const drawerRef = useRef(null);
+  const { t } = useTranslation();
+  const drawerRef = useRef(null);
 
-    useClickOutside(drawerRef, handleCloseAvatar);
+  useClickOutside(drawerRef, handleCloseAvatar);
 
-    return (
-        <DrawerWrapper open={expandAvatar} PaperProps={{ ref: drawerRef }}>
-            <DrawerCloseWrapper>
-                <DrawerClose disableRipple onClick={handleCloseAvatar}>
-                    <CloseRoundedIcon />
-                </DrawerClose>
-            </DrawerCloseWrapper>
-            <DrawerAvatarWrapper>
-                <DrawerAvatar 
-                    alt="Helvira Goma" 
-                    src="https://i.ibb.co/fdH9J4F/ww0u-V-EZ-400x400.jpg" 
+  return (
+    <DrawerWrapper open={expandAvatar} PaperProps={{ ref: drawerRef }}>
+      <DrawerCloseWrapper>
+        <DrawerClose disableRipple onClick={handleCloseAvatar}>
+          <CloseRoundedIcon />
+        </DrawerClose>
+      </DrawerCloseWrapper>
+      <DrawerAvatarWrapper>
+        <DrawerAvatar
+          alt="Helvira Goma - Computer Whisperer - Tech Speaker - Web Enthusiast"
+          src="https://i.ibb.co/0Bhnz0g/1715867189847-1.jpg"
+        />
+      </DrawerAvatarWrapper>
+      <DrawerChipWrapper>
+        <DrawerChip label="Helvira Goma" />
+      </DrawerChipWrapper>
+      <SocialMediaWrapper>
+        <IconButton component={RouterLink} to={Routes.LINKEDIN}>
+          <LinkedInIcon />
+        </IconButton>
+        <IconButton component={RouterLink} to={Routes.GITHUB}>
+          <GitHubIcon />
+        </IconButton>
+        <IconButton component={RouterLink} to={Routes.TWITTER}>
+          <TwitterIcon />
+        </IconButton>
+      </SocialMediaWrapper>
+      <CardBox>
+        <CardBoxWrapper>
+          <CardWrapper>
+            <CardContentBox>
+              <CardContentTypography variant="h5">
+                {t("app.menu.profile.about")}
+              </CardContentTypography>
+              <Typography
+                sx={(theme) => ({
+                  color: "#FB0F5A",
+                  cursor: "none",
+                  fontWeight: 900,
+                  textDecoration: "none",
+                })}
+              >
+                <Trans
+                  i18nKey="app.menu.profile.about_text"
+                  components={[
+                    <Link
+                      href="https://motivher.fr"
+                      sx={{
+                        color: "lightpink!important",
+                        cursor: "none",
+                        fontWeight: "900!important",
+                        textDecoration: "none",
+                      }}
+                    />,
+                  ]}
                 />
-            </DrawerAvatarWrapper>
-            <DrawerChipWrapper>
-                <DrawerChip label='Helvira Goma' />
-            </DrawerChipWrapper>
-            <SocialMediaWrapper>
-                <IconButton component={Link} to={Routes.LINKEDIN}><LinkedInIcon /></IconButton>
-                <IconButton component={Link} to={Routes.GITHUB}><GitHubIcon /></IconButton>
-                <IconButton component={Link} to={Routes.TWITTER}><TwitterIcon /></IconButton>
-            </SocialMediaWrapper>
-            <CardBox>
-                <CardBoxWrapper>
-                    <CardWrapper>
-                        <CardContentBox>
-                            <CardContentTypography variant="h5">{t('app.menu.profile.about')}</CardContentTypography>
-                            <Typography>{t('app.menu.profile.about_text')}</Typography>
-                        </CardContentBox>
-                        <CardActions></CardActions>
-                    </CardWrapper>
-                </CardBoxWrapper>
-            </CardBox>
-        </DrawerWrapper>
-    )
-}
+              </Typography>
+            </CardContentBox>
+            <CardActions></CardActions>
+          </CardWrapper>
+        </CardBoxWrapper>
+      </CardBox>
+    </DrawerWrapper>
+  );
+};
