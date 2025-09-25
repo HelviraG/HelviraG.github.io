@@ -2,21 +2,20 @@ import { alpha, Badge, BadgeProps, Box, styled } from '@mui/material';
 
 interface StyledBadgeProps extends BadgeProps {
   isRedDot?: boolean;
+  isHomePage?: boolean;
 }
 
 export const StyledBadge = styled(Badge, {
-  shouldForwardProp: (prop) => prop !== 'isRedDot',
-})<StyledBadgeProps>(({ theme, isRedDot }) => ({
+  shouldForwardProp: (prop) => prop !== 'isRedDot' && prop !== 'isHomePage',
+})<StyledBadgeProps>(({ theme, isRedDot, isHomePage }) => ({
   '& .MuiBadge-badge': {
-    backgroundColor: '#E74C3C',
-    color: '#E74C3C',
+    backgroundColor: '#ff477e',
+    color: '#ff477e',
 
     ...(isRedDot && {
       backgroundColor: theme.palette.error.dark,
       color: theme.palette.error.dark,
     }),
-
-    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
 
     '&::after': {
       position: 'absolute',
@@ -43,14 +42,22 @@ export const StyledBadge = styled(Badge, {
   },
 }));
 
-export const AppHeader = styled(Box)(({ theme }) => ({
+export const AppHeader = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'isHomePage',
+})<{ isHomePage: boolean }>(({ theme, isHomePage }) => ({
   alignItems: 'center',
-  backgroundColor: theme.palette.background.default,
+  backgroundColor: isHomePage ? "#00c79a" : theme.palette.background.default,
   borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
+
+  ...(isHomePage && {
+    border: 'none',
+  }),
+
   display: 'flex', 
   justifyContent: 'space-around', 
   padding: theme.spacing(4),
-  position: 'sticky',
+  position: 'fixed',
+  width: '100%',
   top: 0,
   zIndex: 1000
 }));
