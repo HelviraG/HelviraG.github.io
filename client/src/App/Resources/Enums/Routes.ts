@@ -1,7 +1,6 @@
 export enum Routes {
   CAREER = "/career",
   CONFS = "/confs",
-  CONTACT = "/contact",
   COFFEE = "https://www.buymeacoffee.com/helvira",
   GITHUB = "https://github.com/HelviraG",
   HOME = "/",
