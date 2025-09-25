@@ -1,3 +1,4 @@
+import { WidthFull } from '@mui/icons-material';
 import { alpha, Box, Button, styled, Typography } from '@mui/material';
 
 export const AnimatedTextBox = styled(Box)(({ theme }) => ({
@@ -96,10 +97,11 @@ export const WelcomeText = styled(Typography)(({ theme }) => ({
 
 export const HomeCTABox = styled(Box)(({ theme }) => ({
     alignItems: 'center', 
-    display: 'flex', 
+    display: 'flex',
+    flex: 1,
     justifyContent: 'center', 
-    marginTop: theme.spacing(12), 
-    marginBottom: theme.spacing(5),
+    marginTop: theme.spacing(4), 
+    marginBottom: theme.spacing(1),
     gap: theme.spacing(2),
 
     [theme.breakpoints.down('md')]: {
@@ -109,41 +111,52 @@ export const HomeCTABox = styled(Box)(({ theme }) => ({
     },
         
     [theme.breakpoints.down('lg')]: {
+        width: '-webkit-fill-available',
         flexDirection: 'column',
 
         '& > a': {
-            width: '60%',
+            width: '-webkit-fill-available',
             '&:not(:last-child)': {
-                marginBottom: theme.spacing(2)
+                marginBottom: theme.spacing(1)
             }
         }
     },
 }));
 
-export const HomeCTAButton = styled(Button)(({ theme }) => ({
+export const HomeCTAButton = styled(Button, {
+    shouldForwardProp: (prop) => prop !== 'isSecondary',
+})<{ isSecondary?: boolean }>(( { isSecondary = false, theme } ) => ({
     alignSelf: 'center',
-    border: `2px solid ${theme.game.special.blue}`,
+    backgroundColor: "#ff477e",
+    border: `2px solid ${theme.game.special.dark}`,
     boxShadow: 'rgba(0, 0, 0, .2) 15px 28px 25px -18px',
-    color: theme.game.special.blue,
+    borderRadius: '24px',
+    color: theme.game.special.dark,
     fontWeight: 900,
     lineHeight: '23px',
     outline: 'none',
-    padding: '0.75rem',
+    padding: '0.75rem 1.4rem',
     textDecoration: 'none',
     transition: 'all 235ms ease-in-out',
-    borderBottomLeftRadius: '15px 255px',
-    borderBottomRightRadius: '225px 15px',
-    borderTopLeftRadius: '255px 15px',
-    borderTopRightRadius: '15px 225px',
     userSelect: 'none',
     touchAction: 'manipulation',
 
+    ...(isSecondary && {
+        backgroundColor: theme.game.special.dark,
+        border: `2px solid #ff477e`,
+        color: "#ff477e",
+    }),
+
     '&:hover': {
-        border: `2px solid ${theme.palette.primary.light}`,
-        backgroundColor: theme.palette.background.paper,
+        border: `2px solid #1E1E40`,
+        backgroundColor: "#00c79a",
         boxShadow: 'rgba(0, 0, 0, .3) 2px 8px 8px -5px',
-        color: theme.palette.primary.light,
-        transform: 'translate3d(0, 2px, 0)'
+        color: "#1E1E40",
+        transform: 'translate3d(0, 2px, 0)',
+    },
+
+    [theme.breakpoints.up('xl')]: {
+        fontSize: '1.25rem',
     }
 }));
 
@@ -284,7 +297,17 @@ export const RightSideTitleBox = styled(Box)(({ theme }) => ({
 
     [theme.breakpoints.between('md', 'lg')]: {
         padding: '7px'
-    }
+    },
+
+    [theme.breakpoints.down('lg')]: {
+        right: '2em',
+        bottom: '-2.6em',
+    },
+
+    [theme.breakpoints.down('md')]: {
+        right: '0em',
+        bottom: '7.4em',
+    },
 }));
 
 export const RightSideBelowImageBox = styled(Box)(({ theme }) => ({
@@ -376,12 +399,11 @@ export const SecondSectionAboveBox = styled(Box)(({ theme }) => ({
 
 export const SecondSectionMiddleBox = styled(Box)(({ theme }) => ({
     zIndex: 2,
-    left: '-22px',
+    left: '10px',
     position: 'absolute',
-    top: '256px',
+    top: '-4em',
 
     [theme.breakpoints.down('sm')]: {
-        marginTop: '12em',
         left: '145px',
         top: '45px',
     },
@@ -391,6 +413,16 @@ export const SecondSectionMiddleBox = styled(Box)(({ theme }) => ({
         top: '14px',
         width: 'fit-content',
     },
+
+    [theme.breakpoints.down('lg')]: {
+        top: '-2.5em',
+        left: '-0.2em'
+    },
+
+    [theme.breakpoints.down('md')]: {
+        left: 0,
+        top: '-3em',
+    }
 }));
 
 export const InnerMiddleBox = styled(Box)(({ theme }) => ({
@@ -401,7 +433,7 @@ export const InnerMiddleBox = styled(Box)(({ theme }) => ({
     padding: '10px 30px',
 
     '&:hover': {
-        backgroundColor: theme.game.special.greeny,
+        backgroundColor: "#ff751f",
     },
 
     '& .MuiTypography-root': {
