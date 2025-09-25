@@ -26,15 +26,6 @@ export default function useScrollText() {
                         "last_section": t('app.scroll.confs.last_section')
                     }
                 ];
-            case Routes.CONTACT:
-                return [
-                    {
-                        "first_section": t('app.scroll.contact.first_section'),
-                        "second_section": t('app.scroll.contact.second_section'),
-                        "third_section": t('app.scroll.contact.third_section'),
-                        "last_section": t('app.scroll.contact.last_section')
-                    }
-                ];
             case Routes.LIVE:
                 return [
                     {
@@ -60,6 +51,18 @@ export default function useScrollText() {
                         "second_section": t('app.scroll.explore.second_section'),
                         "third_section": t('app.scroll.explore.third_section'),
                         "last_section": t('app.scroll.explore.last_section')
+                    }
+                ];
+            case Routes.PASSION:
+            case Routes.QUIZ:
+            case Routes.QUIZ_INIT:
+            case Routes.QUIZ_STEP:
+                return [
+                    {
+                        "first_section": t('app.scroll.passion.first_section'),
+                        "second_section": t('app.scroll.passion.second_section'),
+                        "third_section": t('app.scroll.passion.third_section'),
+                        "last_section": t('app.scroll.passion.last_section')
                     }
                 ];
             default:
