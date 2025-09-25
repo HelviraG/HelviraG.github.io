@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react';
-import { Header } from '../../Components/Header/Header';
-import { Footer } from '../../Components/Footer/Footer';
-import { ScrollTopButton } from '../../Components/ScrollTopButton/ScrollTopButton';
-import MouseContextProvider from '../../../Context/MouseContextProvider';
-import { Cursor } from '../../../Components/Cursor/Cursor';
+import { Header } from '@component/Header/Header';
+import { Footer } from '@component/Footer/Footer';
+import { ScrollTopButton } from '@component/ScrollTopButton/ScrollTopButton';
+import MouseContextProvider from '@context/MouseContextProvider';
+import { Cursor } from '@cursor';
 
 export const Mobile = ({ children }: { children: ReactNode }) => {
     return (
