@@ -1,5 +1,4 @@
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import { Typography } from "@mui/material";
 import { Sounds } from "@resources/Enums/Sounds";
 import {
   SettingsButtonBox,
@@ -7,6 +6,7 @@ import {
   WavySettingsButtonBox,
   WavySettingsSpan,
   WavySettingsSpanBox,
+  WavySettingsSpanTypo,
 } from "@styles/Pages/FalloutOnPassionStyle/ComponentsStyle";
 import React, { MouseEventHandler } from "react";
 import { useTranslation } from "react-i18next";
@@ -36,29 +36,10 @@ export const QuizSettings = ({
       <WavySettingsButtonBox isPillButton>
         <WavySettingsSpanBox isPillButton isSettingsOpen={isSettingsOpen}>
           <WavySettingsSpan>
-            <SettingsSuggestIcon
-              fontSize="small"
-              sx={(theme) => ({
-                marginRight: "8px",
-
-                [theme.breakpoints.down("md")]: {
-                  margin: "0 auto",
-                },
-              })}
-            />
-            <Typography
-              sx={(theme) => ({
-                display: "block",
-                fontSize: "11px",
-                fontWeight: 900,
-
-                [theme.breakpoints.down(768)]: {
-                  display: "none",
-                },
-              })}
-            >
+            <SettingsSuggestIcon fontSize="small" />
+            <WavySettingsSpanTypo>
               {t("app.general.actions.params")}
-            </Typography>
+            </WavySettingsSpanTypo>
           </WavySettingsSpan>
         </WavySettingsSpanBox>
         <WavyButton
