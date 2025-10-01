@@ -14,5 +14,5 @@ export enum Routes {
   QUIZ_STEP = "/explore/passion/whoami/:cat/:id",
   TWITTER = "https://twitter.com/helvira_g",
   EXPLORE = "/explore",
-  QUIZ_RESULT = "/whoarewe",
+  QUIZ_RESULT = "/explore/passion/whoarewe",
 }
