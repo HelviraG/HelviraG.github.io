@@ -6,6 +6,7 @@ import { videosApi } from "./Services/VideosApi";
 import { pressApi } from "./Services/PressApi";
 import { careerApi } from "./Services/CareerApi";
 import { quizSlice } from "./Slices/QuizSlice";
+import { quizApi } from "./Services/QuizApi";
 
 export const store = configureStore({
     reducer: {
@@ -15,10 +16,11 @@ export const store = configureStore({
         pressApi: pressApi.reducer,
         careerApi: careerApi.reducer,
         quiz: quizSlice.reducer,
+        quizApi: quizApi.reducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false,
-    }).concat(conferencesApi.middleware, videosApi.middleware, pressApi.middleware, careerApi.middleware),
+    }).concat(conferencesApi.middleware, videosApi.middleware, pressApi.middleware, careerApi.middleware, quizApi.middleware),
 });
 
 setupListeners(store.dispatch);
