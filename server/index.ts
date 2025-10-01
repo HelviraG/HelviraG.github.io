@@ -5,15 +5,28 @@ import * as dotenv from "dotenv";
 import express, { Express, Request, Response } from "express";
 import * as fs from "node:fs";
 import * as path from "path";
+import { initializeApp } from "firebase/app";
+import { collection, addDoc, getFirestore, query, getDocs, where } from "firebase/firestore";
 
 dotenv.config();
 
 const app: Express = express();
 app.use(express.json());
 
-const bufferFile = (relPath: string) => {
-  return fs.readFileSync(path.join(__dirname, relPath), { encoding: "utf-8" });
+// Import the functions you need from the SDKs you need
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID
 };
+
+// Initialize Firebase
+const fireBaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(fireBaseApp);
 
 app.use(express.json());
 app.use(cors());
@@ -88,51 +101,58 @@ app.get("/api/getPassion", async (req: Request, res: Response) => {
 });
 
 app.post("/api/postResult", async (req: Request, res: Response) => {
-  const filePath = "./database/quizz/results.json";
+  const { category, type } = req.body;
 
-  // Read the existing file
-  fs.readFile(filePath, "utf-8", (err, data) => {
-    if (err) {
-      return res.status(500).json({ message: "Error reading JSON file" });
+  if (!category || !type) {
+    return res.status(400).json({ message: "Missing category or type" });
+  }
+
+  await addDoc(
+    collection(db, "fallout-passion-test"), 
+    { 
+      category: category, 
+      type: type
+    }
+  );
+
+  res.status(200).json({ message: "Result added successfully" });
+});
+
+app.get("/api/getResults", async (req: Request, res: Response) => {
+  try {
+    const { category } = req.query;
+
+    let q = query(collection(db, "fallout-passion-test"));
+    if (category) {
+      q = query(collection(db, "fallout-passion-test"), where("category", "==", category));
     }
 
-    try {
-      let fileObject: { results: any };
+    const querySnapshot = await getDocs(q);
 
-      // Check if the file is empty or not valid JSON
-      if (!data.trim()) {
-        fileObject = { results: [] };
-      } else {
-        fileObject = JSON.parse(data);
-      }
+    const results = querySnapshot.docs.map((doc) => doc.data() as any);
 
-      // Ensure results array exists
-      if (!fileObject.results) {
-        fileObject.results = [];
-      }
+    // 🔹 Count factions
+    const counts: Record<string, number> = {};
+    results.forEach((r) => {
+      counts[r.type] = (counts[r.type] || 0) + 1;
+    });
 
-      // Get request body instead of query params
-      const reqObj = req.body;
+    // 🔹 Turn into percentages
+    const total = results.length;
+    const factions = ["citizen", "paladin", "superMutant"];
 
-      // Append new data
-      fileObject.results.push(reqObj);
+    const percentages: Record<string, number> = {};
+    factions.forEach((f) => {
+      const count = counts[f] || 0;
+      percentages[f] = total > 0 ? (count / total) * 100 : 0;
+    });
 
-      // Convert to JSON
-      const updatedJson = JSON.stringify(fileObject, null, 4);
 
-      // Write back to file
-      fs.writeFile(filePath, updatedJson, (err) => {
-        if (err) {
-          return res.status(500).json({ message: "Error writing JSON file" });
-        }
-        console.log("Updated JSON:", updatedJson);
-        return res.json(fileObject);
-      });
-    } catch (parseError) {
-      console.error("Error parsing JSON:", parseError);
-      return res.status(500).json({ message: "Error parsing JSON file" });
-    }
-  });
+    res.status(200).json({ total, counts, percentages, results });
+  } catch (error) {
+    console.error("Error fetching results:", error);
+    res.status(500).json({ error: "Failed to fetch results" });
+  }
 });
 
 app.get("/*", (req: Request, res: Response) => {
