@@ -1,6 +1,4 @@
 import { Typography } from '@mui/material';
-import useLocalStorage from '@hooks/useLocalStorage';
-import i18n from '@i18n';
 import { FooterLang, FooterTextTypography, FooterTextWrapper, FooterToolbar, FooterWrapper, LangSwitch } from '@styles/Layout/Footer';
 import { DigitalClock } from '../DigitalClock/DigitalClock';
 import useChangeLangage from "@hooks/useChangeLangage";
