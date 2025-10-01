@@ -1,4 +1,5 @@
 import { AppChip } from "@/App/Components/Chip/Chip";
+import { Routes } from "@/App/Resources/Enums/Routes";
 import { Tags } from "@/App/Resources/Enums/Tags";
 import { FooterLang, LangSwitch } from "@/App/Styles/Layout/Footer";
 import { ChipWrapper } from "@/App/Styles/Pages/ConferencesStyle";
@@ -7,9 +8,11 @@ import { CloseOutlined } from "@mui/icons-material";
 import { AppBar, Box, IconButton, Toolbar, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export const QuizLayout = ({ children, buttons, withFooter = true }: { children: React.ReactNode; buttons: React.ReactNode; withFooter?: boolean }) => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const { appLang: lang, changeLang: changeLanguage } = useChangeLangage();
     const isTablet = useMediaQuery("(max-width: 800px");
 
@@ -46,8 +49,8 @@ export const QuizLayout = ({ children, buttons, withFooter = true }: { children:
                         </ChipWrapper>
                         <Box sx={(theme) => ({ 
                             [theme.breakpoints.down(601)]: {
-                            textAlign: 'center', 
-                            width: '100%' 
+                                textAlign: 'center', 
+                                width: '100%' 
                             }
                         })}>
                             <Typography
@@ -82,7 +85,7 @@ export const QuizLayout = ({ children, buttons, withFooter = true }: { children:
                             <LangSwitch checked={lang === 'en'} onChange={changeLanguage} />
                             <Typography variant="caption">🇺🇸{isTablet ? '' : ' EN'}</Typography>
                         </FooterLang>
-                        <IconButton>
+                        <IconButton onClick={() => navigate(Routes.EXPLORE)}>
                             <CloseOutlined />
                         </IconButton>
                     </Box>
