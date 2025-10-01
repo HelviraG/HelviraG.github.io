@@ -17,21 +17,24 @@ export const StepButton = styled(Button, {
     height: '50px',
     flexShrink: 0,
     borderRadius: '14px',
-    background: `linear-gradient(180deg, #B67800 55.86%, ${theme.game.purple.dark} 100%)`,
     position: 'relative',
 
     '&.active': {
         ...(isClicking && {
-            background: `linear-gradient(180deg, ${theme.game.special.red} 55.86%, ${theme.game.special.orange} 100%)`,
+            background: '#000',
         }),
     },
 
     ...(isSaved && {
-        background: `linear-gradient(180deg, ${theme.game.special.red} 55.86%, ${theme.game.special.orange} 100%)`,
+        background: '#000',
     }),
 
     [theme.breakpoints.down('lg')]: {
         padding: '14px',
+    },
+
+    [theme.breakpoints.down(800)]: {
+        height: '66px',
     },
 
     [theme.breakpoints.up(783)]: {
@@ -49,12 +52,16 @@ export const BackgroundStepInnerBox = styled(Box)(({ theme}) => ({
     borderRadius: '17px',
     top: 0,
     right: 0,
-    boxShadow: '0px 4px 0.9px 0px rgba(255, 255, 255, 0.50) inset',
-    background: 'linear-gradient(180deg, #3C40C6 55.86%, #0FBCf9 100%)',
+    background: '#000',
+    color: theme.palette.background.paper,
 
     [theme.breakpoints.up(783)]: {
         height: '64px',
         width: '64px',
+    },
+
+    [theme.breakpoints.down(800)]: {
+        height: '66px',
     },
 }));
 
@@ -62,12 +69,17 @@ export const BackgroundStepSecondInnerBox = styled(Box)(({ theme}) => ({
     width: '64px',
     height: '50px',
     borderRadius: '17px',
-    background: 'linear-gradient(180deg, #3C40C6 55.86%, #0FBCf9 100%)',
+    background: '#000',
+    color: theme.palette.background.paper,
 
     [theme.breakpoints.up(783)]: {
         height: '64px',
         width: '64px',
-    }
+    },
+
+    [theme.breakpoints.down(800)]: {
+        height: '66px',
+    },
 }));
 
 export const BackgroundStepThirdInnerBox = styled(Box)(({ theme}) => ({
@@ -75,18 +87,19 @@ export const BackgroundStepThirdInnerBox = styled(Box)(({ theme}) => ({
     height: '50px',
     flexShrink: 0,
     borderRadius: '17px 17px 0px 0px',
-    background: 'linear-gradient(177deg, rgba(255, 255, 255, 0.00) 2.87%, rgba(255, 255, 255, 0.27) 102.03%)',
+    background: '#000',
+    color: '#FFF',
 
     [theme.breakpoints.up(783)]: {
-        height: '64px',
         width: '64px',
-    }
+    },
+
+    [theme.breakpoints.down(800)]: {
+        height: '66px',
+    },
 }));
 
 export const BackgroundStepTypo = styled(Typography)(({ theme}) => ({
-    color: '#7ed6df',
-    paddingTop: '15px',
-    textShadow: '0px 5.339px 0px #130f40',
     webkitTextStrokeWidth: '0.5837001204490662',
     webkitTextStrokeColor: '#000',
     fontFamily: "Lilita One",
@@ -94,9 +107,10 @@ export const BackgroundStepTypo = styled(Typography)(({ theme}) => ({
     fontStyle: 'normal',
     fontWeight: 400,
     lineHeight: 'normal',
-    background: 'linear-gradient(180deg, #FFF 30.82%, #4BCFFA 86.99%)',
+    background: '#000',
     backgroundClip: 'text',
     webkitTextFillColor: 'transparent',
+    color: theme.palette.background.paper,
 
     [theme.breakpoints.down('md')]: {
         fontSize: '20px'
@@ -109,8 +123,7 @@ export const ForegroundStepBox = styled(Box, {
     width: '64px',
     height: '50px',
     borderRadius: '17px',
-    background: `linear-gradient(180deg, ${theme.game.purple.light} 0%, ${theme.game.special.red} 100%)`,
-    boxShadow: '0px 4px 0.9px 0px rgba(255, 255, 255, 0.50) inset',
+    background: '#B0DF81',
     zIndex: 99999999,
     mask: 'url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png")',
     maskSize: '3000% 100%',
@@ -121,19 +134,26 @@ export const ForegroundStepBox = styled(Box, {
         width: '64px',
     },
 
+    [theme.breakpoints.down(800)]: {
+        height: '66px',
+    },
+
     '&.active': {
         ...(isClicking && {
-            background: `linear-gradient(180deg, ${theme.game.special.red} 55.86%, ${theme.game.special.orange} 100%)`,
+            background: '#000',
+            color: theme.palette.background.paper
         }),
     },
 
     ...(isSaved && {
-        background: `linear-gradient(180deg, ${theme.game.special.red} 55.86%, ${theme.game.special.orange} 100%)`,
+        background: '#000',
+        color: theme.palette.background.paper
     }),
 
     '&:hover': {
         animation: 'ani .7s steps(22) forwards',
-        backgroundColor: 'pink',
+        backgroundColor: '#B8E986',
+        color: theme.palette.background.paper
     },
 
     "@keyframes ani": {
@@ -160,18 +180,18 @@ export const ForegroundStepInnerBox = styled(Box)(({ theme}) => ({
     height: '50px',
     flexShrink: 0,
     borderRadius: '17px 17px 0px 0px',
-    background: 'linear-gradient(177deg, rgba(255, 255, 255, 0.00) 2.87%, rgba(255, 255, 255, 0.27) 102.03%)',
 
     [theme.breakpoints.up(783)]: {
         height: '64px',
         width: '64px',
-    }
+    },
+
+    [theme.breakpoints.down(800)]: {
+        height: '66px',
+    },
 }));
 
 export const ForegroundStepTypo = styled(Typography)(({ theme}) => ({
-    color: '#eccc68',
-    paddingTop: '15px',
-    textShadow: '0px 5.339px 0px #723400',
     webkitTextStrokeWidth: '0.5837001204490662',
     webkitTextStrokeColor: '#000',
     fontFamily: "Lilita One",
@@ -179,15 +199,11 @@ export const ForegroundStepTypo = styled(Typography)(({ theme}) => ({
     fontStyle: 'normal',
     fontWeight: 400,
     lineHeight: 'normal',
-    background: 'linear-gradient(180deg, #FFF 30.82%, #FFB672 86.99%)',
+    background: '#B0DF81',
     backgroundClip: 'text',
     webkitTextFillColor: 'transparent',
 
     [theme.breakpoints.down('md')]: {
         fontSize: '20px'
     },
-
-    [theme.breakpoints.between('md', 'lg')]: {
-        paddingTop: '10px'
-    }
 }));
