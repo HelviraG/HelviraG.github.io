@@ -1,6 +1,18 @@
 import useScrollText from "@hooks/useScrollText";
-import { Box, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+
+const ScrollTextWrapper = styled(Box)(({ theme }) => ({
+  color: theme.game.special.dark,
+  textAlign: 'center', 
+  width: '50%'
+}));
+
+const ScrollTextTypograhy = styled(Typography)(({ theme }) => ({
+  [theme.breakpoints.down('md')]: {
+    fontSize: '14px'
+  },
+}));
 
 export const ScrollText = () => {
   const [scrollY, setScrollY] = useState<number>(0);
@@ -36,17 +48,10 @@ export const ScrollText = () => {
   });
 
   return (
-    <Box sx={{ textAlign: "center", width: "50%", color: "#1E1E40" }}>
-      <Typography
-        variant="body1"
-        sx={(theme) => ({
-          [theme.breakpoints.down("md")]: {
-            fontSize: "14px",
-          },
-        })}
-      >
+    <ScrollTextWrapper>
+      <ScrollTextTypograhy variant="body1">
         {scrollY ? text : pageScrollText[0].first_section}
-      </Typography>
-    </Box>
+      </ScrollTextTypograhy>
+    </ScrollTextWrapper>
   );
 };
