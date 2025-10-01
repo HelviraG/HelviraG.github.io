@@ -54,9 +54,9 @@ export const NeuBrutButtonBox = styled(Box, {
 }));
 
 export const FabButtonBox = styled(Box)(() => ({
-    bottom: '3.5%',
+    bottom: '16.5%',
     position: 'absolute',
-    right: '2%',
+    left: '18%',
 }));
 
 export const FabButtonComponent = styled(Fab)(({ theme }) => ({
