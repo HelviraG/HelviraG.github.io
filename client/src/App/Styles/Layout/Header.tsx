@@ -46,7 +46,7 @@ export const AppHeader = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'isHomePage',
 })<{ isHomePage: boolean }>(({ theme, isHomePage }) => ({
   alignItems: 'center',
-  backgroundColor: isHomePage ? "#00c79a" : theme.palette.background.default,
+  backgroundColor: isHomePage ? theme.game.special.iceBlue.medium : theme.palette.background.default,
   borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
 
   ...(isHomePage && {
@@ -59,5 +59,5 @@ export const AppHeader = styled(Box, {
   position: 'fixed',
   width: '100%',
   top: 0,
-  zIndex: 1000
+  zIndex: 100000000
 }));
