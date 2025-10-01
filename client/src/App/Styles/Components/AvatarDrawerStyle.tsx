@@ -13,6 +13,8 @@ import {
 } from '@mui/material';
 
 export const DrawerWrapper = styled(Drawer)(({ theme }) => ({
+    zIndex: 100000000,
+    
     '.MuiDrawer-paper': {
         backgroundColor: theme.palette.text.primary,
         overflow: 'hidden',
