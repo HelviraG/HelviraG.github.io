@@ -5,14 +5,14 @@ import { ScrollTopButton } from '@component/ScrollTopButton/ScrollTopButton';
 import MouseContextProvider from '@context/MouseContextProvider';
 import { Cursor } from '@cursor';
 
-export const Desktop = ({ children }: { children: ReactNode }) => {
+export const Desktop = ({ children, withHeader = true, withTopButton = true, withFooter = true }: { children: ReactNode; withHeader?: boolean; withTopButton?: boolean; withFooter?: boolean }) => {
     return (
         <MouseContextProvider>
             <Cursor />
-            <Header />
+            {withHeader && <Header />}
             {children}
-            <ScrollTopButton />
-            <Footer />
+            {withTopButton && <ScrollTopButton />}
+            {withFooter && <Footer />}
         </MouseContextProvider>
     )
 };
