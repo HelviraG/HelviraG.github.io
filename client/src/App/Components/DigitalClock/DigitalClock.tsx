@@ -10,7 +10,7 @@ const AlarmClock = styled(Box)({
     flex: 1
 });
 
-const TimeWrapper = styled(Box)({
+const TimeWrapper = styled(Box)(({ theme }) => ({
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -24,11 +24,11 @@ const TimeWrapper = styled(Box)({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#00c79a',
+        color: theme.game.special.iceBlue.medium,
         lineHeight: '1.75',
         textShadow: '0 0 15px rgba(60, 231, 97, 0.4)',
     }
-});
+}));
 
 const Colon = styled(Box)({
     width: '12px',
