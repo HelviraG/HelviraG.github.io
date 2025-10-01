@@ -6,7 +6,7 @@ import useDocumentTitle from "../../Hooks/useDocumentTitle";
 import { Desktop } from "../Layout/Desktop/Desktop";
 import { Mobile } from "../Layout/Mobile/Mobile";
 import { CareerPage } from "./Career/CareerPage";
-import { BuyMeACoffee } from "./Home/BuyMeACoffee";
+import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 
 export const Career = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();
@@ -24,7 +24,7 @@ export const Career = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="error"
           />
           <CareerPage />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Mobile>
       ) : (
         <Desktop>
@@ -35,7 +35,7 @@ export const Career = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="error"
           />
           <CareerPage />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Desktop>
       )}
     </>

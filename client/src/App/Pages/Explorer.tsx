@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Desktop } from "../Layout/Desktop/Desktop";
 import { Mobile } from "../Layout/Mobile/Mobile";
 import { ExplorerList } from "./Explorer/ExplorerList";
-import { BuyMeACoffee } from "./Home/BuyMeACoffee";
+import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 
 export const Explorer = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();
@@ -24,7 +24,7 @@ export const Explorer = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="error"
           />
           <ExplorerList />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Mobile>
       ) : (
         <Desktop>
@@ -35,7 +35,7 @@ export const Explorer = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="error"
           />
           <ExplorerList />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Desktop>
       )}
     </>

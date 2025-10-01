@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import useDocumentTitle from "../../Hooks/useDocumentTitle";
 import { Desktop } from "../Layout/Desktop/Desktop";
 import { Mobile } from "../Layout/Mobile/Mobile";
-import { BuyMeACoffee } from "./Home/BuyMeACoffee";
+import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 import { VideosList } from "./Videos/VideosList";
 
 export const Videos = ({ isTablet }: { isTablet: boolean }) => {
@@ -24,7 +24,7 @@ export const Videos = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="primary"
           />
           <VideosList />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Mobile>
       ) : (
         <Desktop>
@@ -35,7 +35,7 @@ export const Videos = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="primary"
           />
           <VideosList />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Desktop>
       )}
     </>

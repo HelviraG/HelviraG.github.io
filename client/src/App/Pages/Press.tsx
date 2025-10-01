@@ -5,7 +5,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Desktop } from "../Layout/Desktop/Desktop";
 import { Mobile } from "../Layout/Mobile/Mobile";
-import { BuyMeACoffee } from "./Home/BuyMeACoffee";
+import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 import { PressList } from "./Press/PressList";
 
 export const Press = ({ isTablet }: { isTablet: boolean }) => {
@@ -24,7 +24,7 @@ export const Press = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="primary"
           />
           <PressList />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Mobile>
       ) : (
         <Desktop>
@@ -35,7 +35,7 @@ export const Press = ({ isTablet }: { isTablet: boolean }) => {
             titleColor="primary"
           />
           <PressList />
-          <BuyMeACoffee />
+          <BuyCoffeeSection />
         </Desktop>
       )}
     </>
