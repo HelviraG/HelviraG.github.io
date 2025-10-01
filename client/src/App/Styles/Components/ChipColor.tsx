@@ -49,6 +49,18 @@ export const ChipColor = (type: string, chipBackground?: string, chipColor?: str
                     border: '1px solid #F1931D',
                     color: '#F1931D'
                 };
+            case Tags.FALLOUT:
+                return {
+                    background: 'background.default',
+                    border: '1px solid #7d5fff',
+                    color: '#7d5fff'
+                };
+            case Tags.QUIZ_PASSION:
+                return {
+                    background: 'background.default',
+                    border: '1px solid #3c40c6',
+                    color: '#3c40c6'
+                };
             default:
                 return {
                     background: 'background.default',
