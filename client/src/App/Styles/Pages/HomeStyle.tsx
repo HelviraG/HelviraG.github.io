@@ -1,98 +1,214 @@
-import { WidthFull } from '@mui/icons-material';
-import { alpha, Box, Button, styled, Typography } from '@mui/material';
+import { alpha, Box, Button, Divider, Link, styled, Typography } from '@mui/material';
 
-export const AnimatedTextBox = styled(Box)(({ theme }) => ({
-    alignItems: 'center',
-    backgroundColor: theme.palette.background.default,
-    display: 'flex',
-    flexDirection: 'column', 
-    justifyContent: 'center', 
-    padding: theme.spacing(10),
-
-    [theme.breakpoints.down('sm')]: {
-        padding: theme.spacing(8)
-    },
-
-    [theme.breakpoints.down('xs')]: {
-        padding: `${theme.spacing(8)} ${theme.spacing(4)}`
-    },
+// Main Section //////////////////////////////////////////////////////
+export const MainSectionBox = styled(Box)(({ theme }) => ({
+    backgroundColor: theme.game.special.iceBlue.medium
 }));
 
-export const AnimatedTextTypography = styled(Typography)(({ theme }) => ({
-    [theme.breakpoints.down('md')]: {
-        fontSize: '20px',
+// Hero Section //////////////////////////////////////////////////////
+export const HeroSectionWrapper = styled(Box)(({ theme }) => ({
+    display: "flex", 
+    justifyContent: "space-between", 
+    maxWidth: "90%", 
+    margin: "0 auto", 
+    flexDirection: 'row', 
+    paddingTop: '5em', 
+    gap: 2,
+
+    [theme.breakpoints.up(1025)]: {
+        paddingTop: '14em'
     },
-
-    '&:after': {
-        content: '""',
-        height: '1px',
-        width: '206%',
-        display: 'block',
-        border: `1px solid ${alpha(theme.palette.primary.light, 0.2)}`,
-        marginLeft: '-3em',
-        marginTop: '1em',
-        marginBottom: '1em',
-    }
-}));
-
-export const WelcomeSectionBox = styled(Box)(({ theme }) => ({
-    marginBottom: theme.spacing(4), 
-    marginTop: theme.spacing(4), 
-    textAlign: 'center'
-}));
-
-export const WelcomeTextBox = styled(Box)(({ theme }) => ({
-    alignItems: 'center',
-    backgroundImage: `linear-gradient(131.83deg, #FFFFFF 0%, #C1EAEA 99.21%)`,
-    borderRadius: theme.spacing(2),
-    display: 'flex',
-    justifyContent: 'center',
-    margin: '0 auto',
-    marginBottom: theme.spacing(6),
-    marginTop: theme.spacing(2),
-    padding: theme.spacing(2),
-    position: 'relative',
-    textAlign: 'center',
-
-    [theme.breakpoints.down('md')]: {
-        maxWidth: '100%'
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        marginTop: theme.spacing(4),
-    },
-
-    '&:before': {
-        backgroundImage: 'linear-gradient(312.25deg, #66CCCC 0%, rgba(255, 255, 255, 0) 66.19%)',
-        borderRadius: '18px',
-        bottom: -2,
-        content: '""',
-        left: -2,
-        position: 'absolute',
-        right: -2,
-        top: -2,
-        zIndex: -1
-    }
-}));
-
-export const WelcomeTextInnerBox = styled(Box)(({ theme }) => ({
-    borderRadius: '14px',
-    boxShadow: '0 40px 80px #66CCCC',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    maxWidth: '80%',
-    padding: theme.spacing(2)
-}));
-
-export const WelcomeText = styled(Typography)(({ theme }) => ({
-    color: theme.palette.background.paper,
-    fontSize: '4rem',
-    textShadow: `-2px 0 ${theme.game.special.blue}, 0 -2px ${theme.game.special.blue}, 2px 0 ${theme.game.special.blue}, 0 2px ${theme.game.special.blue}, 2px 2px ${theme.game.special.blue}, -2px -2px ${theme.game.special.blue}, -2px 2px ${theme.game.special.blue}, 2px -2px ${theme.game.special.blue}, 6px 6px  ${theme.game.special.blue}`,
 
     [theme.breakpoints.down('lg')]: {
-        fontSize: '3rem'
+        gap: 0,
     },
+
+    [theme.breakpoints.down(426)]: {
+        flexDirection: 'column',
+        gap: 4
+    }
+}));
+
+export const HeroSectionBox = styled(Box)(({ theme }) => ({
+    flex: 1, 
+    display: 'flex', 
+    flexDirection: 'column', 
+    alignItems: 'start', 
+    justifyContent: 'center', 
+    fontSize: '2em', 
+    fontWeight: 'bold', 
+    padding: '0 2em',
+
+    [theme.breakpoints.down('lg')]: {
+        padding: '0 16px',
+    },
+}));
+
+export const HeroSectionTextBox = styled(Box)({
+    position: 'relative'
+});
+
+export const HeroSectionDivider = styled(Divider)(({ theme }) => ({
+    margin: '0 0 1em 0', 
+    borderColor: theme.game.special.iceBlue.light, 
+    width: '50px', 
+    height: '4px', 
+    borderRadius: '2px'
+}));
+
+export const HeroSectionAboveTypo = styled(Typography)(({ theme }) => ({
+    fontSize: '0.8em', 
+    padding: '0 40px 0 0', 
+    textAlign: 'justify',
+    marginBottom: '10px',
+
+    [theme.breakpoints.up(1025)]: {
+        fontSize: '0.7em'
+    },
+
+    [theme.breakpoints.down('lg')]: {
+        fontSize: '0.6em',
+        padding: '0 32px 0 0'
+    },
+
+    [theme.breakpoints.down(500)]: {
+        padding: 0
+    }
+}));
+
+export const HeroSectionBelowTypo = styled(Typography)(({ theme }) => ({
+    fontSize: '0.8em', 
+    padding: '0 40px 0 0',
+
+    [theme.breakpoints.up(1025)]: {
+        fontSize: '0.7em'
+    },
+
+    [theme.breakpoints.down('lg')]: {
+        fontSize: '0.6em',
+        padding: '0 32px 0 0'
+    },
+
+    [theme.breakpoints.down(500)]: {
+        padding: 0
+    }
+}));
+
+export const HeroSectionImageBox = styled(Box)(({ theme }) => ({
+    flex: 1, 
+    position: 'relative',
+
+    [theme.breakpoints.down('lg')]: {
+        display: 'flex',
+        flexDirection: 'column-reverse'
+    },
+
+    [theme.breakpoints.down(500)]: {
+        marginTop: '-4em'
+    }
+}));
+
+export const NameTitlePillBox = styled(Box)(({ theme }) => ({
+    backgroundColor: '#ff477e',
+    border: `4px solid ${theme.game.special.dark}`,
+    borderRadius: '23px',
+    boxShadow: `4px 6px 0px 0px ${theme.game.special.dark}`,
+    padding: '10px 30px',
+    width: 'fit-content', 
+    position: 'absolute', 
+    right: '2em', 
+    bottom: '5em',
+
+    '&:hover': {
+        backgroundColor: theme.game.special.greeny,
+    },
+
+    [theme.breakpoints.down('sm')]: {
+        width: 'fit-content',
+        padding: '4px 10px'
+    },
+
+    [theme.breakpoints.between('sm', 'md')]: {
+        width: 'fit-content',
+        padding:  '4px'
+    },
+
+    [theme.breakpoints.between('md', 'lg')]: {
+        padding: '7px'
+    },
+
+    [theme.breakpoints.down('lg')]: {
+        right: '2em',
+        bottom: '-2.6em',
+    },
+
+    [theme.breakpoints.down('md')]: {
+        right: '0em',
+        bottom: '7.4em',
+    },
+}));
+
+export const HelloPillBox = styled(Box)(({ theme }) => ({
+    zIndex: 2,
+    left: '10px',
+    position: 'absolute',
+    top: '-4em',
+
+    [theme.breakpoints.down('sm')]: {
+        left: '145px',
+        top: '45px',
+    },
+
+    [theme.breakpoints.between('sm', 'md')]: {
+        left: '190px',
+        top: '14px',
+        width: 'fit-content',
+    },
+
+    [theme.breakpoints.down('lg')]: {
+        top: '-2.5em',
+        left: '-0.2em'
+    },
+
+    [theme.breakpoints.down('md')]: {
+        left: 0,
+        top: '-3em',
+    }
+}));
+
+export const HelloPillTitle = styled(Box)(({ theme }) => ({
+    backgroundColor: theme.game.special.greeny,
+    border: `4px solid ${theme.game.special.dark}`,
+    borderRadius: '23px',
+    boxShadow: `4px 6px 0px 0px ${theme.game.special.dark}`,
+    padding: '10px 30px',
+
+    '&:hover': {
+        backgroundColor: "#ff751f",
+    },
+
+    '& .MuiTypography-root': {
+        fontWeight: 900
+    },
+
+    [theme.breakpoints.down('sm')]: {
+        padding: '7px'
+    }
+}));
+
+
+// Home CTAs //////////////////////////////////////////////////////
+export const HomeCTAWrapper = styled(Box)(({ theme }) => ({ 
+    display: 'flex', 
+    gap: 2, 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    width: '100%',
+
+    [theme.breakpoints.down(426)]: {
+        flexDirection: 'column',
+        alignItems: 'start'
+    }
 }));
 
 export const HomeCTABox = styled(Box)(({ theme }) => ({
@@ -148,10 +264,10 @@ export const HomeCTAButton = styled(Button, {
     }),
 
     '&:hover': {
-        border: `2px solid #1E1E40`,
-        backgroundColor: "#00c79a",
+        border: `2px solid ${theme.game.special.dark}`,
+        backgroundColor: theme.game.special.iceBlue.medium,
         boxShadow: 'rgba(0, 0, 0, .3) 2px 8px 8px -5px',
-        color: "#1E1E40",
+        color: theme.game.special.dark,
         transform: 'translate3d(0, 2px, 0)',
     },
 
@@ -160,395 +276,74 @@ export const HomeCTAButton = styled(Button, {
     }
 }));
 
-export const HomeFirstSectionBox = styled(Box)(({ theme }) => ({
-    alignItems: 'center', 
-    display: 'flex', 
-    margin:'0 auto', 
-    maxWidth: '90%',    
-    
+// Buy Coffee Section //////////////////////////////////////////////////////
+export const BuyCoffeeWrapper = styled(Box)(({ theme }) => ({
+    backgroundColor: theme.palette.background.default,
+    display: 'flex',
+    alignItems: 'center',
+
     [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
-    },
-}));
-
-export const FirstSectionLeftBox = styled(Box)(({ theme }) => ({
-    background: `${theme.game.special.dark} url("https://od.lk/s/MzRfMzYzMjk4MDJf/Design%20sans%20titre%20%2814%29%20%281%29.png") no-repeat center`,
-    width: '60%',
-    padding: '10px',
-    margin: '30px 5px 30px 0px',
-    borderRadius: '20px',
-    alignItems: 'center',
-    height: '520px',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    position: 'relative',
-
-    [theme.breakpoints.down('md')]: {
-        '& span': {
-            fontSize: '1.525rem'
-        }
-    },
-
-    [theme.breakpoints.down('lg')]: {
-        width: '100%',
-
-        '& span': {
-            left: '25%'
-        }
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        height: '720px',
-    },
-
-    [theme.breakpoints.up(20000)]: {
-        height: '1460px',
-    },
-
-    '& > img': {
-        position: 'absolute',
-        bottom: '0px',
-        left: '20px',
-        width: '100px'
-    }
-}));
-
-export const FirstSectionRightBox = styled(Box)(({ theme }) => ({
-    height: '520px',
-    width: '40%',
-    position: 'relative',
-
-    [theme.breakpoints.down('md')]: {
-        display: 'flex',
-        flexDirection: 'column',
-        width: '100%'
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        height: '720px',
-    },
-}));
-
-export const RightSideAboveImageBox = styled(Box)(({ theme }) => ({
-    background: `${theme.game.special.dark} url("https://i.ibb.co/C2fdwMf/1715867194281.jpg?w=248&fit=crop&auto=format") no-repeat center`,
-
-    padding: '10px',
-    borderRadius: '20px',
-    alignItems: 'center',
-    height: '300px',
-    justifyContent: 'center',
-
-    filter: 'sepia(1)',
-    backgroundSize: 'cover',
-
-    '&:hover': {
-        filter: 'none',
-    },
-
-    [theme.breakpoints.down('md')]: {
-        alignSelf: 'end',
-        marginTop: '-100px',
-        width: '60%'
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        height: '445px',
-    },
-}));
-
-export const RightSideTitleWrapper = styled(Box)(({ theme }) => ({
-    zIndex: 2,
-    right: '-22px',
-    position: 'absolute',
-    top: '256px',
-
-    [theme.breakpoints.down('sm')]: {
-        left: '4em',
-        top: '-18em',
-    },
-
-    [theme.breakpoints.between('sm', 'md')]: {
-        left: '11em',
-        top: '-20em',
-        width: 'fit-content',
-    }
-}));
-
-export const RightSideTitleBox = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.game.warning.light,
-    border: `4px solid ${theme.game.special.dark}`,
-    borderRadius: '23px',
-    boxShadow: `4px 6px 0px 0px ${theme.game.special.dark}`,
-    padding: '10px 30px',
-
-    '&:hover': {
-        backgroundColor: theme.game.special.greeny,
-    },
-
-    [theme.breakpoints.down('sm')]: {
-        width: 'fit-content',
-        padding: '4px 10px'
-    },
-
-    [theme.breakpoints.between('sm', 'md')]: {
-        width: 'fit-content',
-        padding:  '4px'
     },
 
     [theme.breakpoints.between('md', 'lg')]: {
-        padding: '7px'
+        marginTop: theme.spacing(14),
     },
 
-    [theme.breakpoints.down('lg')]: {
-        right: '2em',
-        bottom: '-2.6em',
-    },
-
-    [theme.breakpoints.down('md')]: {
-        right: '0em',
-        bottom: '7.4em',
+    [theme.breakpoints.up('lg')]: {
+        paddingTop: '2em',
     },
 }));
 
-export const RightSideBelowImageBox = styled(Box)(({ theme }) => ({
-    background: `${theme.game.special.dark} url("https://i.ibb.co/kgPGWDv/pub-gouv-large.jpg?w=248&fit=crop&auto=format") no-repeat center`,
-
-    padding: '10px',
-    borderRadius: '20px',
-    alignItems: 'center',
-    height: '200px',
-    justifyContent: 'center',
-
-    filter: 'sepia(1)',
-    backgroundSize: 'cover',
-    marginTop: '10px',
-
-    '&:hover': {
-        filter: 'none',
-    },
+export const BuyCoffeeTitleBox = styled(Box)(({ theme }) => ({
+    padding: '82px 75px 82px 82px',
+    borderRight: `2px dashed ${theme.game.warning.light}`,
+    textAlign: 'center',
+    width: '50%',
 
     [theme.breakpoints.down('md')]: {
-        marginTop: '-2em',
-        width: '60%'
+        padding: '100px 50px 50px',
+        borderBottom: `2px dashed ${theme.game.warning.light}`,
+        borderRight: 'none',
+        width: '80%'
     },
 
-    [theme.breakpoints.up(1440)]: {
-        height: '266px',
+    [theme.breakpoints.between('md', 'lg')]: {
+        padding: '62px 38px 62px 62px'
+    },
+
+    [theme.breakpoints.up('xl')]: {
+        padding: '82px 175px 82px 82px'
     },
 }));
 
-export const HomeSecondSectionBox = styled(Box)(({ theme }) => ({
-    marginTop: '-24px!important', 
-    alignItems: 'center', 
-    display: 'flex', 
-    margin:'0 auto', 
-    maxWidth: '90%',
+export const BuyCoffeeTitleTypo = styled(Typography)({
+    fontWeight: 500
+});
+
+export const BuyCoffeeLink = styled(Link)({
+    color: '#FB0F5A',
+    cursor: 'none',
+    textDecoration: 'none'
+});
+
+export const BuyCoffeeImageBox = styled(Box)(({ theme }) => ({
+    background: 'url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTdtcXRsa2x6cG94dDNiODR0Y3hidWJyODJ1dTBwNWg2bmVmbHdtcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/513lZvPf6khjIQFibF/giphy.gif") no-repeat right',
+    height: '280px',
+    width: '65%',
 
     [theme.breakpoints.down('md')]: {
-        flexDirection: 'column-reverse',
-        marginTop: '-13em!important'
-    }
-}));
-
-export const SecondSectionLeftBox = styled(Box)(({ theme }) => ({
-    maxHeight: '720px',
-    width: '40%',
-    position: 'relative',
-
-    [theme.breakpoints.down('md')]: {
-        display: 'flex',
-        flexDirection: 'column',
-        width: '100%',
-        marginTop: '6em'
-    },
-    
-    [theme.breakpoints.up(1440)]: {
-        height: '920px',
-    },
-}));
-
-export const SecondSectionAboveBox = styled(Box)(({ theme }) => ({
-    background: `${theme.game.special.dark} url("https://i.ibb.co/17Dg9Qn/bilan-8.jpg?w=248&fit=crop&auto=format") no-repeat center`,
-
-    padding: '10px',
-    borderRadius: '20px',
-    alignItems: 'center',
-    height: '220px',
-    justifyContent: 'center',
-
-    filter: 'sepia(1)',
-    backgroundSize: 'cover',
-
-    '&:hover': {
-        filter: 'none',
+        backgroundPosition: 'center',
+        marginTop: '1.5em',
+        width: '100%'
     },
 
-    [theme.breakpoints.down('sm')]: {
-        marginTop: '14em',
-    },
-
-    [theme.breakpoints.down('md')]: {
-        alignSelf: 'start',
-        width: '70%'
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        height: '320px',
-    },
-}));
-
-export const SecondSectionMiddleBox = styled(Box)(({ theme }) => ({
-    zIndex: 2,
-    left: '10px',
-    position: 'absolute',
-    top: '-4em',
-
-    [theme.breakpoints.down('sm')]: {
-        left: '145px',
-        top: '45px',
-    },
-
-    [theme.breakpoints.between('sm', 'md')]: {
-        left: '190px',
-        top: '14px',
-        width: 'fit-content',
-    },
-
-    [theme.breakpoints.down('lg')]: {
-        top: '-2.5em',
-        left: '-0.2em'
-    },
-
-    [theme.breakpoints.down('md')]: {
-        left: 0,
-        top: '-3em',
-    }
-}));
-
-export const InnerMiddleBox = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.game.special.blue,
-    border: `4px solid ${theme.game.special.dark}`,
-    borderRadius: '23px',
-    boxShadow: `4px 6px 0px 0px ${theme.game.special.dark}`,
-    padding: '10px 30px',
-
-    '&:hover': {
-        backgroundColor: "#ff751f",
-    },
-
-    '& .MuiTypography-root': {
-        fontWeight: 900
-    },
-
-    [theme.breakpoints.down('sm')]: {
-        padding: '7px'
-    }
-}));
-
-export const SecondSectionBelowBox = styled(Box)(({ theme }) => ({
-    background: `${theme.game.special.dark} url("https://od.lk/s/MzRfMzc1NDk3Njdf/WhatsApp%20Image%202024-06-14%20%C3%A0%2016.22.40_503b4eaf.jpg") no-repeat center`,
-
-    padding: '120px',
-    borderRadius: '20px',
-    alignItems: 'center',
-    height: '500px',
-    justifyContent: 'center',
-
-    filter: 'sepia(1)',
-    backgroundSize: 'cover',
-    marginTop: '10px',
-
-    '&:hover': {
-        filter: 'none',
-    },
-
-    [theme.breakpoints.down('md')]: {
-        alignSelf: 'end',
-        width: '70%'
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        height: '720px',
-    },
-}));
-
-export const SecondSectionRightBox = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: '20px',
-    height: '720px',
-    margin: '30px 0px 30px 5px',
-    padding: '30px',
-    width: '60%',
-
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.between('md', 'lg')]: {
+        padding: '100px',
         width: '100%'
     },
 }));
 
-export const SecondSectionRightBelowBox = styled(Box)(({ theme }) => ({
-    display: 'flex', 
-    marginTop: theme.spacing(8), 
-    gap: 4,
-
-    [theme.breakpoints.down('lg')]: {
-        display: 'none'
-    },
-
-    [theme.breakpoints.between('md', 'lg')]: {
-        marginTop: theme.spacing(4)
-    }
-}));
-
-export const BelowBoxFirstSection = styled(Box)(({ theme }) => ({
-    background: `${theme.game.special.dark} url("https://i.ibb.co/d7FJhKm/20230531-200845.jpg?w=248&fit=crop&auto=format") no-repeat center`,
-
-    padding: '10px',
-    borderRadius: '20px',
-    alignItems: 'center',
-    height: '220px',
-    justifyContent: 'center',
-
-    filter: 'sepia(1)',
-    backgroundSize: 'cover',
-    width: '50%',
-
-    '&:hover': {
-        filter: 'none',
-    },
-
-    [theme.breakpoints.down('md')]: {
-        alignSelf: 'start',
-        width: '70%'
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        height: '320px',
-    },
-}));
-
-export const BelowBoxSecondSection = styled(Box)(({ theme }) => ({
-    background: `${theme.game.special.dark} url("	https://i.ibb.co/2cntgRT/square-media-img-2.png?w=248&fit=crop&auto=format") no-repeat center`,
-
-    padding: '10px',
-    borderRadius: '20px',
-    alignItems: 'center',
-    height: '220px',
-    justifyContent: 'center',
-
-    filter: 'sepia(1)',
-    backgroundSize: 'cover',
-    width: '50%',
-
-    '&:hover': {
-        filter: 'none',
-    },
-
-    [theme.breakpoints.down('md')]: {
-        alignSelf: 'start',
-        width: '70%'
-    },
-
-    [theme.breakpoints.up(1440)]: {
-        height: '320px',
-    },
-}));
+export const BuyCoffeeImageLink = styled(Link)({
+    textDecoration: 'none'
+});
