@@ -1,6 +1,5 @@
 import { convertTags } from "@hooks/useConverters";
 import { useListPressArticlesQuery } from "@services/PressApi";
-import { useTranslation } from "react-i18next";
 
 export interface IPress {
   media: string;
@@ -17,10 +16,7 @@ export interface IPress {
 
 export const ListPressArticles = () => {
   // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
-  const { t } = useTranslation();
   const { data } = useListPressArticlesQuery();
-
-  console.log(data);
 
   if (data && data.press) {
     return data.press.map((pressArticle) => {
