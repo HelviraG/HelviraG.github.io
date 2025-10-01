@@ -3,30 +3,27 @@ import { useTranslation } from "react-i18next";
 import useDocumentTitle from "@hooks/useDocumentTitle";
 import { Desktop } from "@/App/Layout/Desktop/Desktop";
 import { Mobile } from "@/App/Layout/Mobile/Mobile";
-import { BuyMeACoffee } from "@/App/Pages/Home/BuyMeACoffee";
-import { QuizStart } from "./QuizStart";
+import { FalloutQuiz } from "../FalloutQuiz";
 
 export const QuizStartPage = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();
   
-    useDocumentTitle(`Helvira Goma | 🕹️ ${t("app.menu.explorer")}`);
+  useDocumentTitle(`Helvira Goma | 💓 ${t("app.menu.passion")}`);
   
-    return (
-      <>
-        {isTablet ? (
-          <Mobile>
-            <QuizStart />
-            
-            <BuyMeACoffee />
-          </Mobile>
-        ) : (
-          <Desktop>
-            <QuizStart />
-            
-            <BuyMeACoffee />
-          </Desktop>
-        )}
-      </>
-    );
+  return (
+    <>
+      {isTablet ? (
+        <Mobile withTopButton={false} withHeader={false} withFooter={false}>
+          <FalloutQuiz />
+          
+        </Mobile>
+      ) : (
+        <Desktop withTopButton={false} withHeader={false} withFooter={false}>
+          <FalloutQuiz />
+          
+        </Desktop>
+      )}
+    </>
+  );
 };
 

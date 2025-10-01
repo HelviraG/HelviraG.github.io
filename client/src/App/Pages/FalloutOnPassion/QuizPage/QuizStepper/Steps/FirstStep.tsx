@@ -44,7 +44,7 @@ export const FirstStep = ({ p }: { p: string[] }) => {
         fontSize: isMobile ? "12px" : "15px",
         display: "block",
         height: isMobile ? "120px" : "90px",
-        padding: isMobile ? "0px 26px 26px" : "0 40px 40px 40px",
+        padding: isMobile ? "0px 26px 26px" : "0",
         marginTop: isMobile ? "2em" : "1em",
         textAlign: "justify",
         fontStyle: "italic",

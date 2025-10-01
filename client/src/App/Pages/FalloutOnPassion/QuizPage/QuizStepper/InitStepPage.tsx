@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import useDocumentTitle from "@hooks/useDocumentTitle";
 import { Desktop } from "@/App/Layout/Desktop/Desktop";
 import { Mobile } from "@/App/Layout/Mobile/Mobile";
-import { BuyMeACoffee } from "@/App/Pages/Home/BuyMeACoffee";
 import { InitStep } from "./InitStep";
 
 export const InitStepsPage = ({ isTablet }: { isTablet: boolean }) => {
@@ -14,16 +13,14 @@ export const InitStepsPage = ({ isTablet }: { isTablet: boolean }) => {
     return (
       <>
         {isTablet ? (
-          <Mobile>
+          <Mobile withFooter={false} withHeader={false} withTopButton={false}>
             <InitStep />
             
-            <BuyMeACoffee />
           </Mobile>
         ) : (
-          <Desktop>
+          <Desktop withFooter={false} withHeader={false} withTopButton={false}>
             <InitStep />
             
-            <BuyMeACoffee />
           </Desktop>
         )}
       </>

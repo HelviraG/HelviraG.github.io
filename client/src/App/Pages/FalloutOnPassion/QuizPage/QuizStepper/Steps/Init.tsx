@@ -1,16 +1,11 @@
 import { EnterName } from "@fallout/QuizPage/QuizStepper/Steps/Init/EnterName";
 import { PickCategory } from "@fallout/QuizPage/QuizStepper/Steps/Init/PickCategory";
 import ReceiptIcon from "@mui/icons-material/Receipt";
-import { Divider } from "@mui/material";
+import { Box, CardMedia, Divider } from "@mui/material";
 import {
-  InitPromptAbove,
-  InitPromptAboveWrapper,
   InitPromptAboveWrapperChildren,
   InitPromptBelow,
-  InitPromptBox,
-  InitPromptCardMedia,
   InitPromptIndicator,
-  InitPromptWrapper,
 } from "@pages/FalloutOnPassion/QuizPage/Styles/InitPrompt";
 import { Sounds } from "@resources/Enums/Sounds";
 import React, { SyntheticEvent, useEffect, useState } from "react";
@@ -47,65 +42,89 @@ export const Init = () => {
   }, [hasStoredUser, storedCategory]);
 
   return (
-    <InitPromptWrapper>
-      <InitPromptBox>
-        <InitPromptAbove>
-          <InitPromptCardMedia
-            image={
-              "https://od.lk/s/MzRfMzk5Njg0MDZf/WhatsApp_Image_2024-06-19_a%CC%80_03.43.04_796dfceb-removebg-preview.png"
-            }
-          />
-          <InitPromptAboveWrapper>
-            <Divider textAlign={"left"} variant={"fullWidth"}>
-              <InitPromptAboveWrapperChildren
-                hasEnterName={hasEnterName || hasStoredUser}
-                deleteIcon={<ReceiptIcon />}
-                label={
-                  hasEnterName || hasStoredUser
-                    ? t("app.explore.fallout_on_passion.quiz.chip")
-                    : t("app.explore.fallout_on_passion.quiz.chip_name")
-                }
-              />
-            </Divider>
-            {!hasError && (hasEnterName || hasStoredUser) && (
-              <InitPromptIndicator hasUsername>
-                <Trans
-                  i18nKey={
-                    "app.explore.fallout_on_passion.quiz.indicators.say_hi"
-                  }
-                  values={{ userName: userName ? userName : storedUserName }}
-                />
-              </InitPromptIndicator>
-            )}
-            {!hasError && !hasEnterName && userName && userName.length > 0 && (
-              <InitPromptIndicator isSuccess>
-                {t(
-                  "app.explore.fallout_on_passion.quiz.indicators.press_confirm",
-                )}
-              </InitPromptIndicator>
-            )}
-            {hasError && (
-              <InitPromptIndicator isError>
-                {t("app.explore.fallout_on_passion.quiz.indicators.error")}
-              </InitPromptIndicator>
-            )}
-          </InitPromptAboveWrapper>
-        </InitPromptAbove>
-        <InitPromptBelow>
-          {!hasEnterName && !hasStoredUser && (
-            <EnterName
-              setHasEnterName={setHasEnterName}
-              setUserName={setUserName}
-              setHasError={setHasError}
-              hasError={hasError}
-              userName={userName}
+    <>
+      <Box sx={{ 
+        backgroundColor: '#EEFAE1', 
+        display: 'flex', 
+        height: '-webkit-fill-available', 
+        alignItems: 'center', 
+        flexDirection: 'column', 
+        justifyContent: 'center', 
+        width: '50%' 
+      }}>
+        <Box sx={{ 
+          backgroundColor: '#B8E986', 
+          padding: '4em', 
+          margin: '5em', 
+          borderRadius: '32px', 
+          height: '50%', 
+          ...((hasEnterName || hasStoredUser) && { 
+            height: 'auto', 
+            padding: '3em' 
+          }) 
+        }}>
+          <Divider textAlign={"right"} variant={"fullWidth"}>
+            <InitPromptAboveWrapperChildren
+              hasEnterName={hasEnterName || hasStoredUser}
+              deleteIcon={<ReceiptIcon />}
+              label={
+                hasEnterName || hasStoredUser
+                  ? t("app.explore.fallout_on_passion.quiz.chip")
+                  : t("app.explore.fallout_on_passion.quiz.chip_name")
+              }
             />
+          </Divider>
+          {!hasError && (hasEnterName || hasStoredUser) && (
+            <InitPromptIndicator hasUsername>
+              <Trans
+                i18nKey={
+                  "app.explore.fallout_on_passion.quiz.indicators.say_hi"
+                }
+                values={{ userName: userName ? userName : storedUserName }}
+              />
+            </InitPromptIndicator>
           )}
-          {(hasEnterName || hasStoredUser) && (
-            <PickCategory handleSelectField={handleSelectField} />
+          {!hasError && !hasEnterName && userName && userName.length > 0 && (
+            <InitPromptIndicator isSuccess>
+              {t(
+                "app.explore.fallout_on_passion.quiz.indicators.press_confirm",
+              )}
+            </InitPromptIndicator>
           )}
-        </InitPromptBelow>
-      </InitPromptBox>
-    </InitPromptWrapper>
+          {hasError && (
+            <InitPromptIndicator isError>
+              {t("app.explore.fallout_on_passion.quiz.indicators.error")}
+            </InitPromptIndicator>
+          )}
+          <InitPromptBelow>
+            {!hasEnterName && !hasStoredUser && (
+              <EnterName
+                setHasEnterName={setHasEnterName}
+                setUserName={setUserName}
+                setHasError={setHasError}
+                hasError={hasError}
+                userName={userName}
+              />
+            )}
+            {(hasEnterName || hasStoredUser) && (
+              <PickCategory handleSelectField={handleSelectField} />
+            )}
+          </InitPromptBelow>
+        </Box>
+      </Box>
+      <Box sx={{ 
+        padding: '2em', 
+        width: '50%', 
+        backgroundColor: 'black', 
+        height: '-webkit-fill-available', 
+        alignContent: 'center' 
+      }}>
+        <CardMedia
+          component="img"
+          image="https://od.lk/s/MzRfMzk5Njg0MDZf/WhatsApp_Image_2024-06-19_a%CC%80_03.43.04_796dfceb-removebg-preview.png"
+          sx={{ borderRadius: '40px' }}
+        />
+      </Box>
+    </>
   );
 };
