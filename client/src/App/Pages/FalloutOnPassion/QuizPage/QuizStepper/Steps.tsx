@@ -1,13 +1,5 @@
-import { Sound } from "@component/Sound/Sound";
-import MouseContextProvider from "@context/MouseContextProvider";
-import { Cursor } from "@cursor";
 import useClickOutside from "@hooks/useClickOutside";
-import useSessionStorage from "@hooks/useSessionStorage";
-import i18n from "@i18n";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import MusicOffIcon from "@mui/icons-material/MusicOff";
-import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import { Box, Card, CardMedia, Typography, useMediaQuery } from "@mui/material";
+import { Box, CardMedia, LinearProgress, linearProgressClasses, styled, useMediaQuery } from "@mui/material";
 import { QuizPopper } from "@pages/FalloutOnPassion/QuizPage/QuizPopper";
 import { Sounds } from "@resources/Enums/Sounds";
 import { FalloutPassionEN } from "@resources/Pages/General/FalloutPassionEN";
@@ -19,18 +11,6 @@ import {
   showField,
   showLastAnswer,
 } from "@slices/QuizSlice";
-import {
-  FabButton,
-  FabButtonBox,
-  FabButtonComponent,
-} from "@styles/Pages/FalloutOnPassionStyle";
-import {
-  SettingsButtonBox,
-  WavyButton,
-  WavySettingsButtonBox,
-  WavySettingsSpan,
-  WavySettingsSpanBox,
-} from "@styles/Pages/FalloutOnPassionStyle/ComponentsStyle";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,10 +20,6 @@ import useSound from "use-sound";
 import { QuizPersonal } from "../QuizResult/QuizPersonal";
 import {
   CardContentBody,
-  CardContentStyle,
-  DialogBox,
-  DialogPaper,
-  DialogStyle,
   QuizContentBox,
   QuizContentTitle,
   QuizContentTitleBox,
@@ -51,11 +27,44 @@ import {
 import { Navigation } from "./Navigation";
 import { FirstStep } from "./Steps/FirstStep";
 import { Step } from "./Steps/Step";
-import { Stepper } from "./Steps/Stepper";
+import useChangeLangage from "@/Hooks/useChangeLangage";
+import { QuizSettings } from "../../Components/QuizSettings";
+import { Routes } from "@/App/Resources/Enums/Routes";
+import { QuizLayout } from "../../Layouts/QuizLayout";
+import { QuizContainedButton, QuizOutlinedButton } from "@/App/Styles/Pages/FalloutOnPassionStyle/QuizLayoutStyle";
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  height: 2,
+  borderRadius: 5,
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: theme.palette.background.paper,
+    ...theme.applyStyles('dark', {
+      backgroundColor: theme.palette.background.paper,
+    }),
+  },
+  [`& .${linearProgressClasses.bar}`]: {
+    borderRadius: 5,
+    backgroundColor: '#B8E986',
+    ...theme.applyStyles('dark', {
+      backgroundColor: '#B8E986',
+    }),
+  },
+}));
+
+function formatQuestion(text: string, replacements: Record<string, string>) {
+  return text.replace(/{{\s*(\w+)\s*}}/g, (_, key) => replacements[key] || "");
+}
+
+function stripQuotes(str: string) {
+  try {
+    return JSON.parse(str);
+  } catch {
+    return str;
+  }
+}
 
 export const Steps = () => {
   const navigate = useNavigate();
-  const [value] = useSessionStorage("PAUSE_SOUND", false);
   const location = useLocation();
   const dispatch = useDispatch();
 
@@ -73,7 +82,6 @@ export const Steps = () => {
     currentStep ? parseInt(currentStep, 10) : 0,
   );
   const [play] = useSound(Sounds.CLICK_SETTINGS);
-  const [pauseMusic, setPauseMusic] = useState<boolean>(value);
 
   const answers = useSelector(listAllAnswers);
   const hasAnswer = answers
@@ -89,22 +97,24 @@ export const Steps = () => {
         10,
       )
     : 0;
+
   // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
   const lastSavedStep = useSelector(showLastAnswer);
 
-  const lang = i18n.language;
   const [dataFile, setDataFile] = useState<{
     subject: string;
     survey: { q: string[]; p: string[]; i: string; i_sm: string }[];
   }>();
 
   const isMobile = useMediaQuery("(max-width: 600px");
+
   const isWavyMobile = useMediaQuery("(max-width: 767px");
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
   const disabledButton = !selectedAnswer && activeStep !== 0 && !hasAnswer;
 
   const maxSteps = dataFile?.survey.length;
+  const { appLang: lang } = useChangeLangage();
 
   useClickOutside(popperRef, () => {
     setOpenSettings(false);
@@ -113,13 +123,13 @@ export const Steps = () => {
   const handleNext = () => {
     play();
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    navigate(`/explore/passion/whoami/${cat}/${activeStep + 1}`);
+    navigate(`/explore/passion/whoami/${stripQuotes(cat)}/${activeStep + 1}`);
   };
 
   const handleBack = () => {
     play();
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
-    navigate(`/explore/passion/whoami/${cat}/${activeStep - 1}`);
+    navigate(`/explore/passion/whoami/${stripQuotes(cat)}/${activeStep - 1}`);
   };
 
   const handlePopper = (event: any) => {
@@ -128,12 +138,8 @@ export const Steps = () => {
   };
 
   useEffect(() => {
-    setPauseMusic(value);
-  }, [value]);
-
-  useEffect(() => {
     if (cat && !hasAnswer && !answers) {
-      navigate(`/explore/passion/whoami/${cat}/0`);
+      navigate(`/explore/passion/whoami/${stripQuotes(cat)}/0`);
     }
   }, [currentStep]);
 
@@ -152,112 +158,113 @@ export const Steps = () => {
   if (!dataFile && !maxSteps) return null;
 
   return (
-    <MouseContextProvider>
-      <Cursor />
-      <DialogStyle
-        sx={(theme) => ({
-          "& .MuiDialogContent-root": {
-            alignContent: "center",
-            backgroundColor: theme.game.purple.dark,
-            height: "-webkit-fill-available",
+    <>
+      <QuizLayout 
+        buttons={
+          <>
+            {activeStep !== 18 && maxSteps && (
+              <Navigation
+                activeStep={activeStep}
+                maxSteps={maxSteps}
+                handleBack={handleBack}
+                handleNext={handleNext}
+                isDisabled={disabledButton}
+                stepLabel={`${activeStep + 1} / ${maxSteps }`}
+              />
+            )}
+            {activeStep === 18 && (
+              <Box sx={(theme) => ({ 
+                display: 'flex', 
+                flex: 1, 
+                justifyContent: 'space-between',
+                textTransform: 'lowercase',
 
-            [theme.breakpoints.down("md")]: {
-              width: "100%",
-            },
-          },
-
-          "& .MuiPaper-root": {
-            backgroundColor: theme.game.purple.dark,
-            maxWidth: "728px",
-
-            [theme.breakpoints.down("md")]: {
-              maxWidth: "100%",
-              margin: 0,
-              flex: 1,
-            },
-
-            [theme.breakpoints.between("md", 1999)]: {
-              maxWidth: "76vw",
-              margin: "0 auto",
-            },
-
-            [theme.breakpoints.up(2000)]: {
-              maxWidth: "1100px",
-              margin: 0,
-            },
-          },
-        })}
-      >
-        <DialogBox>
-          <SettingsButtonBox>
-            <WavySettingsButtonBox isPillButton={true}>
-              <WavySettingsSpanBox
-                isPillButton={true}
-                isSettingsOpen={openSettings}
-              >
-                <WavySettingsSpan>
-                  <SettingsSuggestIcon
-                    fontSize="small"
-                    sx={(theme) => ({
-                      marginRight: "8px",
-
-                      [theme.breakpoints.down("md")]: {
-                        margin: "0 auto",
-                      },
-                    })}
-                  />
-                  <Typography
-                    sx={(theme) => ({
-                      display: "block",
-                      fontSize: "11px",
-                      fontWeight: 900,
-
-                      [theme.breakpoints.down(768)]: {
-                        display: "none",
-                      },
-                    })}
-                  >
-                    {t("app.general.actions.params")}
-                  </Typography>
-                </WavySettingsSpan>
-              </WavySettingsSpanBox>
-              <WavyButton
-                variant="contained"
-                onClick={handlePopper}
-                startIcon={<SettingsSuggestIcon />}
-                isDrawy
-                isSettingsOpen={openSettings}
-              >
-                {isWavyMobile ? "" : t("app.general.actions.params")}
-              </WavyButton>
-            </WavySettingsButtonBox>
-          </SettingsButtonBox>
-          <Card sx={{ width: "100%" }}>
-            <CardContentStyle sx={{ margin: "0 auto" }}>
-              <Box
-                sx={{ borderRadius: "23px", width: "-webkit-fill-available" }}
-              >
-                <CardMedia
-                  component="img"
-                  image={
-                    isMobile
-                      ? dataFile.survey[activeStep].i_sm
-                      : dataFile.survey[activeStep].i
-                  }
-                  sx={{ width: "100%" }}
-                />
+                [theme.breakpoints.down(500)]: {
+                  flexDirection: 'column',
+                  gap: 2,
+                  alignItems: 'center',
+                  width: '-webkit-fill-available',
+                }
+              })}>
+                <QuizOutlinedButton 
+                  hasFullWidth
+                  variant="outlined" 
+                  onClick={() => navigate(Routes.QUIZ_INIT)}
+                >
+                  {t('app.general.actions.redo')}
+                </QuizOutlinedButton>
+                <QuizContainedButton 
+                  hasFullWidth
+                  variant="contained" 
+                  onClick={() => navigate(Routes.QUIZ_RESULT)}
+                >
+                  {t('app.general.actions.results')}
+                </QuizContainedButton>
               </Box>
+            )}
+          </>
+        }
+      >
+        {activeStep !== 18 && maxSteps && (
+          <BorderLinearProgress variant="determinate" value={activeStep + 1 / maxSteps} />
+        )}
+
+        {activeStep === 18 && <QuizPersonal cat={cat} />}
+
+        {activeStep !== 18 && 
+          <Box 
+            sx={(theme) => ({ 
+              position: 'relative', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              flex: 1,
+
+              [theme.breakpoints.down(800)]: {
+                backgroundColor: '#EEFAE1',
+                flexDirection: 'column-reverse',
+                justifyContent: 'space-between',
+              },
+
+              [theme.breakpoints.down(601)]: {
+                maxHeight: '680px',
+                overflow: 'scroll',
+              }
+            })}
+          >
+            <Box 
+              sx={(theme) => ({ 
+                backgroundColor: '#EEFAE1', 
+                display: 'flex', 
+                height: '-webkit-fill-available', 
+                alignItems: 'center', 
+                flexDirection: 'column', 
+                justifyContent: 'center', 
+                width: '60%' ,
+
+                [theme.breakpoints.down(800)]: {
+                  flex: 1,
+                  width: '-webkit-fill-available'
+                }
+              })}
+            >
               <CardContentBody isQuizResult={activeStep === 18}>
-                {activeStep !== 18 && maxSteps && (
-                  <Stepper activeStep={activeStep} maxSteps={maxSteps} />
-                )}
                 <QuizContentBox isQuizResult={activeStep === 18}>
                   <QuizContentTitleBox>
-                    {dataFile.survey[activeStep].q.map((q: string, index) => (
-                      <QuizContentTitle variant="subtitle1" key={index}>
-                        {q}
-                      </QuizContentTitle>
-                    ))}
+                    {dataFile.survey[activeStep].q.map((q: string, index) => {
+                      const formattedQ = formatQuestion(q, { 
+                        cat_job: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_job`),
+                        cat_verb: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_verb`),
+                        cat_hobby: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_hobby`),
+                        cat_action: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_action`),
+                      });
+
+                      return (
+                        <QuizContentTitle variant="h6" key={index}>
+                          {formattedQ}
+                        </QuizContentTitle>
+                      )
+                    })}
                   </QuizContentTitleBox>
                   {activeStep === 0 && (
                     <FirstStep p={dataFile.survey[activeStep].p} />
@@ -271,39 +278,49 @@ export const Steps = () => {
                       storedAnswer={storedAnswer}
                     />
                   )}
-                  {activeStep === 18 && <QuizPersonal cat={cat} />}
-                  {maxSteps && (
-                    <Navigation
-                      activeStep={activeStep}
-                      maxSteps={maxSteps}
-                      handleBack={handleBack}
-                      handleNext={handleNext}
-                      isDisabled={disabledButton}
-                    />
-                  )}
                 </QuizContentBox>
               </CardContentBody>
-              <QuizPopper
-                openSettings={openSettings}
-                anchorEl={anchorEl}
-                popperRef={popperRef}
+            </Box>
+            <Box 
+              sx={(theme) => ({ 
+                padding: '2em', 
+                width: '50%',
+
+                [theme.breakpoints.down(800)]: {
+                  padding: '1em 1em 0 1em',
+                  width: '-webkit-fill-available'
+                },
+
+                [theme.breakpoints.down(601)]: {
+                  width: '70%'
+                },
+
+                [theme.breakpoints.down(480)]: {
+                  width: '-webkit-fill-available'
+                },
+              })}
+            >
+              <CardMedia
+                component="img"
+                image={
+                  isMobile
+                    ? dataFile.survey[activeStep].i_sm
+                    : dataFile.survey[activeStep].i
+                }
+                sx={{ borderRadius: '40px' }}
               />
-            </CardContentStyle>
-          </Card>
-        </DialogBox>
-      </DialogStyle>
-      <FabButtonBox>
-        <Sound sound={Sounds.QUIZ_BACKGROUND} pause={pauseMusic} />
-        <FabButtonComponent
-          aria-label={"play or stop sound"}
-          onClick={() => setPauseMusic(!pauseMusic)}
-        >
-          <FabButton>
-            {pauseMusic && <MusicOffIcon />}
-            {!pauseMusic && <MusicNoteIcon />}
-          </FabButton>
-        </FabButtonComponent>
-      </FabButtonBox>
-    </MouseContextProvider>
+            </Box>
+            <QuizSettings isMobile={isWavyMobile} handlePopper={handlePopper} isSettingsOpen={openSettings} />
+            <QuizPopper
+              openSettings={openSettings}
+              anchorEl={anchorEl}
+              popperRef={popperRef}
+            />
+          </Box>
+        }
+      </QuizLayout>
+    </>
   );
 };
+
+

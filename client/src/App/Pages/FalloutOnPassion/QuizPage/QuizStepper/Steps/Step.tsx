@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Sounds } from "@resources/Enums/Sounds";
 import { storeAnswers } from "@slices/QuizSlice";
 import React, { useState } from "react";
@@ -63,7 +63,19 @@ export const Step = ({
             <BackgroundStepInnerBox component={"span"}>
               <BackgroundStepSecondInnerBox component={"span"}>
                 <BackgroundStepThirdInnerBox component={"span"}>
-                  <BackgroundStepTypo>{option}</BackgroundStepTypo>
+                  <BackgroundStepTypo>
+                    <Box 
+                      sx={{ 
+                        border: '1px solid white',     
+                        padding: '6px',
+                        borderRadius: '50%',
+                        margin: '10px',
+                        fontSize: '27px'
+                      }}
+                    >
+                      {option}
+                    </Box>
+                  </BackgroundStepTypo>
                 </BackgroundStepThirdInnerBox>
               </BackgroundStepSecondInnerBox>
             </BackgroundStepInnerBox>
@@ -72,7 +84,23 @@ export const Step = ({
               isSaved={hasAnswer && storedAnswer === option}
             >
               <ForegroundStepInnerBox>
-                <ForegroundStepTypo>{option}</ForegroundStepTypo>
+                <ForegroundStepTypo>
+                  <Box 
+                    sx={(theme) => ({ 
+                      border: '1px solid #596F4C',     
+                      padding: '6px',
+                      borderRadius: '50%',
+                      margin: '10px',
+                      fontSize: '27px',
+
+                      ...(hasAnswer && storedAnswer === option && {
+                        color: theme.palette.background.paper
+                      })
+                    })}
+                  >
+                    {option}
+                  </Box>
+                </ForegroundStepTypo>
               </ForegroundStepInnerBox>
             </ForegroundStepBox>
           </StepButton>
