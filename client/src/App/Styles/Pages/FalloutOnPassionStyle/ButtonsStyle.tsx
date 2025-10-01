@@ -19,7 +19,7 @@ export const StartButton = styled(Button, {
     height: '53px',
     flexShrink: 0,
     borderRadius: '17px',
-    background: 'linear-gradient(180deg, #B67800 55.86%, #6B2D00 100%)',
+    background: '#000',
     position: 'relative',
 
     [theme.breakpoints.down(1030)]: {
@@ -55,7 +55,7 @@ export const BackgroundStartInnerBox = styled(Box, {
     top: 0,
     right: 0,
     boxShadow: '0px 4px 0.9px 0px rgba(255, 255, 255, 0.50) inset',
-    background: 'linear-gradient(180deg, #0fbcf9 55.86%, #3c40c6 100%)',
+    background: '#000',
 
     [theme.breakpoints.down(1030)]: {
         width: '158px',
@@ -83,7 +83,7 @@ export const BackgroundStartSecondInnerBox = styled(Box, {
     width: '250px',
     height: '53px',
     borderRadius: '17px',
-    background: 'linear-gradient(180deg, #0fbcf9 0%, #f53b57 100%)',
+    background: '#000',
 
     [theme.breakpoints.down(1030)]: {
         width: '158px',
@@ -112,7 +112,7 @@ export const BackgroundStartThirdInnerBox = styled(Box, {
     height: '53px',
     flexShrink: 0,
     borderRadius: '17px 17px 0px 0px',
-    background: 'linear-gradient(177deg, rgba(255, 255, 255, 0.00) 2.87%, rgba(255, 255, 255, 0.27) 102.03%)',
+    background: '#000',
 
     [theme.breakpoints.down(1030)]: {
         width: '158px',
@@ -137,9 +137,8 @@ export const BackgroundStartThirdInnerBox = styled(Box, {
 export const BackgroundStartTypo = styled(Typography, {
     shouldForwardProp: (prop) => prop !== "isInitPrompt"
 })<ButtonTypoProps>(({ isInitPrompt, theme}) => ({
-    color: '#7ed6df',
+    color: '#fff',
     paddingTop: '10px',
-    textShadow: '0px 2.339px 0px #130f40',
     webkitTextStrokeWidth: '0.5837001204490662',
     webkitTextStrokeColor: '#000',
     fontFamily: "Lilita One",
@@ -188,8 +187,8 @@ export const ForegroundStartBox = styled(Box, {
     width: '250px',
     height: '53px',
     borderRadius: '17px',
-    background: 'linear-gradient(180deg, #FFA800 0%, #FF6B00 100%)',
-    boxShadow: '0px 4px 0.9px 0px rgba(255, 255, 255, 0.50) inset',
+    background: '#B0DF81',
+    border: '1px solid #93BA6F',
     zIndex: 99999999,
     mask: 'url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png")',
     maskSize: '3000% 100%',
@@ -217,7 +216,7 @@ export const ForegroundStartBox = styled(Box, {
 
     ...(isInitPrompt && {
         width: '186px',
-        background: 'linear-gradient(180deg, #32ff7e 0%, #3ae374 100%)'
+        background: '#B0DF81',
     }),
 
     "@keyframes ani": {
@@ -246,7 +245,7 @@ export const ForegroundStartInnerBox = styled(Box, {
     height: '32px',
     flexShrink: 0,
     borderRadius: '17px 17px 0px 0px',
-    background: 'linear-gradient(177deg, rgba(255, 255, 255, 0.00) 2.87%, rgba(255, 255, 255, 0.27) 102.03%)',
+    background: '#B0DF81',
 
     [theme.breakpoints.down(1030)]: {
         width: '158px',
@@ -273,7 +272,6 @@ export const ForegroundStartTypo = styled(Typography, {
 })<ButtonTypoProps>(({ isInitPrompt, theme}) => ({
     color: '#eccc68',
     paddingTop: '10px',
-    textShadow: '0px 2.339px 0px #723400',
     webkitTextStrokeWidth: '0.5837001204490662',
     webkitTextStrokeColor: '#000',
     fontFamily: "Lilita One",
@@ -281,13 +279,12 @@ export const ForegroundStartTypo = styled(Typography, {
     fontStyle: 'normal',
     fontWeight: 400,
     lineHeight: 'normal',
-    background: 'linear-gradient(180deg, #FFF 30.82%, #FFB672 86.99%)',
+    background: '#B0DF81',
     backgroundClip: 'text',
     webkitTextFillColor: 'transparent',
 
     [theme.breakpoints.down('md')]: {
         fontSize: '16px',
-        textShadow: '0px 3.339px 0px #723400',
     },
 
     [theme.breakpoints.between('md',1030)]: {
@@ -295,9 +292,8 @@ export const ForegroundStartTypo = styled(Typography, {
     },
 
     ...(isInitPrompt && {
-        background: 'linear-gradient(180deg, #FFF 30.82%, #009432 86.99%)',
+        background: '#B0DF81',
         fontSize: '27px',
         color: '#009432',
-        textShadow: '0px 5.339px 0px #32ff7e',
     })
 }));

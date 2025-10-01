@@ -1,4 +1,4 @@
-import { Box, BoxProps, Button, ButtonProps, styled } from '@mui/material';
+import { Box, BoxProps, Button, ButtonProps, Icon, styled } from '@mui/material';
 
 interface WavySettingsButtonBoxProps extends BoxProps {
     isPillButton: boolean;
@@ -17,12 +17,8 @@ interface AnimatedGameButtonProps extends ButtonProps {
 
 export const SettingsButtonBox = styled(Box)(({ theme }) => ({
     position: 'absolute',
-    top: '5%',
-    right: '5%',
-
-    [theme.breakpoints.down('md')]: {
-        top: '3%',
-    },
+    top: '2%',
+    right: '4%',
 }));
 
 export const WavySettingsButtonBox = styled(Box, {
@@ -33,7 +29,7 @@ export const WavySettingsButtonBox = styled(Box, {
     transition: '.5s',
     letterSpacing: '1px',
 
-    zIndex: 999999,
+    zIndex: 99999,
 
     ...(!isPillButton && {
         width: '100px',
@@ -65,7 +61,25 @@ export const WavySettingsSpan = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     verticalAlign: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+
+    '& .MuiButton-icon': {
+        marginRight: "8px",
+
+        [theme.breakpoints.down("md")]: {
+            margin: "0 auto",
+        },
+    }
+}));
+
+export const WavySettingsSpanTypo = styled(Icon)(({ theme }) => ({
+    display: "block",
+    fontSize: "11px",
+    fontWeight: 900,
+
+    [theme.breakpoints.down(768)]: {
+        display: "none",
+    },
 }));
 
 export const WavySettingsSpanBox = styled(Box, {
