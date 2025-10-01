@@ -91,10 +91,8 @@ export const InitPromptAboveWrapper = styled(Box)(({ theme }) => ({
 export const InitPromptAboveWrapperChildren = styled(Chip, {
   shouldForwardProp: (prop) => prop !== "hasEnterName",
 })<ChipProps>(({ hasEnterName, theme }) => ({
-  backgroundColor: theme.game.special.iceBlue.dark,
-  ...(hasEnterName && {
-    backgroundColor: theme.palette.success.main,
-  }),
+  backgroundColor: theme.game.special.dark,
+  color: theme.palette.background.paper,
 }));
 
 export const InitPromptIndicator = styled(Typography, {
@@ -103,8 +101,9 @@ export const InitPromptIndicator = styled(Typography, {
 })<InitPromptIndicatorProps>(({ isSuccess, isError, hasUsername, theme }) => ({
   textTransform: "capitalize",
   ...((isSuccess || hasUsername) && {
-    color: theme.game.special.greeny,
+    color: theme.game.special.dark,
   }),
+  
   ...(isError && {
     color: theme.game.special.red,
   }),
@@ -116,12 +115,13 @@ export const InitPromptBelow = styled(Box)(({ theme }) => ({
 }));
 
 export const InitPromptBelowTypoWrapper = styled(Box)(({ theme }) => ({
-  marginBottom: theme.spacing(2),
-  marginTop: theme.spacing(2),
+  marginBottom: theme.spacing(8),
+  marginTop: theme.spacing(4),
 }));
 
 export const InitPromptBelowTypo = styled(Typography)(({ theme }) => ({
   fontFamily: "Manrope Variable",
+  textAlign: "left",
 
   [theme.breakpoints.down("sm")]: {
     fontSize: "12px",
@@ -155,7 +155,7 @@ export const EnterNameInput = styled(TextField, {
   height: "30px",
 
   "& input": {
-    borderBottom: "5px solid #337799",
+    borderBottom: "5px solid #1F2429",
     color: "#8cbfd9",
     fontFamily: '"Rubik Mono One", sans-serif',
     fontSize: "30px",

@@ -13,87 +13,25 @@ interface QuizContentBoxProps extends BoxProps {
   isQuizResult: boolean;
 }
 
-export const DialogStyle = styled(Box)(({ theme }) => ({
-  "& .MuiPaper-root": {
-    maxWidth: "100%",
-    position: "relative",
-  },
-
-  [theme.breakpoints.down("lg")]: {
-    margin: 0,
-  },
-}));
-
-export const LoadDialogStyle = styled(Dialog)(({ theme }) => ({
-  "& .MuiPaper-root": {
-    maxWidth: "74%",
-  },
-
-  [theme.breakpoints.down(767)]: {
-    maxWidth: "100%",
-  },
-}));
-
 // QuizStepper Part
-export const DialogPaper = (isMobile: boolean, isFirstStep: boolean) => {
-  const theme = useTheme();
-
-  return {
-    dialogProps: {
-      borderRadius: "23px",
-      display: "flex",
-      margin: "0 auto",
-      overflow: "hidden",
-
-      ...(isFirstStep && {
-        maxWidth: "70%",
-      }),
-
-      ...(isMobile && {
-        maxWidth: "100%",
-      }),
-
-      maxWidth: "70%",
-
-      [theme.breakpoints.down("md")]: {
-        maxWidth: "100%",
-      },
-
-      [theme.breakpoints.between(600, 1030)]: {
-        maxWidth: "70%",
-      },
-    },
-  };
-};
-
-export const DialogBox = styled(Box)({
-  padding: 0,
-  width: "100%",
-  overflow: "hidden",
-  position: "relative",
-});
-
-export const CardContentStyle = styled(CardContent)({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  padding: "0!important",
-});
-
 export const CardContentBody = styled(Box, {
   shouldForwardProp: (prop) => prop !== "isQuizResult",
 })<QuizContentBoxProps>(({ isQuizResult, theme }) => ({
-  backgroundColor: theme.game.purple.dark,
-  zIndex: 3,
-  padding: "10px 33px 0px",
-  width: "100%",
+  backgroundColor: '#B8E986', 
+  borderRadius: '32px',
+  padding: '4em 2em',
+  maxWidth: '80%',
+  margin: '0 auto',
 
   ...(isQuizResult && {
     padding: "14px 32px 0px",
   }),
 
   ...(!isQuizResult && {
+    [theme.breakpoints.down(601)]: {
+      margin: '2em 0',
+    },
+
     [theme.breakpoints.down("lg")]: {
       padding: "10px 14px 0px",
     },
@@ -107,14 +45,17 @@ export const CardContentBody = styled(Box, {
 export const QuizContentBox = styled(Box, {
   shouldForwardProp: (prop) => prop !== "isQuizResult",
 })<QuizContentBoxProps>(({ isQuizResult, theme }) => ({
-  backgroundColor: theme.game.purple.light,
-  borderRadius: "24px 24px 0px 0px",
   marginTop: theme.spacing(1),
   position: "relative",
 
   ...(isQuizResult && {
-    borderRadius: "24px",
     marginBottom: theme.spacing(3),
+  }),
+
+  ...(!isQuizResult && {
+    [theme.breakpoints.down(601)]: {
+      marginBottom: theme.spacing(1),
+    },
   }),
 
   [theme.breakpoints.down(500)]: {
@@ -123,7 +64,7 @@ export const QuizContentBox = styled(Box, {
 }));
 
 export const QuizContentTitleBox = styled(Box)(({ theme }) => ({
-  padding: `${theme.spacing(4)} ${theme.spacing(4)} ${theme.spacing(0)} ${theme.spacing(4)}`,
+  padding: `${theme.spacing(0)} ${theme.spacing(0)} ${theme.spacing(4)} ${theme.spacing(0)}`,
 
   [theme.breakpoints.down("lg")]: {
     padding: `${theme.spacing(4)} ${theme.spacing(2)} ${theme.spacing(0)} ${theme.spacing(2)}`,
@@ -133,7 +74,8 @@ export const QuizContentTitleBox = styled(Box)(({ theme }) => ({
 export const QuizContentTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 900,
   lineHeight: 1.4,
-  textAlign: "center",
+  textAlign: "left",
+  textTransform: "capitalize",
 
   [theme.breakpoints.down("lg")]: {
     fontSize: "15px",
@@ -142,13 +84,17 @@ export const QuizContentTitle = styled(Typography)(({ theme }) => ({
 
 // Stepper Part
 export const StepperBox = styled(MobileStepper)(({ theme }) => ({
-  backgroundColor: theme.game.purple.dark,
   margin: "0 auto",
   width: "100%",
   display: "flex",
+  padding: 0,
 
   [theme.breakpoints.up("lg")]: {
     maxWidth: "100%",
+  },
+
+  "& .MuiLinearProgress-root": {
+    backgroundColor: "#B8E986",
   },
 
   "& .MuiMobileStepper-dots": {
@@ -179,7 +125,6 @@ export const StepperBox = styled(MobileStepper)(({ theme }) => ({
 export const StepBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  height: "194px",
   justifyContent: "space-around",
   padding: `0px ${theme.spacing(4)}`,
   width: "100%",
@@ -191,12 +136,16 @@ export const StepBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     padding: "0px",
   },
+
+  [theme.breakpoints.up(601)]: {
+    height: "194px",
+  }
 }));
 
 export const StepButtonBox = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
-  marginBottom: "20px",
+  marginBottom: "40px",
   marginTop: "15px",
   gap: theme.spacing(2),
   flexWrap: "wrap",
@@ -214,6 +163,6 @@ export const StepButtonBox = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.up("xl")]: {
-    gap: theme.spacing(2),
+    gap: theme.spacing(3),
   },
 }));

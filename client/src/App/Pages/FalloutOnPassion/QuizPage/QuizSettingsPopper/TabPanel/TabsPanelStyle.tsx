@@ -97,7 +97,7 @@ export const TabPanelWrapper = styled(Box, {
 
 export const TabsPanelChip = styled(Chip)(({ theme }) => ({
   color: theme.game.special.dark,
-  backgroundColor: "#0cd5ac",
+  backgroundColor: theme.game.special.greeny,
   padding: `${theme.spacing(0)} ${theme.spacing(1)}`,
 
   "& .MuiChip-icon": {

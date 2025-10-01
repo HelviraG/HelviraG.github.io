@@ -2,7 +2,7 @@ import { Box, Paper, Popper, styled } from "@mui/material";
 
 export const QuizPopperStyle = styled(Popper)(({ theme }) => ({
     display: 'flex',
-    zIndex: 99999,
+    zIndex: 100000000,
     marginTop: '24px!important',
     height: '60%',
     width: '600px',
