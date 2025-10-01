@@ -7,6 +7,7 @@ import {
     Chip, 
     Drawer, 
     IconButton, 
+    Link, 
     styled,
     Typography
 } from '@mui/material';
@@ -205,3 +206,17 @@ export const CardContentTypography = styled(Typography)(({ theme }) => ({
         marginTop: theme.spacing(1)
     }
 }));
+
+export const CardContentAboutTypography = styled(Typography)({
+    color: '#FB0F5A',
+    cursor: 'none',
+    fontWeight: 900,
+    textDecoration: 'none',
+});
+
+export const CardContentAboutLink = styled(Link)({
+    color: 'lightpink!important',
+    cursor: 'none',
+    fontWeight: '900!important',
+    textDecoration: 'none',
+});

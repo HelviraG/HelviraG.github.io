@@ -2,11 +2,13 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { CardActions, IconButton, Link, Typography } from "@mui/material";
+import { CardActions, IconButton } from "@mui/material";
 import { Routes } from "@resources/Enums/Routes";
 import {
   CardBox,
   CardBoxWrapper,
+  CardContentAboutLink,
+  CardContentAboutTypography,
   CardContentBox,
   CardContentTypography,
   CardWrapper,
@@ -72,29 +74,14 @@ export const AvatarDrawer = ({
               <CardContentTypography variant="h5">
                 {t("app.menu.profile.about")}
               </CardContentTypography>
-              <Typography
-                sx={(theme) => ({
-                  color: "#FB0F5A",
-                  cursor: "none",
-                  fontWeight: 900,
-                  textDecoration: "none",
-                })}
-              >
+              <CardContentAboutTypography>
                 <Trans
                   i18nKey="app.menu.profile.about_text"
                   components={[
-                    <Link
-                      href="https://motivher.fr"
-                      sx={{
-                        color: "lightpink!important",
-                        cursor: "none",
-                        fontWeight: "900!important",
-                        textDecoration: "none",
-                      }}
-                    />,
+                    <CardContentAboutLink href="https://motivher.fr" />,
                   ]}
                 />
-              </Typography>
+              </CardContentAboutTypography>
             </CardContentBox>
             <CardActions></CardActions>
           </CardWrapper>
