@@ -11,7 +11,9 @@
         "watch": "Voir",
         "params": "Paramètres",
         "start_again": "Recommencer",
-        "resume": "Reprendre"
+        "resume": "Reprendre",
+        "next": "Suivant",
+        "back": "Précédent"
       },
       "buy_coffee": {
         "title": "☕ Vous aimez ce que je fais et souhaitez me soutenir ainsi que mon travail 😁"
@@ -221,6 +223,9 @@
           }
         },
         "quiz": {
+          "welcome_back_title": "🖖​ Bienvenue!",
+          "welcome_back_subtitle_1": "Il semble que vous ayez déjà commencé le quiz.",
+          "welcome_back_subtitle_2": "Vous pouvez soit reprendre là où vous vous étiez arrêté, soit recommencer.",
           "chip": "Sélectionner une industrie",
           "label": "Choisis ta spécialité tech :)",
           "chip_name": "Entrer son identité",
@@ -232,6 +237,32 @@
             "error_tip": "Seules les lettres comptent"
           },
           "activity": {
+             "cat": {
+              "coding": {
+                "cat_job": "de dev",
+                "cat_hobby": "en codant",
+                "cat_action": "de coder",
+                "cat_verb": "coder"
+              },
+              "gaming": {
+                "cat_job": "de gamer/gameuse",
+                "cat_hobby": "en jouant",
+                "cat_action": "de jouer",
+                "cat_verb": "jouer"
+              },
+              "designing": {
+                "cat_job": "de designer",
+                "cat_hobby": "en multipliant les Figma",
+                "cat_action": "de multiplier les Figma",
+                "cat_verb": "designer"
+              },
+              "machine_learning": {
+                "cat_job": "d'ingénieur(e) en machine learning",
+                "cat_hobby": "en entraînant des bots",
+                "cat_action": "d'entraîner des bots",
+                "cat_verb": "créer des IAs/modèles"
+              }
+            },
             "fields": {
               "coding": "coding",
               "gaming": "gaming",
@@ -278,6 +309,11 @@
             }
           },
           "result": {
+            "chart": {
+              "allCategory": "toutes teams",
+              "subText": "Tous les types en pourcentage",
+              "noData": "Aucun test réalisé pour cette catégorie"
+            },
             "img": {
               "citizen": "https://od.lk/s/MzRfMzg3MDAyNDlf/result_citizen_fr.png",
               "paladin": "https://od.lk/s/MzRfMzg2ODg0MTVf/result_paladin_fr.png",

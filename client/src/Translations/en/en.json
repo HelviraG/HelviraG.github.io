@@ -11,7 +11,11 @@
         "watch": "Watch",
         "params": "Settings",
         "start_again": "Restart",
-        "resume": "Resume"
+        "resume": "Resume",
+        "next": "Next",
+        "back": "Back",
+        "redo": "Start over",
+        "results": "To the landscape"
       },
       "buy_coffee": {
         "title": "☕ If you like what I do and want to support me and my work 😁"
@@ -215,6 +219,12 @@
           }
         },
         "quiz": {
+          "welcome_title": "Hello there!",
+          "welcome_subtitle_1": "",
+          "welcome_subtitle_2": "Shall we start?",
+          "welcome_back_title": "🖖​ Welcome Back!",
+          "welcome_back_subtitle_1": "It seems that you have already started the quiz.",
+          "welcome_back_subtitle_2": "You can either resume where you left off or start over.",
           "chip": "Choose a field",
           "chip_name": "Enter your name",
           "label": "Pick up the tech field you work in :)",
@@ -226,6 +236,32 @@
             "error_tip": "Only letters allowed"
           },
           "activity": {
+            "cat": {
+              "coding": {
+                "cat_job": "programmer",
+                "cat_hobby": "coding",
+                "cat_action": "code",
+                "cat_verb": "code"
+              },
+              "gaming": {
+                "cat_job": "gamer",
+                "cat_hobby": "gaming",
+                "cat_action": "play",
+                "cat_verb": "play"
+              },
+              "designing": {
+                "cat_job": "designer",
+                "cat_hobby": "creating designs",
+                "cat_action": "sketch on Figma or Adobe",
+                "cat_verb": "design"
+              },
+              "machine_learning": {
+                "cat_job": "machine learning engineer",
+                "cat_hobby": "training bots",
+                "cat_action": "train AI models",
+                "cat_verb": "train AI models"
+              }
+            },
             "fields": {
               "coding": "coding",
               "gaming": "gaming",
@@ -272,9 +308,14 @@
             }
           },
           "result": {
+            "chart": {
+              "allCategory": "all teams",
+              "subText": "All the types in proportion",
+              "noData": "No test result was submitted in this category"
+            },
             "img": {
-              "citizen": "https://od.lk/s/MzRfMzg2ODg0MjBf/result_citizen_fr.png",
-              "paladin": "https://od.lk/s/MzRfMzg2ODg0MTVf/result_paladin_fr.png",
+              "citizen": "https://od.lk/s/MzRfMzg3MDAyNDhf/result_citizen_en.png",
+              "paladin": "https://od.lk/s/MzRfMzg2ODg0MTRf/result_paladin_en.png",
               "superMutant": "https://od.lk/s/MzRfMzg2ODg0MjNf/result_supermutant_en.png"
             },
             "label": {
