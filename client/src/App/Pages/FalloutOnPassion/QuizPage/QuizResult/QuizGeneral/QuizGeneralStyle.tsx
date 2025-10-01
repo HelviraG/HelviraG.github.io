@@ -193,3 +193,7 @@ export const DashboardContentChartWrapper = styled(Box)({
     display: 'flex', 
     marginTop: '.5em' 
 });
+
+export const ChartBox = styled(Box)({
+    flex: 1
+});
