@@ -13,7 +13,7 @@ interface Video {
 
 export const videosApi = createApi({
   reducerPath: "videosApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
   endpoints: (builder) => ({
     listVideos: builder.query<{ videos: Video[] }, void>({
       query: () => ({

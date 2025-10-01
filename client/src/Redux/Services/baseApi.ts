@@ -35,8 +35,6 @@ export const axiosBaseQuery =
       { url: baseUrl + url, method, data, params }
     );
     
-    console.log(url, baseUrl, method, data, params, result);
-
     return { data: result };
   } catch (axiosError) {
     let err = axiosError as AxiosError;

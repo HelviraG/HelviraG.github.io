@@ -27,7 +27,7 @@ interface QuizResult {
 
 export const quizApi = createApi({
   reducerPath: "quizApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
   endpoints: (builder) => ({
     storeResult: builder.mutation({
       query: (body: { category: string; type: string }) => ({

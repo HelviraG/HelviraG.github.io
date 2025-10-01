@@ -15,7 +15,7 @@ interface PressArticle {
 
 export const pressApi = createApi({
   reducerPath: "pressApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
   endpoints: (builder) => ({
     listPressArticles: builder.query<{ press: PressArticle[] }, void>({
       query: () => ({

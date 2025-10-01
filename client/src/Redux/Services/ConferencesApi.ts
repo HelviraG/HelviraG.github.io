@@ -14,7 +14,7 @@ interface Conference {
 
 export const conferencesApi = createApi({
   reducerPath: "conferencesApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
   endpoints: (builder) => ({
     listConferences: builder.query<{ conferences: Conference[] }, void>({
       query: () => ({
