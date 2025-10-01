@@ -22,7 +22,7 @@ export const ListItemWrapper = styled(ListItem, {
 })<ListItemWrapperProps>(({ isRight, theme }) => ({
     alignItems: 'center', 
     overflow: 'hidden', 
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(5),
     paddingBottom: theme.spacing(2), 
 
     ...(isRight && {
