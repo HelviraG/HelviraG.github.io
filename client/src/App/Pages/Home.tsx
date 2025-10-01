@@ -1,5 +1,4 @@
 import useDocumentTitle from "@hooks/useDocumentTitle";
-import { useListConferencesQuery } from "@services/ConferencesApi";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Desktop } from "../Layout/Desktop/Desktop";
