@@ -104,6 +104,11 @@
         "software": "Software Engineer"
       },
       "missions": {
+        "sunday": {
+          "first": "- Designed and implemented B2B user management with advanced search and update features [ReactJS, Typescript, Material UI]",
+          "second": "- Build autonomous client-side order functionality, without initial staff or waiter intervention [ReactJS, Typescript, Java, Kotlin]",
+          "third": "- Implemented robust navigation with native transitions, history management, and offline synchronization with local persistence [Kotlin Multiplatform, Swift, Android, Ruby, Kotlin, GitHub Actions]"
+        },
         "op": {
           "first": "- Implementation of a CMD+K search engine (based on the Slack model) [Elasticsearch, Laravel, Modular architecture, ReactJS, Material UI, REST API]",
           "second": "- Creation of 3 back-end and front-end libraries [Laravel, Typescript]",
@@ -399,7 +404,7 @@
         "first_section": " < Hello World ! /> ",
         "second_section": "📼 Live!",
         "third_section": "🎞️ The lives",
-        "last_section": "You shall not scroll"
+        "last_section": "You shall not scroll!"
       },
       "press": {
         "first_section": " < Hello World ! /> ",
@@ -424,6 +429,12 @@
         "second_section": "🧩 The Test",
         "third_section": "🧩 The Test",
         "last_section": "That's it, for now"
+      },
+      "career": {
+        "first_section": " < Tech Career ! /> ",
+        "second_section": "🔖​ The Tech Resume",
+        "third_section": "🔖​ The Tech Resume",
+        "last_section": "You've scrolled the whole page"
       }
     }
   }

@@ -103,6 +103,11 @@
         "software": "Ingénieur logiciel"
       },
       "missions": {
+        "sunday": {
+          "first": "- Conception et implémentation de la gestion des utilisateurs B2B avec des fonctionnalités de recherche et de mise à jour avancées [ReactJS, Typescript, Material UI]",
+          "second": "- Implémentation d'une fonctionnalité de commande restaurant autonome côté client, sans intervention initiale du personnel ou du serveur [ReactJS, Typescript, Java, Kotlin]",
+          "third": "- Implémentation de la navigation d'une app mobiles avec transitions natives, gestion de l'historique et synchronisation hors ligne avec persistance locale des données [Kotlin Multiplatform, Swift, Android, Ruby, Kotlin, GitHub Actions]"
+        },
         "op": {
           "first": "- Mise en place d'un moteur de recherche CMD+K (sur le modèle de Slack) [Elasticsearch, Laravel, Architecture modulaire, ReactJS, Material UI, API REST]",
           "second": "- Création de 3 librairies back et front [Laravel, Typescript]",
@@ -425,6 +430,12 @@
         "second_section": "🧩 Le Quiz",
         "third_section": "🧩 Le Quiz",
         "last_section": "C'est tout pour l'instant"
+      },
+      "career": {
+        "first_section": " < Tech Career ! /> ",
+        "second_section": "🔖​ The CV Tech",
+        "third_section": "🔖​ The CV Tech",
+        "last_section": "Vous avez parcouru toute la page"
       }
     }
   }
