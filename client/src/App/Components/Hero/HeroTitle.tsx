@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { 
     AnimatedTitleBox,
     HeroImgBox,
@@ -8,7 +8,8 @@ import {
     TitleWrapper,
     SubTitle,
     SubTitleBox,
-    SubTiTleDivider
+    SubTiTleDivider,
+    HeroTitleWrapper
 } from '@styles/Components/HeroTitleStyle';
 
 interface HeroTitleProps {
@@ -20,7 +21,7 @@ interface HeroTitleProps {
 
 export const HeroTitle = ({ imgUrl, quote, title, titleColor }: HeroTitleProps) => {    
     return (
-        <Box sx={{ backgroundColor: '#00c79a', padding: '7em 0' }}>
+        <HeroTitleWrapper>
             <HeroTitleBox>
                 <HeroImgBox imgUrl={imgUrl}></HeroImgBox>
                 <AnimatedTitleBox>
@@ -36,6 +37,6 @@ export const HeroTitle = ({ imgUrl, quote, title, titleColor }: HeroTitleProps) 
                     </SubTitleBox>
                 </AnimatedTitleBox>
             </HeroTitleBox>
-        </Box>
+        </HeroTitleWrapper>
     )
 }
