@@ -12,10 +12,10 @@ export const HeroSectionWrapper = styled(Box)(({ theme }) => ({
     maxWidth: "90%", 
     margin: "0 auto", 
     flexDirection: 'row', 
-    paddingTop: '5em', 
+    paddingTop: '9em', 
     gap: 2,
 
-    [theme.breakpoints.up(1025)]: {
+    [theme.breakpoints.down(1025)]: {
         paddingTop: '14em'
     },
 
@@ -95,8 +95,11 @@ export const HeroSectionBelowTypo = styled(Typography)(({ theme }) => ({
 }));
 
 export const HeroSectionImageBox = styled(Box)(({ theme }) => ({
-    flex: 1, 
     position: 'relative',
+
+    [theme.breakpoints.down(1025)]: {
+        flex: 1
+    },
 
     [theme.breakpoints.down('lg')]: {
         display: 'flex',
