@@ -12,6 +12,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { QuizStepsPage } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizStepper/QuizStepsPage";
 import { InitStepsPage } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizStepper/InitStepPage";
 import { QuizStartPage } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizStartPage";
+import { QuizLandScape } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizLandscape";
 
 export const AppRoutes = () => {
   const location = useLocation();
@@ -19,7 +20,15 @@ export const AppRoutes = () => {
   const isTablet = useMediaQuery("(max-width: 768px)");
 
   return (
-    <div style={{ backgroundColor: isPassionRoute ? "#d10d6c" : "transparent", minHeight: "100vh" }}>
+    <div style={{ 
+      backgroundColor: isPassionRoute ? "#FFF" : "transparent", 
+      minHeight: "100vh", 
+      ...(isPassionRoute && {     
+        flex: 1,
+        display: "flex",
+        flexDirection: "column" 
+      }) 
+    }}>
       <Routes>
         <Route path={Links.CAREER} element={<Career isTablet={isTablet} />} />
         <Route
@@ -37,6 +46,7 @@ export const AppRoutes = () => {
         <Route path={Links.QUIZ} element={<QuizStartPage isTablet={isTablet} />} />
         <Route path={Links.QUIZ_STEP} element={<QuizStepsPage isTablet={isTablet} />} />
         <Route path={Links.QUIZ_INIT} element={<InitStepsPage isTablet={isTablet} />} />
+        <Route path={Links.QUIZ_RESULT} element={<QuizLandScape isTablet={isTablet} />} />
       </Routes>
     </div>
   );
