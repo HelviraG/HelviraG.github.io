@@ -22,7 +22,7 @@ export const PickCategory = ({ handleSelectField }: { handleSelectField: (e: Syn
     return (
         <>
             <InitPromptBelowTypoWrapper>
-                <InitPromptBelowTypo variant={"h6"}>
+                <InitPromptBelowTypo variant={"h3"}>
                     {t('app.explore.fallout_on_passion.quiz.label')}
                 </InitPromptBelowTypo>
             </InitPromptBelowTypoWrapper>
