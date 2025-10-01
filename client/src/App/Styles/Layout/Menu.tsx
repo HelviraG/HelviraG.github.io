@@ -42,6 +42,7 @@ export const MenuWrapper = styled(Drawer, {
     shouldForwardProp: (prop) => prop !== 'menuWidth' && prop !== 'menuColor',
 })<MenuDrawerProps>(({ menuWidth, menuColor, theme }) => ({
     cursor: 'none',
+    zIndex: 1200000000,
     '.MuiDrawer-paper': { 
         backgroundColor: alpha(theme.palette.text.primary, 0.93),
         ...(menuColor !== '' && menuColor && {
