@@ -23,7 +23,7 @@ interface HeroTitleBoxProps extends BoxProps {
 }
 
 export const TitleWrapper = styled(Box)(({ theme }) => ({
-  backgroundColor: "#00c79a",
+  backgroundColor: theme.game.special.iceBlue.medium,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -48,11 +48,11 @@ export const TitleBox = styled(Box, {
 
     "&:nth-of-type(1)": {
       color: "transparent",
-      WebkitTextStroke: `2px #1E1E40`,
+      WebkitTextStroke: `2px ${theme.game.special.dark}`,
     },
 
     "&:nth-of-type(2)": {
-      color: '#1E1E40',
+      color: theme.game.special.dark,
       animation: "wave 4s ease-in-out infinite",
     },
 
@@ -82,6 +82,11 @@ export const TitleBox = styled(Box, {
       fontSize: "10em",
     },
   },
+}));
+
+export const HeroTitleWrapper = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.game.special.iceBlue.medium, 
+  padding: '7em 0'
 }));
 
 export const HeroTitleBox = styled(Box)(({ theme }) => ({
@@ -158,7 +163,7 @@ export const SubTitleBox = styled(Box)(({ theme }) => ({
 export const SubTiTleDivider = styled(Divider)(({ theme }) => ({
   paddingBottom: theme.spacing(8),
   marginBottom: theme.spacing(4),
-  borderColor: "#cbef85",
+  borderColor: theme.game.special.iceBlue.light,
 
   [theme.breakpoints.down("md")]: {
     paddingBottom: theme.spacing(4),
