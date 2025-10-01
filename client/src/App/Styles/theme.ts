@@ -231,15 +231,15 @@ const theme = createTheme({
             grey: '#E9E9E9',
             dark: '#1E1E40',
             blue: '#49DBC8',
-            greeny: '#BEFF6C',
+            greeny: '#0CD5AC',
             magenta: '#FD9FDD',
             yellow: '#FFF172',
             orange: '#FC7339',
             violet: '#AF96FB',
             red: '#DF1443',
             iceBlue: {
-                light: '#00CEC9',
-                medium: '#55EFC4',
+                light: '#CBEF85',
+                medium: '#00C79A',
                 dark: '#0984e3'
             },
         }
