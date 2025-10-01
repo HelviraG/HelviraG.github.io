@@ -5,8 +5,24 @@ export interface Answer {
   answer: string;
 }
 
-interface QuizState {
-  answers: Answer[];
+interface QuizResult {
+  counts: {
+    citizen: string;
+    paladin: string;
+    superMutant: string
+  },
+  percentages: {
+    citizen: string;
+    paladin: string;
+    superMutant: string
+  },
+  results: [
+    { 
+      category: string;
+      type: string
+    }
+  ],
+  total: number
 }
 
 export const quizApi = createApi({
@@ -23,7 +39,18 @@ export const quizApi = createApi({
         body,
       }),
     }),
+    listResult: builder.query<QuizResult, { category?: string }>({
+      query: (arg) => {
+        const params = new URLSearchParams();
+        if (arg?.category) params.append("category", arg.category);
+
+        return {
+          url: `/getResults?${params.toString()}`,
+          method: "GET",
+        };
+      },
+    }),
   }),
 });
 
-export const { useStoreResultMutation } = quizApi;
+export const { useStoreResultMutation, useListResultQuery } = quizApi;
