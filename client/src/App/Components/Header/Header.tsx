@@ -36,9 +36,9 @@ export const Header = () => {
         <Box>
           <IconButton
             onClick={handleOpenMenu}
-            sx={{
+            sx={(theme) => ({
               "&:hover": {
-                backgroundColor: "#1E1E40",
+                backgroundColor: theme.game.special.dark,
 
                 "& .MuiSvgIcon-root": {
                   color: "background.default",
@@ -49,16 +49,16 @@ export const Header = () => {
                   backgroundColor: "error.dark",
                 }),
               },
-            }}
+            })}
           >
             <HdrWeakRoundedIcon
-              sx={{
-                color: "#1E1E40",
+              sx={(theme) => ({
+                color: theme.game.special.dark,
 
                 ...(pathname === Routes.EXPLORE && {
                   color: "error.dark",
                 }),
-              }}
+              })}
             />
           </IconButton>
         </Box>
