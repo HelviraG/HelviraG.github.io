@@ -31,9 +31,9 @@ const db = getFirestore(fireBaseApp);
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "../../client/build")));
 
-app.get("/api/getConfs", async (req: Request, res: Response) => {
+app.get("/.netlify/functions/getConfs", async (req: Request, res: Response) => {
   const params = {
     Key: "./database/app/conferences.json",
   };
@@ -156,11 +156,7 @@ app.get("/api/getResults", async (req: Request, res: Response) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "../../client/build", "index.html"));
 });
 
-const port = process.env.PORT || 8000;
-
-app.listen(port);
-
-console.log(`Server is running on port ${port}`);
+export default app;
