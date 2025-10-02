@@ -313,10 +313,15 @@
             }
           },
           "result": {
+            "types": {
+              "citizen": "Shelter Citizen",
+              "paladin": "Brotherhood of Steel",
+              "superMutant": "Super Mutant"
+            },
             "chart": {
               "allCategory": "all teams",
               "subText": "All the types in proportion",
-              "noData": "No test result was submitted in this category"
+              "noData": "No test result submitted in this category!"
             },
             "img": {
               "citizen": "https://od.lk/s/MzRfMzg3MDAyNDhf/result_citizen_en.png",

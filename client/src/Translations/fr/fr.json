@@ -314,10 +314,15 @@
             }
           },
           "result": {
+            "types": {
+              "citizen": "Habitant de l'Abri",
+              "paladin": "Confrérie de l'Acier",
+              "superMutant": "Super Mutant"
+            },
             "chart": {
               "allCategory": "toutes teams",
               "subText": "Tous les types en pourcentage",
-              "noData": "Aucun test réalisé pour cette catégorie"
+              "noData": "Aucun test réalisé pour cette catégorie!"
             },
             "img": {
               "citizen": "https://od.lk/s/MzRfMzg3MDAyNDlf/result_citizen_fr.png",
