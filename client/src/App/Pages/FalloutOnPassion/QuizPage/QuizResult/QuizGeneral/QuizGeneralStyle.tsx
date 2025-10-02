@@ -14,8 +14,8 @@ export const DashboardWrapper = styled(Box)(({ theme }) => ({
     },
 
     [theme.breakpoints.down(600)]: {
-        maxHeight: '700px',
-        overflow: 'scroll'
+        maxHeight: '750px',
+        overflow: 'scroll',
     }
 }));
 
@@ -49,7 +49,7 @@ export const DashboardLeftWrapperBox = styled(Box, {
     },
 
     [theme.breakpoints.down(500)]: {
-        marginTop: '6em',
+        marginTop: '19em',
         padding: '9em 10px',
     },
 
@@ -164,6 +164,10 @@ export const DashboardContentInner = styled(Box)(({ theme }) => ({
     flexDirection: 'column',
     alignSelf: 'center',
     margin: '0 auto',
+
+    [theme.breakpoints.down(500)]: {
+        width: '90%'
+    }
 }));
 
 export const DashboardContentInnerPill = styled(Box)(({ theme }) => ({
