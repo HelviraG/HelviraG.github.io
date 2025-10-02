@@ -48,11 +48,12 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "eslint src && tsc && vite build",
+    "build": "tsc && vite build",
     "serve": "vite preview",
     "eject": "react-scripts eject",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts,.tsx"
   },
   "eslintConfig": {
     "extends": [
