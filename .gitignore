@@ -6,3 +6,4 @@
 /server/dist
 /client/public/_redirects
 .env
+node_modules
