@@ -9,7 +9,7 @@ interface StepperProps {
 export const Stepper = ({ activeStep, maxSteps }: StepperProps) => {
   return (
     <StepperBox
-      variant="dots"
+      variant="progress"
       steps={maxSteps}
       position="static"
       activeStep={activeStep}
