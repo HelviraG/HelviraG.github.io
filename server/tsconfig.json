@@ -1,19 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2020",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "allowJs": true
+    "outDir": "./server/dist",
+    "allowJs": true,
+    "resolveJsonModule": true,
   },
   "include": [
     "**/*"
   ],
   "exclude": [
-    "node_modules",
+    "node_modules", 
+    "client", 
     "dist"
   ]
 }

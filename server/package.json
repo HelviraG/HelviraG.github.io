@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "build:server": "tsc -p server/tsconfig.json",
     "start": "rm -rf node dist && tsc && node dist/index.js",
     "dev": "tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"

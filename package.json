@@ -11,10 +11,10 @@
     "serverless-http": "^4.0.0"
   },
   "scripts": {
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
-    "start": "npm run start:server",
+    "build": "yarn build:client && yarn build:server",
+    "build:client": "cd client && yarn build",
+    "build:server": "tsc",
+    "start": "netlify dev",
     "start:server": "cd server && npm start",
     "dev": "npm run dev:client & npm run start:server",
     "dev:client": "cd client && npm run start",
