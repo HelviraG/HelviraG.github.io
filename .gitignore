@@ -1,10 +1,7 @@
 /client/.vite
 /client/build
 /client/node_modules
-/server/database
-/server/node_modules
-/server/dist
-/client/public/_redirects
+/netlify/functions/database
 .env
 node_modules
 
