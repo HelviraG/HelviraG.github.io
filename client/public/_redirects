@@ -3,4 +3,4 @@
   to = "/index.html"
   status = 200
   force = false
-  /api/* /.netlify/functions/api/:splat 200
+  /api/* /.netlify/functions/:splat 200
