@@ -234,7 +234,7 @@ const theme = createTheme({
             greeny: '#0CD5AC',
             magenta: '#FD9FDD',
             yellow: '#FFF172',
-            orange: '#FC7339',
+            orange: '#FC427B',
             violet: '#AF96FB',
             red: '#DF1443',
             iceBlue: {
