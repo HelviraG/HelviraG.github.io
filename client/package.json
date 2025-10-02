@@ -48,7 +48,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build": "npx vite build",
     "serve": "vite preview",
     "eject": "react-scripts eject",
     "test": "vitest",
