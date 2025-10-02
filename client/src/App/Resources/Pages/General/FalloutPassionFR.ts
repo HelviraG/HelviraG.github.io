@@ -1,6 +1,6 @@
 export const FalloutPassionFR = {
   subject:
-    "En pensant à la place du codage dans vos vies, indiquez votre niveau d'accord avec chaque élément.",
+    "En pensant à la place que {{cat_verb}} prend dans vos vies, indiquez à quel point vous êtes d'accord avec chaque assertion.",
   survey: [
     {
       q: [
@@ -8,10 +8,10 @@ export const FalloutPassionFR = {
         "THE test ultime pour tous les enthousiastes du code !",
       ],
       p: [
-        "Dans ce quiz captivant, vous allez découvrir quelle faction de l'univers Fallout incarne le mieux votre esprit de programmeur.",
-        "Que vous soyez un développeur intrépide, un ingénieur méthodique, ou un hacker ingénieux,",
+        "Dans ce quiz captivant, vous allez découvrir quelle faction de l'univers Fallout incarne le mieux votre esprit de {{cat}}.",
+        "Que vous soyez un(e) développeur(euse) intrépide, un(e) ingénieur(e) méthodique, ou un(e) hacker(euse) ingénieux(se),",
         "Il existe une faction qui résonne avec votre passion et vos compétences.",
-        "Alors, êtes-vous prêt à explorer vos talents de codage à travers le prisme des factions de Fallout ?",
+        "Alors, êtes-vous prêt à explorer vos talents à travers les factions Fallout ?",
         "Préparez-vous, car vos réponses façonneront le futur !",
       ],
       i: "https://od.lk/s/MzRfMzg2ODg4MzBf/fallout_on_passion_quiz_0.png",
@@ -77,7 +77,7 @@ export const FalloutPassionFR = {
     },
     {
       q: [
-        "Le codage est en harmonie avec d'autres choses qui font partie de moi.",
+        "{{cat_verb}} est en harmonie avec d'autres choses qui font partie de moi.",
       ],
       p: ["1 = Pas du tout d'accord, 7 = Absolument super très d'accord"],
       i: "https://od.lk/s/MzRfMzc1NDk4Njlf/fallout_on_passion_quiz_8.png",
@@ -85,7 +85,7 @@ export const FalloutPassionFR = {
     },
     {
       q: [
-        "Le codage est tellement passionnant que j'en perds parfois le contrôle.",
+        "{{cat_verb}} est tellement passionnant que j'en perds parfois le contrôle.",
       ],
       p: ["1 = Pas du tout d'accord, 7 = Absolument super très d'accord"],
       i: "https://od.lk/s/MzRfMzc1NDk4MzNf/fallout_on_passion_quiz_1.png",
