@@ -18,12 +18,13 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "firebase": "^12.3.0",
+    "netlify": "^23.9.1",
     "serverless-http": "^4.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.4.20",
     "@vitejs/plugin-react": "^4.0.0",
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.4.20"
   }
 }
