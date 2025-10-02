@@ -134,7 +134,7 @@ export const QuizPersonalContentBody = styled(Box)(({ theme }) => ({
 
   "& #full-width-tabpanel-0": {
     "& .MuiTypography-root:first-of-type": {
-      color: '#4e4187',
+      color: '#5352ed',
     },
   },
 
@@ -158,7 +158,7 @@ export const QuizPersonalContentBody = styled(Box)(({ theme }) => ({
 
   "& #full-width-tabpanel-4": {
     "& .MuiTypography-root:first-of-type": {
-      color: "#1dd1a1",
+      color: "#0652DD",
     },
   },
 }));
@@ -177,11 +177,11 @@ export const QuizPersonalContentTabs = styled(Tabs, {
 
   ...(tabValue === 0 && {
     "& .MuiTabs-indicator": {
-      backgroundColor: '#4e4187',
+      backgroundColor: '#5352ed',
     },
 
     "& .MuiButtonBase-root.MuiTab-root.Mui-selected": {
-      color: '#4e4187',
+      color: '#5352ed',
     },
   }),
 
@@ -217,11 +217,11 @@ export const QuizPersonalContentTabs = styled(Tabs, {
 
   ...(tabValue === 4 && {
     "& .MuiTabs-indicator": {
-      backgroundColor: "#1dd1a1",
+      backgroundColor: "#0652DD",
     },
 
     "& .MuiButtonBase-root.MuiTab-root.Mui-selected": {
-      color: "#1dd1a1",
+      color: "#0652DD",
     },
   }),
 

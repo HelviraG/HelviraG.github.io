@@ -195,7 +195,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
                     bold: (
                       <Typography
                         component={"span"}
-                        sx={{ fontWeight: 900, color: "#4e4187" }}
+                        sx={{ fontWeight: 900, color: "#5352ed" }}
                       />
                     ),
                   }}
@@ -217,7 +217,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
                     bold: (
                       <Typography
                         component={"span"}
-                        sx={{ fontWeight: 900, color: "#FC7339" }}
+                        sx={{ fontWeight: 900, color: "#FC427B" }}
                       />
                     ),
                   }}
@@ -283,7 +283,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
                     bold: (
                       <Typography
                         component={"span"}
-                        sx={{ fontWeight: 900, color: "#1dd1a1" }}
+                        sx={{ fontWeight: 900, color: "#0652DD" }}
                       />
                     ),
                   }}
