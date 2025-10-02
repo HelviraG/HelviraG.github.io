@@ -12,6 +12,7 @@
   to = "/index.html"
   status = 200
   force = false
+  /api/* /.netlify/functions/:splat 200
 
 [functions]
   directory = "netlify/functions"
