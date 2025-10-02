@@ -21,7 +21,7 @@ interface Career {
 
 export const careerApi = createApi({
   reducerPath: "careerApi",
-  baseQuery: fetchBaseQuery({}),
+  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
   endpoints: (builder) => ({
     listCareer: builder.query<{ career: Career[] }, void>({
       query: () => ({

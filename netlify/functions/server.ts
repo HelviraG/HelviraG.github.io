@@ -34,7 +34,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-app.get("/getConfs", async (req: Request, res: Response) => {
+app.get("/api/getConfs", async (req: Request, res: Response) => {
   const params = {
     Key: "./database/app/conferences.json",
   };
@@ -47,7 +47,7 @@ app.get("/getConfs", async (req: Request, res: Response) => {
   });
 });
 
-app.get("/getCareer", async (req: Request, res: Response) => {
+app.get("/api/getCareer", async (req: Request, res: Response) => {
   const params = {
     Key: "./database/app/career.json",
   };
