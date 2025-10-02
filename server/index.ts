@@ -31,7 +31,7 @@ const db = getFirestore(fireBaseApp);
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "client/public")));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("/api/getConfs", async (req: Request, res: Response) => {
   const params = {
@@ -155,8 +155,8 @@ app.get("/api/getResults", async (req: Request, res: Response) => {
   }
 });
 
-app.get("/*", (req: Request, res: Response) => {
-  res.send("./client/public/index.html");
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
 const port = process.env.PORT || 8000;
