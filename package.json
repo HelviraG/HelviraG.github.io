@@ -2,6 +2,11 @@
   "name": "helvira_app_server",
   "version": "1.0.0",
   "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase": "^12.3.0",
     "netlify-cli": "^23.9.1",
     "serverless-http": "^4.0.0"
   },
