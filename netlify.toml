@@ -1,6 +1,6 @@
 [build]
   base = "client"
-  publish = "build"
+  publish = "dist"
   command = "yarn build"
   functions = "netlify/functions"
 
