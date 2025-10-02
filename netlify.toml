@@ -14,4 +14,6 @@
   force = false
 
 [functions]
-  directory = "../netlify/functions"
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["express", "cors", "dotenv", "body-parser", "serverless-http", "firebase"]

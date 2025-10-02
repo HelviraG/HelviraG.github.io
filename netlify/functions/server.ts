@@ -32,7 +32,7 @@ const db = getFirestore(fireBaseApp);
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "../../client/build")));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.get("/getConfs", async (req: Request, res: Response) => {
   const params = {
@@ -157,7 +157,7 @@ app.get("/getResults", async (req: Request, res: Response) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 export const handler = serverless(app);
