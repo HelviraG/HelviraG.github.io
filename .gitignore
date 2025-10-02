@@ -1,7 +1,10 @@
 /client/.vite
 /client/build
 /client/node_modules
-/netlify/functions/database
+/netlify/functions/database/app/conferences.json
+/netlify/functions/database/app/press.json
+/netlify/functions/database/app/videos.json
+/netlify/functions/database/quizz
 .env
 node_modules
 
