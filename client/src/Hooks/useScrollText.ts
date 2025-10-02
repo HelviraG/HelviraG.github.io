@@ -44,6 +44,15 @@ export default function useScrollText() {
                         "last_section": t('app.scroll.press.last_section')
                     }
                 ];
+            case Routes.CAREER:
+                return [
+                    {
+                        "first_section": t('app.scroll.career.first_section'),
+                        "second_section": t('app.scroll.career.second_section'),
+                        "third_section": t('app.scroll.career.third_section'),
+                        "last_section": t('app.scroll.career.last_section')
+                    }
+                ];
             case Routes.EXPLORE:
                 return [
                     {
