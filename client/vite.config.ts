@@ -20,9 +20,12 @@ export default defineConfig(({ mode }) => {
         }
       }
     },
-    root:  path.resolve(__dirname),
+    root: '.',
     build: {
       outDir: "dist",
+      rollupOptions: {
+        input: '/index.html',
+      },
     },
     resolve: {
       alias: {
