@@ -1,6 +1,7 @@
 [build]
+  base = "client"
+  publish = "build"
   command = "yarn build"
-  publish = "client/build"
   functions = "netlify/functions"
 
 [[redirects]]
@@ -10,3 +11,6 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[functions]
+  directory = "../netlify/functions"
