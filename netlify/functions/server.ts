@@ -34,7 +34,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "../../client/build")));
 
-app.get("/.netlify/functions/getConfs", async (req: Request, res: Response) => {
+app.get("/getConfs", async (req: Request, res: Response) => {
   const params = {
     Key: "./database/app/conferences.json",
   };
@@ -47,7 +47,7 @@ app.get("/.netlify/functions/getConfs", async (req: Request, res: Response) => {
   });
 });
 
-app.get("/api/getCareer", async (req: Request, res: Response) => {
+app.get("/getCareer", async (req: Request, res: Response) => {
   const params = {
     Key: "./database/app/career.json",
   };
@@ -60,7 +60,7 @@ app.get("/api/getCareer", async (req: Request, res: Response) => {
   });
 });
 
-app.get("/api/getPress", async (req: Request, res: Response) => {
+app.get("/getPress", async (req: Request, res: Response) => {
   const params = {
     Key: "./database/app/press.json",
   };
@@ -73,7 +73,7 @@ app.get("/api/getPress", async (req: Request, res: Response) => {
   });
 });
 
-app.get("/api/getVideos", async (req: Request, res: Response) => {
+app.get("/getVideos", async (req: Request, res: Response) => {
   const params = {
     Key: "./database/app/videos.json",
   };
@@ -86,7 +86,7 @@ app.get("/api/getVideos", async (req: Request, res: Response) => {
   });
 });
 
-app.get("/api/getPassion", async (req: Request, res: Response) => {
+app.get("/getPassion", async (req: Request, res: Response) => {
   const lang = req.query.lang?.toString().toUpperCase() ?? "EN";
 
   const params = {
@@ -101,7 +101,7 @@ app.get("/api/getPassion", async (req: Request, res: Response) => {
   });
 });
 
-app.post("/api/postResult", async (req: Request, res: Response) => {
+app.post("/postResult", async (req: Request, res: Response) => {
   const { category, type } = req.body;
 
   if (!category || !type) {
@@ -119,7 +119,7 @@ app.post("/api/postResult", async (req: Request, res: Response) => {
   res.status(200).json({ message: "Result added successfully" });
 });
 
-app.get("/api/getResults", async (req: Request, res: Response) => {
+app.get("/getResults", async (req: Request, res: Response) => {
   try {
     const { category } = req.query;
 
@@ -157,7 +157,7 @@ app.get("/api/getResults", async (req: Request, res: Response) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../../client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 export const handler = serverless(app);
