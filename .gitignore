@@ -7,3 +7,6 @@
 /client/public/_redirects
 .env
 node_modules
+
+# Local Netlify folder
+.netlify
