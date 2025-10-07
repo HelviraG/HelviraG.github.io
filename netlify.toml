@@ -6,10 +6,15 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# SPA fallback for React router
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/server/api/:splat"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
+
+# SPA fallback for React router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
 
 # API proxy for local dev
