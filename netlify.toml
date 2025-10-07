@@ -7,14 +7,26 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# SPA fallback for React router
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = false
-  /api/* /.netlify/functions/:splat 200
+
+# API proxy for local dev
+[[dev.redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
 
 [functions]
-  directory = "netlify/functions"
+  directory = "netlify/functions-build"
   node_bundler = "esbuild"
-  external_node_modules = ["express", "cors", "dotenv", "body-parser", "serverless-http", "firebase"]
+  external_node_modules = [
+    "express",
+    "cors",
+    "dotenv",
+    "body-parser",
+    "serverless-http",
+    "firebase-admin"
+  ]

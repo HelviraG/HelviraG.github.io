@@ -18,7 +18,7 @@ export const conferencesApi = createApi({
   endpoints: (builder) => ({
     listConferences: builder.query<{ conferences: Conference[] }, void>({
       query: () => ({
-        url: `/getConfs`,
+        url: `getConfs`,
         method: "GET",
       }),
     }),

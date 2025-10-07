@@ -25,7 +25,7 @@ export const careerApi = createApi({
   endpoints: (builder) => ({
     listCareer: builder.query<{ career: Career[] }, void>({
       query: () => ({
-        url: `/getCareer`,
+        url: `getCareer`,
         method: "GET",
       }),
     }),

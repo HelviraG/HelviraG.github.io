@@ -10,9 +10,10 @@
     "build:server": "tsc -p server/tsconfig.json",
     "build": "yarn build:client && yarn build:server",
     "dev": "netlify dev",
-    "start": "node server/dist/index.js"
+    "build:functions": "esbuild netlify/functions/*.ts --outdir=netlify/functions-build --platform=node"
   },
   "dependencies": {
+    "@netlify/functions": "^4.2.7",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
     "concurrently": "^8.2.0",
+    "esbuild": "^0.25.10",
     "typescript": "^5.2.2",
     "vite": "^5.4.20"
   }
