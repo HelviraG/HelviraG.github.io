@@ -28,5 +28,6 @@
     "dotenv",
     "body-parser",
     "serverless-http",
-    "firebase-admin"
+    "firebase-admin",
+    "firebase"
   ]
