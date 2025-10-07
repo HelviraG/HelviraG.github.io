@@ -31,23 +31,23 @@ const db = getFirestore(fireBaseApp);
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../client/dist")));
-app.get("/getConfs", (req: Request, res: Response) => {
+app.get("/api/getConfs", (req: Request, res: Response) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/conferences.json"));
 });
 
-app.get("/getCareer", (req: Request, res: Response) => {
+app.get("/api/getCareer", (req: Request, res: Response) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/career.json"));
 });
 
-app.get("/getPress", (req: Request, res: Response) => {
+app.get("/api/getPress", (req: Request, res: Response) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/press.json"));
 });
 
-app.get("/getVideos", (req: Request, res: Response) => {
+app.get("/api/getVideos", (req: Request, res: Response) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/videos.json"));
 });
 
-app.get("/getPassion", (req: Request, res: Response) => {
+app.get("/api/getPassion", (req: Request, res: Response) => {
   const lang = req.query.lang?.toString().toUpperCase() ?? "EN";
   if (lang === "FR") {
     return res.sendFile(join(process.cwd(), "client/public/database/app/falloutFR.json"));
@@ -55,7 +55,7 @@ app.get("/getPassion", (req: Request, res: Response) => {
   return res.sendFile(join(process.cwd(), "client/public/database/app/falloutEN.json"));;
 });
 
-app.post("/postResult", async (req: Request, res: Response) => {
+app.post("/api/postResult", async (req: Request, res: Response) => {
   const { category, type } = req.body;
 
   if (!category || !type) {
@@ -73,7 +73,7 @@ app.post("/postResult", async (req: Request, res: Response) => {
   res.status(200).json({ message: "Result added successfully" });
 });
 
-app.get("/getResults", async (req: Request, res: Response) => {
+app.get("/api/getResults", async (req: Request, res: Response) => {
   try {
     const { category } = req.query;
 
@@ -108,7 +108,7 @@ app.get("/getResults", async (req: Request, res: Response) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+  res.sendFile(path.join(__dirname, "client/dist/index.html"));
 });
 
 // Instead of: export const handler = serverless(app);
