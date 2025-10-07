@@ -32,27 +32,27 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../client/dist")));
 app.get("/api/getConfs", (req: Request, res: Response) => {
-  res.sendFile(join(__dirname, "app/conferences.json"));
+  res.sendFile(join(__dirname, "public/database/app/conferences.json"));
 });
 
 app.get("/api/getCareer", (req: Request, res: Response) => {
-  res.sendFile(join(__dirname, "app/career.json"));
+  res.sendFile(join(__dirname, "public/database/app/career.json"));
 });
 
 app.get("/api/getPress", (req: Request, res: Response) => {
-  res.sendFile(join(__dirname, "app/press.json"));
+  res.sendFile(join(__dirname, "public/database/app/press.json"));
 });
 
 app.get("/api/getVideos", (req: Request, res: Response) => {
-  res.sendFile(join(__dirname, "app/videos.json"));
+  res.sendFile(join(__dirname, "public/database/app/videos.json"));
 });
 
 app.get("/api/getPassion", (req: Request, res: Response) => {
   const lang = req.query.lang?.toString().toUpperCase() ?? "EN";
   if (lang === "FR") {
-    return res.sendFile(join(__dirname, "app/falloutFR.json"));
+    return res.sendFile(join(__dirname, "public/database/app/falloutFR.json"));
   }
-  return res.sendFile(join(__dirname, "app/falloutEN.json"));
+  return res.sendFile(join(__dirname, "public/database/app/falloutEN.json"));
 });
 
 app.post("/api/postResult", async (req: Request, res: Response) => {
