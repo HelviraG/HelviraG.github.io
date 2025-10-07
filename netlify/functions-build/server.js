@@ -25,16 +25,16 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../client/dist")));
 app.get("/api/getConfs", (req, res) => {
-  res.sendFile(join(process.cwd(), `app/conferences.json`));
+  res.sendFile(join(process.cwd(), `database/app/conferences.json`));
 });
 app.get("/api/getCareer", (req, res) => {
-  res.sendFile(join(process.cwd(), `app/career.json`));
+  res.sendFile(join(process.cwd(), `database/app/career.json`));
 });
 app.get("/api/getPress", (req, res) => {
-  res.sendFile(join(process.cwd(), `app/press.json`));
+  res.sendFile(join(process.cwd(), `database/app/press.json`));
 });
 app.get("/api/getVideos", (req, res) => {
-  res.sendFile(join(process.cwd(), `app/videos.json`));
+  res.sendFile(join(process.cwd(), `database/app/videos.json`));
 });
 app.get("/api/getPassion", (req, res) => {
   const lang = req.query.lang?.toString().toUpperCase() ?? "EN";
@@ -62,12 +62,11 @@ app.get("/api/getResults", async (req, res) => {
   try {
     const { category } = req.query;
     let q = query(collection(db, "fallout-passion-test"));
-    console.log(q);
+    console.log(process.env.FIREBASE_API_KEY);
     if (category) {
       q = query(collection(db, "fallout-passion-test"), where("category", "==", category));
     }
     const querySnapshot = await getDocs(q);
-    console.log(querySnapshot);
     const results = querySnapshot.docs.map((doc) => doc.data());
     const counts = {};
     results.forEach((r) => {
