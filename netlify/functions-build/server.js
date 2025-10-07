@@ -86,6 +86,4 @@ app.get("/api/getResults", async (req, res) => {
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
-export const handler = serverless(app, {
-  basePath: "/.netlify/functions/server"
-});
+export const handler = serverless(app);

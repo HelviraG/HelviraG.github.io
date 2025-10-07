@@ -112,6 +112,4 @@ app.get("/*", (req, res) => {
 });
 
 // Instead of: export const handler = serverless(app);
-export const handler = serverless(app, {
-  basePath: "/.netlify/functions/server",
-});
+export const handler = serverless(app);
