@@ -108,7 +108,7 @@ app.get("/api/getResults", async (req: Request, res: Response) => {
 });
 
 app.get((req, res) => {
-  res.sendFile(path.join(__dirname, "client/dist/index.html"));
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 // Instead of: export const handler = serverless(app);

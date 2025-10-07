@@ -8,8 +8,8 @@
 
 # SPA fallback for React router
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/api/*"
+  to = "/.netlify/functions/server/api/:splat"
   status = 200
 
 # API proxy for local dev
