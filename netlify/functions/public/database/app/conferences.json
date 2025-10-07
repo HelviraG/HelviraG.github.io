@@ -1,0 +1,246 @@
+ {
+  "conferences": [
+    {
+      "cover": "https://od.lk/s/MzRfNDQ4ODczMjBf/valhalla_planet_1.png",
+      "title": "Firey Passion 🔥 VS Icy Reason ❄️: The Developers Great Divide",
+      "lang": "EN",
+      "events": [
+        {
+          "year": "2024",
+          "day": "26",
+          "month": "t('app.general.month.october')",
+          "event": "PHPCon Poland",
+          "place": "Stok Hotel",
+          "location": "Wisła, Poland",
+          "tags": ["TECH", "TALK"],
+          "imgUrl": "https://od.lk/s/MzRfNDQ4ODM4MjNf/icon-8160-small-107618415.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/tree/main/%5BEN%5Dfiry_and_icy/events/phpcon_poland"
+        },
+        {
+          "year": "2024",
+          "day": "18",
+          "month": "t('app.general.month.october')",
+          "event": "DevFest Hamburg",
+          "place": "Sparkasse Innovation Hub",
+          "location": "Hamburg, Germany",
+          "tags": ["TECH"],
+          "imgUrl": "https://od.lk/s/MzRfNDQ4ODM4MjJf/DevFest2024%2Blogo_6uG07Uq-2888900103.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/tree/main/%5BEN%5Dfiry_and_icy/events/devfest_hambourg"
+        }
+      ]
+    },
+    {
+      "cover": "https://i.ibb.co/5cDwjGS/1715867191670.jpg",
+      "title": "Silent Figures: The Secret History of Autistics in Tech",
+      "lang": "EN",
+      "events": [
+        {
+          "year": "2024",
+          "day": "12",
+          "month": "t('app.general.month.october')",
+          "event": "Method Conference",
+          "place": "efactory",
+          "location": "Springfield, MO",
+          "tags": ["TECH", "TALK"],
+          "imgUrl": "https://od.lk/s/MzRfNDQ4ODM4MzZf/Screenshot%202024-08-31%20at%2014.40.06.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/tree/main/%5BEN%5Dsilent_figures/method_conference"
+        },
+        {
+          "year": "2024",
+          "day": "14",
+          "month": "t('app.general.month.may')",
+          "event": "JCON Europe",
+          "place": "Cinedom Multiplex Cinema",
+          "location": "Köln, Germany",
+          "tags": ["TECH"],
+          "imgUrl": "https://i.ibb.co/5cDwjGS/1715867191670.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "link": "https://www.youtube.com/watch?v=eF11na9bNRs&pp=ygUYamNvbiBldXJvcGUgaGVsdmlyYSBnb21h",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/tree/main/%5BEN%5Dsilent_figures/jcon_europe"
+        }
+      ]
+    },
+    {
+      "cover": "https://od.lk/s/MzRfMzc1NDk3NzRf/WhatsApp%20Image%202024-06-14%20%C3%A0%2016.22.40_fe14e1b5.jpg",
+      "title": "Vous n'êtes pas passionné(e) 🔥. Et alors ?",
+      "lang": "FR",
+      "events": [
+        {
+          "year": "2024",
+          "day": "06",
+          "month": "t('app.general.month.june')",
+          "event": "AlpesCraft",
+          "place": "Alpexpo",
+          "location": "Grenoble, France",
+          "tags": ["TECH", "TALK", "PASSION"],
+          "imgUrl": "https://i.ibb.co/Dp6ZCKB/Capture-d-cran-2024-05-18-235142.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "FR",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/tree/main/%5BFR%5Dpassion_and_dev"
+        }
+      ]
+    },
+    {
+      "cover": "https://i.ibb.co/mDKYGtZ/sddefault.jpg",
+      "title": "Si la reconversion m'était contée: itinéraire d'une reconversion",
+      "lang": "FR",
+      "events": [
+        {
+          "year": "2023",
+          "day": "31",
+          "month": "t('app.general.month.october')",
+          "event": "Asynconf",
+          "place": "Terrasse Discovery",
+          "location": "Paris, France",
+          "tags": ["DISCOVERY", "REPLAY"],
+          "imgUrl": "https://i.ibb.co/mDKYGtZ/sddefault.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "link": "https://www.youtube.com/embed/rOkFhYHl2rc",
+          "lang": "FR"
+        }
+      ]
+    },
+    {
+      "cover": "https://i.ibb.co/hdZ7JNw/1698420175427.jpg",
+      "title": "Je ne suis pas passionnée 🔥 et alors ?",
+      "lang": "FR",
+      "events": [
+        {
+          "year": "2023",
+          "day": "20",
+          "month": "t('app.general.month.october')",
+          "event": "DevFest Nantes",
+          "place": "Cité des Congrès",
+          "location": "Nantes, France",
+          "tags": ["DISCOVERY", "REPLAY"],
+          "imgUrl": "https://i.ibb.co/hdZ7JNw/1698420175427.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "link": "https://www.youtube.com/embed/o-2cC8KC2wg?list=PLuZ_sYdawLiUHU4E1i5RrFsRN_lQcgPwT",
+          "lang": "FR"
+        },
+        {
+          "year": "2023",
+          "day": "20",
+          "month": "t('app.general.month.april')",
+          "event": "NantesJS",
+          "place": "SNCF Connect & Tech",
+          "location": "Nantes, France",
+          "tags": ["TECH"],
+          "imgUrl": "https://i.ibb.co/Fs2k42y/1682424175890.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "FR"
+        }
+      ]
+    },
+    {
+      "cover": "https://i.ibb.co/R9ZkYkN/1682695859511.jpg",
+      "title": "Heureux accident: La reconversion ou quand le dev s'impose à soi !",
+      "lang": "FR",
+      "events": [
+        {
+          "year": "2023",
+          "day": "31",
+          "month": "t('app.general.month.may')",
+          "event": "Web2Day",
+          "place": "Stereolux 4",
+          "location": "Nantes, France",
+          "tags": ["TECH_NOCODE"],
+          "imgUrl": "https://i.ibb.co/R9ZkYkN/1682695859511.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "FR"
+        }
+      ]
+    },
+    {
+      "cover": "https://i.ibb.co/Fg8vCQC/Fk-Bpzqj-WYAMk1-Nc.jpg",
+      "title": "Les reconvertis: cette nouvelle vague 🌊 de profils dans le dev",
+      "lang": "FR",
+      "events": [
+        {
+          "year": "2023",
+          "day": "26",
+          "month": "t('app.general.month.may')",
+          "event": "DevFest Lille",
+          "place": "Grand Palais",
+          "location": "Lille, France",
+          "tags": ["DISCOVERY", "REPLAY"],
+          "imgUrl": "https://i.ibb.co/KG9dRhZ/maxresdefault.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "link": "https://www.youtube.com/embed/fbiam_bOKPY",
+          "lang": "FR"
+        },
+        {
+          "year": "2023",
+          "day": "02",
+          "month": "t('app.general.month.february')",
+          "event": "Very Tech Trip",
+          "place": "Cité des Sciences et de l'Industrie",
+          "location": "Paris, France",
+          "tags": ["QUICKY"],
+          "imgUrl": "https://i.ibb.co/X5m0dmP/image-1.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "FR"
+        },
+        {
+          "year": "2023",
+          "day": "19",
+          "month": "t('app.general.month.january')",
+          "event": "Touraine Tech",
+          "place": "École Polytech Tours",
+          "location": "Tours, France",
+          "tags": ["HUMAN_TECH", "REPLAY"],
+          "imgUrl": "https://i.ibb.co/pQzqTjr/maxresdefault-1.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "link": "https://www.youtube.com/embed/y9oCT0Zx3Vc",
+          "lang": "FR"
+        },
+        {
+          "year": "2022",
+          "day": "15",
+          "month": "t('app.general.month.december')",
+          "event": "Agile Tour Rennes",
+          "place": "Couvent des Jacobins",
+          "location": "Rennes, France",
+          "tags": ["BEGINNER"],
+          "imgUrl": "https://i.ibb.co/Fg8vCQC/Fk-Bpzqj-WYAMk1-Nc.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "FR"
+        },
+        {
+          "year": "2022",
+          "day": "17",
+          "month": "t('app.general.month.november')",
+          "event": "Codeurs en Seine",
+          "place": "Kindarena",
+          "location": "Rouen, France",
+          "tags": ["QUICKY", "REPLAY"],
+          "imgUrl": "https://i.ibb.co/6gZkH9m/1668788757970.jpg",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "link": "https://www.youtube.com/embed/B8eqnvsg9O4",
+          "lang": "FR"
+        }
+      ]
+    }
+  ]
+}

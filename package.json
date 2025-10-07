@@ -9,8 +9,7 @@
     "build:client": "cd client && yarn install && yarn build",
     "build": "yarn build:client",
     "dev": "netlify dev",
-    "build:functions": "esbuild netlify/functions/*.ts --outdir=netlify/functions-build --platform=node",
-    "postbuild": "mkdir -p netlify/functions/public/database/app && cp -r client/public/database/app/*.json netlify/functions/public/database/app/"
+    "build:functions": "esbuild netlify/functions/*.ts --outdir=netlify/functions-build --platform=node"
   },
   "dependencies": {
     "@netlify/functions": "^4.2.7",
