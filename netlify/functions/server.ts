@@ -32,19 +32,19 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../client/dist")));
 app.get("/api/getConfs", (req: Request, res: Response) => {
-  res.sendFile(join(process.cwd(), `${process.env.PUBLIC_URL}/database/app/conferences.json`));
+  res.sendFile(join(process.cwd(), `app/conferences.json`));
 });
 
 app.get("/api/getCareer", (req: Request, res: Response) => {
-  res.sendFile(join(process.cwd(), `${process.env.PUBLIC_URL}/database/app/career.json`));
+  res.sendFile(join(process.cwd(), `app/career.json`));
 });
 
 app.get("/api/getPress", (req: Request, res: Response) => {
-  res.sendFile(join(process.cwd(), `${process.env.PUBLIC_URL}/database/app/press.json`));
+  res.sendFile(join(process.cwd(), `app/press.json`));
 });
 
 app.get("/api/getVideos", (req: Request, res: Response) => {
-  res.sendFile(join(process.cwd(), `${process.env.PUBLIC_URL}/database/app/videos.json`));
+  res.sendFile(join(process.cwd(), `app/videos.json`));
 });
 
 app.get("/api/getPassion", (req: Request, res: Response) => {
@@ -78,6 +78,7 @@ app.get("/api/getResults", async (req: Request, res: Response) => {
     const { category } = req.query;
 
     let q = query(collection(db, "fallout-passion-test"));
+    console.log(q);
     if (category) {
       q = query(collection(db, "fallout-passion-test"), where("category", "==", category));
     }
