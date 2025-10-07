@@ -24,19 +24,19 @@ const db = getFirestore(fireBaseApp);
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../client/dist")));
-app.get("/getConfs", (req, res) => {
+app.get("/api/getConfs", (req, res) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/conferences.json"));
 });
-app.get("/getCareer", (req, res) => {
+app.get("/api/getCareer", (req, res) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/career.json"));
 });
-app.get("/getPress", (req, res) => {
+app.get("/api/getPress", (req, res) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/press.json"));
 });
-app.get("/getVideos", (req, res) => {
+app.get("/api/getVideos", (req, res) => {
   res.sendFile(join(process.cwd(), "client/public/database/app/videos.json"));
 });
-app.get("/getPassion", (req, res) => {
+app.get("/api/getPassion", (req, res) => {
   const lang = req.query.lang?.toString().toUpperCase() ?? "EN";
   if (lang === "FR") {
     return res.sendFile(join(process.cwd(), "client/public/database/app/falloutFR.json"));
@@ -44,7 +44,7 @@ app.get("/getPassion", (req, res) => {
   return res.sendFile(join(process.cwd(), "client/public/database/app/falloutEN.json"));
   ;
 });
-app.post("/postResult", async (req, res) => {
+app.post("/api/postResult", async (req, res) => {
   const { category, type } = req.body;
   if (!category || !type) {
     return res.status(400).json({ message: "Missing category or type" });
@@ -58,7 +58,7 @@ app.post("/postResult", async (req, res) => {
   );
   res.status(200).json({ message: "Result added successfully" });
 });
-app.get("/getResults", async (req, res) => {
+app.get("/api/getResults", async (req, res) => {
   try {
     const { category } = req.query;
     let q = query(collection(db, "fallout-passion-test"));
