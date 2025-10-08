@@ -60,7 +60,7 @@ export const FalloutPassionEN = {
       i_sm: "https://od.lk/s/MzRfMzc1NDk4ODJf/fallout_on_passion_sm_12.png",
     },
     {
-      q: ["{{cat_hobby}} is the only thing that really turns me on."],
+      q: ["{{cat_hobby}} is the only thing that really excites me."],
       p: ["1 = Do not agree at all, 7 = Absolutely strongly agree"],
       i: "https://od.lk/s/MzRfMzc1NDk4NjNf/fallout_on_passion_quiz_7.png",
       i_sm: "https://od.lk/s/MzRfMzc1NDk4OTNf/fallout_on_passion_sm_quiz_7.png",
