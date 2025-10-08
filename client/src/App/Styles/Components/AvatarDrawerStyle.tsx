@@ -214,11 +214,12 @@ export const CardContentAboutTypography = styled(Typography)({
     cursor: 'none',
     fontWeight: 900,
     textDecoration: 'none',
+    whiteSpace: 'pre-line'
 });
 
 export const CardContentAboutLink = styled(Link)({
-    color: 'lightpink!important',
-    cursor: 'none',
+    color: '#1E1E40!important',
+    cursor: 'pointer',
     fontWeight: '900!important',
     textDecoration: 'none',
 });
