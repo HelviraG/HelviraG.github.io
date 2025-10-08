@@ -6,10 +6,8 @@
     "node": ">=22"
   },
   "scripts": {
-    "copy-jsons": "mkdir -p netlify/functions-build/database/app && cp client/public/database/app/*.json netlify/functions-build/database/app",
     "build:client": "cd client && yarn install && yarn build",
-    "build:server": "yarn copy-jsons && tsc -p server/tsconfig.json",
-    "build": "yarn build:client && yarn build:server",
+    "build": "yarn build:client",
     "dev": "netlify dev",
     "build:functions": "esbuild netlify/functions/*.ts --outdir=netlify/functions-build --platform=node"
   },
