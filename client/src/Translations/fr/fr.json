@@ -60,7 +60,7 @@
       },
       "profile": {
         "about": "À propos",
-        "about_text": "Développeuse fullstack (+6 ans), Helvira Goma a vécu plusieurs vies - de l'ingéniérie en qualité à l'office management - jusqu'à ce qu'elle trouve sa véritable vocation : la programmation. Après une reconversion réussie, elle partage désormais son temps entre murmurer à l'oreille des ordinateurs et encourager les autres à rejoindre l'autre côté de la force à travers sa communauté en ligne : <0>Motiv'Her</0>."
+        "about_text": "Helvira Goma est développeuse full-stack depuis plus de six ans, passionnée par la création de logiciels à la fois élégants et utiles. \n\nLorsqu’elle ne code pas, elle monte sur scène pour parler de tech, de créativité et du côté humain de l’ingénierie — ou échange avec d’autres à travers <0>Motiv'Her</0>, sa communauté en ligne qui encourage davantage de femmes à découvrir et à s’épanouir dans le monde de la tech. \n\nQu’elle écrive du code ou prenne la parole devant un public, Helvira aborde chaque projet avec la même curiosité et la même bienveillance — cherchant toujours à inspirer, une ligne de code (ou une conférence) à la fois."
       }
     },
     "home": {
@@ -72,9 +72,8 @@
           "motivher": "Motiv'Her Original"
         },
         "subtext": {
-          "part_1": "qui aime le code",
-          "part_2": "back & front",
-          "part_3": "et partager sur scène."
+          "part_1": "qui aime coder côté <span>back</span> et <span>front</span> ainsi que partager sur scène.",
+          "part_2": "Je transforme tout ce qui touche à la tech en expériences <span>ludiques</span> et <span>puissantes</span> à travers mon <span>code</span> et mes conférences."
         }
       },
       "welcome": {
