@@ -237,7 +237,7 @@
           "chip": "Sélectionner une industrie",
           "label": "Choisis ta spécialité tech :)",
           "chip_name": "Entrer son identité",
-          "label_name": "Ton (sur)nom :)",
+          "label_name": "Ton (sur)nom :)?",
           "indicators": {
             "say_hi": "Salut, {{ userName }} \uD83D\uDC4B!",
             "press_confirm": "\uD83D\uDC7E Appuies Sur Entrer",
