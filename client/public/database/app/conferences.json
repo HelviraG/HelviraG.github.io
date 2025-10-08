@@ -1,10 +1,46 @@
  {
   "conferences": [
     {
+      "cover": "https://i.ibb.co/mP0qLGd/54799705955-d82d3c2e8d-c.jpg",
+      "title": "Help! My Tech Skills Have An Expiration Date",
+      "lang": "EN",
+      "events": [
+        {
+          "year": "2025",
+          "day": "18",
+          "month": "t('app.general.month.september')",
+          "event": "API Platform Conference",
+          "place": "Euratechnologies Lille",
+          "location": "Lille, France",
+          "tags": ["HUMAN_TECH", "TALK"],
+          "imgUrl": "https://od.lk/s/MzRfNDQ4ODM4MjNf/icon-8160-small-107618415.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/tree/main/%5BEN%5Dtech_skills_expiration/events/api_platform_conference"
+        }
+      ]
+    },
+    {
       "cover": "https://od.lk/s/MzRfNDQ4ODczMjBf/valhalla_planet_1.png",
       "title": "Firey Passion 🔥 VS Icy Reason ❄️: The Developers Great Divide",
       "lang": "EN",
       "events": [
+        {
+          "year": "2025",
+          "day": "21",
+          "month": "t('app.general.month.march')",
+          "event": "AppDev Con",
+          "place": "Pathe Amsterdam Noord",
+          "location": "Amsterdam, Netherlands",
+          "tags": ["INSPIRATION", "TECH"],
+          "imgUrl": "",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "link": "https://vimeo.com/1097806195?fl=pl&fe=ti",
+          "githubLink": ""
+        },
         {
           "year": "2024",
           "day": "26",
