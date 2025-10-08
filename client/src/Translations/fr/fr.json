@@ -228,6 +228,9 @@
           }
         },
         "quiz": {
+          "welcome_title": "🖖​ Hello !",
+          "welcome_subtitle_1": "Bienvenue dans LE test qui vous indiquera la faction Fallout à laquelle vous appartenez en fonction du degré de votre passion.",
+          "welcome_subtitle_2": "Commençons donc?",
           "welcome_back_title": "🖖​ Bienvenue!",
           "welcome_back_subtitle_1": "Il semble que vous ayez déjà commencé le quiz.",
           "welcome_back_subtitle_2": "Vous pouvez soit reprendre là où vous vous étiez arrêté, soit recommencer.",
