@@ -15,13 +15,10 @@ interface PressArticle {
 
 export const pressApi = createApi({
   reducerPath: "pressApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "/" }),
   endpoints: (builder) => ({
     listPressArticles: builder.query<{ press: PressArticle[] }, void>({
-      query: () => ({
-        url: `/getPress`,
-        method: "GET",
-      }),
+       query: () => "database/app/press.json",
     }),
   }),
 });
