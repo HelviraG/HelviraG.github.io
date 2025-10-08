@@ -150,7 +150,7 @@ export const QuizStart = () => {
                             [theme.breakpoints.down(500)]: {
                                 marginBottom: '8.5em',
                                 padding: '2em',
-                                width: '90%'
+                                maxWidth: '90%'
                             }
                         })}
                     >
