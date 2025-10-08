@@ -134,16 +134,16 @@ export const InitPromptBelowButtonBox = styled(Box)(({ theme }) => ({
   alignContent: "center",
   justifyContent: "center",
   display: "flex",
-
-  [theme.breakpoints.down(500)]: {
-    flexWrap: 'wrap'
-  }
 }));
 
 export const InitNameWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   gap: theme.spacing(1.5),
+
+  [theme.breakpoints.down(500)]: {
+    flexWrap: 'wrap'
+  }
 }));
 
 export const EnterNameInput = styled(TextField, {

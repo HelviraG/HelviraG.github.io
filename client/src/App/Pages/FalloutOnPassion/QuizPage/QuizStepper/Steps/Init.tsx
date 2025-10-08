@@ -81,6 +81,10 @@ export const Init = () => {
             height: 'auto',
             padding: '3em 4em',
             margin: '2em'
+          },
+
+          [theme.breakpoints.down(380)]: {
+            padding: '3em 2em'
           }
         })}>
           <Divider textAlign={"right"} variant={"fullWidth"}>
