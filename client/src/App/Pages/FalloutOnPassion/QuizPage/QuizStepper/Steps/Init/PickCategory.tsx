@@ -3,16 +3,7 @@ import {
     InitPromptBelowTypo,
     InitPromptBelowTypoWrapper
 } from "@fallout/QuizPage/Styles/InitPrompt";
-import {Box} from "@mui/material";
-import {
-    BackgroundStartInnerBox,
-    BackgroundStartSecondInnerBox,
-    BackgroundStartThirdInnerBox,
-    BackgroundStartTypo,
-    ForegroundStartBox,
-    ForegroundStartInnerBox, ForegroundStartTypo,
-    StartButton
-} from "@styles/Pages/FalloutOnPassionStyle/ButtonsStyle";
+import { Box, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { SyntheticEvent } from "react";
 
@@ -29,22 +20,26 @@ export const PickCategory = ({ handleSelectField }: { handleSelectField: (e: Syn
             <Box>
                 <InitPromptBelowButtonBox>
                     {['coding', 'gaming', 'design', 'data'].map((activity: string) => (
-                        <Box key={activity}>
-                            <StartButton onClick={(e) => handleSelectField(e, activity)} isInitPrompt>
-                                <BackgroundStartInnerBox component={"span"} isInitPrompt>
-                                    <BackgroundStartSecondInnerBox component={"span"} isInitPrompt>
-                                        <BackgroundStartThirdInnerBox component={"span"} isInitPrompt>
-                                            <BackgroundStartTypo isInitPrompt>{activity}</BackgroundStartTypo>
-                                        </BackgroundStartThirdInnerBox>
-                                    </BackgroundStartSecondInnerBox>
-                                </BackgroundStartInnerBox>
-                                <ForegroundStartBox isInitPrompt>
-                                    <ForegroundStartInnerBox isInitPrompt>
-                                        <ForegroundStartTypo isInitPrompt>{activity}</ForegroundStartTypo>
-                                    </ForegroundStartInnerBox>
-                                </ForegroundStartBox>
-                            </StartButton>
-                        </Box>
+                        <Button 
+                            key={activity} 
+                            onClick={(e) => handleSelectField(e, activity)}
+                            variant="outlined"
+                            sx={{ 
+                                width: '-webkit-fill-available', 
+                                fontSize: '1em', 
+                                borderRadius: '16px', 
+                                color: 'black', 
+                                border: '1px solid #000',
+
+                                '&:hover': {
+                                    border: '1px solid #EEFAE1',
+                                    color: '#B8E986',
+                                    backgroundColor: '#000'
+                                }
+                            }}
+                        >
+                            {activity}
+                        </Button>
                     ))}
                 </InitPromptBelowButtonBox>
             </Box>

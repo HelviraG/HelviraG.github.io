@@ -84,18 +84,16 @@ export const Steps = () => {
   const [play] = useSound(Sounds.CLICK_SETTINGS);
 
   const answers = useSelector(listAllAnswers);
-  const hasAnswer = answers
+  const currentAnswers = Array.isArray(answers)
     ? answers.filter(
-        (a: { questionId: string }) => a.questionId === activeStep.toString(),
-      ).length > 0
-    : false;
-  const storedAnswer = answers
-    ? parseInt(
-        answers.filter(
-          (a: { questionId: string }) => a.questionId === activeStep.toString(),
-        )[0]?.answer,
-        10,
+        (a: { questionId: string }) => a.questionId === activeStep.toString()
       )
+    : [];
+
+  const hasAnswer = currentAnswers.length > 0;
+
+  const storedAnswer = currentAnswers.length > 0
+    ? parseInt(currentAnswers[0].answer, 10)
     : 0;
 
   // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
@@ -218,6 +216,7 @@ export const Steps = () => {
             alignItems: 'center', 
             justifyContent: 'center', 
             flex: 1,
+            overflowY: 'auto',
 
             [theme.breakpoints.down(800)]: {
               backgroundColor: '#EEFAE1',
@@ -234,12 +233,10 @@ export const Steps = () => {
               alignItems: 'center', 
               flexDirection: 'column', 
               justifyContent: 'center', 
-              width: '60%' ,
-              overflowY: 'auto',
+              width: '60%',
               flex: 1,
 
               [theme.breakpoints.down(800)]: {
-                flex: 1,
                 width: '-webkit-fill-available'
               }
             })}

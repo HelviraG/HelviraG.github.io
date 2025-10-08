@@ -39,7 +39,8 @@ export const InitStep = () => {
 
           [theme.breakpoints.down(800)]: {
             backgroundColor: '#EEFAE1',
-            flexDirection: 'column-reverse'
+            flexDirection: 'column-reverse',
+            paddingBottom: '6em'
           }
         })}
       >

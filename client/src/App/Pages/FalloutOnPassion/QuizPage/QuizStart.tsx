@@ -110,13 +110,15 @@ export const QuizStart = () => {
                     position: 'relative', 
                     display: 'flex', 
                     justifyContent: 'center', 
+                    alignItems: 'center',
                     flex: 1,
                     overflowY: 'auto',
 
                     [theme.breakpoints.down(800)]: {
                         backgroundColor: '#EEFAE1',
                         flexDirection: 'column-reverse',
-                        paddingBottom: '6em'
+                        paddingBottom: '7em',
+                        alignItems: 'stretch'
                     },
                 })}
             >

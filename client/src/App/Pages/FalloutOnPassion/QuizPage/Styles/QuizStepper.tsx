@@ -32,8 +32,13 @@ export const CardContentBody = styled(Box, {
       margin: '2em 0',
     },
 
+    [theme.breakpoints.down(800)]: {
+      maxWidth: '90%',
+      width: '90%'
+    },
+
     [theme.breakpoints.down("lg")]: {
-      padding: "10px 14px 0px",
+      padding: "10px 2em 0px",
     },
 
     [theme.breakpoints.down("sm")]: {

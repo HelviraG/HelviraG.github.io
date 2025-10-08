@@ -129,11 +129,14 @@ export const InitPromptBelowTypo = styled(Typography)(({ theme }) => ({
 }));
 
 export const InitPromptBelowButtonBox = styled(Box)(({ theme }) => ({
-  flexWrap: "wrap",
   gap: "12px",
   alignContent: "center",
-  justifyContent: "center",
+  justifyContent: "space-between",
   display: "flex",
+
+  [theme.breakpoints.down(500)]: {
+    flexWrap: "wrap",
+  }
 }));
 
 export const InitNameWrapper = styled(Box)(({ theme }) => ({
