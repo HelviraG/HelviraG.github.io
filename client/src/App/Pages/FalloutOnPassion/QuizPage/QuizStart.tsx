@@ -148,7 +148,7 @@ export const QuizStart = () => {
                             },
 
                             [theme.breakpoints.down(500)]: {
-                                marginBottom: '8.5em',
+                                marginBottom: '3em',
                                 padding: '2em',
                                 maxWidth: '90%'
                             }
