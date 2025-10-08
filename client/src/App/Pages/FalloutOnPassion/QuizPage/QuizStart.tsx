@@ -131,6 +131,7 @@ export const QuizStart = () => {
                         width: '50%',
 
                         [theme.breakpoints.down(800)]: {
+                            marginBottom: '3em',
                             width: '-webkit-fill-available'
                         }
                     })}
