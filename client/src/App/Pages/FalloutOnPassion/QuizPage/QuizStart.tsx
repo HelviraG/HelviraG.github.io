@@ -110,7 +110,7 @@ export const QuizStart = () => {
                     position: 'relative', 
                     display: 'flex', 
                     justifyContent: 'center', 
-                    flex: 1,
+                    //flex: 1,
                     overflowY: 'auto',
 
                     [theme.breakpoints.down(800)]: {
