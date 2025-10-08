@@ -122,14 +122,6 @@ export const InitPromptBelowTypoWrapper = styled(Box)(({ theme }) => ({
 export const InitPromptBelowTypo = styled(Typography)(({ theme }) => ({
   fontFamily: "Manrope Variable",
   textAlign: "left",
-
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "12px",
-  },
-
-  [theme.breakpoints.down("lg")]: {
-    fontSize: "15px",
-  },
 }));
 
 export const InitPromptBelowButtonBox = styled(Box)(({ theme }) => ({
