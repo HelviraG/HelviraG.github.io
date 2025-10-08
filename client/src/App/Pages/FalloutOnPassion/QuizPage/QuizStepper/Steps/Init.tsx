@@ -57,7 +57,8 @@ export const Init = () => {
         },
 
         [theme.breakpoints.down(800)]: {
-          width: '90%'
+          flex: 1,
+          width: '-webkit-fill-available'
         }
       })}>
         <Box sx={(theme) => ({ 

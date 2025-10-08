@@ -117,6 +117,10 @@ export const InitPromptBelow = styled(Box)(({ theme }) => ({
 export const InitPromptBelowTypoWrapper = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(8),
   marginTop: theme.spacing(4),
+
+  [theme.breakpoints.down(500)]: {
+    marginBottom: theme.spacing(6)
+  }
 }));
 
 export const InitPromptBelowTypo = styled(Typography)(({ theme }) => ({
@@ -130,6 +134,10 @@ export const InitPromptBelowButtonBox = styled(Box)(({ theme }) => ({
   alignContent: "center",
   justifyContent: "center",
   display: "flex",
+
+  [theme.breakpoints.down(500)]: {
+    flexWrap: 'wrap'
+  }
 }));
 
 export const InitNameWrapper = styled(Box)(({ theme }) => ({
