@@ -1,5 +1,6 @@
 import { convertTags } from "@hooks/useConverters";
 import { useListPressArticlesQuery } from "@services/PressApi";
+import { useTranslation } from "react-i18next";
 
 export interface IPress {
   media: string;
@@ -15,6 +16,8 @@ export interface IPress {
 }
 
 export const ListPressArticles = () => {
+  const { t } = useTranslation();
+  
   // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
   const { data } = useListPressArticlesQuery();
 
@@ -24,9 +27,14 @@ export const ListPressArticles = () => {
         media: pressArticle.media,
         mediaImg: pressArticle.mediaImg,
         title: pressArticle.title,
-        tags: pressArticle.tags.map((tag: string) =>
-          tag.includes("t(") ? eval(tag) : convertTags(tag),
-        ),
+        tags: pressArticle.tags.map((tag) => {
+          if (tag.startsWith("t(") && typeof t === 'function') {
+            // extract translation key inside parentheses
+            const key = tag.match(/t\(['"](.+?)['"]\)/)?.[1];
+            return key ? t(key) : tag;
+          }
+          return convertTags(tag);
+        }),
         imgUrl: pressArticle.imgUrl,
         lightColor: pressArticle.lightColor,
         darkColor: pressArticle.darkColor,
