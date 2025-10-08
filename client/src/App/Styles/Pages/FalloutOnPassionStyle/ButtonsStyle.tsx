@@ -28,7 +28,7 @@ export const StartButton = styled(Button, {
     },
 
     [theme.breakpoints.down('md')]: {
-        width: '120px',
+        width: '-webkit-fill-available',
         height: '45px'
     },
 
@@ -63,7 +63,7 @@ export const BackgroundStartInnerBox = styled(Box, {
     },
 
     [theme.breakpoints.down('md')]: {
-        width: '120px',
+        width: '-webkit-fill-available',
         height: '45px'
     },
 
@@ -91,7 +91,7 @@ export const BackgroundStartSecondInnerBox = styled(Box, {
     },
 
     [theme.breakpoints.down('md')]: {
-        width: '120px',
+        width: '-webkit-fill-available',
         height: '45px'
     },
 
@@ -120,7 +120,7 @@ export const BackgroundStartThirdInnerBox = styled(Box, {
     },
 
     [theme.breakpoints.down('md')]: {
-        width: '120px',
+        width: '-webkit-fill-available',
         height: '45px'
     },
 
@@ -166,7 +166,7 @@ export const BackgroundStartTypo = styled(Typography, {
     },
 
     [theme.breakpoints.down('md')]: {
-        width: '120px',
+        width: '-webkit-fill-available',
         height: '45px'
     },
 
@@ -200,7 +200,7 @@ export const ForegroundStartBox = styled(Box, {
     },
 
     [theme.breakpoints.down('md')]: {
-        width: '120px',
+        width: '-webkit-fill-available',
         height: '45px'
     },
 
@@ -253,7 +253,7 @@ export const ForegroundStartInnerBox = styled(Box, {
     },
 
     [theme.breakpoints.down('md')]: {
-        width: '120px',
+        width: '-webkit-fill-available',
         height: '45px'
     },
 
