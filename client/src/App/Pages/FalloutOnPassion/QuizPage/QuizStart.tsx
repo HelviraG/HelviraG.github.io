@@ -165,8 +165,8 @@ export const QuizStart = () => {
                             {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_subtitle_2') : t('app.explore.fallout_on_passion.quiz.welcome_subtitle_2')}
                         </Typography>
                     </Box>                    
-                    <QuizSettings isMobile={isWavyMobile} handlePopper={handlePopper} isSettingsOpen={openSettings} />
                 </Box>
+                <QuizSettings isMobile={isWavyMobile} handlePopper={handlePopper} isSettingsOpen={openSettings} />
                 <Box 
                     sx={(theme) => ({ 
                         padding: '2em', 
