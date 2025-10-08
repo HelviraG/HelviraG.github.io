@@ -109,7 +109,6 @@ export const QuizStart = () => {
                 sx={(theme) => ({ 
                     position: 'relative', 
                     display: 'flex', 
-                    alignItems: 'center', 
                     justifyContent: 'center', 
                     flex: 1,
                     overflowY: 'auto',
