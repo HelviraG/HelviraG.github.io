@@ -87,11 +87,15 @@ export const LangSwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-export const FooterTextWrapper = styled(Box)(({
+export const FooterTextWrapper = styled(Box)((({ theme }) => ({
   display: 'flex', 
   flex: 1, 
   justifyContent: 'center',
-}));
+
+  [theme.breakpoints.down(500)]: {
+    gap: '12px'
+  }
+})));
 
 export const FooterTextTypography = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.between('xxs', 'xs')]: {
