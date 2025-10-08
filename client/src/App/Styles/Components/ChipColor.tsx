@@ -28,6 +28,7 @@ export const ChipColor = (type: string, chipBackground?: string, chipColor?: str
                     border: `1px solid ${theme.palette.warning.main}`,
                     color: theme.palette.warning.main
                 };
+            case Tags.INSPIRATION:
             case Tags.HUMAN_TECH:
                 return {
                     background: 'background.default',
