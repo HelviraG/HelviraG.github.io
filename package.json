@@ -7,7 +7,7 @@
   },
   "scripts": {
     "copy-json": "mkdir -p netlify/functions-build/database/app && cp client/public/database/app/*.json netlify/functions-build/database/app/",
-    "build": "yarn copy-json && cd client && yarn build:client",
+    "build": "yarn copy-json && yarn build:client",
     "build:client": "cd client && yarn install && yarn build",
     "dev": "netlify dev",
     "build:functions": "esbuild netlify/functions/*.ts --outdir=netlify/functions-build --platform=node"
