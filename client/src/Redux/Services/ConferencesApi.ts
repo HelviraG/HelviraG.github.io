@@ -14,13 +14,10 @@ interface Conference {
 
 export const conferencesApi = createApi({
   reducerPath: "conferencesApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "/api" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "/" }),
   endpoints: (builder) => ({
     listConferences: builder.query<{ conferences: Conference[] }, void>({
-      query: () => ({
-        url: `getConfs`,
-        method: "GET",
-      }),
+       query: () => "database/app/conferences.json",
     }),
   }),
 });
