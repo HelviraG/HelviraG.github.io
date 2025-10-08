@@ -1,6 +1,7 @@
 import '@fontsource/orbitron';
 import { Box, styled } from '@mui/material';
 import dayjs from 'dayjs';
+import { useEffect, useState } from 'react'; 
 
 const AlarmClock = styled(Box)({
     borderRadius: '10px',
@@ -55,12 +56,22 @@ const Colon = styled(Box)({
 });
 
 export const DigitalClock = ()=> {
+    const [time, setTime] = useState(dayjs());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(dayjs());
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <AlarmClock>
             <TimeWrapper>
-                <Box component="span">{dayjs().format('HH')}</Box>
+                <Box component="span">{time.format('HH')}</Box>
                 <Colon component="span">:</Colon>
-                <Box component="span">{dayjs().format('mm')}</Box>        
+                <Box component="span">{time.format('mm')}</Box>        
             </TimeWrapper>
         </AlarmClock>
     )
