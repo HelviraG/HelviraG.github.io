@@ -17,7 +17,14 @@ export const QuizLayout = ({ children, buttons, withFooter = true }: { children:
     const isTablet = useMediaQuery("(max-width: 800px");
 
     return (
-        <Box sx={{ height: '100vh' }}>
+        <Box 
+            sx={{ 
+                height: '100vh',
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column'
+            }}
+        >
             <AppBar position="static" color="transparent" elevation={0} sx={{ backgroundColor: '#FFF', padding: '14px', top: 0 }}>
                 <Toolbar sx={(theme) => ({ 
                     display: 'flex', 
