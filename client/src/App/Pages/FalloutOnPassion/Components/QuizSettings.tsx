@@ -37,9 +37,6 @@ export const QuizSettings = ({
         <WavySettingsSpanBox isPillButton isSettingsOpen={isSettingsOpen}>
           <WavySettingsSpan>
             <SettingsSuggestIcon fontSize="small" />
-            <WavySettingsSpanTypo>
-              {t("app.general.actions.params")}
-            </WavySettingsSpanTypo>
           </WavySettingsSpan>
         </WavySettingsSpanBox>
         <WavyButton
@@ -49,7 +46,6 @@ export const QuizSettings = ({
           isDrawy
           isSettingsOpen={isSettingsOpen}
         >
-          {isMobile ? "" : t("app.general.actions.params")}
         </WavyButton>
       </WavySettingsButtonBox>
     </SettingsButtonBox>

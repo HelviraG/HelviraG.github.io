@@ -39,7 +39,6 @@ export const WavySettingsButtonBox = styled(Box, {
 
     ...(isPillButton && {
         borderRadius: '16px',
-        width: '150px',
         height: '40px',
 
         [theme.breakpoints.down('md')]: {
@@ -63,9 +62,13 @@ export const WavySettingsSpan = styled(Box)(({ theme }) => ({
     verticalAlign: 'center',
     justifyContent: 'center',
 
-    '& .MuiButton-icon': {
-        marginRight: "8px",
+    '& .MuiSvgIcon-root': {
+        marginLeft: '0!important',
+        marginRight: '0!important',
+    },
 
+    '& .MuiButton-icon': {
+        marginLeft: '0!important',
         [theme.breakpoints.down("md")]: {
             margin: "0 auto",
         },
@@ -134,6 +137,11 @@ export const WavyButton = styled(Button,
     ...(isSettingsOpen && {
        backgroundColor: theme.game.special.dark,
     }),
+
+    '& .MuiButton-icon': {
+        marginLeft: '0!important',
+        marginRight: '0!important'
+    },
 
     [theme.breakpoints.up(2300)]: {
         fontSize: '30px',
