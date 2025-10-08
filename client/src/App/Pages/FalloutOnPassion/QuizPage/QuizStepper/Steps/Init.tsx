@@ -54,6 +54,10 @@ export const Init = () => {
 
         [theme.breakpoints.down(1100)]: {
           width: '60%'
+        },
+
+        [theme.breakpoints.down(800)]: {
+          width: '90%'
         }
       })}>
         <Box sx={(theme) => ({ 
@@ -74,7 +78,7 @@ export const Init = () => {
 
           [theme.breakpoints.down(800)]: {
             height: 'auto',
-            padding: '4em',
+            padding: '3em 4em',
             margin: '2em'
           }
         })}>
