@@ -8,15 +8,11 @@ export const DashboardWrapper = styled(Box)(({ theme }) => ({
     alignItems: 'center', 
     justifyContent: 'center', 
     flex: 1,
+    overflowY: 'auto',
 
     [theme.breakpoints.down(800)]: {
         flexDirection: 'column'
     },
-
-    [theme.breakpoints.down(600)]: {
-        maxHeight: '750px',
-        overflow: 'scroll',
-    }
 }));
 
 export const DashboardLeftWrapperBox = styled(Box, {

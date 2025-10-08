@@ -57,143 +57,137 @@ export const QuizStart = () => {
     };
 
     return (
-        <>
-            <QuizLayout 
-                buttons={
-                    <>
-                        {field && (
-                            <>
-                                <Box>
-                                    <QuizOutlinedButton 
-                                        variant="outlined" 
-                                        onClick={handleClickStart}
-                                    >
-                                        {t('app.general.actions.start_again')}
-                                    </QuizOutlinedButton>
-                                </Box>
-                                <Box>
-                                    <QuizContainedButton 
-                                        variant="contained" 
-                                        onClick={handleClickResume}
-                                    >
-                                        {t('app.general.actions.resume')}
-                                    </QuizContainedButton>
-                                </Box>
-                            </>
-                        )}
-                        {!field && 
-                            <Box sx={(theme) => ({ 
-                                flex: 1, 
-                                display: 'flex', 
-                                justifyContent: 'end',
-
-                                [theme.breakpoints.down(500)]: {
-                                    flexDirection: 'column',
-                                    gap: 2,
-                                    alignItems: 'center',
-                                    width: '-webkit-fill-available',
-                                }
-                            })}>
-                                <QuizContainedButton 
-                                    variant="contained" 
-                                    hasFullWidth
+        <QuizLayout 
+            buttons={
+                <>
+                    {field && (
+                        <>
+                            <Box>
+                                <QuizOutlinedButton 
+                                    variant="outlined" 
                                     onClick={handleClickStart}
                                 >
-                                    {t('app.general.actions.start')}
+                                    {t('app.general.actions.start_again')}
+                                </QuizOutlinedButton>
+                            </Box>
+                            <Box>
+                                <QuizContainedButton 
+                                    variant="contained" 
+                                    onClick={handleClickResume}
+                                >
+                                    {t('app.general.actions.resume')}
                                 </QuizContainedButton>
                             </Box>
-                        }
-                    </>
-                }
+                        </>
+                    )}
+                    {!field && 
+                        <Box sx={(theme) => ({ 
+                            flex: 1, 
+                            display: 'flex', 
+                            justifyContent: 'end',
+
+                            [theme.breakpoints.down(500)]: {
+                                flexDirection: 'column',
+                                gap: 2,
+                                alignItems: 'center',
+                                width: '-webkit-fill-available',
+                            }
+                        })}>
+                            <QuizContainedButton 
+                                variant="contained" 
+                                hasFullWidth
+                                onClick={handleClickStart}
+                            >
+                                {t('app.general.actions.start')}
+                            </QuizContainedButton>
+                        </Box>
+                    }
+                </>
+            }
+        >
+            <Box 
+                sx={(theme) => ({ 
+                    position: 'relative', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    flex: 1,
+                    overflowY: 'auto',
+
+                    [theme.breakpoints.down(800)]: {
+                        backgroundColor: '#EEFAE1',
+                        flexDirection: 'column-reverse'
+                    },
+                })}
             >
                 <Box 
                     sx={(theme) => ({ 
-                        position: 'relative', 
+                        backgroundColor: '#EEFAE1', 
                         display: 'flex', 
+                        height: '-webkit-fill-available', 
                         alignItems: 'center', 
+                        flexDirection: 'column', 
                         justifyContent: 'center', 
-                        flex: 1,
+                        width: '50%',
 
                         [theme.breakpoints.down(800)]: {
-                            backgroundColor: '#EEFAE1',
-                            flexDirection: 'column-reverse'
-                        },
-
-                        [theme.breakpoints.down(500)]: {
-                            maxHeight: '680px',
-                            overflow: 'scroll'
+                            width: '-webkit-fill-available'
                         }
                     })}
                 >
                     <Box 
                         sx={(theme) => ({ 
-                            backgroundColor: '#EEFAE1', 
-                            display: 'flex', 
-                            height: '-webkit-fill-available', 
-                            alignItems: 'center', 
-                            flexDirection: 'column', 
-                            justifyContent: 'center', 
-                            width: '50%',
+                            backgroundColor: '#B8E986', 
+                            padding: '4em', 
+                            borderRadius: '32px', 
+                            maxWidth: '80%',
 
                             [theme.breakpoints.down(800)]: {
-                                width: '-webkit-fill-available'
-                            }
-                        })}
-                    >
-                        <Box 
-                            sx={(theme) => ({ 
-                                backgroundColor: '#B8E986', 
-                                padding: '4em', 
-                                borderRadius: '32px', 
-                                maxWidth: '80%',
-
-                                [theme.breakpoints.down(800)]: {
-                                    padding: '2em 3em'
-                                },
-
-                                [theme.breakpoints.down(500)]: {
-                                    marginBottom: '8.5em',
-                                    padding: '2em',
-                                    width: '90%'
-                                }
-                            })}
-                        >
-                            <Typography variant="h3" sx={{ textAlign: 'left' }}>
-                            {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_title') : t('app.explore.fallout_on_passion.quiz.welcome_title')}
-                            </Typography>
-                            <Divider sx={{ margin: '1em 0 2em 0' }} />
-                            <Typography variant="h6" sx={{ textAlign: 'justify'  }}>
-                                {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_subtitle_1') : t('app.explore.fallout_on_passion.quiz.welcome_subtitle_1')}
-                            </Typography>
-                            <Typography variant="h6" sx={{ textAlign: 'justify' }}>
-                                {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_subtitle_2') : t('app.explore.fallout_on_passion.quiz.welcome_subtitle_2')}
-                            </Typography>
-                        </Box>                    
-                        <QuizSettings isMobile={isWavyMobile} handlePopper={handlePopper} isSettingsOpen={openSettings} />
-                    </Box>
-                    <Box 
-                        sx={(theme) => ({ 
-                            padding: '2em', 
-                            width: '50%',
-
-                            [theme.breakpoints.down(800)]: {
-                                width: '-webkit-fill-available'
+                                padding: '2em 3em'
                             },
 
                             [theme.breakpoints.down(500)]: {
-                                padding: '1em'
+                                marginBottom: '8.5em',
+                                padding: '2em',
+                                width: '90%'
                             }
                         })}
                     >
-                        <CardMedia
-                            component="img"
-                            image={field ? resumeImage : startImage}
-                            sx={{ borderRadius: '40px' }}
-                        />
-                    </Box>
-                    <QuizPopper openSettings={openSettings} anchorEl={anchorEl} popperRef={popperRef} />
+                        <Typography variant="h3" sx={{ textAlign: 'left' }}>
+                        {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_title') : t('app.explore.fallout_on_passion.quiz.welcome_title')}
+                        </Typography>
+                        <Divider sx={{ margin: '1em 0 2em 0' }} />
+                        <Typography variant="h6" sx={{ textAlign: 'justify'  }}>
+                            {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_subtitle_1') : t('app.explore.fallout_on_passion.quiz.welcome_subtitle_1')}
+                        </Typography>
+                        <Typography variant="h6" sx={{ textAlign: 'justify' }}>
+                            {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_subtitle_2') : t('app.explore.fallout_on_passion.quiz.welcome_subtitle_2')}
+                        </Typography>
+                    </Box>                    
+                    <QuizSettings isMobile={isWavyMobile} handlePopper={handlePopper} isSettingsOpen={openSettings} />
                 </Box>
-            </QuizLayout>
-        </>
+                <Box 
+                    sx={(theme) => ({ 
+                        padding: '2em', 
+                        width: '50%',
+
+                        [theme.breakpoints.down(800)]: {
+                            width: '-webkit-fill-available'
+                        },
+
+                        [theme.breakpoints.down(500)]: {
+                            padding: '1em'
+                        }
+                    })}
+                >
+                    <CardMedia
+                        component="img"
+                        image={field ? resumeImage : startImage}
+                        sx={{ borderRadius: '40px' }}
+                    />
+                </Box>
+                <QuizPopper openSettings={openSettings} anchorEl={anchorEl} popperRef={popperRef} />
+            </Box>
+        </QuizLayout>
     )
 }

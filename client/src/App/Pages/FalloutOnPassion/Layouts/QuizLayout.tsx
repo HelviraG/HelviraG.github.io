@@ -17,7 +17,7 @@ export const QuizLayout = ({ children, buttons, withFooter = true }: { children:
     const isTablet = useMediaQuery("(max-width: 800px");
 
     return (
-        <>
+        <Box sx={{ height: '100vh' }}>
             <AppBar position="static" color="transparent" elevation={0} sx={{ backgroundColor: '#FFF', padding: '14px', top: 0 }}>
                 <Toolbar sx={(theme) => ({ 
                     display: 'flex', 
@@ -93,12 +93,12 @@ export const QuizLayout = ({ children, buttons, withFooter = true }: { children:
             </AppBar>
             {children}
             {withFooter && (
-                <AppBar position="static" color="transparent" elevation={0} sx={{ backgroundColor: '#FFF', bottom: 0, top: 'auto' }}>
+                <AppBar position="static" color="transparent" elevation={0} sx={{ backgroundColor: '#FFF', bottom: 0, top: 'auto', flexShrink: 0 }}>
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '18px 24px' }}>
                         {buttons}
                     </Toolbar>
                 </AppBar>
             )}
-        </>
+        </Box>
     )
 }

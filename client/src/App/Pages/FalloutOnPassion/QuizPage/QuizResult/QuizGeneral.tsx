@@ -38,41 +38,39 @@ export const QuizGeneral = () => {
   }, [searchParams]);
 
   return (
-    <>
-      <QuizLayout buttons={<></>} withFooter={false}>
-        <DashboardWrapper>
-          <DashboardLeftWrapperBox selectedActivity={selectedActivity}>
-            {selectedActivity && (
-              <CategoryDashboard cat={selectedActivity} />
-            )}
-            {!selectedActivity && (
-              <GeneralDashboard />
-            )}
-          </DashboardLeftWrapperBox>
-          <DashboardRightWrapperBox>
-            <DashboardRightBox>
-              <Divider textAlign={"right"} variant={"fullWidth"}>
-                <Chip label={'All the results'} />
-              </Divider>
-              <Box sx={{ marginTop: 2 }}>
-                <Typography variant="h3" sx={{ fontWeight: 300 }}>Pick up your lane!</Typography>
-              </Box>
-              <DashboardButtonsWrapper>
-                {['coding', 'gaming', 'design', 'data'].map((activity: string) => (
-                  <DashboardButton 
-                    variant="contained" 
-                    key={activity} 
-                    isSelectedActivity={selectedActivity === activity}
-                    onClick={() => handleCategoryClick(activity)}
-                  >
-                    {activity}
-                  </DashboardButton>
-                ))}
-              </DashboardButtonsWrapper>
-            </DashboardRightBox>
-          </DashboardRightWrapperBox>
-        </DashboardWrapper>
-      </QuizLayout>
-    </>
+    <QuizLayout buttons={<></>} withFooter={false}>
+      <DashboardWrapper>
+        <DashboardLeftWrapperBox selectedActivity={selectedActivity}>
+          {selectedActivity && (
+            <CategoryDashboard cat={selectedActivity} />
+          )}
+          {!selectedActivity && (
+            <GeneralDashboard />
+          )}
+        </DashboardLeftWrapperBox>
+        <DashboardRightWrapperBox>
+          <DashboardRightBox>
+            <Divider textAlign={"right"} variant={"fullWidth"}>
+              <Chip label={'All the results'} />
+            </Divider>
+            <Box sx={{ marginTop: 2 }}>
+              <Typography variant="h3" sx={{ fontWeight: 300 }}>Pick up your lane!</Typography>
+            </Box>
+            <DashboardButtonsWrapper>
+              {['coding', 'gaming', 'design', 'data'].map((activity: string) => (
+                <DashboardButton 
+                  variant="contained" 
+                  key={activity} 
+                  isSelectedActivity={selectedActivity === activity}
+                  onClick={() => handleCategoryClick(activity)}
+                >
+                  {activity}
+                </DashboardButton>
+              ))}
+            </DashboardButtonsWrapper>
+          </DashboardRightBox>
+        </DashboardRightWrapperBox>
+      </DashboardWrapper>
+    </QuizLayout>
   );
 };

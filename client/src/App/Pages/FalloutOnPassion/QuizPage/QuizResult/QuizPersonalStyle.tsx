@@ -23,22 +23,12 @@ export const QuizPersonalWrapperBox = styled(Box)(({ theme }) => ({
   alignItems: 'center', 
   justifyContent: 'center', 
   flex: 1,
+  overflowY: 'auto',
 
   [theme.breakpoints.down(800)]: {
     flexDirection: 'column',
-    flex: 0,
-    maxHeight: '718px !important',
-    overflowY: 'scroll',
     justifyContent: 'flex-start',
-  },
-
-  [theme.breakpoints.down(500)]: {
-    maxHeight: '620px !important',
-  },
-
-  [theme.breakpoints.down(400)]: {
-    maxHeight: '600px !important',
-  },
+  }
 }));
 
 export const QuizPersonalHeaderWrapper = styled(Box)(({ theme }) => ({

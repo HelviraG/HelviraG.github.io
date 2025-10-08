@@ -27,34 +27,33 @@ export const InitStep = () => {
   useDocumentTitle(`Helvira Goma | 💓 ${i18n.t("app.menu.passion")}`);
 
   return (
-    <>
-      <QuizLayout buttons={<></>}>
-        <Box 
-          sx={(theme) => ({ 
-            position: 'relative', 
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            flex: 1,
+    <QuizLayout buttons={<></>}>
+      <Box 
+        sx={(theme) => ({ 
+          position: 'relative', 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          flex: 1,
+          overflowY: 'auto',
 
-            [theme.breakpoints.down(800)]: {
-              backgroundColor: '#EEFAE1'
-            }
-          })}
-        >
-          <Init />
-          <QuizSettings
-            isMobile={isWavyMobile}
-            handlePopper={handlePopper}
-            isSettingsOpen={openSettings}
-          />
-          <QuizPopper
-            openSettings={openSettings}
-            anchorEl={anchorEl}
-            popperRef={popperRef}
-          />
-        </Box>
-      </QuizLayout>
-    </>
+          [theme.breakpoints.down(800)]: {
+            backgroundColor: '#EEFAE1'
+          }
+        })}
+      >
+        <Init />
+        <QuizSettings
+          isMobile={isWavyMobile}
+          handlePopper={handlePopper}
+          isSettingsOpen={openSettings}
+        />
+        <QuizPopper
+          openSettings={openSettings}
+          anchorEl={anchorEl}
+          popperRef={popperRef}
+        />
+      </Box>
+    </QuizLayout>
   );
 };
