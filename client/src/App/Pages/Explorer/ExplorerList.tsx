@@ -1,5 +1,6 @@
 import { AppChip } from "@component/Chip/Chip";
 import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
+import LineAxisIcon from '@mui/icons-material/LineAxis';
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { SubTitle } from "@resources/Enums/Images";
 import { Routes } from "@resources/Enums/Routes";
@@ -85,7 +86,13 @@ export const ExplorerList = () => {
               >
                 {t("app.explore.fallout_on_passion.subtitle")}
               </Typography>
-              <CardContentAction>
+              <CardContentAction isExplorerList>
+                <CardContentButton
+                  href={`${Routes.QUIZ_RESULT}`}
+                  startIcon={<LineAxisIcon />}
+                >
+                  {t("app.general.actions.check")}
+                </CardContentButton>
                 <CardContentButton
                   href={`${Routes.PASSION}`}
                   startIcon={<VideogameAssetIcon />}
