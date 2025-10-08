@@ -1,6 +1,16 @@
 {
   "videos": [
     {
+      "channel": "WeLoveDevs",
+      "title": "La puissance du réseau féminin : Motiv'Her - Helvira Goma ⚡️",
+      "tags": ["VIDEO", "INTERVIEW", "ALL"],
+      "imgUrl": "https://i.ibb.co/QFbCx8wZ/thumbnail.jpg",
+      "lightColor": "#f783ac",
+      "darkColor": "#f783ac",
+      "link": "https://www.youtube.com/watch?v=blur5_wirHM",
+      "channelImg": "https://i.ibb.co/zZVT2jQ/we-love-devs-channel.jpg"
+    },
+    {
       "channel": "Gouvernement",
       "title": "On a toutes une tête à travailler dans la tech",
       "tags": ["PUB", "VIDEO", "ALL"],
