@@ -116,7 +116,7 @@ export const QuizStart = () => {
                     [theme.breakpoints.down(800)]: {
                         backgroundColor: '#EEFAE1',
                         flexDirection: 'column-reverse',
-                        paddingBottom: '3em'
+                        paddingBottom: '6em'
                     },
                 })}
             >
