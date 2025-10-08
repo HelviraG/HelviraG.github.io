@@ -98,6 +98,10 @@ export const FooterTextWrapper = styled(Box)((({ theme }) => ({
 })));
 
 export const FooterTextTypography = styled(Typography)(({ theme }) => ({
+  [theme.breakpoints.down(500)]: {
+    textAlign: 'right'
+  },
+
   [theme.breakpoints.between('xxs', 'xs')]: {
     fontSize: '9px',
   },
