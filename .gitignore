@@ -2,9 +2,6 @@
 /client/build
 /client/node_modules
 /client/public/database
-/client/public/database/app/conferences.json
-/client/public/database/app/press.json
-/client/public/database/app/videos.json
 /client/public/database/quizz
 .env
 node_modules
