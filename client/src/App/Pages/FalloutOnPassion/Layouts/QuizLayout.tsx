@@ -41,13 +41,15 @@ export const QuizLayout = ({ children, buttons, withFooter = true }: { children:
                         gap: 2,
 
                         [theme.breakpoints.down(800)]: { 
-                        gap: 4,
+                            alignItems: 'center',
+                            gap: 4,
+                            textAlign: 'center'
                         },
 
                         [theme.breakpoints.down(601)]: {
-                        flexDirection: 'column',
-                        gap: 1,
-                        width: '-webkit-fill-available',
+                            flexDirection: 'column',
+                            gap: 1,
+                            width: '-webkit-fill-available'
                         }
                     })}>
                         <ChipWrapper>
