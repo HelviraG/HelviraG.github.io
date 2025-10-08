@@ -92,7 +92,7 @@ export const DashboardRightBox = styled(Box)(({ theme }) => ({
     },
 
     [theme.breakpoints.down(500)]: {
-        width: '90%'
+        maxWidth: '90%'
     }
 }));
 
@@ -162,7 +162,7 @@ export const DashboardContentInner = styled(Box)(({ theme }) => ({
     margin: '0 auto',
 
     [theme.breakpoints.down(500)]: {
-        width: '90%'
+        maxWidth: '90%'
     }
 }));
 

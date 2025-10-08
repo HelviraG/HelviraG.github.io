@@ -43,7 +43,7 @@ export const InitPromptWrapper = styled(Box)(({ theme }) => ({
   },
 
   [theme.breakpoints.up(1440)]: {
-    width: "90%",
+    maxWidth: "90%",
     padding: theme.spacing(5),
   },
 
