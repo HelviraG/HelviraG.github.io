@@ -27,7 +27,7 @@ export const InitStep = () => {
   useDocumentTitle(`Helvira Goma | 💓 ${i18n.t("app.menu.passion")}`);
 
   return (
-    <QuizLayout buttons={<></>}>
+    <QuizLayout buttons={<></>} withFooter={false}>
       <Box 
         sx={(theme) => ({ 
           position: 'relative', 
@@ -38,7 +38,8 @@ export const InitStep = () => {
           overflowY: 'auto',
 
           [theme.breakpoints.down(800)]: {
-            backgroundColor: '#EEFAE1'
+            backgroundColor: '#EEFAE1',
+            flexDirection: 'column-reverse'
           }
         })}
       >

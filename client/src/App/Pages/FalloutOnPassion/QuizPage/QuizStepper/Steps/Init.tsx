@@ -43,26 +43,41 @@ export const Init = () => {
 
   return (
     <>
-      <Box sx={{ 
+      <Box sx={(theme) => ({ 
         backgroundColor: '#EEFAE1', 
         display: 'flex', 
         height: '-webkit-fill-available', 
         alignItems: 'center', 
         flexDirection: 'column', 
         justifyContent: 'center', 
-        width: '50%' 
-      }}>
-        <Box sx={{ 
+        width: '50%',
+
+        [theme.breakpoints.down(1100)]: {
+          width: '60%'
+        }
+      })}>
+        <Box sx={(theme) => ({ 
           backgroundColor: '#B8E986', 
           padding: '4em', 
           margin: '5em', 
           borderRadius: '32px', 
           height: '50%', 
+
           ...((hasEnterName || hasStoredUser) && { 
             height: 'auto', 
             padding: '3em' 
-          }) 
-        }}>
+          }),
+
+          [theme.breakpoints.down(1100)]: {
+            maxWidth: '90%'
+          },
+
+          [theme.breakpoints.down(800)]: {
+            height: 'auto',
+            padding: '4em',
+            margin: '2em'
+          }
+        })}>
           <Divider textAlign={"right"} variant={"fullWidth"}>
             <InitPromptAboveWrapperChildren
               hasEnterName={hasEnterName || hasStoredUser}
@@ -112,13 +127,21 @@ export const Init = () => {
           </InitPromptBelow>
         </Box>
       </Box>
-      <Box sx={{ 
+      <Box sx={(theme) => ({ 
         padding: '2em', 
         width: '50%', 
         backgroundColor: 'black', 
         height: '-webkit-fill-available', 
-        alignContent: 'center' 
-      }}>
+        alignContent: 'center',
+
+        [theme.breakpoints.down(1100)]: {
+          width: '40%'
+        },
+
+        [theme.breakpoints.down(800)]: {
+          width: '-webkit-fill-available'
+        }
+      })}>
         <CardMedia
           component="img"
           image="https://od.lk/s/MzRfMzk5Njg0MDZf/WhatsApp_Image_2024-06-19_a%CC%80_03.43.04_796dfceb-removebg-preview.png"
