@@ -11,7 +11,7 @@ import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 export const Career = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();
 
-  useDocumentTitle(`Helvira Goma | ${t("app.menu.career")}`);
+  useDocumentTitle(`Helvira Goma | 🔖 ${t("app.menu.career")}`);
 
   return (
     <>
