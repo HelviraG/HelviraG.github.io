@@ -33,6 +33,7 @@ interface CardContentMediaProps extends CardMediaProps {
 
 interface CardContentActionProps extends BoxProps {
   flexRight?: boolean;
+  isExplorerList?: boolean;
 }
 
 interface CardContentButtonProps extends BoxProps {
@@ -179,8 +180,8 @@ export const CardContentCaption = styled(Typography)(({ theme }) => ({
 }));
 
 export const CardContentAction = styled(Box, {
-  shouldForwardProp: (prop) => prop !== "flexRight",
-})<CardContentActionProps>(({ flexRight, theme }) => ({
+  shouldForwardProp: (prop) => prop !== "flexRight" && prop !== 'isExplorerList',
+})<CardContentActionProps>(({ flexRight, isExplorerList, theme }) => ({
   display: "flex",
   justifyContent: "end",
   marginTop: theme.spacing(1),
@@ -188,6 +189,10 @@ export const CardContentAction = styled(Box, {
   ...(flexRight && {
     justifyContent: "start",
   }),
+
+  ...(isExplorerList && {
+    gap: '10px'
+  })
 }));
 
 export const CardContentButton = styled(Button, {
