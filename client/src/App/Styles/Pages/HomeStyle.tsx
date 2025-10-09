@@ -332,6 +332,7 @@ export const BuyCoffeeLink = styled(Link)({
 
 export const BuyCoffeeImageBox = styled(Box)(({ theme }) => ({
     background: 'url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTdtcXRsa2x6cG94dDNiODR0Y3hidWJyODJ1dTBwNWg2bmVmbHdtcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/513lZvPf6khjIQFibF/giphy.gif") no-repeat right',
+    display: 'flex',
     height: '280px',
     width: '65%',
 
@@ -348,5 +349,6 @@ export const BuyCoffeeImageBox = styled(Box)(({ theme }) => ({
 }));
 
 export const BuyCoffeeImageLink = styled(Link)({
+    flex: 1,
     textDecoration: 'none'
 });
