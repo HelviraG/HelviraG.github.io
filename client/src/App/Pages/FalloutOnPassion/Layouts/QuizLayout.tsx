@@ -52,7 +52,14 @@ export const QuizLayout = ({ children, buttons, withFooter = true }: { children:
                             width: '-webkit-fill-available'
                         }
                     })}>
-                        <ChipWrapper>
+                        <ChipWrapper 
+                            sx={(theme) => ({
+                                [theme.breakpoints.down(601)]: {
+                                    width: '100%',
+                                    display: 'flex'
+                                }
+                            })}
+                        >
                             <AppChip label="fallout" type={Tags.FALLOUT} />
                             <AppChip label="passion" type={Tags.QUIZ_PASSION} />
                         </ChipWrapper>
