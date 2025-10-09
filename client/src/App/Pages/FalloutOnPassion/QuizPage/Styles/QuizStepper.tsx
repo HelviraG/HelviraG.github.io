@@ -20,7 +20,7 @@ export const CardContentBody = styled(Box, {
   backgroundColor: '#B8E986', 
   borderRadius: '32px',
   padding: '4em 2em',
-  maxWidth: '80%',
+  width: '80%',
   margin: '0 auto',
 
   ...(isQuizResult && {

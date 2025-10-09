@@ -15,6 +15,16 @@ export const DashboardWrapper = styled(Box)(({ theme }) => ({
     },
 }));
 
+export const EmptyBoxWrapper = styled(Box)(({ theme }) => ({
+    backgroundImage: `url(${falloutResultImg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'right',
+    display: 'flex',
+    flex: 1,
+    filter: 'saturate(1)',
+    transition: 'all 0.5s ease',
+}));
+
 export const DashboardLeftWrapperBox = styled(Box, {
     shouldForwardProp: (prop) => prop != 'selectedActivity'
 })<{ selectedActivity: string | null }>(({ theme, selectedActivity }) => ({
@@ -24,29 +34,24 @@ export const DashboardLeftWrapperBox = styled(Box, {
     width: '80%',
     position: 'relative',
 
-    backgroundImage: selectedActivity
-        ? `url(${falloutResultImg})`
-        : `url(https://od.lk/s/MzRfMzc4MDEwODhf/thumb-1920-830262.jpg)`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    filter: 'saturate(1)',
-    transition: 'all 0.5s ease',
+    //backgroundImage: selectedActivity
+        //? `url(${falloutResultImg})`
+        //: `url(https://od.lk/s/MzRfMzc4MDEwODhf/thumb-1920-830262.jpg)`,
+    //backgroundSize: 'cover',
+    //backgroundPosition: 'center',
+    //filter: 'saturate(1)',
+    //transition: 'all 0.5s ease',
 
     [theme.breakpoints.down(1200)]: {
         width: '70%'
     },
 
-    [theme.breakpoints.down(1050)]: {
-        backgroundPosition: 'right'
-    },
-
     [theme.breakpoints.down(800)]: {
-        width: '100%', 
+        width: '100%'
     },
-
-    [theme.breakpoints.down(500)]: {
-        marginTop: '19em',
-        padding: '9em 10px',
+    
+    [theme.breakpoints.down(585)]: {
+        height: '850px', 
     },
 
     '&:after': {
@@ -75,6 +80,7 @@ export const DashboardRightWrapperBox = styled(Box)(({ theme }) => ({
     },
 
     [theme.breakpoints.down(800)]: {
+        flex: 0,
         width: '-webkit-fill-available'
     }
 }));
@@ -92,7 +98,7 @@ export const DashboardRightBox = styled(Box)(({ theme }) => ({
     },
 
     [theme.breakpoints.down(500)]: {
-        maxWidth: '90%'
+        width: '90%'
     }
 }));
 
@@ -160,9 +166,19 @@ export const DashboardContentInner = styled(Box)(({ theme }) => ({
     flexDirection: 'column',
     alignSelf: 'center',
     margin: '0 auto',
+    position: 'absolute',
+    left: 0,
+    right: 0,
 
-    [theme.breakpoints.down(500)]: {
-        maxWidth: '90%'
+    [theme.breakpoints.down(800)]: {
+        padding: '1em 2em', 
+        gap: 0
+    },
+
+    [theme.breakpoints.down(585)]: {
+        padding: '1em', 
+        top: '41%',
+        width: '90%'
     }
 }));
 
@@ -195,5 +211,6 @@ export const DashboardContentChartWrapper = styled(Box)({
 });
 
 export const ChartBox = styled(Box)({
-    flex: 1
+    flex: 1,
+    zIndex: 1
 });

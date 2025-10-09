@@ -1,6 +1,6 @@
 import { useListResultQuery } from "@/Redux/Services/QuizApi";
 import { pieArcLabelClasses, PieChart } from '@mui/x-charts/PieChart';
-import { Box, useMediaQuery } from "@mui/material"
+import { Box, CardMedia, useMediaQuery } from "@mui/material"
 import { DefaultizedPieValueType } from "@mui/x-charts";
 import { 
     ChartBox, 
@@ -9,8 +9,8 @@ import {
     DashboardContentInner, 
     DashboardContentInnerPill, 
     DashboardContentInnerPillTypo, 
-    DashboardContentTypo, 
-    DashboardContentWrapper 
+    DashboardContentTypo,
+    EmptyBoxWrapper
 } from "./QuizGeneralStyle";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +19,7 @@ export const CategoryDashboard = ({ cat }: { cat: string }) => {
     const { data } = useListResultQuery({ category: cat });
     const isMobile = useMediaQuery("(max-width: 500px)")
     
-    if (!data?.percentages) return null;
+    if (!data?.percentages) return <EmptyBoxWrapper></EmptyBoxWrapper>;
 
     const categories: { key: 'citizen' | 'paladin' | 'superMutant', label: string, labelMarkType: 'square' }[] = [
         { key: 'citizen', label: t('app.explore.fallout_on_passion.quiz.result.types.citizen'), labelMarkType: 'square' },
@@ -42,14 +42,37 @@ export const CategoryDashboard = ({ cat }: { cat: string }) => {
     };
 
     return (
-        <DashboardContentWrapper>
+        <Box sx={(theme) => ({ 
+            display: 'flex', 
+            position: 'relative', 
+           
+            [theme.breakpoints.down(585)]: {
+                height: '850px', 
+            }
+        })}>
+            <Box 
+                sx={(theme) => ({ 
+                    display: 'flex', 
+                    flex: 1, 
+           
+                    [theme.breakpoints.down(585)]: {
+                        height: '850px', 
+                    }
+                })}
+            >
+                <CardMedia component="img" image="https://od.lk/s/MzRfMzc4MDEwODhf/thumb-1920-830262.jpg" />
+            </Box>
             <DashboardContentInner>
                 <Box>
                     <DashboardContentInnerPill>
                         <DashboardContentInnerPillTypo>team {cat}</DashboardContentInnerPillTypo>
                     </DashboardContentInnerPill>
                 </Box>
-                <Box>
+                <Box sx={(theme) => ({ 
+                    [theme.breakpoints.down(390)]: {
+                        marginTop: '10px'
+                    }
+                 })}>
                     <DashboardContentTypo>{t('app.explore.fallout_on_passion.quiz.result.chart.subText')}</DashboardContentTypo>
                     <DashboardContentDivider />
                 </Box>
@@ -103,6 +126,6 @@ export const CategoryDashboard = ({ cat }: { cat: string }) => {
                     </ChartBox>
                 </DashboardContentChartWrapper>
             </DashboardContentInner>
-        </DashboardContentWrapper>
+        </Box>
     )
 }

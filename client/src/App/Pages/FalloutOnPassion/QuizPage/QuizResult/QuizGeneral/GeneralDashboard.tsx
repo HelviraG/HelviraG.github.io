@@ -1,5 +1,5 @@
 import { useListResultQuery } from "@/Redux/Services/QuizApi";
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, CardMedia, useMediaQuery } from "@mui/material";
 import { DefaultizedPieValueType, pieArcLabelClasses, PieChart } from "@mui/x-charts";
 import { 
     ChartBox,
@@ -8,8 +8,8 @@ import {
     DashboardContentInner, 
     DashboardContentInnerPill, 
     DashboardContentInnerPillTypo, 
-    DashboardContentTypo, 
-    DashboardContentWrapper 
+    DashboardContentTypo,
+    EmptyBoxWrapper
 } from "./QuizGeneralStyle";
 import { useTranslation } from "react-i18next";
 
@@ -18,7 +18,7 @@ export const GeneralDashboard = () => {
     const { data } = useListResultQuery({});
     const isMobile = useMediaQuery("(max-width: 500px)")
 
-    if (!data?.percentages) return null;
+    if (!data?.percentages) return <EmptyBoxWrapper></EmptyBoxWrapper>;
 
     const dataToChart = [
         { value: parseInt(data.percentages.citizen, 10), label: t('app.explore.fallout_on_passion.quiz.result.types.citizen'), labelMarkType: 'square' as const },
@@ -33,14 +33,37 @@ export const GeneralDashboard = () => {
     };
 
     return (
-        <DashboardContentWrapper>
+        <Box sx={(theme) => ({ 
+            display: 'flex', 
+            position: 'relative', 
+           
+            [theme.breakpoints.down(585)]: {
+                height: '850px', 
+            }
+        })}>
+            <Box 
+                sx={(theme) => ({ 
+                    display: 'flex', 
+                    flex: 1, 
+           
+                    [theme.breakpoints.down(585)]: {
+                        height: '850px', 
+                    }
+                })}
+            >
+                <CardMedia component="img" image="https://od.lk/s/MzRfMzc4MDEwODhf/thumb-1920-830262.jpg" sx={{ filter: 'saturate(1)' }} />
+            </Box>
             <DashboardContentInner>
                 <Box>
                     <DashboardContentInnerPill>
                         <DashboardContentInnerPillTypo>{t('app.explore.fallout_on_passion.quiz.result.chart.allCategory')}</DashboardContentInnerPillTypo>
                     </DashboardContentInnerPill>
                 </Box>
-                <Box>
+                <Box sx={(theme) => ({ 
+                    [theme.breakpoints.down(390)]: {
+                        marginTop: '10px'
+                    }
+                 })}>
                     <DashboardContentTypo>{t('app.explore.fallout_on_passion.quiz.result.chart.subText')}</DashboardContentTypo>
                     <DashboardContentDivider />
                 </Box>
@@ -94,6 +117,6 @@ export const GeneralDashboard = () => {
                     </ChartBox>
                 </DashboardContentChartWrapper>
             </DashboardContentInner>
-        </DashboardContentWrapper>
+        </Box>
     );
 }
