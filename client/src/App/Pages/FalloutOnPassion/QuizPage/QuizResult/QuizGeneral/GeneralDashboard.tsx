@@ -51,7 +51,7 @@ export const GeneralDashboard = () => {
                     }
                 })}
             >
-                <CardMedia component="img" image="https://od.lk/s/MzRfMzc4MDEwODhf/thumb-1920-830262.jpg" sx={{ filter: 'saturate(1)' }} />
+                <CardMedia component="img" image="https://i.ibb.co/zhzjcGG7/thumb-1920-830262.jpg" sx={{ filter: 'saturate(1)' }} />
             </Box>
             <DashboardContentInner>
                 <Box>

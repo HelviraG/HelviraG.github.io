@@ -183,15 +183,15 @@
         "link_article": "https://selfdeterminationtheory.org/SDT/documents/2003_VallerancBlanchardMageauKoesnterRatelleLeonardGagneMacolais_JPSP.pdf",
         "title": "Which Fallout Faction Reflects Your Passion?",
         "subtitle": "Fallout on Passion",
-        "miniature": "https://od.lk/s/MzRfMzc1NDk3NTNf/Copie%20de%20GIT%20INIT%20%2821%29.png",
-        "cover": "https://od.lk/s/MzRfMzc1NDk3NTdf/Copie%20de%20GIT%20INIT%20%2817%29.png",
-        "cover_sm": "https://od.lk/s/MzRfMzc1NDk3NTVf/Copie%20de%20GIT%20INIT%20%2819%29.png",
-        "init": "https://od.lk/s/MzRfMzg2ODg0MDlf/fallout_on_passion_init_background.png",
-        "init_sm": "https://od.lk/s/MzRfMzg2OTExOTJf/fallout_on_passion_init_background_sm.png",
+        "miniature": "https://i.ibb.co/vvR4Bs1b/Copie-de-GIT-INIT-21.png",
+        "cover": "https://i.ibb.co/9kc1k1Lk/Copie-de-GIT-INIT-17.png",
+        "cover_sm": "https://i.ibb.co/5hmzB6Fm/Copie-de-GIT-INIT-19.png",
+        "init": "https://i.ibb.co/XZZxnZzJ/fallout-on-passion-init-background.png",
+        "init_sm": "https://i.ibb.co/BVY6xbBy/fallout-on-passion-init-background-sm.png",
         "link_images": "https://alphacoders.com/fallout-4-wallpapers",
-        "resume": "https://od.lk/s/MzRfMzg2OTA1NDBf/fallout_on_passion_quiz_21.png",
-        "resume_sm": "https://od.lk/s/MzRfMzg2OTA5Nzhf/fallout_on_passion_quiz_sm_21.png",
-        "error": "https://od.lk/s/MzRfMzg2OTE0MTVf/fallout_on_passion_error.png",
+        "resume": "https://i.ibb.co/ZRbZDJL2/fallout-on-passion-quiz-21.png",
+        "resume_sm": "https://i.ibb.co/bRvNrPT8/fallout-on-passion-quiz-sm-21.png",
+        "error": "https://i.ibb.co/wFFQ24J3/fallout-on-passion-error.png",
         "tabs": {
           "tab": {
             "title_1": "Info",
@@ -325,9 +325,9 @@
               "noData": "No test result submitted in this category!"
             },
             "img": {
-              "citizen": "https://od.lk/s/MzRfMzg3MDAyNDhf/result_citizen_en.png",
-              "paladin": "https://od.lk/s/MzRfMzg2ODg0MTRf/result_paladin_en.png",
-              "superMutant": "https://od.lk/s/MzRfMzg2ODg0MjNf/result_supermutant_en.png"
+              "citizen": "https://i.ibb.co/n84wCVZn/result-citizen-en.png",
+              "paladin": "https://i.ibb.co/Q3YjwzYt/result-paladin-en.png",
+              "superMutant": "https://i.ibb.co/23ZPWRyr/result-supermutant-en.png"
             },
             "label": {
               "coding": {

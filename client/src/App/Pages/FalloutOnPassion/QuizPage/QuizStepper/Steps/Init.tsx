@@ -158,7 +158,7 @@ export const Init = () => {
       })}>
         <CardMedia
           component="img"
-          image="https://od.lk/s/MzRfMzk5Njg0MDZf/WhatsApp_Image_2024-06-19_a%CC%80_03.43.04_796dfceb-removebg-preview.png"
+          image="https://i.ibb.co/bMrZrqnt/Whats-App-Image-2024-06-19-at-03-43-02.jpg"
           sx={{ borderRadius: '40px' }}
         />
       </Box>

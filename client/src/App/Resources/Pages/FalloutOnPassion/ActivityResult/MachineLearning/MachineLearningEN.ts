@@ -11,7 +11,7 @@ export const MachineLearningEN = {
             "social_style": "You work <bold>well both</bold> independently and as part of a team, much like a <bold>lone wanderer</bold> who <bold>occasionally partners up</bold> for survival.\n",
         },
         "paladin": {
-            "title": "The Brotherhood of Steel: The Harmonious Coder",
+            "title": "The Brotherhood of Steel: The Harmonious Machine Learning Enthusiast",
             "text": "Hi, <bold>Paladin</bold>! You embody the <bold>Brotherhood of Steel</bold> with your <bold>harmonious</bold> passion for coding. You see coding as a <bold>noble pursuit</bold>, combining <bold>duty</bold> with a <bold>deep appreciation</bold> for the craft.\n",
             "approach": "You approach coding with <bold>reverence</bold> and <bold>discipline</bold>, much like the Brotherhood’s approach to technology. You strive for <bold>excellence</bold> and uphold machine learning <bold>standards</bold> as if they were <bold>sacred</bold>.\n",
             "work_life": "You maintain a <bold>healthy balance</bold>, ensuring your <bold>passion</bold> for coding doesn’t become a <bold>burden</bold>. You might spend a weekend <bold>optimizing code</bold>, but you’ll also make time for <bold>power armor maintenance</bold> (or, you know, real-life hobbies).\n",
