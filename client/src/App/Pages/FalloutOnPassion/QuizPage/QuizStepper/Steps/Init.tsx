@@ -83,6 +83,11 @@ export const Init = () => {
             margin: '2em'
           },
 
+          [theme.breakpoints.down(500)]: {
+            padding: '3em 2.5em',
+            margin: '1em'
+          },
+
           [theme.breakpoints.down(380)]: {
             padding: '3em 2em'
           }
