@@ -44,6 +44,10 @@ export const CopyrightPanel = ({ value }: { value: number }) => {
           flex: 1,
           width: "100%",
           color: theme.palette.background.paper,
+
+            "& .MuiSvgIcon-root, .MuiTypography-root": {
+              color: theme.palette.background.paper
+            }
         })}
       >
         <ListItem
