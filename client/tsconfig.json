@@ -23,7 +23,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@pages/*": ["src/App/Pages/*"],
-      "@fallout/*": ["src/App/Pages/FalloutOnPassion/*"],
+      "@fallout/*": ["src/App/Pages/QuizPages/FalloutOnPassion/*"],
       "@component/*": ["src/App/Components/*"],
       "@resources/*": ["src/App/Resources/*"],
       "@styles/*": ["src/App/Styles/*"],
