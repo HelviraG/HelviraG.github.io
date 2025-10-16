@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import useDocumentTitle from "@hooks/useDocumentTitle";
 import { Desktop } from "../Layout/Desktop/Desktop";
 import { Mobile } from "../Layout/Mobile/Mobile";
-import { FalloutQuiz } from "./FalloutOnPassion/FalloutQuiz";
+import { FalloutQuiz } from "./QuizPages/FalloutOnPassion/FalloutQuiz";
 
 export const FalloutPassionPage = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();

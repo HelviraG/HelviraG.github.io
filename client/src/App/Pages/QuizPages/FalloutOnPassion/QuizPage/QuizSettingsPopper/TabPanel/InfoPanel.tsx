@@ -1,12 +1,12 @@
-import { CustomTabPanel } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel";
+import { CustomTabPanel } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel";
 import {
   InfoPanelContentBox,
   InfoPanelContentLink,
-} from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/InfoPanelStyle";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/InfoPanelStyle";
 import {
   TabsPanelChip,
   TabsPanelSubTitle,
-} from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import { Divider, Typography } from "@mui/material";
 import { Routes } from "@resources/Enums/Routes";

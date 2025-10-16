@@ -2,7 +2,7 @@ import useClickOutside from "@hooks/useClickOutside";
 import useDocumentTitle from "@hooks/useDocumentTitle";
 import i18n from "@i18n";
 import { Box, useMediaQuery } from "@mui/material";
-import { Init } from "@pages/FalloutOnPassion/QuizPage/QuizStepper/Steps/Init";
+import { Init } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStepper/Steps/Init";
 import React, { useRef, useState } from "react";
 import { QuizSettings } from "../../Components/QuizSettings";
 import { QuizPopper } from "../QuizPopper";

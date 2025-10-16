@@ -1,5 +1,5 @@
-import { CustomTabPanel } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel";
-import { TabsPanelChip } from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
+import { CustomTabPanel } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel";
+import { TabsPanelChip } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
 import FilterIcon from "@mui/icons-material/Filter";
 import ImageSearchIcon from "@mui/icons-material/ImageSearch";
 import ReceiptIcon from "@mui/icons-material/Receipt";

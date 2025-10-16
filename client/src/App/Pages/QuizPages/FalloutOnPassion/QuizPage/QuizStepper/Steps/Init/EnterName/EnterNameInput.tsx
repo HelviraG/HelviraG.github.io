@@ -4,7 +4,7 @@ import {
     EnterNameErrorWrapper,
     EnterNameInput,
     InitNameWrapper
-} from "@fallout/QuizPage/Styles/InitPrompt";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/Styles/InitPrompt";
 import { useTranslation } from "react-i18next";
 import { Box, Tooltip, Typography } from "@mui/material";
 import NewReleasesIcon from '@mui/icons-material/NewReleases';

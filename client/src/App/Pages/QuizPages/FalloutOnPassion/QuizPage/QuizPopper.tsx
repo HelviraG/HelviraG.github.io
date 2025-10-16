@@ -1,4 +1,4 @@
-import {QuizPopperContent, QuizPopperStyle, QuizPopperWrapper} from "@fallout/QuizPage/Styles/QuizPopper";
+import {QuizPopperContent, QuizPopperStyle, QuizPopperWrapper} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/Styles/QuizPopper";
 import {Sounds} from "@resources/Enums/Sounds";
 import {MutableRefObject, SyntheticEvent, useState} from "react";
 import useSound from "use-sound";

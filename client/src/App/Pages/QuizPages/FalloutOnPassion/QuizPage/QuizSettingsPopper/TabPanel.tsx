@@ -1,7 +1,7 @@
-import { CopyrightPanel } from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/CopyrightPanel";
-import { InfoPanel } from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/InfoPanel";
-import { LinksPanel } from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/LinksPanel";
-import { TabPanelWrapper } from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
+import { CopyrightPanel } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/CopyrightPanel";
+import { InfoPanel } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/InfoPanel";
+import { LinksPanel } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/LinksPanel";
+import { TabPanelWrapper } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
 import { Box } from "@mui/material";
 import React, { ReactNode } from "react";
 

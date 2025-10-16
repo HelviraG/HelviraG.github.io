@@ -1,9 +1,9 @@
-import { EnterNameTextInput } from "@fallout/QuizPage/QuizStepper/Steps/Init/EnterName/EnterNameInput";
+import { EnterNameTextInput } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStepper/Steps/Init/EnterName/EnterNameInput";
 import {
   InitNameWrapper,
   InitPromptBelowTypo,
   InitPromptBelowTypoWrapper,
-} from "@fallout/QuizPage/Styles/InitPrompt";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/Styles/InitPrompt";
 import { Box } from "@mui/material";
 import { Dispatch, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";

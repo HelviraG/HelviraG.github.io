@@ -2,7 +2,7 @@ import {
     InitPromptBelowButtonBox,
     InitPromptBelowTypo,
     InitPromptBelowTypoWrapper
-} from "@fallout/QuizPage/Styles/InitPrompt";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/Styles/InitPrompt";
 import { Box, Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { SyntheticEvent } from "react";

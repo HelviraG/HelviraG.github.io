@@ -9,10 +9,10 @@ import { Videos } from "@pages/Videos";
 import { Routes as Links } from "@resources/Enums/Routes";
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { QuizStepsPage } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizStepper/QuizStepsPage";
-import { InitStepsPage } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizStepper/InitStepPage";
-import { QuizStartPage } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizStartPage";
-import { QuizLandScape } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizLandscape";
+import { QuizStepsPage } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStepper/QuizStepsPage";
+import { InitStepsPage } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStepper/InitStepPage";
+import { QuizStartPage } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStartPage";
+import { QuizLandScape } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizLandscape";
 
 export const AppRoutes = () => {
   const location = useLocation();

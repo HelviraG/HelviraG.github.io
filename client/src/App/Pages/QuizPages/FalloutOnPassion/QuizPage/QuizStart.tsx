@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Box, Button, CardMedia, Divider, Typography, useMediaQuery } from "@mui/material";
 import { useRef, useState } from 'react';
-import useClickOutside from "../../../../Hooks/useClickOutside";
+import useClickOutside from "../../../../../Hooks/useClickOutside";
 import { QuizPopper } from './QuizPopper';
 import {QuizSettings} from '../Components/QuizSettings';
 import { Routes } from "@resources/Enums/Routes";

@@ -2,7 +2,7 @@ import {
   TabNavigation as TabNavigationStyle,
   TabsNavigation,
   TabsNavigationWrapper,
-} from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import DoorSlidingIcon from "@mui/icons-material/DoorSliding";
 import MarkUnreadChatAltIcon from "@mui/icons-material/MarkUnreadChatAlt";

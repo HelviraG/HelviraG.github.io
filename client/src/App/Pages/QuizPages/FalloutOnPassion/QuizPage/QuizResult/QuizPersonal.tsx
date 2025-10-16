@@ -16,7 +16,7 @@ import {
   QuizPersonalWrapperBox,
   TabPanelProps,
   TabPanelWrapper,
-} from "@pages/FalloutOnPassion/QuizPage/QuizResult/QuizPersonalStyle";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizResult/QuizPersonalStyle";
 import { listAllAnswers, listAnswers, showField } from "@slices/QuizSlice";
 import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";

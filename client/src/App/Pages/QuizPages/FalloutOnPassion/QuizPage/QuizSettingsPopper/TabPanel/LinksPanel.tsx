@@ -1,9 +1,9 @@
-import { CustomTabPanel } from "@/App/Pages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel";
+import { CustomTabPanel } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel";
 import {
   TabsListItem,
   TabsListItemButton,
   TabsPanelChip,
-} from "@fallout/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSettingsPopper/TabPanel/TabsPanelStyle";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 import ReplayIcon from "@mui/icons-material/Replay";

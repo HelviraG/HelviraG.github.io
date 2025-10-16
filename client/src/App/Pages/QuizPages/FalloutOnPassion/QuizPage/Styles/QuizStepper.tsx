@@ -1,12 +1,9 @@
 import {
   Box,
   BoxProps,
-  CardContent,
-  Dialog,
   MobileStepper,
   styled,
   Typography,
-  useTheme,
 } from "@mui/material";
 
 interface QuizContentBoxProps extends BoxProps {

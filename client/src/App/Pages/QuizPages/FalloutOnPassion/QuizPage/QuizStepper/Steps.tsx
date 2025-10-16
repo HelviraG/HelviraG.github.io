@@ -1,6 +1,6 @@
 import useClickOutside from "@hooks/useClickOutside";
 import { Box, CardMedia, LinearProgress, linearProgressClasses, styled, useMediaQuery } from "@mui/material";
-import { QuizPopper } from "@pages/FalloutOnPassion/QuizPage/QuizPopper";
+import { QuizPopper } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizPopper";
 import { Sounds } from "@resources/Enums/Sounds";
 import { FalloutPassionEN } from "@resources/Pages/General/FalloutPassionEN";
 import { FalloutPassionFR } from "@resources/Pages/General/FalloutPassionFR";

@@ -1,12 +1,12 @@
-import { EnterName } from "@fallout/QuizPage/QuizStepper/Steps/Init/EnterName";
-import { PickCategory } from "@fallout/QuizPage/QuizStepper/Steps/Init/PickCategory";
+import { EnterName } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStepper/Steps/Init/EnterName";
+import { PickCategory } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStepper/Steps/Init/PickCategory";
 import ReceiptIcon from "@mui/icons-material/Receipt";
 import { Box, CardMedia, Divider } from "@mui/material";
 import {
   InitPromptAboveWrapperChildren,
   InitPromptBelow,
   InitPromptIndicator,
-} from "@pages/FalloutOnPassion/QuizPage/Styles/InitPrompt";
+} from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/Styles/InitPrompt";
 import { Sounds } from "@resources/Enums/Sounds";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
