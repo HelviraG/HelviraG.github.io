@@ -23,7 +23,7 @@ export const HeroSectionWrapper = styled(Box)(({ theme }) => ({
         gap: 0,
     },
 
-    [theme.breakpoints.down(426)]: {
+    [theme.breakpoints.down(580)]: {
         flexDirection: 'column',
         gap: 4
     }
