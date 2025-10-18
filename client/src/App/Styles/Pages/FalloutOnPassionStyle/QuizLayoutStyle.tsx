@@ -47,3 +47,33 @@ export const QuizContainedButton = styled(Button, {
         color: theme.game.special.greeny
     }
 }));
+
+export const BurnoutQuizOutlinedButton = styled(Button)(({ theme }) => ({
+    backgroundColor: theme.game.special.greeny, 
+    border: `2px solid #130f40`,
+    borderRadius: '9999px', 
+    color: '#130f40',
+    padding: '.5rem 1.5rem', 
+    minWidth: '150px',
+
+    '&:hover': {
+        backgroundColor: theme.game.special.orange,
+        border: `2px solid #130f40`,
+        color: theme.palette.background.paper
+    }
+}));
+
+export const BurnoutQuizContainedButton = styled(Button)(({ theme }) => ({
+    backgroundColor: '#130f40', 
+    border: `2px solid ${theme.game.special.greeny}`,
+    borderRadius: '9999px', 
+    color: theme.game.special.greeny,
+    padding: '.5rem 1.5rem', 
+    minWidth: '150px',
+
+    '&:hover': {
+        backgroundColor: theme.game.special.greeny,
+        border: `2px solid #130f40`,
+        color: '#130f40'
+    }
+}));
