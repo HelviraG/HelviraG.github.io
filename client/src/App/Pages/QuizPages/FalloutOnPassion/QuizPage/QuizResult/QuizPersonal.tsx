@@ -17,7 +17,7 @@ import {
   TabPanelProps,
   TabPanelWrapper,
 } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizResult/QuizPersonalStyle";
-import { listAllAnswers, listAnswers, showField } from "@slices/QuizSlice";
+import { listAllAnswers, listAnswers, showField } from "@/Redux/Slices/PassionQuizSlice";
 import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";

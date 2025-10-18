@@ -1,6 +1,6 @@
 import useChangeLangage from "@hooks/useChangeLangage";
 import { useMediaQuery } from "@mui/material";
-import { showField } from "@slices/QuizSlice";
+import { showField } from "@/Redux/Slices/PassionQuizSlice";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";

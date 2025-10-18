@@ -1,5 +1,5 @@
 import useDocumentTitle from "@hooks/useDocumentTitle";
-import { getPassionField, listAnswers } from "@slices/QuizSlice";
+import { getPassionField, listAnswers } from "@/Redux/Slices/PassionQuizSlice";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { Sounds } from "@resources/Enums/Sounds";
-import { storeAnswers } from "@slices/QuizSlice";
+import { storeAnswers } from "@/Redux/Slices/PassionQuizSlice";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import useSound from "use-sound";

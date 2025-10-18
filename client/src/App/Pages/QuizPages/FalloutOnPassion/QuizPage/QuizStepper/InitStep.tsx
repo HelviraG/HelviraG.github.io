@@ -6,9 +6,11 @@ import { Init } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizSteppe
 import React, { useRef, useState } from "react";
 import { QuizSettings } from "../../Components/QuizSettings";
 import { QuizPopper } from "../QuizPopper";
-import { QuizLayout } from "../../Layouts/QuizLayout";
+import { QuizLayout } from "../../../Layout/QuizLayout";
+import { useTranslation } from "react-i18next";
 
 export const InitStep = () => {
+  const { t } = useTranslation();
   const [openSettings, setOpenSettings] = useState<boolean>(false);
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const popperRef = useRef(null);
@@ -27,7 +29,7 @@ export const InitStep = () => {
   useDocumentTitle(`Helvira Goma | 💓 ${i18n.t("app.menu.passion")}`);
 
   return (
-    <QuizLayout buttons={<></>} withFooter={false}>
+    <QuizLayout title={`🔥​ ${t("app.explore.fallout_on_passion.title")}`}buttons={<></>} withFooter={false}>
       <Box 
         sx={(theme) => ({ 
           position: 'relative', 

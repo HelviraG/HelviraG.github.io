@@ -6,9 +6,9 @@ import { QuizPopper } from './QuizPopper';
 import {QuizSettings} from '../Components/QuizSettings';
 import { Routes } from "@resources/Enums/Routes";
 import { useNavigate } from "react-router-dom";
-import { showField, showLastAnswer } from "@slices/QuizSlice";
+import { showField, showLastAnswer } from "@/Redux/Slices/PassionQuizSlice";
 import { useSelector } from "react-redux";
-import { QuizLayout } from "../Layouts/QuizLayout";
+import { QuizLayout } from "../../Layout/QuizLayout";
 import { QuizContainedButton, QuizOutlinedButton } from "@/App/Styles/Pages/FalloutOnPassionStyle/QuizLayoutStyle";
 
 export const QuizStart = () => {
@@ -58,6 +58,7 @@ export const QuizStart = () => {
 
     return (
         <QuizLayout 
+            title={`🔥​ ${t("app.explore.fallout_on_passion.title")}`}
             buttons={
                 <>
                     {field && (

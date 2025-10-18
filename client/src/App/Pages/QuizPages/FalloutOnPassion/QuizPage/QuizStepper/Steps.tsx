@@ -10,7 +10,7 @@ import {
   listAllAnswers,
   showField,
   showLastAnswer,
-} from "@slices/QuizSlice";
+} from "@/Redux/Slices/PassionQuizSlice";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,7 +30,7 @@ import { Step } from "./Steps/Step";
 import useChangeLangage from "@/Hooks/useChangeLangage";
 import { QuizSettings } from "../../Components/QuizSettings";
 import { Routes } from "@/App/Resources/Enums/Routes";
-import { QuizLayout } from "../../Layouts/QuizLayout";
+import { QuizLayout } from "../../../Layout/QuizLayout";
 import { QuizContainedButton, QuizOutlinedButton } from "@/App/Styles/Pages/FalloutOnPassionStyle/QuizLayoutStyle";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
@@ -156,7 +156,8 @@ export const Steps = () => {
   if (!dataFile && !maxSteps) return null;
 
   return (
-    <QuizLayout 
+    <QuizLayout  
+      title={`🔥​ ${t("app.explore.fallout_on_passion.title")}`}
       buttons={
         <>
           {activeStep !== 18 && maxSteps && (

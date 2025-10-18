@@ -1,7 +1,7 @@
 import { Box, Chip, Divider, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { QuizLayout } from "../../Layouts/QuizLayout";
+import { QuizLayout } from "../../../Layout/QuizLayout";
 import { useSearchParams } from "react-router-dom";
 import { GeneralDashboard } from "./QuizGeneral/GeneralDashboard";
 import { CategoryDashboard } from "./QuizGeneral/CategoryDashboard";
