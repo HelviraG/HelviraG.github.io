@@ -7,7 +7,7 @@ import { Mobile } from "../Layout/Mobile/Mobile";
 export const BurnoutQuiz = ({ isTablet }: { isTablet: boolean }) => {
     const { t } = useTranslation();
       
-    useDocumentTitle(`Helvira Goma | 💓 ${t("app.menu.battery")}`);
+    useDocumentTitle(`Helvira Goma | 🔌 ${t("app.menu.battery")}`);
     
     return (
         <>

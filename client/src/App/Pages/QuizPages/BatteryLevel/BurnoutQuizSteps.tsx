@@ -11,7 +11,7 @@ export const BurnoutQuizSteps = ({ isTablet }: { isTablet: boolean }) => {
     const { t } = useTranslation();
     const dispatch = useDispatch();
 
-    useDocumentTitle(`Helvira Goma | 💓 ${t("app.menu.battery")}`);
+    useDocumentTitle(`Helvira Goma | 🔌 ${t("app.menu.battery")}`);
 
     useEffect(() => {
         dispatch(listAnswers());
