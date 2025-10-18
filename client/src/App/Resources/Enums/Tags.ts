@@ -30,4 +30,5 @@ export enum Tags {
   WOMEN_IN_TECH = "womenintech",
   YEAR = "year",
   INSPIRATION = "inspiration",
+  BURNOUT = "burn-out"
 }

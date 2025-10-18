@@ -37,6 +37,7 @@ export const ChipColor = (type: string, chipBackground?: string, chipColor?: str
                 };
             case Tags.LIVE:
             case Tags.REPLAY:
+            case Tags.BURNOUT:
                 return {
                     background: 'background.default',
                     border: '1px solid #FF4757',

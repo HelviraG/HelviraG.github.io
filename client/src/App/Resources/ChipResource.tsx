@@ -9,6 +9,7 @@ import PublicRoundedIcon from '@mui/icons-material/PublicRounded';
 import SatelliteAltRoundedIcon from '@mui/icons-material/SatelliteAltRounded';
 import SensorsIcon from '@mui/icons-material/Sensors';
 import TheatersRoundedIcon from '@mui/icons-material/TheatersRounded';
+import FlashOffIcon from '@mui/icons-material/FlashOff';
 
 export const ChipResource = ({ type }: { type: string }) => {
     const renderIcon = () => {
@@ -32,6 +33,8 @@ export const ChipResource = ({ type }: { type: string }) => {
                 return <PublicRoundedIcon fontSize='small' />;
             case Tags.VIDEO:
                 return <MovieRoundedIcon fontSize='small' />;
+            case Tags.BURNOUT:
+                return <FlashOffIcon fontSize='small' />;
             default:
                 return <></>;
         }
