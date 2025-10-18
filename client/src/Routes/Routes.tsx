@@ -13,17 +13,21 @@ import { QuizStepsPage } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/Q
 import { InitStepsPage } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStepper/InitStepPage";
 import { QuizStartPage } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizStartPage";
 import { QuizLandScape } from "@/App/Pages/QuizPages/FalloutOnPassion/QuizPage/QuizLandscape";
+import { BurnoutQuiz } from "@/App/Pages/BurnoutQuiz";
+import { BurnoutQuizSteps } from "@/App/Pages/QuizPages/BatteryLevel/BurnoutQuizSteps";
+import { BurnoutQuizResult } from "@/App/Pages/QuizPages/BatteryLevel/BurnoutQuizResult";
 
 export const AppRoutes = () => {
   const location = useLocation();
   const isPassionRoute = location.pathname.includes("/passion");
+  const isBurnoutRoute = location.pathname.includes("/burnout");
   const isTablet = useMediaQuery("(max-width: 768px)");
 
   return (
     <div style={{ 
       backgroundColor: isPassionRoute ? "#FFF" : "transparent", 
       minHeight: "100vh", 
-      ...(isPassionRoute && {     
+      ...((isPassionRoute || isBurnoutRoute) && {     
         flex: 1,
         display: "flex",
         flexDirection: "column" 
@@ -47,6 +51,9 @@ export const AppRoutes = () => {
         <Route path={Links.QUIZ_STEP} element={<QuizStepsPage isTablet={isTablet} />} />
         <Route path={Links.QUIZ_INIT} element={<InitStepsPage isTablet={isTablet} />} />
         <Route path={Links.QUIZ_RESULT} element={<QuizLandScape isTablet={isTablet} />} />
+        <Route path={Links.BATTERY} element={<BurnoutQuiz isTablet={isTablet} />} />
+        <Route path={Links.BATTERY_QUIZ_STEP} element={<BurnoutQuizSteps isTablet={isTablet} />} />
+        <Route path={Links.BATTER_QUIZ_RESULT} element={<BurnoutQuizResult isTablet={isTablet} />} />
       </Routes>
     </div>
   );
