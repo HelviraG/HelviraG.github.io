@@ -1,10 +1,45 @@
  {
   "conferences": [
     {
+      "cover": " https://i.ibb.co/JwKPHCmC/Oops-I-burnt-out-again-3.png",
+      "title": "Oops! I Burnt Out Again",
+      "lang": "EN",
+      "events": [
+        {
+          "year": "2025",
+          "day": "14",
+          "month": "t('app.general.month.october')",
+          "event": "JavaCro",
+          "place": "Island of St. Andrew",
+          "location": "Rovinj, Croatia",
+          "tags": ["TECH", "TALK"],
+          "imgUrl": "https://od.lk/s/MzRfNDQ4ODM4MjNf/icon-8160-small-107618415.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/blob/main/%5BEN%5Doops_burnout/events/java_cro/README.md"
+        }
+      ]
+    },
+    {
       "cover": "https://i.ibb.co/mP0qLGd/54799705955-d82d3c2e8d-c.jpg",
       "title": "Help! My Tech Skills Have An Expiration Date",
       "lang": "EN",
       "events": [
+         {
+          "year": "2025",
+          "day": "14",
+          "month": "t('app.general.month.october')",
+          "event": "JavaCro",
+          "place": "Island of St. Andrew",
+          "location": "Rovinj, Croatia",
+          "tags": ["TECH", "TALK"],
+          "imgUrl": "https://od.lk/s/MzRfNDQ4ODM4MjNf/icon-8160-small-107618415.png",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/blob/main/%5BEN%5Dtech_skills_expiration/events/java_cro/README.md"
+        },
         {
           "year": "2025",
           "day": "18",
