@@ -15,4 +15,7 @@ export enum Routes {
   TWITTER = "https://twitter.com/helvira_g",
   EXPLORE = "/explore",
   QUIZ_RESULT = "/explore/passion/whoarewe",
+  BATTERY = "/explore/burnout",
+  BATTERY_QUIZ_STEP = "/explore/burnout/:id",
+  BATTER_QUIZ_RESULT = "/explore/burnout/result"
 }
