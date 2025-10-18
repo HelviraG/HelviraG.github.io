@@ -62,7 +62,8 @@
       "profile": {
         "about": "À propos",
         "about_text": "Helvira Goma est développeuse full-stack depuis plus de six ans, passionnée par la création de logiciels à la fois élégants et utiles. \n\nLorsqu’elle ne code pas, elle monte sur scène pour parler de tech, de créativité et du côté humain de l’ingénierie — ou échange avec d’autres à travers <0>Motiv'Her</0>, sa communauté en ligne qui encourage davantage de femmes à découvrir et à s’épanouir dans le monde de la tech. \n\nQu’elle écrive du code ou prenne la parole devant un public, Helvira aborde chaque projet avec la même curiosité et la même bienveillance — cherchant toujours à inspirer, une ligne de code (ou une conférence) à la fois."
-      }
+      },
+      "battery": "Votre Pourcentage de Batterie"
     },
     "home": {
       "main": {
@@ -364,6 +365,102 @@
             }
           }
         }
+      },
+      "battery": {
+        "title": "Quel est votre pourcentage de batterie ?",
+        "subtitle": "Un test sur le burnout",
+        "caption": "💡 Répondez honnêtement pour un résultat plus précis",
+        "miniature": "https://i.ibb.co/ZC5gXh8/Copie-de-GIT-INIT-5.png",
+        "quiz": {
+          "subText": "Test Burnout",
+          "buttons": {
+            "prev": "Préc",
+            "redo": "Refaire le test"
+          },
+          "currentLevel": {
+            "complete": "{{ progress }}% terminé",
+            "title": "Pourcentage de batterie actuel",
+            "caption": "D'après {{ activeStep }} de vos {{ totalQuestions }} réponses" 
+          },
+          "final": {
+            "title": "Votre pourcentage final de batterie"
+          },
+          "footer": {
+            "caption": "{{ activeStep }} sur {{ totalQuestions }}"
+          },
+          "start": {
+            "caption": "22 questions • 5 minutes"
+          },
+          "question": "Question ({{ questionNumber }})",
+          "questions": {
+            "1": "À quelle fréquence vous sentez-vous épuisé(e) émotionnellement par votre travail ?",
+            "2": "À quelle fréquence vous sentez-vous épuisé(e) après une journée de travail ?",
+            "3": "Combien de fois vous sentez-vous fatigué(e) en vous levant le matin alors que vous devez affronter une autre journée de travail ?",
+            "4": "À quelle fréquence travailler avec d'autres personnes toute la journée vous semble-t-il éprouvant ?",
+            "5": "À quelle fréquence vous sentez-vous épuisé(e) par votre travail ?",
+            "6": "À quelle fréquence vous sentez-vous frustré(e) par votre travail ?",
+            "7": "À quelle fréquence avez-vous l'impression de travailler trop dur dans votre activité ?",
+            "8": "À quelle fréquence le fait de travailler directement avec d'autres personnes vous met-il trop de stress?",
+            "9": "Combien de fois avez-vous l'impression d'être au bout du rouleau ?",
+            "10": "Combien de fois avez-vous l'impression de traiter certaines personnes, de façon impersonnelle ?",
+            "11": "Combien de fois êtes-vous devenu(e) plus insensible envers les gens depuis que vous avez commencé ce travail ?",
+            "12": "Combien de fois craignez-vous que ce travail vous endurcisse émotionnellement ?",
+            "13": "Combien de fois avez-vous l'impression de ne pas vraiment vous soucier de ce qui arrive à certaines personnes avec lesquelles vous travaillez ?",
+            "14": "Combien de fois avez-vous l'impression que les gens vous blâment pour certains de leurs problèmes ?",
+            "15": "Combien de fois comprenez-vous facilement ce que les autres ressentent ?",
+            "16": "À quelle fréquence traitez-vous efficacement les problèmes des autres ?",
+            "17": "À quelle fréquence avez-vous l'impression d'influencer positivement la vie des autres grâce à votre travail ?",
+            "18": "À quelle fréquence vous sentez-vous très énergique ?",
+            "19": "À quelle fréquence créez-vous facilement une atmosphère détendue avec les autres ?",
+            "20": "Combien de fois vous sentez-vous heureux après avoir travaillé en étroite collaboration avec les autres ?",
+            "21": "Combien de fois avez-vous accompli beaucoup de tâches qui en valent la peine dans votre travail ?",
+            "22": "Combien de fois avez-vous l'impression de pouvoir gérer les problèmes calmement et efficacement dans votre travail ?"
+          },
+          "options": {
+            "0": "Jamais",
+            "1": "Quelques fois par an ou moins",
+            "2": "Une fois par mois ou moins",
+            "3": "Quelques fois par mois",
+            "4": "Une fois par semaine",
+            "5": "Quelques fois par semaine",
+            "6": "Tous les jours"
+          },
+          "results": {
+            "caption": "À propos du quiz",
+            "subCaption": "Ce quiz est basé sur <0>l'Inventaire d'Épuisement Professionnel de Maslach</0> à des fins d'introspection et de divertissement. Si vous souffrez d'épuisement professionnel, consultez un professionnel de la santé mentale.",
+            "todo": "Ce que vous pouvez faire dès à présent:",
+            "full": {
+              "title": "🔋 Pleine Charge (100-80%)",
+              "description": "Vous êtes cette créature mythique qui apporte réellement son câble de chargeur aux réunions 'au cas où'. Vos réserves d'énergie sont solides, le travail a du sens, et vous êtes sincèrement enthousiaste le lundi matin (oui, vraiment). Vous avez probablement un calendrier codé par couleur et vous prenez réellement vos pauses déjeuner.",
+              "advice": "Gardez ces limites sacrées. Quoi que vous fassiez—les séances de gym matinales, le refus catégorique des emails du dimanche, les vraies vacances—ne laissez personne vous culpabiliser d'arrêter.",
+              "personality": "Le Lapin Energizer (mais en durable)"
+            },
+            "optimal": {
+              "title": "🔋 Fonctionnement Optimal (79-60%)",
+              "description": "Vous allez bien, mais vous avez commencé à calculer combien d'heures jusqu'au week-end dès mardi après-midi. Le travail reste engageant et vous tenez à ce que vous faites, mais vous êtes aussi stratégique en disant 'laisse-moi vérifier ma disponibilité' au lieu d'un oui automatique.",
+              "advice": "C'est le point idéal, mais c'est aussi là où les gens deviennent complaisants. Planifiez ces congés maintenant avant que le Q4 devienne fou. Prévoyez du temps tampon entre les gros projets.",
+              "personality": "Le Professionnel Pragmatique"
+            },
+            "low": {
+              "title": "🪫 Mode Économie d'Énergie (59-40%)",
+              "description": "Votre statut Slack est en permanence 'Mode Concentration' mais en réalité vous fixez juste le mur. Chaque réunion semble pouvoir être un email. Vous répondez 'ça marche' à des messages que vous n'avez pas vraiment lus. Votre consommation de café a doublé mais l'efficacité a diminué de moitié.",
+              "advice": "Territoire d'alerte jaune. Il est temps d'avoir cette conversation avec votre manager sur la charge de travail. Prenez cette journée santé mentale que vous repoussez. Supprimez au moins trois choses de votre liste de tâches.",
+              "personality": "Le Professionnel Zombie"
+            },
+            "critical": {
+              "title": "🪫 Avertissement Critique (39-20%)",
+              "description": "Vous êtes ce téléphone qui meurt à 15% même s'il affiche plus. Votre message d'absence est essentiellement un appel à l'aide en langage professionnel. L'expression 'on en reparle' vous rend irrationnellement en colère. Vous fonctionnez sur du dépit, du café expiré et un vague espoir.",
+              "advice": "C'est sérieux. Prenez des congés—de vrais congés. Parlez aux RH, à votre manager ou à un professionnel du burnout. Quelque chose doit changer : charge de travail, poste, limites ou environnement.",
+              "personality": "La Notification Ambulante"
+            },
+            "emergency": {
+              "title": "⚠️ Arrêt d'Urgence Imminent (<20%)",
+              "description": "Vous êtes le téléphone qui a été branché pendant une heure mais affiche toujours 5%. Vous avez automatisé votre message d'absence pour dire simplement 'Non'. L'idée d'ouvrir votre ordinateur vous donne la nausée. Vous ne vous souvenez pas de la dernière fois où vous avez ressenti... quelque chose ?",
+              "advice": "STOP. Ce n'est pas durable. Prenez un congé médical si possible. Consultez un thérapeute ou un médecin—le burnout a de vraies conséquences sur la santé. Votre valeur n'est pas votre productivité. Demandez-vous si ce poste/entreprise/carrière vous nuit activement.",
+              "personality": "Le Fantôme dans la Machine"
+            }
+          }
+        }
       }
     },
     "lives": {
@@ -444,6 +541,12 @@
         "second_section": "🔖​ The CV Tech",
         "third_section": "🔖​ The CV Tech",
         "last_section": "Vous avez parcouru toute la page"
+      },
+      "battery": {
+        "first_section": " < Niveau de Batterie🔋​ ! /> ",
+        "second_section": "🧩 Le Quiz",
+        "third_section": "🧩 Le Quiz",
+        "last_section": "C'est tout pour l'instant"
       }
     }
   }
