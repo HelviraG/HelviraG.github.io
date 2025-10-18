@@ -24,11 +24,17 @@ export const FooterClock = styled(Box)(({
   flex: 1
 }));
 
-export const FooterLang = styled(Box)(({ theme }) => ({
+export const FooterLang = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'justifyEnd'
+})<{ justifyEnd?: boolean }>(({ justifyEnd, theme }) => ({
   display: 'flex', 
   flex: 1, 
   gap: 10, 
   justifyContent: 'center',
+
+  ...(justifyEnd && {
+    justifyContent: 'end'
+  }),
 
   '& .MuiTypography-root': {
     color: theme.game.special.dark,
