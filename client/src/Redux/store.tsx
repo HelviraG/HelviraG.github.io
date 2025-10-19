@@ -8,6 +8,7 @@ import { careerApi } from "./Services/CareerApi";
 import { quizSlice } from "./Slices/PassionQuizSlice";
 import { quizApi } from "./Services/QuizApi";
 import { burnoutSlice } from "./Slices/BurnoutQuizSlice";
+import { techSkillsSlice } from "./Slices/TechSkillsQuizSlice";
 
 export const store = configureStore({
     reducer: {
@@ -18,7 +19,8 @@ export const store = configureStore({
         careerApi: careerApi.reducer,
         quiz: quizSlice.reducer,
         quizApi: quizApi.reducer,
-        burnoutQuiz: burnoutSlice.reducer
+        burnoutQuiz: burnoutSlice.reducer,
+        techSkillsQuiz: techSkillsSlice.reducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false,
