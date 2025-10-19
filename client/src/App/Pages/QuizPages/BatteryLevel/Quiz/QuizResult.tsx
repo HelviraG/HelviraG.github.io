@@ -5,6 +5,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { Box, Button, Divider, Link, Typography } from "@mui/material";
 import { getBatteryColor } from "./QuizSteps";
 import { useNavigate } from "react-router-dom";
+import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 
 export const QuizResult = () => {
     const { t } = useTranslation();
@@ -123,6 +124,8 @@ export const QuizResult = () => {
 
     return (
         <QuizContent 
+            isBurnoutQuiz
+            title={`🔋​ ${t('app.explore.battery.title')}`}
             leftSide={
                 <Box 
                     sx={(theme) => ({ 
@@ -196,7 +199,8 @@ export const QuizResult = () => {
                             }
                         })}
                     >
-                        <Typography>{t('app.explore.battery.quiz.final.title')}</Typography>
+                        <Typography sx={{ marginBottom: '2rem' }}>{t('app.explore.battery.quiz.final.title')}</Typography>
+                        <BuyCoffeeLink noAbsolute />
                     </Box>
                 </>
             } 
