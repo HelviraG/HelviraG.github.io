@@ -4,6 +4,7 @@ import useDocumentTitle from "@hooks/useDocumentTitle";
 import { Desktop } from "../Layout/Desktop/Desktop";
 import { Mobile } from "../Layout/Mobile/Mobile";
 import { FalloutQuiz } from "./QuizPages/FalloutOnPassion/FalloutQuiz";
+import { BuyCoffeeLink } from "../Components/Link/BuyCoffeeLink";
 
 export const FalloutPassionPage = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();
@@ -15,11 +16,13 @@ export const FalloutPassionPage = ({ isTablet }: { isTablet: boolean }) => {
       {isTablet ? (
         <Mobile withTopButton={false} withHeader={false} withFooter={false}>
           <FalloutQuiz />
+          <BuyCoffeeLink />
           
         </Mobile>
       ) : (
         <Desktop withTopButton={false} withHeader={false} withFooter={false}>
           <FalloutQuiz />
+          <BuyCoffeeLink />
           
         </Desktop>
       )}
