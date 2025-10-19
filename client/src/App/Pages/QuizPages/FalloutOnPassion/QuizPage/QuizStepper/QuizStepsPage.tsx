@@ -4,6 +4,7 @@ import useDocumentTitle from "@hooks/useDocumentTitle";
 import { Desktop } from "@/App/Layout/Desktop/Desktop";
 import { Mobile } from "@/App/Layout/Mobile/Mobile";
 import { Steps } from "./Steps";
+import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 
 export const QuizStepsPage = ({ isTablet }: { isTablet: boolean }) => {
   const { t } = useTranslation();
@@ -15,11 +16,13 @@ export const QuizStepsPage = ({ isTablet }: { isTablet: boolean }) => {
       {isTablet ? (
         <Mobile withFooter={false} withHeader={false} withTopButton={false}>
           <Steps />
+          <BuyCoffeeLink />
           
         </Mobile>
       ) : (
         <Desktop withFooter={false} withHeader={false} withTopButton={false}>
           <Steps />
+          <BuyCoffeeLink />
           
         </Desktop>
       )}
