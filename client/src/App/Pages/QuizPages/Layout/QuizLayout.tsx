@@ -17,6 +17,7 @@ export const QuizLayout = ({
     title,
     isPassionQuiz = true,
     isBurnoutQuiz,
+    isTechSkillsQuiz,
 }: { 
     children: React.ReactNode; 
     buttons: React.ReactNode; 
@@ -24,6 +25,7 @@ export const QuizLayout = ({
     title: string;
     isPassionQuiz?: boolean; 
     isBurnoutQuiz?: boolean;
+    isTechSkillsQuiz?: boolean;
 }) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
@@ -125,6 +127,21 @@ export const QuizLayout = ({
                                 </Box>
                             )}
 
+                            {isTechSkillsQuiz && (
+                                <Box 
+                                    sx={(theme) => ({
+                                        textAlign: 'left',
+
+                                        [theme.breakpoints.down(601)]: {
+                                            width: '100%',
+                                            display: 'flex'
+                                        }
+                                    })}
+                                >
+                                    <Typography variant="body2" sx={{ color: '#6b7280' }}>{t('app.explore.skills.quiz.subText')}</Typography>
+                                </Box>
+                            )}
+
                             <Typography
                                 component="div"
                                 variant={isPassionQuiz ? "body1" : "h6"}
@@ -152,7 +169,7 @@ export const QuizLayout = ({
                             width: '100%',
                         },
 
-                        ...(isBurnoutQuiz && { justifyContent: 'end' })
+                        ...((isBurnoutQuiz || isTechSkillsQuiz) && { justifyContent: 'end' })
                     })}>
                         {isPassionQuiz && (
                             <FooterLang>
@@ -187,7 +204,7 @@ export const QuizLayout = ({
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '18px 24px' }}>
                         {isPassionQuiz && buttons}
 
-                        {isBurnoutQuiz && (
+                        {(isBurnoutQuiz || isTechSkillsQuiz) && (
                             <>
                                 <Box sx={{ flex: 1 }}>{buttons}</Box>
                                 <FooterLang justifyEnd>
