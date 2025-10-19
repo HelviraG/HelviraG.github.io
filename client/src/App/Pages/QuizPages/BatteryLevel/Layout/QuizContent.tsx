@@ -1,21 +1,19 @@
 import { Box } from "@mui/material"
 import { QuizLayout } from "../../Layout/QuizLayout"
 import { ReactNode } from "react";
-import { useTranslation } from "react-i18next";
 
-export const QuizContent = ({ leftSide, rightSide, footer }: { leftSide: ReactNode; rightSide: ReactNode; footer: ReactNode }) => {
-    const { t } = useTranslation();
-
+export const QuizContent = ({ title, leftSide, rightSide, footer, isTechSkillsQuiz, isBurnoutQuiz }: { title: string; leftSide: ReactNode; rightSide: ReactNode; footer: ReactNode; isTechSkillsQuiz?: boolean; isBurnoutQuiz?: boolean }) => {
     return (
         <QuizLayout 
-            title={`🔋​ ${t('app.explore.battery.title')}`}
+            title={title}
             buttons={
                 <Box sx={{ alignItems: 'center', display: 'flex', flex: 1, justifyContent: 'space-between' }}>
                     {footer}
                 </Box>
             } 
-            isBurnoutQuiz 
+            isBurnoutQuiz={isBurnoutQuiz}
             isPassionQuiz={false}
+            isTechSkillsQuiz={isTechSkillsQuiz}
         >
             <Box sx={(theme) => ({ backgroundColor: theme.palette.background.paper, display: 'flex', flex: 1, padding: '2rem', overflowY: 'auto' })}>
                 <Box 
