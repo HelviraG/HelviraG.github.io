@@ -65,7 +65,8 @@
         "about": "About",
         "about_text": "Helvira Goma is a full-stack developer with over six years of experience who loves making technology feel intuitive, meaningful, and a little bit magical.\n\n When she’s not deep in code, she’s on stage sharing stories about tech, creativity, and the human side of engineering — or connecting with others through <0>Motiv'Her</0>, her online community that encourages more women to explore and thrive in technology.\n\n Whether she’s writing software or speaking to an audience, Helvira brings the same curiosity and care to everything she creates — always aiming to spark inspiration, one line of code (or one talk) at a time."
       },
-      "battery": "Your Battery Level"
+      "battery": "Your Battery Level",
+      "skills": "Your Tech Skills Expiration Date"
     },
     "home": {
       "main": {
@@ -458,6 +459,191 @@
             }
           }
         }
+      },
+      "skills": {
+        "title": "Which dairy embodies your tech skills?",
+        "subtitle": "A tech skills expiration assessment quiz",
+        "caption": "💡 Answer honestly for the most accurate assessment",
+        "miniature": "https://i.ibb.co/tTxS9wXg/Copie-de-GIT-INIT-6.png",
+        "quiz": {
+          "advice": "💡 Advice:",
+          "currentFreshness": "Tech Skills Freshness",
+          "startCaption": "Start answering to see your freshness level!",
+          "subText": "Tech Skills Assessment",
+          "freshnessLevel": {
+            "ultraFresh": "Ultra Fresh",
+            "fresh": "Fresh",
+            "stable": "Stable",
+            "aging": "Aging",
+            "expired": "Expired"
+          },
+          "questions": {
+            "1": {
+              "q": "When did you last learn a new programming language or framework?",
+              "options": {
+                "1": "Within the last 3 months",
+                "2": "6 months to a year ago",
+                "3": "1-2 years ago",
+                "4": "More than 2 years ago"
+              }
+            },
+            "2": {
+              "q": "How often do you read technical blogs, documentation, or follow tech news?",
+              "options": {
+                "1": "Daily or several times a week",
+                "2": "Once a week",
+                "3": "Once a month",
+                "4": "Rarely or never"
+              }
+            },
+            "3": {
+              "q": "What's your primary tech stack's relevance?",
+              "options": {
+                "1": "Cutting-edge, trending technologies",
+                "2": "Modern, widely-used stable tools",
+                "3": "Mature technologies still in demand",
+                "4": "Legacy systems or deprecated tools"
+              }
+            },
+            "4": {
+              "q": "How do you feel when facing completely unfamiliar technology?",
+              "options": {
+                "1": "Excited! I love learning new things",
+                "2": "Confident I can figure it out",
+                "3": "Anxious but willing to try",
+                "4": "Prefer to stick with what I know"
+              }
+            },
+            "5": {
+              "q": "How active are you in tech communities?",
+              "options": {
+                "1": "Very active: contribute, answer questions, engage regularly",
+                "2": "Moderately: occasionally participate or lurk",
+                "3": "Minimally: only when I need help",
+                "4": "Not active at all"
+              }
+            },
+            "6": {
+              "q": "When solving problems, you tend to:",
+              "options": {
+                "1": "Explore modern best practices and new approaches",
+                "2": "Mix proven methods with some newer techniques",
+                "3": "Rely on approaches that have worked before",
+                "4": "Stick to 'the way we've always done it'"
+              }
+            },
+            "7": {
+              "q": "How much time do you dedicate to learning vs. doing familiar work?",
+              "options": {
+                "1": "20%+ of my time on continuous learning",
+                "2": "About 10% learning, 90% execution",
+                "3": "5% or less on learning",
+                "4": "Almost entirely focused on familiar tasks"
+              }
+            },
+            "8": {
+              "q": "When was your last side project or open-source contribution?",
+              "options": {
+                "1": "Currently working on one",
+                "2": "Within the last 6 months",
+                "3": "Within the last 1-2 years",
+                "4": "Years ago or never"
+              }
+            },
+            "9": {
+              "q": "How do you approach technical debt in your projects?",
+              "options": {
+                "1": "Actively refactor and modernize regularly",
+                "2": "Address it when it becomes problematic",
+                "3": "Only fix what's absolutely necessary",
+                "4": "If it works, don't touch it"
+              }
+            },
+            "10": {
+              "q": "When you encounter an error or bug, you typically:",
+              "options": {
+                "1": "Search for recent solutions and modern approaches",
+                "2": "Check Stack Overflow and official docs",
+                "3": "Look for any solution that works",
+                "4": "Ask a colleague or avoid the issue"
+              }
+            },
+            "11": {
+              "q": "How familiar are you with AI/ML tools in your workflow?",
+              "options": {
+                "1": "Actively using them daily (GitHub Copilot, ChatGPT, etc.)",
+                "2": "Tried them, use occasionally",
+                "3": "Aware of them but haven't really used them",
+                "4": "Not interested or don't see the value"
+              }
+            },
+            "12": {
+              "q": "Your approach to certifications and formal training:",
+              "options": {
+                "1": "Regularly pursue new certifications and courses",
+                "2": "Take courses when needed for a specific skill",
+                "3": "Completed some years ago",
+                "4": "Prefer learning on the job only"
+              }
+            },
+            "13": {
+              "q": "How do you keep your development environment up to date?",
+              "options": {
+                "1": "Update tools and dependencies regularly",
+                "2": "Update when there's a reason to",
+                "3": "Update only when forced to",
+                "4": "Stick with what works, avoid updates"
+              }
+            },
+            "14": {
+              "q": "Your resume/portfolio was last updated:",
+              "options": {
+                "1": "Within the last 6 months",
+                "2": "Within the last year",
+                "3": "1-3 years ago",
+                "4": "I can't remember"
+              }
+            },
+            "15": {
+              "q": "How comfortable are you with cloud technologies?",
+              "options": {
+                "1": "Deploy and manage cloud infrastructure regularly",
+                "2": "Use cloud services but basics only",
+                "3": "Limited exposure to cloud",
+                "4": "Primarily work with on-premise solutions"
+              }
+            }
+          },
+          "result": {
+            "final": "Final Tech Skills Freshness",
+            "title": "You're {{ resultCategory }}!",
+            "cream": {
+              "name": "Fresh Cream",
+              "description": "You're at the cutting edge! Your skills are fresh and constantly being renewed, but remember: you need regular refreshing to stay this way. Keep that momentum going!",
+              "advice": "Consider mentoring others to deepen your knowledge while staying current."
+            },
+            "yogurt": {
+              "name": "Yogurt",
+              "description": "You're actively cultivating your skills through regular practice and learning. You've got good cultures growing, and with consistent care, you'll keep getting better!",
+              "advice": "Focus on depth in a few areas while maintaining breadth awareness."
+            },
+            "cheese": {
+              "name": "Aged Cheese",
+              "description": "Your foundational skills are solid and actually improve with time. Like a fine cheese, you've got expertise that deepens. Just make sure you're not getting too crusty around the edges!",
+              "advice": "Balance your deep expertise with exposure to emerging trends in your field."
+            },
+            "butter": {
+              "name": "Butter",
+              "description": "You're versatile and stable, surviving most environments. Your skills are reliable but might need some freshening up to spread into new areas.",
+              "advice": "Set aside dedicated time each week for learning something new."
+            },
+            "iceCream": {
+              "name": "Ice Cream",
+              "description": "Your skills might be melting under pressure! Time to get back in the freezer and preserve what you have while adding new flavors. The good news? It's never too late to refresh!",
+              "advice": "Start with small, consistent learning habits. Pick one new skill to focus on this month."
+            }
+          }      
+        }
       }
     },
     "lives": {
@@ -541,6 +727,12 @@
       },
       "battery": {
         "first_section": " < Battery Level🔋​ ! /> ",
+        "second_section": "🧩 The Test",
+        "third_section": "🧩 The Test",
+        "last_section": "That's it, for now"
+      },
+      "skills": {
+        "first_section": " < Skills Expiration​ ! /> ",
         "second_section": "🧩 The Test",
         "third_section": "🧩 The Test",
         "last_section": "That's it, for now"
