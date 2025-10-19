@@ -9,7 +9,6 @@ import {
   getUserNameField,
   listAllAnswers,
   showField,
-  showLastAnswer,
 } from "@/Redux/Slices/PassionQuizSlice";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -95,9 +94,6 @@ export const Steps = () => {
   const storedAnswer = currentAnswers.length > 0
     ? parseInt(currentAnswers[0].answer, 10)
     : 0;
-
-  // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
-  const lastSavedStep = useSelector(showLastAnswer);
 
   const [dataFile, setDataFile] = useState<{
     subject: string;
