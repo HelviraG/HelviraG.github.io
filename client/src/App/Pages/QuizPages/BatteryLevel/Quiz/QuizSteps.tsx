@@ -128,14 +128,11 @@ export const QuizSteps = () => {
         );
         setActiveStep(activeStep + 1);
 
-        // Navigate to next question
         const nextStep = activeStep + 1;
         
-        if (nextStep >= questions.length) {
-            // Quiz completed
+        if (nextStep >= questions.length + 1) {
             navigate('/explore/burnout/result');
         } else {
-            // Go to next question
             navigate(`/explore/burnout/${nextStep}`);
         }
     }
