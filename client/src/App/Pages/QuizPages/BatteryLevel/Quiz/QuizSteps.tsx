@@ -5,6 +5,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { listBurnoutAnswers, storeAnswers } from "@/Redux/Slices/BurnoutQuizSlice";
 import { QuizContent } from "../Layout/QuizContent";
+import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 4,
@@ -121,7 +122,7 @@ export const QuizSteps = () => {
     const handleOptionSelected = (option: number) => {
         dispatch(
             storeAnswers({
-                questionId: (activeStep + 1).toString(),
+                questionId: activeStep.toString(),
                 answer: option,
             })
         );
@@ -141,22 +142,16 @@ export const QuizSteps = () => {
 
     const handlePrev = () => {
         if (activeStep > 0) {
-            // Remove the answer for the current question if it exists
-            const currentAnswers = Array.isArray(answers)
-                ? answers.filter(
-                    (a: { questionId: string }) => a.questionId !== (activeStep + 1).toString()
-                )
-                : [];
-            
             navigate(`/explore/burnout/${activeStep - 1}`);
         }
     }
 
     const currentBatteryLevel = getCurrentBatteryLevel();
     const batteryColor = getBatteryColor(currentBatteryLevel);
+    const currentAnswer = answers && answers.filter((answer) => parseInt(answer.questionId) === activeStep);
 
     useEffect(() => {
-        if (!hasAnswer && !answers) {
+        if (!hasAnswer && !answers.length) {
             navigate(`/explore/burnout/1`);
         }
     }, []);
@@ -172,6 +167,8 @@ export const QuizSteps = () => {
 
     return (
         <QuizContent 
+            isBurnoutQuiz
+            title={`🔋​ ${t('app.explore.battery.title')}`}
             footer={
                 <Box sx={{ alignItems: 'center', display: 'flex', flex: 1, justifyContent: 'space-between' }}>
                     <Button 
@@ -223,7 +220,15 @@ export const QuizSteps = () => {
                                             '& .MuiTypography-root': {
                                                 color: '#FFF' 
                                             } 
-                                        } 
+                                        }, 
+
+                                        ...(currentAnswer && currentAnswer[0]?.answer === option.value && {
+                                            backgroundColor: '#14b8a6', 
+
+                                            '& .MuiTypography-root': {
+                                                color: '#FFF' 
+                                            } 
+                                        })
                                     }}
                                     onClick={() => handleOptionSelected(option.value)}
                                 >
@@ -266,9 +271,10 @@ export const QuizSteps = () => {
                         })}
                     >
                         <Typography>{t('app.explore.battery.quiz.currentLevel.title')}</Typography>
-                        <Typography variant="body2">
+                        <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
                             <Trans i18nKey="app.explore.battery.quiz.currentLevel.caption" values={{ activeStep: activeStep, totalQuestions: questions.length }} />
                         </Typography>
+                        <BuyCoffeeLink noAbsolute />
                     </Box>
                 </>
             }
