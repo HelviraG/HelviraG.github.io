@@ -64,6 +64,7 @@ export const ChipColor = (type: string, chipBackground?: string, chipColor?: str
             case Tags.TECH:
             case Tags.TECH_NOCODE:
             case Tags.FALLOUT:
+            case Tags.SKILLS:
                 return {
                     background: 'background.default',
                     border: '1px solid #7d5fff',

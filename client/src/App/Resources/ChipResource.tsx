@@ -10,6 +10,7 @@ import SatelliteAltRoundedIcon from '@mui/icons-material/SatelliteAltRounded';
 import SensorsIcon from '@mui/icons-material/Sensors';
 import TheatersRoundedIcon from '@mui/icons-material/TheatersRounded';
 import FlashOffIcon from '@mui/icons-material/FlashOff';
+import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
 
 export const ChipResource = ({ type }: { type: string }) => {
     const renderIcon = () => {
@@ -35,6 +36,8 @@ export const ChipResource = ({ type }: { type: string }) => {
                 return <MovieRoundedIcon fontSize='small' />;
             case Tags.BURNOUT:
                 return <FlashOffIcon fontSize='small' />;
+            case Tags.SKILLS: 
+                return <HomeRepairServiceIcon fontSize='small' />;
             default:
                 return <></>;
         }
