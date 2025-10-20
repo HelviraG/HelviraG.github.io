@@ -1,6 +1,3 @@
-import { Routes } from "@/App/Resources/Enums/Routes";
-import { BurnoutQuizContainedButton, BurnoutQuizOutlinedButton } from "@/App/Styles/Pages/FalloutOnPassionStyle/QuizLayoutStyle";
-import { alpha, Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { QuizStartLayout } from "../Layout/QuizStartLayout";
