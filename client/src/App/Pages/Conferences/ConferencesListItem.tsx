@@ -75,7 +75,7 @@ export const ConferencesListItem = ({
       <ConferenceCardWrapper>
         <ConferenceCardHeader>
           <CardContentTitle variant="h4" isConference>
-            {title}
+            {lang === "EN" ? '🇺🇸' : '🇫🇷'} {title}
           </CardContentTitle>
         </ConferenceCardHeader>
         <ConferenceCardBody>
