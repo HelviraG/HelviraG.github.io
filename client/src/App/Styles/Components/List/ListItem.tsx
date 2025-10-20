@@ -162,8 +162,7 @@ export const CardContentTitle = styled(Typography, {
   },
 
   ...(isConference && {
-    textShadow: ".1em .1em 0 hsl(343.43deg 82.05% 45.85%)",
-    color: "pink",
+    color: "#1E1E40",
   }),
 }));
 
