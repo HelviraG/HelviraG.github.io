@@ -73,7 +73,7 @@ export const ConferencesListItem = ({
     >
       <CardEventMedia imgUrl={cover} />
       <ConferenceCardWrapper>
-        <ConferenceCardHeader>
+        <ConferenceCardHeader isConference>
           <CardContentTitle variant="h4" isConference>
             {lang === "EN" ? '🇺🇸' : '🇫🇷'} {title}
           </CardContentTitle>
