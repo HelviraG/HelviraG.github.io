@@ -143,12 +143,18 @@ export const ConferenceCardWrapper = styled(Box)(({ theme }) => ({
     }
 }));
 
-export const ConferenceCardHeader = styled(Box)(({ theme }) => ({
+export const ConferenceCardHeader = styled(Box, {
+    shouldForwardProp: (prop) => prop !== 'isConference',
+})<{ isConference?: boolean }>(({ isConference,theme }) => ({
     padding: '0 10px 0 0',
 
     [theme.breakpoints.down(500)]: {
         marginTop: theme.spacing(3)
-    }
+    },
+
+    ...(isConference && {
+        padding: '0 16px 0 0'
+    })
 }));
 
 export const ConferenceCardBody = styled(Box)(({
