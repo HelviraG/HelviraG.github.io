@@ -56,18 +56,19 @@ export const AvatarDrawer = ({
       <DrawerChipWrapper>
         <DrawerChip label="Helvira Goma" />
       </DrawerChipWrapper>
-      <SocialMediaWrapper>
-        <IconButton component={RouterLink} to={Routes.LINKEDIN}>
-          <LinkedInIcon />
-        </IconButton>
-        <IconButton component={RouterLink} to={Routes.GITHUB}>
-          <GitHubIcon />
-        </IconButton>
-        <IconButton component={RouterLink} to={Routes.TWITTER}>
-          <TwitterIcon />
-        </IconButton>
-      </SocialMediaWrapper>
       <CardBox>
+        <SocialMediaWrapper>
+          <IconButton component={RouterLink} to={Routes.LINKEDIN}>
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton component={RouterLink} to={Routes.GITHUB}>
+            <GitHubIcon />
+          </IconButton>
+          <IconButton component={RouterLink} to={Routes.TWITTER}>
+            <TwitterIcon />
+          </IconButton>
+        </SocialMediaWrapper>
+      
         <CardBoxWrapper>
           <CardWrapper>
             <CardContentBox>
