@@ -5,7 +5,6 @@ import { Trans, useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { listBurnoutAnswers, storeAnswers } from "@/Redux/Slices/BurnoutQuizSlice";
 import { QuizContent } from "../Layout/QuizContent";
-import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 4,
@@ -256,22 +255,21 @@ export const QuizSteps = () => {
                             <rect x="50" y="80" width="130" height="90" rx="8" fill={batteryColor} opacity="0.9"></rect>
                             <text x="115" y="135" fontFamily="Arial" fontSize="32" fontWeight="bold" fill="white" textAnchor="middle">{currentBatteryLevel}%</text>
                         </svg>
-                    </Box>
-                    <Box 
-                        sx={(theme) => ({ 
-                            textAlign: 'center',
-                            
-                            [theme.breakpoints.down(680)]: {
-                                marginTop: '-3rem',
-                                paddingBottom: '2rem'
-                            }
-                        })}
-                    >
-                        <Typography>{t('app.explore.battery.quiz.currentLevel.title')}</Typography>
-                        <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
-                            <Trans i18nKey="app.explore.battery.quiz.currentLevel.caption" values={{ activeStep: activeStep, totalQuestions: questions.length }} />
-                        </Typography>
-                        <BuyCoffeeLink noAbsolute />
+                        <Box 
+                            sx={(theme) => ({ 
+                                textAlign: 'center',
+                                
+                                [theme.breakpoints.down(680)]: {
+                                    marginTop: '-3rem',
+                                    paddingBottom: '2rem'
+                                }
+                            })}
+                        >
+                            <Typography>{t('app.explore.battery.quiz.currentLevel.title')}</Typography>
+                            <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
+                                <Trans i18nKey="app.explore.battery.quiz.currentLevel.caption" values={{ activeStep: activeStep - 1, totalQuestions: questions.length }} />
+                            </Typography>
+                        </Box>
                     </Box>
                 </>
             }

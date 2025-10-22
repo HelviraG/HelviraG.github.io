@@ -9,7 +9,6 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import { listTechSkillsAnswers, storeAnswers } from "@/Redux/Slices/TechSkillsQuizSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 4,
@@ -403,8 +402,12 @@ export const QuizSteps = () => {
                         </Box>
                         <Box>
                             {activeStep === 1 && <Typography variant="body2" sx={{ textAlign: 'center' }}>{t('app.explore.skills.quiz.startCaption')}</Typography>}
+                            {activeStep > 1 && (
+                                <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
+                                    <Trans i18nKey="app.explore.battery.quiz.currentLevel.caption" values={{ activeStep: activeStep - 1, totalQuestions: quizQuestions.length }} />
+                                </Typography>
+                            )}
                         </Box>
-                        <BuyCoffeeLink noAbsolute />
                     </Box>
                 </>
             } 
