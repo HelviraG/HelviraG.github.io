@@ -183,7 +183,7 @@ export const DashboardContentInner = styled(Box)(({ theme }) => ({
 }));
 
 export const DashboardContentInnerPill = styled(Box)(({ theme }) => ({
-    backgroundColor: '#130f40', 
+    backgroundColor: theme.game.special.iceBlue.dark, 
     padding: '6px 24px', 
     border: `3px solid ${theme.game.special.greeny}`,
     borderRadius: '24px',
