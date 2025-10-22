@@ -1,4 +1,4 @@
-export const BuyCoffeeLink = ({ noAbsolute, small }: { noAbsolute?: boolean; small?: boolean }) => {
+export const BuyCoffeeLink = ({ noAbsolute, small, left }: { noAbsolute?: boolean; small?: boolean; left?: boolean }) => {
     return (
         <a 
             href="https://www.buymeacoffee.com/helvira" 
@@ -11,7 +11,12 @@ export const BuyCoffeeLink = ({ noAbsolute, small }: { noAbsolute?: boolean; sma
 
                 ...(noAbsolute && {
                     position: 'inherit'
-                })
+                }),
+
+                ...(left && {
+                    bottom: '65px', 
+                    right: '10px',
+                }),
             }}
         >
             <img
