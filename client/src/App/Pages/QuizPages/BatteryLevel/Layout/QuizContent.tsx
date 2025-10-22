@@ -51,7 +51,11 @@ export const QuizContent = ({ title, leftSide, rightSide, footer, isTechSkillsQu
                             flex: 1, 
                             flexDirection: 'column', 
                             justifyContent: 'center',
-                            position: 'relative'
+                            position: 'relative',
+
+                            ...((isBurnoutQuiz || isTechSkillsQuiz) && {
+                                justifyContent: 'space-around',
+                            })
                         }}
                     >
                         {rightSide}
