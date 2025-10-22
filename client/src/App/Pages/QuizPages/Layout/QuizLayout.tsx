@@ -1,4 +1,5 @@
 import { AppChip } from "@/App/Components/Chip/Chip";
+import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 import { Routes } from "@/App/Resources/Enums/Routes";
 import { Tags } from "@/App/Resources/Enums/Tags";
 import { FooterLang, LangSwitch } from "@/App/Styles/Layout/Footer";
@@ -214,6 +215,7 @@ export const QuizLayout = ({
                                 </FooterLang>
                             </>
                         )}
+                        <><BuyCoffeeLink left small /></>
                     </Toolbar>
                 </AppBar>
             )}
