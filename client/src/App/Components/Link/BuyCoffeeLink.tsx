@@ -1,4 +1,4 @@
-export const BuyCoffeeLink = ({ noAbsolute }: { noAbsolute?: boolean }) => {
+export const BuyCoffeeLink = ({ noAbsolute, small }: { noAbsolute?: boolean; small?: boolean }) => {
     return (
         <a 
             href="https://www.buymeacoffee.com/helvira" 
@@ -15,9 +15,16 @@ export const BuyCoffeeLink = ({ noAbsolute }: { noAbsolute?: boolean }) => {
             }}
         >
             <img
-              src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png"
-              alt="Buy Me A Coffee"
-              style={{ height: "48px", width: "200px" }}
+                src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png"
+                alt="Buy Me A Coffee"
+                style={{ 
+                    height: "48px", 
+                    width: "200px",
+
+                    ...(small && {
+                        width: "160px"
+                    })
+                }}
             />
         </a>
     )
