@@ -49,31 +49,31 @@ export const QuizContainedButton = styled(Button, {
 }));
 
 export const BurnoutQuizOutlinedButton = styled(Button)(({ theme }) => ({
-    backgroundColor: theme.game.special.greeny, 
-    border: `2px solid #130f40`,
+    backgroundColor: theme.game.purple.dark, 
+    border: `2px solid ${theme.game.special.dark}`,
     borderRadius: '9999px', 
-    color: '#130f40',
-    padding: '.5rem 1.5rem', 
-    minWidth: '150px',
-
-    '&:hover': {
-        backgroundColor: theme.game.special.orange,
-        border: `2px solid #130f40`,
-        color: theme.palette.background.paper
-    }
-}));
-
-export const BurnoutQuizContainedButton = styled(Button)(({ theme }) => ({
-    backgroundColor: '#130f40', 
-    border: `2px solid ${theme.game.special.greeny}`,
-    borderRadius: '9999px', 
-    color: theme.game.special.greeny,
+    color: theme.palette.background.paper,
     padding: '.5rem 1.5rem', 
     minWidth: '150px',
 
     '&:hover': {
         backgroundColor: theme.game.special.greeny,
-        border: `2px solid #130f40`,
-        color: '#130f40'
+        border: `2px solid ${theme.game.special.iceBlue.dark}`,
+        color: theme.game.special.iceBlue.dark
+    }
+}));
+
+export const BurnoutQuizContainedButton = styled(Button)(({ theme }) => ({
+    backgroundColor: theme.game.special.iceBlue.dark, 
+    border: `2px solid ${theme.game.purple.dark}`,
+    borderRadius: '9999px', 
+    color: theme.palette.background.paper,
+    padding: '.5rem 1.5rem', 
+    minWidth: '150px',
+
+    '&:hover': {
+        backgroundColor: theme.game.purple.dark,
+        border: `2px solid ${theme.game.special.iceBlue.dark}`,
+        color: theme.game.special.iceBlue.dark
     }
 }));
