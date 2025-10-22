@@ -9,6 +9,7 @@ export const BurnoutQuizStart = () => {
     return (
         <QuizStartLayout 
             backgroundImg="https://i.ibb.co/ptZtcQh/Copie-de-GIT-INIT-4.png" 
+            iconImg="https://i.ibb.co/ynx2gpTr/Copie-de-GIT-INIT-11-removebg-preview.png"
             title={`${t('app.explore.battery.title')}`}
             subText={`${t('app.explore.battery.quiz.subText')}`}
             caption={`${t('app.explore.skills.caption')}`}

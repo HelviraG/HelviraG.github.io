@@ -3,18 +3,20 @@ import { Routes } from "@/App/Resources/Enums/Routes";
 import { FooterLang, LangSwitch } from "@/App/Styles/Layout/Footer";
 import { BurnoutQuizContainedButton, BurnoutQuizOutlinedButton } from "@/App/Styles/Pages/FalloutOnPassionStyle/QuizLayoutStyle";
 import useChangeLangage from "@/Hooks/useChangeLangage";
-import { alpha, AppBar, Box, Toolbar, Typography, useMediaQuery } from "@mui/material";
+import { alpha, AppBar, Box, CardMedia, Toolbar, Typography, useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 export const QuizStartLayout = ({ 
     backgroundImg,
+    iconImg,
     title, 
     subText, 
     caption, 
     startRoute 
 }: { 
     backgroundImg: string;
+    iconImg?: string;
     title: string;
     subText: string;
     caption: string;
@@ -28,57 +30,74 @@ export const QuizStartLayout = ({
 
     return (
         <Box 
-            sx={{ 
+            sx={(theme) => ({ 
                 display: 'flex',
                 flexDirection: 'column', 
-                flex: 1,
-                padding: '.4rem',
-                backgroundColor: '#e5e7eb'
-            }}
+                height: '100vh',
+                backgroundColor: '#e5e7eb',
+                overflow: 'hidden',
+
+                [theme.breakpoints.down(780)]: {
+                    padding: 0
+                }
+            })}
         >
             <Box 
-                sx={{ 
+                sx={(theme) => ({ 
                     display: 'flex', 
                     flex: 1,
                     position: 'relative',
+                    overflowY: 'auto',
+                    marginBottom: '72px',
 
                     '&:before': {
                         background: `url(${backgroundImg}) no-repeat center center`,
                         backgroundSize: 'cover',
-                        borderTopLeftRadius: '.5rem',
-                        borderTopRightRadius: '.5rem',
-                        filter: 'brightness(.4)',
+                        filter: 'brightness(.3)',
                         content: '""',
                         display: 'block',
-                        height: '100%',
+                        height: '100vh',
                         position: 'absolute',
                         width: '100%'
                     },
 
                     '&:after': {
-                        backgroundColor: alpha('#1B1464', .4),
+                        backgroundColor: alpha(theme.game.purple.dark, .35),
                         backgroundSize: 'cover',
-                        borderTopLeftRadius: '.5rem',
-                        borderTopRightRadius: '.5rem',
                         content: '""',
                         display: 'block',
-                        height: '100%',
+                        height: '100vh',
                         position: 'absolute',
                         width: '100%'
-                    } 
-                }}
+                    },
+
+                    [theme.breakpoints.down(780)]: {
+                        '&:after, &:before': {
+                            borderRadius: 0
+                        }
+                    }
+                })}
             >
                 <Box 
-                    sx={{ 
+                    sx={(theme) => ({ 
                         color: '#c8d6e5', 
                         flex: 1,
                         display: 'flex',
                         alignItems: 'flex-start',
                         flexDirection: 'column',
                         justifyContent: 'center',
-                        maxWidth: '90%',
-                        margin: '0 auto',
-                    }}
+
+                        [theme.breakpoints.up(781)]: {
+                            maxWidth: '80%',
+                            margin: '0 auto'
+                        },
+
+                        [theme.breakpoints.down(780)]: {
+                            maxWidth: '90%',
+                            margin: '0 auto',
+                            justifyContent: 'center'
+                        }
+                    })}
                 >
                     <Box 
                         sx={(theme) => ({ 
@@ -88,18 +107,33 @@ export const QuizStartLayout = ({
                             padding: '1rem', 
                             zIndex: 3000,
 
-                            [theme.breakpoints.down(680)]: {
-                                padding: '.5rem'
+                            [theme.breakpoints.down(780)]: {
+                                padding: '.5rem',
+                                gap: 0
+                            },
+
+                            [theme.breakpoints.down(425)]: {
+                                marginTop: '6rem'
                             }
                         })}
                     >
                         <Box sx={{ padding: '1rem' }}>
+                            <Box sx={{
+                                marginBottom: '1em',
+                                width: '60px',
+                            }}>
+                                <CardMedia component="img" src={iconImg} />
+                            </Box>
                             <Box>
                                 <Typography 
                                     variant="h1" 
                                     sx={(theme) => ({ 
-                                        [theme.breakpoints.down(680)]: {
+                                        [theme.breakpoints.down(780)]: {
                                             fontSize: '4rem'
+                                        },
+
+                                        [theme.breakpoints.down(480)]: {
+                                            fontSize: '3rem'
                                         }
                                     })}
                                 >{title}</Typography>
@@ -109,7 +143,7 @@ export const QuizStartLayout = ({
                                 <Typography 
                                     variant="h3"
                                     sx={(theme) => ({ 
-                                        [theme.breakpoints.down(680)]: {
+                                        [theme.breakpoints.down(780)]: {
                                             fontSize: '2rem',
                                             marginTop: '1rem'
                                         }
@@ -127,8 +161,9 @@ export const QuizStartLayout = ({
                                 gap: '24px', 
                                 padding: '1rem',
 
-                                [theme.breakpoints.down(680)]: {
-                                    flexDirection: 'column'
+                                [theme.breakpoints.down(780)]: {
+                                    flexDirection: 'column',
+                                    gap: '12px'
                                 }
                             })}
                         >
@@ -139,20 +174,20 @@ export const QuizStartLayout = ({
                 </Box>
             </Box>
             <AppBar
-                position="static" 
+                position="fixed" 
                 color="transparent" 
                 elevation={0} 
-                sx={{ 
-                    backgroundColor: '#0CD5AC', 
+                sx={(theme) => ({ 
+                    backgroundColor: theme.game.purple.dark, 
                     bottom: 0, 
                     top: 'auto', 
                     flexShrink: 0,
-                    borderRadius: '0 0 0.5rem 0.5rem'
-                }}
+                    zIndex: 30000
+                })}
             >
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '18px 24px' }}>
                     <Box sx={{ alignItems: 'center', display: 'flex', flex: 1 }}>
-                        <BuyCoffeeLink noAbsolute />
+                        <BuyCoffeeLink noAbsolute small />
                         <FooterLang justifyEnd>
                             <Typography variant="caption">🇫🇷{isTablet ? '' : ' FR'}</Typography>
                                 <LangSwitch checked={lang === 'en'} onChange={changeLanguage} />
@@ -160,9 +195,7 @@ export const QuizStartLayout = ({
                         </FooterLang>
                     </Box>
                 </Toolbar>
-
             </AppBar>
-           
         </Box>
     )
 }
