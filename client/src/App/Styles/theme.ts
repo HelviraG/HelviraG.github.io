@@ -225,7 +225,7 @@ const theme = createTheme({
         },
         purple: {
             light: '#F2E7FF',
-            dark: '#B782F3',
+            dark: '#607FFF',
         },
         special: {
             grey: '#E9E9E9',
@@ -240,7 +240,7 @@ const theme = createTheme({
             iceBlue: {
                 light: '#CBEF85',
                 medium: '#00C79A',
-                dark: '#0984e3'
+                dark: '#130F40'
             },
         }
     },
