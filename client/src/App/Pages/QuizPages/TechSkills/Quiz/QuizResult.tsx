@@ -193,7 +193,6 @@ export const QuizResult = () => {
                                 {freshnessLevel.label}
                             </Box>
                         </Box>
-                        <BuyCoffeeLink noAbsolute />
                     </Box>
                 </>
             } 
