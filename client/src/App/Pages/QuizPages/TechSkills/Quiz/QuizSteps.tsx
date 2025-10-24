@@ -150,54 +150,9 @@ export const QuizSteps = () => {
             question: t('app.explore.skills.quiz.questions.10.q'),
             options: [
                 { id: 1, text: t('app.explore.skills.quiz.questions.10.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.10.options.2'), points: 4 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.10.options.3'), points: 2 },
+                { id: 2, text: t('app.explore.skills.quiz.questions.10.options.2'), points: 3 },
+                { id: 3, text: t('app.explore.skills.quiz.questions.10.options.3'), points: 1 },
                 { id: 4, text: t('app.explore.skills.quiz.questions.10.options.4'), points: 0 }
-            ]
-        },
-        {
-            question: t('app.explore.skills.quiz.questions.11.q'),
-            options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.11.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.11.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.11.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.11.options.4'), points: 0 }
-            ]
-        },
-        {
-            question: t('app.explore.skills.quiz.questions.12.q'),
-            options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.12.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.12.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.12.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.12.options.4'), points: 0 }
-            ]
-        },
-        {
-            question: t('app.explore.skills.quiz.questions.13.q'),
-            options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.13.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.13.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.13.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.13.options.4'), points: 0 }
-            ]
-        },
-        {
-            question: t('app.explore.skills.quiz.questions.14.q'),
-            options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.14.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.14.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.14.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.14.options.4'), points: 0 }
-            ]
-        },
-        {
-            question: t('app.explore.skills.quiz.questions.15.q'),
-            options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.15.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.15.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.15.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.15.options.4'), points: 0 }
             ]
         }
     ];
