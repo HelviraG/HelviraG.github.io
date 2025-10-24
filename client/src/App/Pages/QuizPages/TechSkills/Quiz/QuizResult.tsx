@@ -1,59 +1,79 @@
 import { Trans, useTranslation } from "react-i18next"
 import { QuizContent } from "../../BatteryLevel/Layout/QuizContent"
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { listTechSkillsAnswers, resetAnswers } from "@/Redux/Slices/TechSkillsQuizSlice";
 import { getFreshnessLevel } from "./QuizSteps";
-import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
-import { useNavigate } from "react-router-dom";
+import DoneIcon from '@mui/icons-material/Done';
+import LinkIcon from '@mui/icons-material/Link';
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import ShareIcon from '@mui/icons-material/Share';
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { SocialMediaWrapper } from "@/App/Styles/Components/AvatarDrawerStyle";
+import { useState } from "react";
+import { CopyAll } from "@mui/icons-material";
 
 export const QuizResult = () => {
+    const [searchParams] = useSearchParams();
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    const [linkCopied, setLinkCopied] = useState(false);
+    const [copied, setCopied] = useState(false);
     const answers = useSelector(listTechSkillsAnswers);
+    const scoreParam = searchParams.get('score');
+    const resultParam = searchParams.get('result');
+    const hasSearchParams = scoreParam !== null && resultParam !== null;
 
-    const currentScore = Object.values(answers).reduce((sum, answer) => sum + answer.answer, 0);
-    const maxPossibleScore = 75;
+    const currentScore = hasSearchParams 
+    ? parseInt(scoreParam, 10) 
+    : Object.values(answers).reduce((sum, answer) => sum + answer.answer, 0);
+    const maxPossibleScore = 50;
     const percentage = (currentScore / maxPossibleScore) * 100;
 
     const dairyResults = [
         {
+            short: "cream",
             name: t('app.explore.skills.quiz.result.cream.name'),
-            range: [66, 75],
+            range: [44, 50],
             emoji: "🥛",
             color: "#10b981",
             description: t('app.explore.skills.quiz.result.cream.description'),
             advice: t('app.explore.skills.quiz.result.cream.advice')
         },
         {
+            short: "yogurt",
             name: t('app.explore.skills.quiz.result.yogurt.name'),
-            range: [53, 65],
+            range: [35, 43],
             emoji: "🥄",
             color: "#14b8a6",
             description: t('app.explore.skills.quiz.result.yogurt.description'),
             advice: t('app.explore.skills.quiz.result.yogurt.advice')
         },
         {
+            short: "cheese",
             name: t('app.explore.skills.quiz.result.cheese.name'),
-            range: [38, 52],
+            range: [25, 34],
             emoji: "🧀",
             color: "#f59e0b",
             description: t('app.explore.skills.quiz.result.cheese.description'),
             advice: t('app.explore.skills.quiz.result.cheese.advice')
         },
         {
+            short: "butter",
             name: t('app.explore.skills.quiz.result.butter.name'),
-            range: [23, 37],
+            range: [15, 24],
             emoji: "🧈",
             color: "#f97316",
             description: t('app.explore.skills.quiz.result.butter.description'),
             advice:  t('app.explore.skills.quiz.result.butter.advice')
         },
         {
+            short: "iceCream",
             name: t('app.explore.skills.quiz.result.iceCream.name'),
-            range: [0, 22],
+            range: [0, 14],
             emoji: "🍨",
             color: "#ef4444",
             description: t('app.explore.skills.quiz.result.iceCream.description'),
@@ -69,6 +89,70 @@ export const QuizResult = () => {
         dispatch(resetAnswers());
         navigate('/explore/skills/1');
     }
+
+    const generateShareableLink = (result: any) => {
+        const params = new URLSearchParams({
+            result: String(result.name),
+            score: String(currentScore),
+            percentage: String(Math.round((currentScore/50)*100))
+        });
+        return `${window.location.origin}${window.location.pathname}?${params.toString()}`;
+    };
+
+    const copyToClipboard = async (result: any) => {
+        try {
+            const pronoun = t(`app.explore.skills.quiz.result.${result.short}.pronoun`);
+            const text = t("app.explore.skills.quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
+
+            await navigator.clipboard.writeText(text);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch (err) {
+            alert('Failed to copy to clipboard');
+        }
+    };
+
+    const shareResults = async (result: any) => {
+        const pronoun = t(`app.explore.skills.quiz.result.${result.short}.pronoun`);
+        const text = t("app.explore.skills.quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
+        const url = generateShareableLink(result);
+        
+        if (navigator.share) {
+            try {
+                await navigator.share({ title: t('app.explore.skills.title'), text, url });
+            } catch (err: any) {
+                if (err.name !== 'AbortError') {
+                    try { await navigator.clipboard.writeText(`${text}\n${url}`); } catch {}
+                }
+            }
+        } else {
+            try { await navigator.clipboard.writeText(`${text}\n${url}`); } catch {}
+        }
+    };
+
+    const shareToTwitter = (result: any) => {
+        const pronoun = t(`app.explore.skills.quiz.result.${result.short}.pronoun`);
+        const text = t("app.explore.skills.quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
+
+        const url = generateShareableLink(result);
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+    };
+
+    const shareToLinkedIn = (result: any) => {
+        const url = generateShareableLink(result);
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+    };
+
+    const copyLinkToClipboard = async (result: any) => {
+        try {
+            const link = generateShareableLink(result);
+            await navigator.clipboard.writeText(link);
+            setLinkCopied(true);
+            setTimeout(() => setLinkCopied(false), 2000);
+        } catch (err) {
+            alert('Failed to copy link');
+        }
+    };
 
     const result = getDairyResult(currentScore);
     const freshnessLevel = getFreshnessLevel(percentage);
@@ -93,7 +177,7 @@ export const QuizResult = () => {
                                 </Typography>
                             </Box>
                             <Box sx={{ marginBottom: '1rem' }}>
-                                <Typography variant="h5" sx={{ color: '#14b8a6' }}>Score: {currentScore}/75 ({Math.round((currentScore/75)*100)}%)</Typography>
+                                <Typography variant="h5" sx={{ color: '#14b8a6' }}>Score: {currentScore}/50 ({Math.round((currentScore/50)*100)}%)</Typography>
                             </Box>
                             <Box sx={{ marginBottom: '1.5rem' }}>
                                 <Typography variant="h6" sx={{ fontWeight: 200 }}>{result?.description}</Typography>
@@ -101,6 +185,41 @@ export const QuizResult = () => {
                             <Box sx={{ padding: '1rem', backgroundColor: '#f0fdfa', borderLeft: '4px solid', borderColor: '#14b8a6' }}>
                                 <Typography sx={{ fontWeight: 200 }}>{t('app.explore.skills.quiz.advice')} {result?.advice}</Typography>
                             </Box>
+                        </Box>
+                        <Box 
+                            sx={(theme) => ({ 
+                                alignItems: 'baseline', 
+                                justifyContent: 'space-between', 
+                                display: 'flex',  
+                                marginTop: theme.spacing(4),
+
+                                [theme.breakpoints.down(1170)]: {
+                                    alignItems: 'center',
+                                    flexDirection: 'column',
+                                    gap: theme.spacing(2)
+                                }
+                            })}
+                        >
+                            <Box>
+                                <Typography>{t('app.explore.skills.quiz.result.share')}</Typography>
+                            </Box>
+                            <SocialMediaWrapper isShareButton>
+                                <IconButton onClick={() => shareToLinkedIn(result)}>
+                                    <LinkedInIcon />
+                                </IconButton>
+                                <IconButton onClick={() => shareToTwitter(result)}>
+                                    <TwitterIcon />
+                                </IconButton>
+                                <IconButton onClick={() => copyLinkToClipboard(result)}>
+                                    {linkCopied ? <DoneIcon /> : <LinkIcon />}
+                                </IconButton>
+                                <IconButton onClick={() => copyToClipboard(result)}>
+                                    {copied ? <DoneIcon /> : <CopyAll />}
+                                </IconButton>
+                                <IconButton onClick={() => shareResults(result)}>
+                                    <ShareIcon />
+                                </IconButton>
+                            </SocialMediaWrapper>
                         </Box>
                         <Box sx={{ marginTop: '1.5rem' }}>
                             <Button 
@@ -132,7 +251,7 @@ export const QuizResult = () => {
                             }
                         })}
                     >
-                         <Box sx={{ textAlign: 'center' }}>
+                        <Box sx={{ textAlign: 'center' }}>
                             <Typography variant="h6">{t('app.explore.skills.quiz.result.final')}</Typography>
                         </Box>
                         <Box
@@ -174,7 +293,7 @@ export const QuizResult = () => {
                             </svg>
                             <Box sx={{ display: 'flex', flexDirection: 'column', position: 'absolute', textAlign: 'center', top: '28%', width: '-webkit-fill-available' }}>
                                 <Typography variant="h3" sx={{ color: result?.color }}>{Math.round(percentage)}%</Typography>
-                                <Typography>{currentScore}/75</Typography>
+                                <Typography>{currentScore}/50</Typography>
                             </Box>
                         </Box>
                         <Box>
