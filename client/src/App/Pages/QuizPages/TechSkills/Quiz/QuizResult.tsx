@@ -103,8 +103,9 @@ export const QuizResult = () => {
         try {
             const pronoun = t(`app.explore.skills.quiz.result.${result.short}.pronoun`);
             const text = t("app.explore.skills.quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
+            const url = generateShareableLink(result);
 
-            await navigator.clipboard.writeText(text);
+            await navigator.clipboard.writeText(`${text}\n${url}`);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch (err) {
