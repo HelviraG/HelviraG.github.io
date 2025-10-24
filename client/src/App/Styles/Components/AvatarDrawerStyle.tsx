@@ -100,12 +100,18 @@ export const DrawerChip = styled(Chip)(({ theme }) => ({
     zIndex: 6000 
 }));
 
-export const SocialMediaWrapper = styled(Box)(({ theme }) => ({
+export const SocialMediaWrapper = styled(Box, {
+    shouldForwardProp: (prop) => prop !== 'isShareButton'
+})<{ isShareButton?: boolean }>(({ isShareButton, theme }) => ({
     display: 'flex', 
     justifyContent: 'center',
     marginBottom: theme.spacing(2),
     marginTop: theme.spacing(4),
     gap: theme.spacing(2),
+
+    ...(isShareButton && {
+        margin: 0,
+    }),
 
     '& .MuiButtonBase-root': {
         backgroundColor: alpha('#E74C3C', 0.9),
@@ -114,8 +120,17 @@ export const SocialMediaWrapper = styled(Box)(({ theme }) => ({
         transition: 'all .4s ease',
         boxShadow: "0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)",
 
+        ...(isShareButton && {
+            backgroundColor: alpha(theme.game.special.iceBlue.dark, 0.9),
+        }),
+
         '&:hover': {
             backgroundColor: "#5170ff",
+
+            ...(isShareButton && {
+                backgroundColor: theme.game.info.light,
+            }),
+
             '.MuiSvgIcon-root': {
                 animation: 'jelly-move 0.9s both',
                 "@keyframes jelly-move": {
