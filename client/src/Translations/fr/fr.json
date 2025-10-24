@@ -554,24 +554,6 @@
               }
             },
             "9": {
-              "q": "Comment abordez-vous la dette technique dans vos projets ?",
-              "options": {
-                "1": "Je refactorise et modernise activement et régulièrement",
-                "2": "Je la traite quand elle devient problématique",
-                "3": "Je ne corrige que le strict nécessaire",
-                "4": "Si ça fonctionne, je n'y touche pas"
-              }
-            },
-            "10": {
-              "q": "Lorsque vous rencontrez une erreur ou un bug, vous :",
-              "options": {
-                "1": "Cherchez des solutions récentes et approches modernes",
-                "2": "Consultez Stack Overflow et la documentation officielle",
-                "3": "Cherchez n'importe quelle solution qui fonctionne",
-                "4": "Demandez à un collègue ou évitez le problème"
-              }
-            },
-            "11": {
               "q": "Quelle est votre familiarité avec les outils d'IA/ML dans votre workflow ?",
               "options": {
                 "1": "Je les utilise activement au quotidien (GitHub Copilot, ChatGPT, etc.)",
@@ -580,34 +562,7 @@
                 "4": "Pas intéressé(e) ou je n'en vois pas l'utilité"
               }
             },
-            "12": {
-              "q": "Votre approche des certifications et formations formelles :",
-              "options": {
-                "1": "Je poursuis régulièrement de nouvelles certifications et cours",
-                "2": "Je suis des cours quand nécessaire pour une compétence spécifique",
-                "3": "J'en ai complété il y a quelques années",
-                "4": "Je préfère apprendre sur le tas uniquement"
-              }
-            },
-            "13": {
-              "q": "Comment maintenez-vous votre environnement de développement à jour ?",
-              "options": {
-                "1": "Je mets à jour les outils et dépendances régulièrement",
-                "2": "Je mets à jour quand il y a une raison de le faire",
-                "3": "Je mets à jour seulement quand j'y suis forcé(e)",
-                "4": "Je garde ce qui fonctionne, j'évite les mises à jour"
-              }
-            },
-            "14": {
-              "q": "Votre CV/portfolio a été mis à jour pour la dernière fois :",
-              "options": {
-                "1": "Au cours des 6 derniers mois",
-                "2": "Au cours de la dernière année",
-                "3": "Il y a 1 à 3 ans",
-                "4": "Je ne m'en souviens pas"
-              }
-            },
-            "15": {
+            "10": {
               "q": "Êtes-vous à l'aise avec les technologies cloud ?",
               "options": {
                 "1": "Je déploie et gère régulièrement l'infrastructure cloud",
@@ -620,27 +575,34 @@
           "result": {
             "final": "Degré de Fraîcheur Final",
             "title": "{{ resultCategory }}!",
+            "share": "Partager votre résultat",
+            "linkText": "J'ai terminé le test \"Quel produit laitier représente vos compétences techniques ?\" et je suis {{ resultName }}! 🎯 Score: {{ score }}/50 ({{ percentage }}%)",
             "cream": {
+              "pronoun": "une",
               "name": "Crème Fraîche",
               "description": "Vous êtes à la pointe ! Vos compétences sont fraîches et constamment renouvelées, mais rappelez-vous : vous devez les rafraîchir régulièrement pour maintenir ce niveau. Gardez cet élan !",
               "advice": "Envisagez de mentorer d'autres personnes pour approfondir vos connaissances tout en restant à jour."
             },
             "yoghurt": {
+              "pronoun": "un",
               "name": "Yaourt",
               "description": "Vous cultivez activement vos compétences par la pratique et l'apprentissage réguliers. Vous avez de bonnes cultures en développement, et en étant régulier, vous ne ferez que progresser !",
               "advice": "Concentrez-vous sur l'approfondissement de quelques domaines tout en restant vigilant."
             },
             "cheese": {
+              "pronoun": "un",
               "name": "Fromage Affiné",
               "description": "Vos compétences fondamentales sont solides et s'améliorent réellement avec le temps. Comme un bon fromage, votre expertise s'approfondit. Assurez-vous simplement de ne pas devenir trop croûteux sur les bords !",
               "advice": "Équilibrez votre expertise approfondie avec une exposition aux tendances émergentes dans votre domaine."
             },
             "butter": {
+              "pronoun": "une motte de",
               "name": "Beurre",
               "description": "Vous êtes polyvalent et stable, survivant dans la plupart des environnements. Vos compétences sont fiables mais pourraient avoir besoin d'être rafraîchies pour s'étendre vers de nouveaux domaines.",
               "advice": "Réservez du temps dédié chaque semaine pour apprendre quelque chose de nouveau."
             },
             "iceCream": {
+              "pronoun": "une",
               "name": "Glace",
               "description": "Vos compétences pourraient fondre sous la pression ! Il est temps de retourner au congélateur et de préserver ce que vous avez tout en ajoutant de nouvelles saveurs. La bonne nouvelle ? Il n'est jamais trop tard pour se rafraîchir !",
               "advice": "Commencez par de petites habitudes d'apprentissage cohérentes. Choisissez une nouvelle compétence sur laquelle vous concentrer ce mois-ci."
