@@ -71,7 +71,7 @@ export const ConferencesListItem = ({
       hidden={!hasTag && value !== Tags.ALL}
       isConference
     >
-      <CardEventMedia imgUrl={cover} />
+      <CardEventMedia component='div' imgUrl={cover} />
       <ConferenceCardWrapper>
         <ConferenceCardHeader isConference>
           <CardContentTitle variant="h4" isConference>
