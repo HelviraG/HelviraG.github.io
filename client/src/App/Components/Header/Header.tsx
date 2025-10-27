@@ -1,5 +1,5 @@
 import HdrWeakRoundedIcon from "@mui/icons-material/HdrWeakRounded";
-import { Box, IconButton, useMediaQuery } from "@mui/material";
+import { Box, IconButton, Link, Typography, useMediaQuery } from "@mui/material";
 import { Routes } from "@resources/Enums/Routes";
 import { AppHeader } from "@styles/Layout/Header";
 import React, { useState } from "react";
@@ -32,6 +32,13 @@ export const Header = () => {
       <AppHeader component="header" isHomePage={pathname === Routes.HOME} data-testid={"app-header"} headerBackground={headerBackground}>
         <Box>
           <AppAvatar />
+          {pathname !== Routes.HOME && 
+            <Link href="/" sx={{ textDecoration: 'none' }}>
+              <Typography sx={{ display: 'flex' }}>helvira
+                <Typography>.dev</Typography>
+              </Typography>
+            </Link>
+          }
         </Box>
         <ScrollText setHeaderBackground={setHeaderBackground} />
         <Box>

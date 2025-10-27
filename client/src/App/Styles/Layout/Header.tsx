@@ -58,8 +58,8 @@ export const AppHeader = styled(Box, {
   }),
 
   display: 'flex', 
-  justifyContent: 'space-around', 
-  padding: theme.spacing(4),
+  justifyContent: 'space-between', 
+  padding: `${theme.spacing(2.5)} ${theme.spacing(4)}`,
   position: 'fixed',
   width: '100%',
   top: 0,

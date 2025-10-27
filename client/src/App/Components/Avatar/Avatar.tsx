@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Avatar } from '@mui/material';
+import { Avatar, Box } from '@mui/material';
 import { StyledBadge } from '@styles/Layout/Header';
 import { AvatarDrawer } from '../Drawer/AvatarDrawer';
 import { useLocation } from 'react-router-dom';
@@ -20,7 +20,15 @@ export const AppAvatar = () => {
     }
 
     return (     
-        <>        
+        <Box 
+            sx={{    
+                ...(pathname !== Routes.HOME && { 
+                    position: 'absolute',
+                    top: '3.8em',
+                    left: '2em'
+                })
+            }}
+        >        
             <StyledBadge
                 overlap="circular"
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -32,6 +40,6 @@ export const AppAvatar = () => {
                 <Avatar alt="Helvira Goma Avatar" src="https://i.ibb.co/qMnXS5Vx/Design-sans-titre-20-removebg-preview.png" />
             </StyledBadge>
             <AvatarDrawer expandAvatar={expandAvatar} handleCloseAvatar={handleCloseAvatar} />
-        </>   
+        </Box>   
     )
 }
