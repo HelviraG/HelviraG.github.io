@@ -16,12 +16,12 @@ export enum Avatars {
 
 export enum SubTitle {
     HOME = 'https://i.ibb.co/ncPZztp/Copie-de-GIT-INIT-7-removebg-preview.png',
-    CONFS = 'https://i.ibb.co/YykggK8/Copie-de-GIT-INIT-10-removebg-preview.png',
-    CAREER = 'https://i.ibb.co/DDG91d9/Copie-de-GIT-INIT-15-removebg-preview.png',
+    CONFS = 'https://i.ibb.co/qYPPnStf/Copie-de-GIT-INIT-23-removebg-preview.png',
+    CAREER = 'https://i.ibb.co/Z6bMT1pT/Copie-de-GIT-INIT-24-removebg-preview.png',
     CONTACT = 'https://i.ibb.co/GnhtYYf/Copie-de-GIT-INIT-10-removebg-preview-2.png',
-    LIVE = 'https://i.ibb.co/ZXtX0Zb/Copie-de-GIT-INIT-14-removebg-preview-1.png',
+    LIVE = 'https://i.ibb.co/ccNWQ79H/Copie-de-GIT-INIT-15-removebg-preview.png',
     PASSION = 'https://i.ibb.co/dc4dJ3s/Copie-de-GIT-INIT-17-removebg-preview.png',
-    EXPLORER = 'https://i.ibb.co/3NZVMWj/Copie-de-GIT-INIT-8-removebg-preview.png',
-    PRESS = 'https://i.ibb.co/H2ZDRmv/Copie-de-GIT-INIT-16-removebg-preview.png',
+    EXPLORER = 'https://i.ibb.co/hRwZb99W/Copie-de-GIT-INIT-22-removebg-preview.png',
+    PRESS = 'https://i.ibb.co/xSjpYyZv/Copie-de-GIT-INIT-25-removebg-preview.png',
     SPEAKER = 'https://i.ibb.co/DWQYkb2/Copie-de-GIT-INIT-12-removebg-preview.png',
 }
