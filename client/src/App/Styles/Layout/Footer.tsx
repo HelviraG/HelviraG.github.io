@@ -96,7 +96,7 @@ export const LangSwitch = styled(Switch)(({ theme }) => ({
 export const FooterTextWrapper = styled(Box)((({ theme }) => ({
   display: 'flex', 
   flex: 1, 
-  justifyContent: 'center',
+  justifyContent: 'end',
 
   [theme.breakpoints.down(500)]: {
     gap: '12px'
