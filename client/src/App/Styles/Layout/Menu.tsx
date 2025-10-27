@@ -44,9 +44,9 @@ export const MenuWrapper = styled(Drawer, {
     cursor: 'none',
     zIndex: 1200000000,
     '.MuiDrawer-paper': { 
-        backgroundColor: alpha(theme.palette.text.primary, 0.93),
+        backgroundColor: alpha(theme.palette.text.primary, 0.96),
         ...(menuColor !== '' && menuColor && {
-            backgroundColor: alpha(menuColor, 0.93),
+            backgroundColor: alpha(menuColor, 0.96),
         }),
         width: `60%`, 
 

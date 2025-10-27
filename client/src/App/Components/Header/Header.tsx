@@ -43,22 +43,13 @@ export const Header = () => {
 
                 "& .MuiSvgIcon-root": {
                   color: "background.default",
-                },
-
-                ...(pathname === Routes.EXPLORE && {
-                  color: "background.default",
-                  backgroundColor: "error.dark",
-                }),
+                }
               },
             })}
           >
             <HdrWeakRoundedIcon
               sx={(theme) => ({
-                color: theme.game.special.dark,
-
-                ...(pathname === Routes.EXPLORE && {
-                  color: "error.dark",
-                }),
+                color: theme.game.special.dark
               })}
             />
           </IconButton>

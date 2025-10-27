@@ -32,7 +32,7 @@ export const Menu = ({ openMenu, menuWidth, closeDrawer }: MenuProps) => {
     useClickOutside(drawerRef, closeDrawer);
  
     return (
-        <MenuWrapper anchor={Types.RIGHT} open={openMenu} menuWidth={menuWidth} PaperProps={{ ref: drawerRef }} menuColor={pathname === Routes.EXPLORE ? '#AF0667' : '#1E1E40'} ModalProps={{ keepMounted: true, disableScrollLock: true }}>
+        <MenuWrapper anchor={Types.RIGHT} open={openMenu} menuWidth={menuWidth} PaperProps={{ ref: drawerRef }} menuColor={'#1E1E40'} ModalProps={{ keepMounted: true, disableScrollLock: true }}>
             <MenuIconBox>
                 <MenuIconButton onClick={closeDrawer}>
                     <HighlightOffRoundedIcon sx={{ color: 'background.default' }} />
