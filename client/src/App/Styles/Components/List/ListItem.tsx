@@ -45,9 +45,9 @@ export const CardWrapper = styled(Card, {
     prop !== "hidden" && prop !== "isPlayground" && prop !== "isConference",
 })<CardWrapperProps>(({ hidden, isPlayground, isConference, theme }) => ({
   alignItems: "center",
-  border: `1px solid ${alpha(theme.palette.primary.light, 0.12)}`,
+  border: `1px solid ${alpha('#2e33db', 0.12)}`,
   borderRadius: theme.spacing(2),
-  boxShadow: `0px 20px 20px -17px ${alpha(theme.palette.primary.main, 0.5)}`,
+  boxShadow: `0px 20px 20px -17px ${alpha('#2e33db', 0.5)}`,
   display: "flex",
   overflow: "initial",
   margin: "auto",

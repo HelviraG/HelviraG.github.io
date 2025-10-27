@@ -45,9 +45,9 @@ export const ChipColor = (type: string, chipBackground?: string, chipColor?: str
                 };
             case Tags.YEAR:
                 return {
-                    background: 'background.default',
-                    border: '1px solid #2F3542',
-                    color: '#2F3542'
+                    background: '#1B1464',
+                    border: '1px solid #FFF',
+                    color: '#FFF'
                 };
             case Tags.PASSION:
                 return {

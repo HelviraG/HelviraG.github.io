@@ -4,12 +4,12 @@ export const VideoTabs = styled(Tabs)(({ theme }) => ({
     marginBottom: theme.spacing(4),
 
     '.Mui-selected': {
-        color: '#ff477e !important',
+        color: '#2c2c54 !important',
         fontWeight: 900
     },
         
     '.MuiTabs-indicator': {
-        backgroundColor: '#ff477e',
+        backgroundColor: '#2c2c54',
         height: 4,
         borderRadius: 2
     },

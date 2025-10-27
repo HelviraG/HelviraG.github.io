@@ -35,7 +35,7 @@ export const TitleTypography = styled(Typography, {
   color: theme.palette.background.default,
   fontSize: "3rem",
   letterSpacing: "0.008em",
-  textShadow: `-2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827, 2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827, 6px 6px ${theme.palette.primary.light}`,
+  textShadow: `-2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827, 2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827, 6px 6px #32ff7e`,
   ...(shadowColor && {
     textShadow: `-2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827, 2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827, 6px 6px ${shadowColor}`,
   }),
