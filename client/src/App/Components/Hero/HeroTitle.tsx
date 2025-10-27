@@ -1,14 +1,12 @@
 import { Typography } from '@mui/material';
 import { 
     AnimatedTitleBox,
-    HeroImgBox,
     HeroTitleBox, 
     PaletteKey, 
     TitleBox, 
     TitleWrapper,
     SubTitle,
     SubTitleBox,
-    SubTiTleDivider,
     HeroTitleWrapper
 } from '@styles/Components/HeroTitleStyle';
 
@@ -23,7 +21,6 @@ export const HeroTitle = ({ imgUrl, quote, title, titleColor }: HeroTitleProps) 
     return (
         <HeroTitleWrapper>
             <HeroTitleBox>
-                <HeroImgBox imgUrl={imgUrl}></HeroImgBox>
                 <AnimatedTitleBox>
                     <TitleWrapper>
                         <TitleBox titleColor={titleColor}>
@@ -32,7 +29,6 @@ export const HeroTitle = ({ imgUrl, quote, title, titleColor }: HeroTitleProps) 
                         </TitleBox>
                     </TitleWrapper>
                     <SubTitleBox>
-                        <SubTiTleDivider orientation="horizontal" variant="middle" />
                         <SubTitle variant="body1">{quote}</SubTitle>
                     </SubTitleBox>
                 </AnimatedTitleBox>

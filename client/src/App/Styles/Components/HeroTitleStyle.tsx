@@ -1,7 +1,6 @@
 import {
   Box,
   BoxProps,
-  Divider,
   Palette,
   PaletteColor,
   styled,
@@ -23,11 +22,11 @@ interface HeroTitleBoxProps extends BoxProps {
 }
 
 export const TitleWrapper = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.game.special.iceBlue.medium,
+  backgroundColor: theme.game.special.dark,
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  padding: theme.spacing(10),
+  padding: theme.spacing(5),
   width: "100%",
 }));
 
@@ -37,22 +36,22 @@ export const TitleBox = styled(Box, {
   position: "relative",
 
   h2: {
-    color: theme.palette.background.default,
+    fontFamily: "'Poppins', sans-serif",
+    color: '#A3FFEA',
     fontSize: "7em",
     position: "absolute",
-    left: "-39px",
     top: 0,
     right: 0,
     textAlign: "center",
-    width: "447px",
+    width: "-webkit-fill-available",
 
     "&:nth-of-type(1)": {
       color: "transparent",
-      WebkitTextStroke: `2px ${theme.game.special.dark}`,
+      WebkitTextStroke: `2px #A3FFEA`,
     },
 
     "&:nth-of-type(2)": {
-      color: theme.game.special.dark,
+      color: '#A3FFEA',
       animation: "wave 4s ease-in-out infinite",
     },
 
@@ -68,12 +67,11 @@ export const TitleBox = styled(Box, {
     },
 
     [theme.breakpoints.down("md")]: {
-      fontSize: "6em",
-      left: "-1em!important",
+      fontSize: "3.8em",
     },
 
-    [theme.breakpoints.down("lg")]: {
-      left: "-66px",
+    [theme.breakpoints.down(420)]: {
+      fontSize: "3em",
     },
   },
 
@@ -85,74 +83,31 @@ export const TitleBox = styled(Box, {
 }));
 
 export const HeroTitleWrapper = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.game.special.iceBlue.medium, 
-  padding: '7em 0'
+  backgroundColor: theme.game.special.dark, 
+  display: 'flex',
+  padding: '7em 0 2em 0'
 }));
 
 export const HeroTitleBox = styled(Box)(({ theme }) => ({
   display: "flex",
+  flex: 1,
   margin: "0 auto",
   maxWidth: "80%",
 
   [theme.breakpoints.down("md")]: {
-    maxWidth: "90%",
+    maxWidth: "100%",
     flexDirection: "column-reverse",
-  },
-}));
-
-export const HeroImgBox = styled(Box, {
-  shouldForwardProp: (prop) => prop !== "imgUrl",
-})<HeroTitleBoxProps>(({ imgUrl, theme }) => ({
-  background: `${theme.game.special.dark} url(${imgUrl}) no-repeat center`,
-  width: "60%",
-  padding: "10px",
-  margin: "30px 30px 30px 0px",
-  borderRadius: "20px",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundSize: "cover",
-  position: "relative",
-
-  [theme.breakpoints.down("md")]: {
-    "& span": {
-      fontSize: "1.525rem",
-    },
-  },
-
-  [theme.breakpoints.down("lg")]: {
-    margin: "30px 0px 30px 0px",
-
-    width: "100%",
-    height: "600px",
-
-    "& span": {
-      left: "25%",
-    },
-  },
-
-  [theme.breakpoints.up(1240)]: {
-    maxHeight: "-webkit-fill-available",
-  },
-
-  [theme.breakpoints.up(20000)]: {
-    height: "1460px",
-  },
-
-  "& > img": {
-    position: "absolute",
-    bottom: "0px",
-    left: "20px",
-    width: "100px",
   },
 }));
 
 export const AnimatedTitleBox = styled(Box)(() => ({
   display: "flex",
+  flex: 1,
   flexDirection: "column",
 }));
 
 export const SubTitleBox = styled(Box)(({ theme }) => ({
-  marginTop: theme.spacing(20),
+  marginTop: theme.spacing(6),
   padding: theme.spacing(4),
 
   [theme.breakpoints.down("md")]: {
@@ -160,18 +115,14 @@ export const SubTitleBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const SubTiTleDivider = styled(Divider)(({ theme }) => ({
-  paddingBottom: theme.spacing(8),
-  marginBottom: theme.spacing(4),
-  borderColor: theme.game.special.iceBlue.light,
+export const SubTitle = styled(Typography)(({ theme }) => ({
+  color: '#A3FFEA',
+  fontWeight: 800,
+  marginTop: theme.spacing(10),
+  textAlign: 'center',
+  padding: '0 20px',
 
   [theme.breakpoints.down("md")]: {
-    paddingBottom: theme.spacing(4),
-    marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(4),
   },
 }));
-
-export const SubTitle = styled(Typography)({
-  fontWeight: 800,
-  fontStyle: "italic",
-});
