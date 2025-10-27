@@ -47,7 +47,7 @@ export const AppHeader = styled(Box, {
 })<{ isHomePage: boolean, headerBackground?: string }>(({ theme, isHomePage, headerBackground }) => ({
   alignItems: 'center',
   backgroundColor: isHomePage ? theme.game.special.iceBlue.medium : theme.palette.background.default,
-  borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
+  borderBottom: `1px solid ${alpha(theme.palette.info.main, 0.1)}`,
 
   ...(isHomePage && {
     border: 'none',
