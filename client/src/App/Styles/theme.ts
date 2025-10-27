@@ -246,36 +246,44 @@ const theme = createTheme({
     },
     components: {
         MuiCssBaseline: {
-            styleOverrides: {
-                body: {
-                    backgroundColor: background,
-                    margin: '0 auto',
-                    color: '#000333',
-                    cursor: 'none',
+            styleOverrides: `
+                * {
+                    scrollbar-color: ${alpha('#1E1E40', 0.9)} rgb(255 255 255 / 10%);
+                }
+                
+                *::-webkit-scrollbar {
+                    border-radius: 9999px;
+                    width: 2px;
+                }
 
-                    '&::-webkit-scrollbar': {
-                        borderRadius: '10px',
-                        width: '4px',
-                    },
+                *::-webkit-scrollbar-track {
+                    background: rgb(255 255 255 / 10%);
+                }
 
-                    '&::-webkit-scrollbar-track': {
-                        background: 'rgb(255 255 255 / 10%)',
-                    },
-
-                    '&::-webkit-scrollbar-thumb': {
-                        background: alpha(primaryBase, 0.3),
-                        borderRadius: '50px'
-                    },
-
-                    '@media (min-width: 1300px)': {
-                        maxWidth: '100%',
-                    },
-
-                    '@media (max-width: 800px)': {
-                        width: 'fit-content',
+                *::-webkit-scrollbar-thumb {
+                    background: ${alpha('#1E1E40', 0.7)};
+                    border-radius: 9999px;
+                }
+                
+                body {
+                    background-color: ${background};
+                    margin: 0 auto;
+                    color: #000333;
+                    cursor: none;
+                }
+                
+                @media (min-width: 1300px) {
+                    body {
+                        max-width: 100%;
                     }
                 }
-            }
+                
+                @media (max-width: 800px) {
+                    body {
+                        width: fit-content;
+                    }
+                }
+            `
         },
         MuiBackdrop: {
             styleOverrides: {
