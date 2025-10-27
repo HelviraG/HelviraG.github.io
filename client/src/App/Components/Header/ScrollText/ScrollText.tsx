@@ -37,7 +37,7 @@ export const ScrollText = ({ setHeaderBackground }: { setHeaderBackground: Calla
       } else if (window.scrollY < 2) {
         setText(pageScrollText[0].first_section);
         setHeaderBackground("#00C79A");
-      } else if (window.scrollY >= 2 && window.scrollY <= 230) {
+      } else if (window.scrollY >= 2 && window.scrollY <= 385.5) {
         setText(pageScrollText[0].second_section);
         setHeaderBackground("#00C79A");
       } else {
