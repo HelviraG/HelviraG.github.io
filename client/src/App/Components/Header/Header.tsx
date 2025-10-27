@@ -35,7 +35,7 @@ export const Header = () => {
           {pathname !== Routes.HOME && 
             <Link href="/" sx={{ textDecoration: 'none' }}>
               <Typography sx={{ display: 'flex' }}>helvira
-                <Typography>.dev</Typography>
+                <Typography component="span" sx={{ color: '#2e86de' }}>.dev</Typography>
               </Typography>
             </Link>
           }
