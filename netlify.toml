@@ -17,12 +17,6 @@
   to = "/index.html"
   status = 200
 
-# API proxy for local dev
-[[dev.redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/server/:splat"
-  status = 200
-
 [functions]
   directory = "netlify/functions-build"
   node_bundler = "esbuild"
