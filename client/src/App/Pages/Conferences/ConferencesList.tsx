@@ -74,7 +74,7 @@ export const ConferencesList = () => {
             <ConferencesListItem
               {...conference}
               events={eventsWithStringTags}
-              key={`${conference.events[0].month}-${conference.events[0].day}`}
+              key={`${conference.title}-${conference.events[0].month}-${conference.events[0].day}`}
               value={currentTab}
             />
           );
