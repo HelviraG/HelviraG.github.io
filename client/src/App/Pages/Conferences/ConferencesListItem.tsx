@@ -111,7 +111,7 @@ export const ConferencesListItem = ({
                           <IconButton onClick={handleShowVideo}>
                             <VisibilityRoundedIcon
                               fontSize={"small"}
-                              color={"error"}
+                              color={"info"}
                             />
                           </IconButton>
                         )}
@@ -123,7 +123,7 @@ export const ConferencesListItem = ({
                           >
                             <MenuBookIcon
                               fontSize={"small"}
-                              color={"primary"}
+                              color={"success"}
                             />
                           </IconButton>
                         )}
