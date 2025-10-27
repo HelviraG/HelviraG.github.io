@@ -13,6 +13,7 @@ const smartphoneDrawer = 320;
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [headerBackground, setHeaderBackground] = useState<string>("#00C79A");
   const location = useLocation();
   const pathname = location.pathname;
 
@@ -28,11 +29,11 @@ export const Header = () => {
 
   return (
     <>
-      <AppHeader component="header" isHomePage={pathname === Routes.HOME} data-testid={"app-header"}>
+      <AppHeader component="header" isHomePage={pathname === Routes.HOME} data-testid={"app-header"} headerBackground={headerBackground}>
         <Box>
           <AppAvatar />
         </Box>
-        <ScrollText />
+        <ScrollText setHeaderBackground={setHeaderBackground} />
         <Box>
           <IconButton
             onClick={handleOpenMenu}

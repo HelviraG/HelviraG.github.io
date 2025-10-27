@@ -43,14 +43,18 @@ export const StyledBadge = styled(Badge, {
 }));
 
 export const AppHeader = styled(Box, {
-  shouldForwardProp: (prop) => prop !== 'isHomePage',
-})<{ isHomePage: boolean }>(({ theme, isHomePage }) => ({
+  shouldForwardProp: (prop) => prop !== 'isHomePage' && prop !== 'headerBackground',
+})<{ isHomePage: boolean, headerBackground?: string }>(({ theme, isHomePage, headerBackground }) => ({
   alignItems: 'center',
   backgroundColor: isHomePage ? theme.game.special.iceBlue.medium : theme.palette.background.default,
   borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
 
   ...(isHomePage && {
     border: 'none',
+  }),
+
+  ...(headerBackground && {
+    backgroundColor: headerBackground,
   }),
 
   display: 'flex', 

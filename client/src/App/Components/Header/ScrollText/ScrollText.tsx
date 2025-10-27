@@ -14,7 +14,7 @@ const ScrollTextTypograhy = styled(Typography)(({ theme }) => ({
   },
 }));
 
-export const ScrollText = () => {
+export const ScrollText = ({ setHeaderBackground }: { setHeaderBackground: CallableFunction }) => {
   const [scrollY, setScrollY] = useState<number>(0);
 
   const [text, setText] = useState<string>("");
@@ -33,12 +33,16 @@ export const ScrollText = () => {
     if (pageScrollText && pageScrollText[0]) {
       if (hasReachedBottom) {
         setText(pageScrollText[0].last_section);
+        setHeaderBackground("#FFF");
       } else if (window.scrollY < 2) {
         setText(pageScrollText[0].first_section);
+        setHeaderBackground("#00C79A");
       } else if (window.scrollY >= 2 && window.scrollY <= 230) {
         setText(pageScrollText[0].second_section);
+        setHeaderBackground("#00C79A");
       } else {
         setText(pageScrollText[0].third_section);
+        setHeaderBackground("#FFF");
       }
     }
   };
