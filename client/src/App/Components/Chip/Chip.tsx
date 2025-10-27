@@ -30,7 +30,11 @@ export const AppChip = ({
                         color: colorChip.color, 
                         fontWeight: 100, 
                         textTransform: 'capitalize', 
-                        padding: 1 
+                        padding: 1,
+
+                        ...(type === Tags.YEAR && {
+                            fontWeight: 600
+                        })
                     }} 
                     variant='filled'
                     {...rest} 
