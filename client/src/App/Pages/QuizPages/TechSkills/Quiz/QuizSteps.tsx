@@ -355,9 +355,9 @@ export const QuizSteps = () => {
                             </Box>
                         </Box>
                         <Box>
-                            {activeStep === 1 && <Typography variant="body2" sx={{ textAlign: 'center' }}>{t('techSkillsQuiz:quiz.startCaption')}</Typography>}
+                            {activeStep === 1 && <Typography variant="body2" sx={{ textAlign: 'center', padding: '0 3em' }}>{t('techSkillsQuiz:quiz.startCaption')}</Typography>}
                             {activeStep > 1 && (
-                                <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
+                                <Typography variant="body2" sx={{ marginBottom: '1rem', padding: '0 3em' }}>
                                     <Trans i18nKey="techSkillsQuiz:quiz.currentLevel.caption" values={{ activeStep: activeStep - 1, totalQuestions: quizQuestions.length }} />
                                 </Typography>
                             )}
