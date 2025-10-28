@@ -1,74 +1,5 @@
 {
   "app": {
-    "general": {
-      "actions": {
-        "play": "Play",
-        "read": "Read",
-        "read_more": "Read",
-        "resources": "Resources",
-        "send": "Send",
-        "start": "Start",
-        "watch": "Watch",
-        "params": "Settings",
-        "start_again": "Restart",
-        "resume": "Resume",
-        "next": "Next",
-        "back": "Back",
-        "redo": "Start over",
-        "results": "To the landscape",
-        "check": "Results"
-      },
-      "buy_coffee": {
-        "title": "☕ If you like what I do and want to support me and my work 😁"
-      },
-      "hello": "Hello,",
-      "month": {
-        "january": "January",
-        "february": "February",
-        "march": "March",
-        "april": "April",
-        "may": "May",
-        "june": "June",
-        "july": "July",
-        "august": "August",
-        "september": "September",
-        "october": "October",
-        "november": "November",
-        "december": "December"
-      },
-      "welcome": {
-        "p1": "I am <bold>Helvira Goma</bold>, a Paris based <bold>fullstack developer</bold>.",
-        "p2": "When I'm not <bold>transforming ✨</bold> an idea into a functional and interactive project - like this website - I give <bold>conferences</bold> and participate in various <bold>tech events</bold>.",
-        "p3": "Here, my <bold>universe!</bold> 🪐",
-        "title": "Welcome"
-      }
-    },
-    "menu": {
-      "back_website": "Back Home",
-      "blog": "Blog",
-      "career": "Career",
-      "conferences": "Conferences",
-      "contact": "Have a talk",
-      "home": "Hello World !",
-      "live": "Lives",
-      "mobile_text": " < Hello World ! /> ",
-      "more": "More",
-      "press": "Press",
-      "universe": "Universe",
-      "explorer": "Explore",
-      "passion": "Fallout On Passion",
-      "passion_quiz": {
-        "start": "Back to cover",
-        "test": "To the test",
-        "result": "To the landscape"
-      },
-      "profile": {
-        "about": "About",
-        "about_text": "Helvira Goma is a full-stack developer with over six years of experience who loves making technology feel intuitive, meaningful, and a little bit magical.\n\n When she’s not deep in code, she’s on stage sharing stories about tech, creativity, and the human side of engineering — or connecting with others through <0>Motiv'Her</0>, her online community that encourages more women to explore and thrive in technology.\n\n Whether she’s writing software or speaking to an audience, Helvira brings the same curiosity and care to everything she creates — always aiming to spark inspiration, one line of code (or one talk) at a time."
-      },
-      "battery": "Your Battery Level",
-      "skills": "Your Tech Skills Expiration Date"
-    },
     "home": {
       "main": {
         "animated": {
@@ -258,7 +189,7 @@
                 "cat_action": "play",
                 "cat_verb": "play"
               },
-              "designing": {
+              "design": {
                 "cat_job": "designer",
                 "cat_hobby": "creating designs",
                 "cat_action": "sketch on Figma or Adobe",
@@ -297,7 +228,7 @@
               ],
               "longNameField": "gaming"
             },
-            "designing": {
+            "design": {
               "field": [
                 "Designing"
               ],
@@ -349,7 +280,7 @@
                 "key_traits": "Key Traits",
                 "social_style": "Social Style"
               },
-              "designing": {
+              "design": {
                 "approach": "Design Approach",
                 "work_life": "Work-Life Balance",
                 "favorite_tools": "Favorite Tools",
@@ -638,75 +569,6 @@
       "title": "The Blog",
       "subtitle": "Articles to read",
       "description": "You can find here all my blog articles!"
-    },
-    "quotes": {
-      "career": "It's not the destination, it's the journey | Ralph Waldo Emerson",
-      "confs": "Speakers who talk about what life has taught them never fail to keep the attention of their listeners | Dale Carnegie",
-      "lives": "A good laugh makes any interview or any conversation, so much better | Barbara Walters",
-      "press_title": "I don't know if I'll ever get used to hearing my name being mentioned alongside all these other legendary artists that have come before me | Gretchen Wilson",
-      "game_title": "Play is training for the unexpected | Marc Bekoff"
-    },
-    "scroll": {
-      "home": {
-        "first_section": " < Hello World ! /> ",
-        "second_section": "🖥️ FullStack Developer",
-        "third_section": "✌️ Welcome!",
-        "last_section": "That's it, for now"
-      },
-      "confs": {
-        "first_section": " < Hello World ! /> ",
-        "second_section": "🎤 Speak!",
-        "third_section": "🎫 The conferences",
-        "last_section": "You've reached the end"
-      },
-      "lives": {
-        "first_section": " < Hello World ! /> ",
-        "second_section": "📼 Live!",
-        "third_section": "🎞️ The lives",
-        "last_section": "You shall not scroll!"
-      },
-      "press": {
-        "first_section": " < Hello World ! /> ",
-        "second_section": "📰 Read!",
-        "third_section": "📃 The articles",
-        "last_section": "You've scrolled the whole page"
-      },
-      "contact": {
-        "first_section": " < Hello World ! /> ",
-        "second_section": "☎️ Talk!",
-        "third_section": "🗨️ Get in touch!",
-        "last_section": "You can go back to the top"
-      },
-      "explore": {
-        "first_section": " < Playground ! /> ",
-        "second_section": "🎮 Game On!",
-        "third_section": "🕹️ SandBox",
-        "last_section": "That's it, for now"
-      },
-      "passion": {
-        "first_section": " < Fallout On Passion🔥 ! /> ",
-        "second_section": "🧩 The Test",
-        "third_section": "🧩 The Test",
-        "last_section": "That's it, for now"
-      },
-      "career": {
-        "first_section": " < Tech Career ! /> ",
-        "second_section": "🔖​ The Tech Resume",
-        "third_section": "🔖​ The Tech Resume",
-        "last_section": "You've scrolled the whole page"
-      },
-      "battery": {
-        "first_section": " < Battery Level🔋​ ! /> ",
-        "second_section": "🧩 The Test",
-        "third_section": "🧩 The Test",
-        "last_section": "That's it, for now"
-      },
-      "skills": {
-        "first_section": " < Skills Expiration​ ! /> ",
-        "second_section": "🧩 The Test",
-        "third_section": "🧩 The Test",
-        "last_section": "That's it, for now"
-      }
     }
   }
 }
