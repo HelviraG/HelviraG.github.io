@@ -1,42 +1,43 @@
 {
     "actions": {
-        "play": "Play",
-        "read": "Lire",
-        "read_more": "Lire",
-        "resources": "Ressources",
-        "send": "Envoyer",
-        "start": "Go",
-        "watch": "Voir",
-        "params": "Paramètres",
-        "start_again": "Recommencer",
-        "resume": "Reprendre",
-        "next": "Suivant",
-        "back": "Précédent",
-        "check": "Résultats"
+      "play": "Play",
+      "read": "Lire",
+      "read_more": "Lire",
+      "resources": "Ressources",
+      "send": "Envoyer",
+      "start": "Go",
+      "watch": "Voir",
+      "params": "Paramètres",
+      "start_again": "Recommencer",
+      "resume": "Reprendre",
+      "next": "Suivant",
+      "back": "Précédent",
+      "check": "Résultats",
+      "return": "Retour"
     },
     "buy_coffee": {
-        "title": "☕ Vous aimez ce que je fais et souhaitez me soutenir ainsi que mon travail 😁"
+      "title": "☕ Vous aimez ce que je fais et souhaitez me soutenir ainsi que mon travail 😁"
     },
     "hello": "Bonjour,",
     "month": {
-        "january": "Janvier",
-        "february": "Février",
-        "march": "Mars",
-        "april": "Avril",
-        "may": "Mai",
-        "june": "Juin",
-        "july": "Juillet",
-        "august": "Août",
-        "september": "Septembre",
-        "october": "Octobre",
-        "november": "Novembre",
-        "december": "Decembre"
+      "january": "Janvier",
+      "february": "Février",
+      "march": "Mars",
+      "april": "Avril",
+      "may": "Mai",
+      "june": "Juin",
+      "july": "Juillet",
+      "august": "Août",
+      "september": "Septembre",
+      "october": "Octobre",
+      "november": "Novembre",
+      "december": "Decembre"
     },
     "welcome": {
-        "p1": "Je suis <bold>Helvira Goma</bold>, <bold>fullstack developer</bold> en région parisienne.",
-        "p2": "Lorsque je ne <bold>transforme</bold> ✨ pas une idée en un projet fonctionnel et intéractif - comme ce site - je donne des <bold>conférences</bold> et participe à divers <bold>événements tech</bold>.",
-        "p3": "Ici, mon <bold>univers!</bold> 🪐",
-        "title": "Bienvenue"
+      "p1": "Je suis <bold>Helvira Goma</bold>, <bold>fullstack developer</bold> en région parisienne.",
+      "p2": "Lorsque je ne <bold>transforme</bold> ✨ pas une idée en un projet fonctionnel et intéractif - comme ce site - je donne des <bold>conférences</bold> et participe à divers <bold>événements tech</bold>.",
+      "p3": "Ici, mon <bold>univers!</bold> 🪐",
+      "title": "Bienvenue"
     },
     "menu": {
       "back_website": "Vers le site",
