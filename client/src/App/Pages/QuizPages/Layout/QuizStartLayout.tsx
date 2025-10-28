@@ -22,7 +22,7 @@ export const QuizStartLayout = ({
     caption: string;
     startRoute: string
 }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     const navigate = useNavigate();
     const { appLang: lang, changeLang: changeLanguage } = useChangeLangage();
     const isTablet = useMediaQuery("(max-width: 800px");
@@ -167,8 +167,8 @@ export const QuizStartLayout = ({
                                 }
                             })}
                         >
-                            <BurnoutQuizOutlinedButton variant="outlined" onClick={() => navigate(startRoute)}>{t('app.general.actions.start')}</BurnoutQuizOutlinedButton>
-                            <BurnoutQuizContainedButton variant="contained" onClick={() => navigate(Routes.EXPLORE)}>{t('app.general.actions.back')}</BurnoutQuizContainedButton>
+                            <BurnoutQuizOutlinedButton variant="outlined" onClick={() => navigate(startRoute)}>{t('actions.start')}</BurnoutQuizOutlinedButton>
+                            <BurnoutQuizContainedButton variant="contained" onClick={() => navigate(Routes.EXPLORE)}>{t('actions.back')}</BurnoutQuizContainedButton>
                         </Box>
                     </Box>
                 </Box>
