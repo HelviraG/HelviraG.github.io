@@ -23,7 +23,7 @@ export const EnterName = ({
   hasError,
   setHasError,
 }: EnterNameProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
 
   return (
     <>
