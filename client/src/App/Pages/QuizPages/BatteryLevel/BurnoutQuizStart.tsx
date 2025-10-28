@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { QuizStartLayout } from "../Layout/QuizStartLayout";
 
 export const BurnoutQuizStart = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     const navigate = useNavigate();
 
     return (
