@@ -6,9 +6,9 @@ import { Mobile } from "../Layout/Mobile/Mobile";
 import { TechSkillsQuizStart } from "./QuizPages/TechSkills/TechSkillsQuizStart";
 
 export const TechSkillsQuiz = ({ isTablet }: { isTablet: boolean }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
       
-    useDocumentTitle(`Helvira Goma | 🧰​ ${t("app.menu.skills")}`);
+    useDocumentTitle(`Helvira Goma | 🧰​ ${t("menu.skills")}`);
     
     return (
         <>
