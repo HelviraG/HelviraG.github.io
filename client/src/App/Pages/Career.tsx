@@ -9,9 +9,9 @@ import { CareerPage } from "./Career/CareerPage";
 import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 
 export const Career = ({ isTablet }: { isTablet: boolean }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
 
-  useDocumentTitle(`Helvira Goma | 🔖 ${t("app.menu.career")}`);
+  useDocumentTitle(`Helvira Goma | 🔖 ${t("menu.career")}`);
 
   return (
     <>
@@ -19,8 +19,8 @@ export const Career = ({ isTablet }: { isTablet: boolean }) => {
         <Mobile>
           <HeroTitle
             imgUrl={Covers.CAREER}
-            quote={t("app.quotes.career")}
-            title={t("app.career.title")}
+            quote={t("quotes.career")}
+            title={t("translation:app.career.title")}
             titleColor="error"
           />
           <CareerPage />
@@ -30,8 +30,8 @@ export const Career = ({ isTablet }: { isTablet: boolean }) => {
         <Desktop>
           <HeroTitle
             imgUrl={Covers.CAREER}
-            quote={t("app.quotes.career")}
-            title={t("app.career.title")}
+            quote={t("quotes.career")}
+            title={t("translation:app.career.title")}
             titleColor="error"
           />
           <CareerPage />
