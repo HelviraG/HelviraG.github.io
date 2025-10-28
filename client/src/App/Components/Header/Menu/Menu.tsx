@@ -6,6 +6,7 @@ import NewspaperRoundedIcon from '@mui/icons-material/NewspaperRounded';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import VolumeUpRoundedIcon from '@mui/icons-material/VolumeUpRounded';
 import WavingHandRoundedIcon from '@mui/icons-material/WavingHandRounded';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import { Box, DrawerProps } from '@mui/material';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -24,7 +25,7 @@ interface MenuProps extends DrawerProps
 }
 
 export const Menu = ({ openMenu, menuWidth, closeDrawer }: MenuProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     const pathname = useLocation().pathname;
 
     const drawerRef = useRef(null);
@@ -40,48 +41,48 @@ export const Menu = ({ openMenu, menuWidth, closeDrawer }: MenuProps) => {
             </MenuIconBox>
             <Box>
                 <MenuList>
-                    <MenuItem isFirstItem key={t('app.menu.universe')} >
-                        <MenuItemText isFirstItem primary={t('app.menu.universe')} />
+                    <MenuItem isFirstItem key={t('menu.universe')} >
+                        <MenuItemText isFirstItem primary={t('menu.universe')} />
                     </MenuItem>
-                    <MenuItem key={t('app.menu.home')}>
+                    <MenuItem key={t('menu.home')}>
                         <MenuListItemButton component={RouterLink} {...{ to: Routes.HOME, isActive: pathname === Routes.HOME }}>
                             <MenuListIcon><WavingHandRoundedIcon /></MenuListIcon>
-                            <MenuItemText primary={t('app.menu.home')} />
+                            <MenuItemText primary={t('menu.home')} />
                         </MenuListItemButton>
                     </MenuItem>
-                    <MenuItem key={t('app.menu.conferences')}>
+                    <MenuItem key={t('menu.conferences')}>
                         <MenuListItemButton component={RouterLink} {...{ to: Routes.CONFS, isActive: pathname === Routes.CONFS }}>
                             <MenuListIcon><VolumeUpRoundedIcon /></MenuListIcon>
-                            <MenuItemText primary={t('app.menu.conferences')} />
+                            <MenuItemText primary={t('menu.conferences')} />
                         </MenuListItemButton>
                     </MenuItem>
-                    <MenuItem key={t('app.menu.live')}>
+                    <MenuItem key={t('menu.live')}>
                         <MenuListItemButton component={RouterLink} {...{ to: Routes.LIVE, isActive: pathname === Routes.LIVE }}>
                             <MenuListIcon><FilterCenterFocusRoundedIcon /></MenuListIcon>
-                            <MenuItemText primary={t('app.menu.live')} />
+                            <MenuItemText primary={t('menu.live')} />
                         </MenuListItemButton>
                     </MenuItem>
-                    <MenuItem key={t('app.menu.press')}>
-                        <MenuListItemButton component={RouterLink} {...{ to: Routes.PRESS, isActive: pathname === Routes.PRESS }}>
-                            <MenuListIcon><NewspaperRoundedIcon /></MenuListIcon>
-                            <MenuItemText primary={t('app.menu.press')} />
+                    <MenuItem key={t('menu.explorer')}>
+                        <MenuListItemButton component={RouterLink} {...{ to: Routes.EXPLORE, isActive: pathname === Routes.EXPLORE }}>
+                            <MenuListIcon><SportsEsportsIcon /></MenuListIcon>
+                            <MenuItemText primary={t('menu.explorer')} />
+                            <MenuListIcon iconColor='#FF6EC7'><FiberNewOutlinedIcon fontSize='large' /></MenuListIcon>
                         </MenuListItemButton>
                     </MenuItem>
 
-                    <MenuItem isFirstItem withMargin key={t('app.menu.more')} >
-                        <MenuItemText isFirstItem primary={t('app.menu.more')} />
+                    <MenuItem isFirstItem withMargin key={t('menu.more')} >
+                        <MenuItemText isFirstItem primary={t('menu.more')} />
                     </MenuItem>
-                    <MenuItem key={t('app.menu.career')}>
-                        <MenuListItemButton component={RouterLink} {...{ to: Routes.CAREER, isActive: pathname === Routes.CAREER }}>
-                            <MenuListIcon><CodeRoundedIcon /></MenuListIcon>
-                            <MenuItemText primary={t('app.menu.career')} />
+                    <MenuItem key={t('menu.press')}>
+                        <MenuListItemButton component={RouterLink} {...{ to: Routes.PRESS, isActive: pathname === Routes.PRESS }}>
+                            <MenuListIcon><ImportContactsIcon /></MenuListIcon>
+                            <MenuItemText primary={t('menu.press')} />
                         </MenuListItemButton>
                     </MenuItem>
-                    <MenuItem key={t('app.menu.explorer')}>
-                        <MenuListItemButton component={RouterLink} {...{ to: Routes.EXPLORE, isActive: pathname === Routes.EXPLORE }}>
-                            <MenuListIcon><SportsEsportsIcon /></MenuListIcon>
-                            <MenuItemText primary={t('app.menu.explorer')} />
-                            <MenuListIcon iconColor='#FF6EC7'><FiberNewOutlinedIcon fontSize='large' /></MenuListIcon>
+                    <MenuItem key={t('menu.career')}>
+                        <MenuListItemButton component={RouterLink} {...{ to: Routes.CAREER, isActive: pathname === Routes.CAREER }}>
+                            <MenuListIcon><CodeRoundedIcon /></MenuListIcon>
+                            <MenuItemText primary={t('menu.career')} />
                         </MenuListItemButton>
                     </MenuItem>
                 </MenuList>
