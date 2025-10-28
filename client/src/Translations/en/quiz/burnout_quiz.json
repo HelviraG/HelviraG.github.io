@@ -1,0 +1,92 @@
+{
+    "quiz": {
+        "subText": "Burnout Assessment",
+        "buttons": {
+            "prev": "Prev",
+            "redo": "Take Quiz Again"
+        },
+        "currentLevel": {
+            "complete": "{{ progress }}% complete",
+            "title": "Current battery level",
+            "caption": "Based on {{ activeStep }} of {{ totalQuestions }} answers" 
+        },
+        "final": {
+            "title": "Your final battery level"
+        },
+        "footer": {
+            "caption": "{{ activeStep }} of {{ totalQuestions }}"
+        },
+        "start": {
+            "caption": "22 questions • 5 minutes"
+        },
+        "question": "Question ({{ questionNumber }})",
+        "questions": {
+            "1": "How often do you feel emotionally drained from your work?",
+            "2": "How often do you feel used up at the end of the workday?",
+            "3": "How often do you feel tired when you get up in the morning and have to face another day at work?",
+            "4": "How often does working with people all day feel like a strain?",
+            "5": "How often do you feel burned out from your work?",
+            "6": "How often do you feel frustrated by your work?",
+            "7": "How often do you feel you're working too hard on your job?",
+            "8": "How often does working directly with people put too much stress on you?",
+            "9": "How often do you feel like you're at the end of your rope?",
+            "10": "How often do you feel you treat some people as if they were impersonal objects?",
+            "11": "How often have you become more callous toward people since you started this job?",
+            "12": "How often do you worry that this job is hardening you emotionally?",
+            "13": "How often do you feel you don't really care what happens to some people you work with?",
+            "14": "How often do you feel people blame you for some of their problems?",
+            "15":  "How often can you easily understand how others feel about things?",
+            "16": "How often do you deal effectively with the problems of others?",
+            "17": "How often do you feel you're positively influencing others' lives through your work?",
+            "18": "How often do you feel very energetic?",
+            "19": "How often can you easily create a relaxed atmosphere with others?",
+            "20": "How often do you feel exhilarated after working closely with others?",
+            "21": "How often have you accomplished many worthwhile things in this job?",
+            "22": "How often do you feel you can deal with problems calmly and effectively in your work?"
+        },
+        "options": {
+            "0": "Never",
+            "1": "A few times a year or less",
+            "2": "Once a month or less",
+            "3": "A few times a month",
+            "4": "Once a week",
+            "5": "A few times a week",
+            "6": "Every day"
+        },
+        "results": {
+            "caption": "About this assessment",
+            "subCaption": "This quiz is based on <0>the Maslach Burnout Inventory</0>. For self-reflection and entertainment. If experiencing serious burnout, consult a mental health professional.",
+            "todo": "What you can do right now:",
+            "full": {
+                "title": "🔋 Fully Charged (100-80%)",
+                "description": "You're that mythical creature who actually brings the charger cable to meetings 'just in case.' Your energy reserves are solid, work feels meaningful, and you're genuinely excited about Monday morning (yes, really). You probably have a color-coded calendar and actually take your lunch breaks.",
+                "advice": "Keep those boundaries sacred. Whatever you're doing—the early gym sessions, the hard no to Sunday emails, the actual vacation time—don't let anyone guilt you into stopping.",
+                "personality": "The Energizer Bunny (but make it sustainable)"
+            },
+            "optimal": {
+                "title": "🔋 Running Smooth (79-60%)",
+                "description": "You're doing well, but you've started calculating how many hours until the weekend on Tuesday afternoon. Work is still engaging and you care about what you do, but you're also strategic about saying 'let me check my bandwidth' instead of automatic yeses.",
+                "advice": "This is the sweet spot, but it's also where people get complacent. Schedule that PTO now before Q4 gets crazy. Build in buffer time between big projects.",
+                "personality": "The Pragmatic Professional"
+            },
+            "low": {
+                "title": "🪫 Low Power Mode (59-40%)",
+                "description": "Your Slack status is permanently set to 'Focus Time' but you're actually just staring at the wall. Every meeting feels like it could have been an email. You reply 'sounds good' to messages you didn't fully read. Your coffee consumption has doubled but effectiveness has halved.",
+                "advice": "Yellow alert territory. Time to have that conversation with your manager about workload. Take that mental health day you've been postponing. Delete at least three things from your to-do list.",
+                "personality": "The Zombie Professional"
+            },
+            "critical": {
+                "title": "🪫 Critical Warning (39-20%)",
+                "description": "You're that phone that dies at 15% even though it claims higher. Your 'out of office' message is basically a cry for help with professional language. The phrase 'circle back' makes you irrationally angry. Running on spite, expired cold brew, and vague hope.",
+                "advice": "This is serious. Take time off—real time off. Talk to HR, your manager, or a professional about burnout. Something has to change: workload, role, boundaries, or environment.",
+                "personality": "The Walking Notification"
+            },
+            "emergency": {
+                "title": "⚠️ Emergency Shutdown (<20%)",
+                "description": "You're the phone that's been plugged in for an hour but still shows 5%. You've automated your out-of-office to just say 'No.' The idea of opening your laptop makes you physically nauseous. You can't remember the last time you felt... anything?",
+                "advice": "STOP. This is not sustainable. Take medical leave if you can. See a therapist or doctor—burnout has real health consequences. Your worth is not your productivity. Consider whether this role/company/career is actively harming you.",
+                "personality": "The Ghost in the Machine"
+            }
+        }
+    }
+}
