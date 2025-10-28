@@ -317,6 +317,8 @@
             }
           },
           "result": {
+            "all": "All the results",
+            "title": "Pick Up Your Lane!",
             "types": {
               "citizen": "Shelter Citizen",
               "paladin": "Brotherhood of Steel",

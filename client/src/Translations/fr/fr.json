@@ -320,6 +320,8 @@
             }
           },
           "result": {
+            "all": "Tous les résultats",
+            "title": "Choisissez votre catégorie!",
             "types": {
               "citizen": "Habitant de l'Abri",
               "paladin": "Confrérie de l'Acier",
