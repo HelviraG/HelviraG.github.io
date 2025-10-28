@@ -10,7 +10,7 @@ export const DashboardWrapper = styled(Box)(({ theme }) => ({
     flex: 1,
     overflowY: 'auto',
 
-    [theme.breakpoints.down(800)]: {
+    [theme.breakpoints.down(1050)]: {
         flexDirection: 'column',
         justifyContent: 'initial',
         flex: 'inherit'
