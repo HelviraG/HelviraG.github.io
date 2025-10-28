@@ -9,9 +9,9 @@ import { ExplorerList } from "./Explorer/ExplorerList";
 import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 
 export const Explorer = ({ isTablet }: { isTablet: boolean }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
 
-  useDocumentTitle(`Helvira Goma | 🕹️ ${t("app.menu.explorer")}`);
+  useDocumentTitle(`Helvira Goma | 🕹️ ${t("menu.explorer")}`);
 
   return (
     <>
@@ -19,8 +19,8 @@ export const Explorer = ({ isTablet }: { isTablet: boolean }) => {
         <Mobile>
           <HeroTitle
             imgUrl={Covers.EXPLORER}
-            quote={t("app.quotes.game_title")}
-            title={t("app.explore.subtitle")}
+            quote={t("quotes.game_title")}
+            title={t("translation:app.explore.subtitle")}
             titleColor="error"
           />
           <ExplorerList />
@@ -30,8 +30,8 @@ export const Explorer = ({ isTablet }: { isTablet: boolean }) => {
         <Desktop>
           <HeroTitle
             imgUrl={Covers.EXPLORER}
-            quote={t("app.quotes.game_title")}
-            title={t("app.explore.subtitle")}
+            quote={t("quotes.game_title")}
+            title={t("translation:app.explore.subtitle")}
             titleColor="error"
           />
           <ExplorerList />
