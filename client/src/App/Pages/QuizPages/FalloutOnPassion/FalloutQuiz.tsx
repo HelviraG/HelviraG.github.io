@@ -7,10 +7,10 @@ import { QuizStart } from "./QuizPage/QuizStart";
 import { Box } from "@mui/material";
 
 export const FalloutQuiz = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const dispatch = useDispatch();
   
-  useDocumentTitle(`Helvira Goma | 💓 ${t("app.menu.passion")}`);
+  useDocumentTitle(`Helvira Goma | 💓 ${t("menu.passion")}`);
 
   useEffect(() => {
     dispatch(getPassionField());
