@@ -2,13 +2,13 @@
   "conferences": [
     {
       "cover": " https://i.ibb.co/JwKPHCmC/Oops-I-burnt-out-again-3.png",
-      "title": "Oops! I Burnt Out Again",
+      "title": "Oops! I Burned Out Again",
       "lang": "EN",
       "events": [
         {
           "year": "2025",
           "day": "14",
-          "month": "t('app.general.month.october')",
+          "month": "october",
           "event": "JavaCro",
           "place": "Island of St. Andrew",
           "location": "Rovinj, Croatia",
@@ -29,7 +29,7 @@
          {
           "year": "2025",
           "day": "14",
-          "month": "t('app.general.month.october')",
+          "month": "october",
           "event": "JavaCro",
           "place": "Island of St. Andrew",
           "location": "Rovinj, Croatia",
@@ -43,7 +43,7 @@
         {
           "year": "2025",
           "day": "18",
-          "month": "t('app.general.month.september')",
+          "month": "september",
           "event": "API Platform Conference",
           "place": "Euratechnologies Lille",
           "location": "Lille, France",
@@ -64,7 +64,7 @@
         {
           "year": "2025",
           "day": "21",
-          "month": "t('app.general.month.march')",
+          "month": "march",
           "event": "AppDev Con",
           "place": "Pathe Amsterdam Noord",
           "location": "Amsterdam, Netherlands",
@@ -79,7 +79,7 @@
         {
           "year": "2024",
           "day": "26",
-          "month": "t('app.general.month.october')",
+          "month": "october",
           "event": "PHPCon Poland",
           "place": "Stok Hotel",
           "location": "Wisła, Poland",
@@ -94,7 +94,7 @@
         {
           "year": "2024",
           "day": "18",
-          "month": "t('app.general.month.october')",
+          "month": "october",
           "event": "DevFest Hamburg",
           "place": "Sparkasse Innovation Hub",
           "location": "Hamburg, Germany",
@@ -115,7 +115,7 @@
         {
           "year": "2024",
           "day": "12",
-          "month": "t('app.general.month.october')",
+          "month": "october",
           "event": "Method Conference",
           "place": "efactory",
           "location": "Springfield, MO",
@@ -130,7 +130,7 @@
         {
           "year": "2024",
           "day": "14",
-          "month": "t('app.general.month.may')",
+          "month": "may",
           "event": "JCON Europe",
           "place": "Cinedom Multiplex Cinema",
           "location": "Köln, Germany",
@@ -152,7 +152,7 @@
         {
           "year": "2024",
           "day": "06",
-          "month": "t('app.general.month.june')",
+          "month": "june",
           "event": "AlpesCraft",
           "place": "Alpexpo",
           "location": "Grenoble, France",
@@ -173,7 +173,7 @@
         {
           "year": "2023",
           "day": "31",
-          "month": "t('app.general.month.october')",
+          "month": "october",
           "event": "Asynconf",
           "place": "Terrasse Discovery",
           "location": "Paris, France",
@@ -194,7 +194,7 @@
         {
           "year": "2023",
           "day": "20",
-          "month": "t('app.general.month.october')",
+          "month": "october",
           "event": "DevFest Nantes",
           "place": "Cité des Congrès",
           "location": "Nantes, France",
@@ -208,7 +208,7 @@
         {
           "year": "2023",
           "day": "20",
-          "month": "t('app.general.month.april')",
+          "month": "april",
           "event": "NantesJS",
           "place": "SNCF Connect & Tech",
           "location": "Nantes, France",
@@ -228,7 +228,7 @@
         {
           "year": "2023",
           "day": "31",
-          "month": "t('app.general.month.may')",
+          "month": "may",
           "event": "Web2Day",
           "place": "Stereolux 4",
           "location": "Nantes, France",
@@ -248,7 +248,7 @@
         {
           "year": "2023",
           "day": "26",
-          "month": "t('app.general.month.may')",
+          "month": "may",
           "event": "DevFest Lille",
           "place": "Grand Palais",
           "location": "Lille, France",
@@ -262,7 +262,7 @@
         {
           "year": "2023",
           "day": "02",
-          "month": "t('app.general.month.february')",
+          "month": "february",
           "event": "Very Tech Trip",
           "place": "Cité des Sciences et de l'Industrie",
           "location": "Paris, France",
@@ -275,7 +275,7 @@
         {
           "year": "2023",
           "day": "19",
-          "month": "t('app.general.month.january')",
+          "month": "january",
           "event": "Touraine Tech",
           "place": "École Polytech Tours",
           "location": "Tours, France",
@@ -289,7 +289,7 @@
         {
           "year": "2022",
           "day": "15",
-          "month": "t('app.general.month.december')",
+          "month": "december",
           "event": "Agile Tour Rennes",
           "place": "Couvent des Jacobins",
           "location": "Rennes, France",
@@ -302,7 +302,7 @@
         {
           "year": "2022",
           "day": "17",
-          "month": "t('app.general.month.november')",
+          "month": "november",
           "event": "Codeurs en Seine",
           "place": "Kindarena",
           "location": "Rouen, France",
