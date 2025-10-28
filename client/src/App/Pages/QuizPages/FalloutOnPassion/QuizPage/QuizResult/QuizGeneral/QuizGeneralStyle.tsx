@@ -178,7 +178,6 @@ export const DashboardContentInner = styled(Box)(({ theme }) => ({
 
     [theme.breakpoints.down(585)]: {
         padding: '1em', 
-        top: '41%',
         width: '90%'
     }
 }));
