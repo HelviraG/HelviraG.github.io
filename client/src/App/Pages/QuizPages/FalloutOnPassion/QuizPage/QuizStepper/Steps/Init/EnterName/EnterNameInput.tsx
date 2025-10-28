@@ -27,7 +27,7 @@ export const EnterNameTextInput = ({
   hasError,
   setHasError,
 }: EnterNameInputProps) => {
-  const { t } = useTranslation('translation');
+  const { t } = useTranslation('falloutQuiz');
 
   // controlled values for the 10 inputs
   const [values, setValues] = useState<string[]>(() => Array(10).fill(''));
@@ -125,7 +125,7 @@ export const EnterNameTextInput = ({
     }
   };
 
-  const handleCharacterError = () => (hasError ? t('app.explore.fallout_on_passion.quiz.indicators.error_tip') : null);
+  const handleCharacterError = () => (hasError ? t('quiz.indicators.error_tip') : null);
 
   return (
     <Box>
