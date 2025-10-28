@@ -9,9 +9,9 @@ import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 import { PressList } from "./Press/PressList";
 
 export const Press = ({ isTablet }: { isTablet: boolean }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
 
-  useDocumentTitle(`Helvira Goma | 🗞️ ${t("app.menu.press")}`);
+  useDocumentTitle(`Helvira Goma | 🗞️ ${t("menu.press")}`);
 
   return (
     <>
@@ -19,8 +19,8 @@ export const Press = ({ isTablet }: { isTablet: boolean }) => {
         <Mobile>
           <HeroTitle
             imgUrl={Covers.PRESS}
-            quote={t("app.quotes.press_title")}
-            title={t("app.press.title")}
+            quote={t("quotes.press_title")}
+            title={t("translation:app.press.title")}
             titleColor="primary"
           />
           <PressList />
@@ -30,8 +30,8 @@ export const Press = ({ isTablet }: { isTablet: boolean }) => {
         <Desktop>
           <HeroTitle
             imgUrl={Covers.PRESS}
-            quote={t("app.quotes.press_title")}
-            title={t("app.press.title")}
+            quote={t("quotes.press_title")}
+            title={t("translation:app.press.title")}
             titleColor="primary"
           />
           <PressList />
