@@ -23,7 +23,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 export const getFreshnessLevel = (percentage: number) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     if (percentage >= 87.5) return { label: t('app.explore.skills.quiz.freshnessLevel.ultraFresh'), icon: WhatshotIcon, color: "#10b981" };
     if (percentage >= 70) return { label: t('app.explore.skills.quiz.freshnessLevel.fresh'), icon: TrendingUpIcon, color: "#14b8a6" };
     if (percentage >= 50) return { label: t('app.explore.skills.quiz.freshnessLevel.stable'), icon: RemoveIcon, color: "#f59e0b" };
@@ -35,7 +35,7 @@ export const QuizSteps = () => {
     const params = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
 
     const currentStep = params.id;
     const [activeStep, setActiveStep] = useState(
@@ -51,7 +51,6 @@ export const QuizSteps = () => {
     const hasAnswer = currentAnswers.length > 0;
 
     const getCurrentFreshnessLevel = (percentage: number) => {
-        const { t } = useTranslation();
         if (percentage >= 87.5) return { label: t('app.explore.skills.quiz.freshnessLevel.ultraFresh'), icon: WhatshotIcon, color: "#10b981" };
         if (percentage >= 70) return { label: t('app.explore.skills.quiz.freshnessLevel.fresh'), icon: TrendingUpIcon, color: "#14b8a6" };
         if (percentage >= 50) return { label: t('app.explore.skills.quiz.freshnessLevel.stable'), icon: RemoveIcon, color: "#f59e0b" };
