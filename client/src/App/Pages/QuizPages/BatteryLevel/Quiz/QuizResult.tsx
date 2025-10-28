@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 
 export const QuizResult = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const answers = useSelector(listBurnoutAnswers);
