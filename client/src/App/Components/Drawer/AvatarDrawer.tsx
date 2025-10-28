@@ -35,7 +35,7 @@ export const AvatarDrawer = ({
   expandAvatar,
   handleCloseAvatar,
 }: AvatarDrawerProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const drawerRef = useRef(null);
 
   useClickOutside(drawerRef, handleCloseAvatar);
@@ -73,11 +73,12 @@ export const AvatarDrawer = ({
           <CardWrapper>
             <CardContentBox>
               <CardContentTypography variant="h5">
-                {t("app.menu.profile.about")}
+                {t("menu.profile.about")}
               </CardContentTypography>
               <CardContentAboutTypography>
                 <Trans
-                  i18nKey="app.menu.profile.about_text"
+                  i18nKey="menu.profile.about_text"
+                  ns="common"
                   components={[
                     <CardContentAboutLink href="https://motivher.fr" />,
                   ]}
