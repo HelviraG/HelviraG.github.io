@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next"
 import { QuizGeneral } from "./QuizResult/QuizGeneral";
 
 export const QuizLandScape = ({ isTablet }: { isTablet: boolean }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
 
-    useDocumentTitle(`Helvira Goma | 💓 ${t("app.menu.passion")}`);
+    useDocumentTitle(`Helvira Goma | 💓 ${t("menu.passion")}`);
 
     return (
        <>
