@@ -10,7 +10,7 @@ import { QuizLayout } from "../../../Layout/QuizLayout";
 import { useTranslation } from "react-i18next";
 
 export const InitStep = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
   const [openSettings, setOpenSettings] = useState<boolean>(false);
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const popperRef = useRef(null);
@@ -26,10 +26,10 @@ export const InitStep = () => {
     setOpenSettings(true);
   };
 
-  useDocumentTitle(`Helvira Goma | 💓 ${i18n.t("app.menu.passion")}`);
+  useDocumentTitle(`Helvira Goma | 💓 ${i18n.t("menu.passion")}`);
 
   return (
-    <QuizLayout title={`🔥​ ${t("app.explore.fallout_on_passion.title")}`}buttons={<></>} withFooter={false}>
+    <QuizLayout title={`🔥​ ${t("translation:app.explore.fallout_on_passion.title")}`}buttons={<></>} withFooter={false}>
       <Box 
         sx={(theme) => ({ 
           position: 'relative', 
