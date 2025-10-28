@@ -1,0 +1,136 @@
+{
+    "actions": {
+        "play": "Play",
+        "read": "Lire",
+        "read_more": "Lire",
+        "resources": "Ressources",
+        "send": "Envoyer",
+        "start": "Go",
+        "watch": "Voir",
+        "params": "Paramètres",
+        "start_again": "Recommencer",
+        "resume": "Reprendre",
+        "next": "Suivant",
+        "back": "Précédent",
+        "check": "Résultats"
+    },
+    "buy_coffee": {
+        "title": "☕ Vous aimez ce que je fais et souhaitez me soutenir ainsi que mon travail 😁"
+    },
+    "hello": "Bonjour,",
+    "month": {
+        "january": "Janvier",
+        "february": "Février",
+        "march": "Mars",
+        "april": "Avril",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juillet",
+        "august": "Août",
+        "september": "Septembre",
+        "october": "Octobre",
+        "november": "Novembre",
+        "december": "Decembre"
+    },
+    "welcome": {
+        "p1": "Je suis <bold>Helvira Goma</bold>, <bold>fullstack developer</bold> en région parisienne.",
+        "p2": "Lorsque je ne <bold>transforme</bold> ✨ pas une idée en un projet fonctionnel et intéractif - comme ce site - je donne des <bold>conférences</bold> et participe à divers <bold>événements tech</bold>.",
+        "p3": "Ici, mon <bold>univers!</bold> 🪐",
+        "title": "Bienvenue"
+    },
+    "menu": {
+      "back_website": "Vers le site",
+      "blog": "Blog",
+      "career": "Parcours",
+      "conferences": "Conférences",
+      "contact": "Me contacter",
+      "home": "Hello World !",
+      "live": "Lives",
+      "mobile_text": " < Hello World ! /> ",
+      "more": "Découvrir",
+      "press": "Presse",
+      "universe": "Univers",
+      "explorer": "Explorer",
+      "passion": "Fallout On Passion",
+      "passion_quiz": {
+        "start": "Bienvenue",
+        "test": "Vers le test",
+        "result": "Voir la fresque"
+      },
+      "profile": {
+        "about": "À propos",
+        "about_text": "Helvira Goma est développeuse full-stack depuis plus de six ans, passionnée par la création de logiciels à la fois élégants et utiles. \n\nLorsqu’elle ne code pas, elle monte sur scène pour parler de tech, de créativité et du côté humain de l’ingénierie — ou échange avec d’autres à travers <0>Motiv'Her</0>, sa communauté en ligne qui encourage davantage de femmes à découvrir et à s’épanouir dans le monde de la tech. \n\nQu’elle écrive du code ou prenne la parole devant un public, Helvira aborde chaque projet avec la même curiosité et la même bienveillance — cherchant toujours à inspirer, une ligne de code (ou une conférence) à la fois."
+      },
+      "battery": "Votre Pourcentage de Batterie",
+      "skills": "Votre Date d'Expiration"
+    },
+    "quotes": {
+      "career": "It's not the destination, it's the journey | Ralph Waldo Emerson",
+      "confs": "Speakers who talk about what life has taught them never fail to keep the attention of their listeners | Dale Carnegie",
+      "lives": "A good laugh makes any interview or any conversation, so much better | Barbara Walters",
+      "press_title": "I don't know if I'll ever get used to hearing my name being mentioned alongside all these other legendary artists that have come before me | Gretchen Wilson",
+      "game_title": "Play is training for the unexpected | Marc Bekoff"
+    },
+    "scroll": {
+      "home": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "🖥️ FullStack Developer",
+        "third_section": "✌️ Welcome here !",
+        "last_section": "C'est tout pour l'instant"
+      },
+      "confs": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "🎤 Talk!",
+        "third_section": "🎫 Les conférences",
+        "last_section": "Merci d'avoir scrollé!"
+      },
+      "lives": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "📼 Live!",
+        "third_section": "🎞️ Les lives",
+        "last_section": "Vous avez vu tous les lives"
+      },
+      "press": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "📰 Read!",
+        "third_section": "📃 Les articles",
+        "last_section": "Vous avez parcouru la page"
+      },
+      "contact": {
+        "first_section": " < Hello World ! /> ",
+        "second_section": "☎️ Chat!",
+        "third_section": "🗨️ Échangeons!",
+        "last_section": "La fin"
+      },
+      "explore": {
+        "first_section": " < Playground ! /> ",
+        "second_section": "🎮 Game On!",
+        "third_section": "🕹️ Bac à Sable",
+        "last_section": "C'est tout pour l'instant"
+      },
+      "passion": {
+        "first_section": " < Fallout On Passion🔥 ! /> ",
+        "second_section": "🧩 Le Quiz",
+        "third_section": "🧩 Le Quiz",
+        "last_section": "C'est tout pour l'instant"
+      },
+      "career": {
+        "first_section": " < Tech Career ! /> ",
+        "second_section": "🔖​ The CV Tech",
+        "third_section": "🔖​ The CV Tech",
+        "last_section": "Vous avez parcouru toute la page"
+      },
+      "battery": {
+        "first_section": " < Niveau de Batterie🔋​ ! /> ",
+        "second_section": "🧩 Le Quiz",
+        "third_section": "🧩 Le Quiz",
+        "last_section": "C'est tout pour l'instant"
+      },
+      "skills": {
+        "first_section": " < Expiration des Compétences​ ! /> ",
+        "second_section": "🧩 Le Quiz",
+        "third_section": "🧩 Le Quiz",
+        "last_section": "C'est tout pour l'instant"
+      }
+    }
+}
