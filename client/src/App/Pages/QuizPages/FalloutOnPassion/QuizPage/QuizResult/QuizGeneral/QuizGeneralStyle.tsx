@@ -11,7 +11,8 @@ export const DashboardWrapper = styled(Box)(({ theme }) => ({
     overflowY: 'auto',
 
     [theme.breakpoints.down(800)]: {
-        flexDirection: 'column'
+        flexDirection: 'column',
+        justifyContent: 'initial',
     },
 }));
 

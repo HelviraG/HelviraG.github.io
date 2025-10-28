@@ -38,17 +38,13 @@ export const GeneralDashboard = () => {
             position: 'relative', 
            
             [theme.breakpoints.down(585)]: {
-                height: '850px', 
+                height: '600px', 
             }
         })}>
             <Box 
                 sx={(theme) => ({ 
                     display: 'flex', 
-                    flex: 1, 
-           
-                    [theme.breakpoints.down(585)]: {
-                        height: '850px', 
-                    }
+                    flex: 1
                 })}
             >
                 <CardMedia component="img" image="https://i.ibb.co/zhzjcGG7/thumb-1920-830262.jpg" sx={{ filter: 'saturate(1)' }} />
