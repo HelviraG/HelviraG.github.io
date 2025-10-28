@@ -17,7 +17,7 @@ export const Navigators = ({
   handleNext,
   disabled,
 }: NavigatorsProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   
   return (
     <>
@@ -42,7 +42,7 @@ export const Navigators = ({
           disabled={disabled}
         >
           <KeyboardDoubleArrowLeftIcon />
-          {t('app.general.actions.back')}
+          {t('actions.back')}
         </Button>
       ) : (
           <Button 
@@ -64,7 +64,7 @@ export const Navigators = ({
             onClick={handleNext}
             disabled={disabled}
           >
-            {t('app.general.actions.next')}
+            {t('actions.next')}
             <KeyboardDoubleArrowRightIcon />
           </Button>
       )}
