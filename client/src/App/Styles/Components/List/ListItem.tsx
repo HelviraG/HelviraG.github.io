@@ -80,7 +80,7 @@ export const CardWrapper = styled(Card, {
     width: "100%",
   },
 
-  [theme.breakpoints.between("lg", 1356)]: {
+  [theme.breakpoints.up("lg")]: {
     "&:nth-of-type(even)": {
       marginRight: "initial",
     },
