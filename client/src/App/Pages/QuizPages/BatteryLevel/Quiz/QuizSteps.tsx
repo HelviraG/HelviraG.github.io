@@ -29,7 +29,7 @@ export const getBatteryColor = (level: number) => {
 export const QuizSteps = () => {
     const params = useParams();
     const dispatch = useDispatch();
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     const navigate = useNavigate();
 
     const currentStep = params.id;
