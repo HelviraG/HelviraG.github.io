@@ -13,6 +13,7 @@ export const DashboardWrapper = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down(800)]: {
         flexDirection: 'column',
         justifyContent: 'initial',
+        flex: 'inherit'
     },
 }));
 
