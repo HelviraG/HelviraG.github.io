@@ -20,7 +20,7 @@ import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 
 export const LinksPanel = ({ value }: { value: number }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
   const pathname = useLocation().pathname;
 
   return (
@@ -28,7 +28,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
       <Divider color={"warning"} textAlign={"right"}>
         <TabsPanelChip
           icon={<WrongLocationIcon fontSize={"small"} />}
-          label={t("app.explore.fallout_on_passion.tabs.exit.title")}
+          label={t("translation:app.explore.fallout_on_passion.tabs.exit.title")}
         />
       </Divider>
       <Box
@@ -42,7 +42,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
           <ListItemButton
             sx={{ "&:hover": { backgroundColor: "transparent" } }}
           >
-            <MenuItemText isFirstItem primary={t("app.menu.passion")} />
+            <MenuItemText isFirstItem primary={t("menu.passion")} />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -54,7 +54,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <ReplayIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("app.menu.passion_quiz.start")} />
+            <MenuItemText primary={t("menu.passion_quiz.start")} />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -66,7 +66,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <PlaylistAddCheckIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("app.menu.passion_quiz.test")} />
+            <MenuItemText primary={t("menu.passion_quiz.test")} />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -81,14 +81,14 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <EmojiEventsIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("app.menu.passion_quiz.result")} />
+            <MenuItemText primary={t("menu.passion_quiz.result")} />
           </ListItemButton>
         </TabsListItem>
         <TabsListItem disablePadding>
           <ListItemButton
             sx={{ "&:hover": { backgroundColor: "transparent" } }}
           >
-            <MenuItemText isFirstItem primary={t("app.menu.universe")} />
+            <MenuItemText isFirstItem primary={t("menu.universe")} />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -100,7 +100,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <WavingHandRoundedIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("app.menu.back_website")} />
+            <MenuItemText primary={t("menu.back_website")} />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -112,7 +112,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <VolumeUpRoundedIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("app.menu.conferences")} />
+            <MenuItemText primary={t("menu.conferences")} />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -124,7 +124,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <SportsEsportsIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("app.menu.explorer")} />
+            <MenuItemText primary={t("menu.explorer")} />
           </ListItemButton>
         </TabsListItem>
       </Box>
