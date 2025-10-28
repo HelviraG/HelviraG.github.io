@@ -15,7 +15,7 @@ import {
 } from "./QuizGeneral/QuizGeneralStyle";
 
 export const QuizGeneral = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('falloutQuiz');
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedActivity, setSelectedActivity] = useState<string | null>(searchParams.get("category"));
@@ -38,7 +38,7 @@ export const QuizGeneral = () => {
   }, [searchParams]);
 
   return (
-    <QuizLayout buttons={<></>} withFooter={false}>
+    <QuizLayout buttons={<></>} withFooter={false} title=''>
       <DashboardWrapper>
         <DashboardLeftWrapperBox selectedActivity={selectedActivity}>
           {selectedActivity && (
@@ -51,10 +51,10 @@ export const QuizGeneral = () => {
         <DashboardRightWrapperBox>
           <DashboardRightBox>
             <Divider textAlign={"right"} variant={"fullWidth"}>
-              <Chip label={t('app.explore.fallout_on_passion.quiz.result.all')} />
+              <Chip label={t('quiz.result.all')} />
             </Divider>
             <Box sx={{ marginTop: 2 }}>
-              <Typography variant="h3" sx={{ fontWeight: 300 }}>{t('app.explore.fallout_on_passion.quiz.result.title')}</Typography>
+              <Typography variant="h3" sx={{ fontWeight: 300 }}>{t('quiz.result.title')}</Typography>
             </Box>
             <DashboardButtonsWrapper>
               {['coding', 'gaming', 'design', 'data'].map((activity: string) => (
