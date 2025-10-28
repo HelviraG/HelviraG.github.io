@@ -60,7 +60,7 @@ function stripQuotes(str: string) {
 }
 
 export const QuizPersonal = ({ cat }: { cat: string }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
   const isMobile = useMediaQuery("(max-width: 767px)");
   const dispatch = useDispatch();
   const answers = useSelector(listAllAnswers);
