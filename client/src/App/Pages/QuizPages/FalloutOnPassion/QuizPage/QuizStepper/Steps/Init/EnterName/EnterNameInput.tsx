@@ -27,7 +27,7 @@ export const EnterNameTextInput = ({
   hasError,
   setHasError,
 }: EnterNameInputProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
 
   // controlled values for the 10 inputs
   const [values, setValues] = useState<string[]>(() => Array(10).fill(''));
