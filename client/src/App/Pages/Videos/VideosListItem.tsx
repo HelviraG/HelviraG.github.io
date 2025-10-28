@@ -30,7 +30,7 @@ export const VideosListItem = ({
   link,
   value,
 }: ILive & LiveItemProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [showVideo, setShowVideo] = useState(false);
   const hasTag = tags.filter((tag) => tag === value).length > 0;
   const [isVisible, setIsVisible] = useState(false);
@@ -105,7 +105,7 @@ export const VideosListItem = ({
             onClick={handleShowVideo}
             startIcon={<PlayCircleuOtlineRoundedIcon />}
           >
-            {t("app.general.actions.watch")}
+            {t("actions.watch")}
           </CardContentButton>
         </CardContentAction>
       </CardContentWrapper>
