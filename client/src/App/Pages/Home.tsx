@@ -6,9 +6,9 @@ import { Mobile } from "../Layout/Mobile/Mobile";
 import { MainSection } from "./Home/MainSection";
 
 export const Home = ({ isTablet }: { isTablet: boolean }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
-  useDocumentTitle(`Helvira Goma | 🖲️ ${t("app.menu.home")}`);
+  useDocumentTitle(`Helvira Goma | 🖲️ ${t("menu.home")}`);
 
   return (
     <>
