@@ -168,7 +168,7 @@ export const QuizStartLayout = ({
                             })}
                         >
                             <BurnoutQuizOutlinedButton variant="outlined" onClick={() => navigate(startRoute)}>{t('actions.start')}</BurnoutQuizOutlinedButton>
-                            <BurnoutQuizContainedButton variant="contained" onClick={() => navigate(Routes.EXPLORE)}>{t('actions.back')}</BurnoutQuizContainedButton>
+                            <BurnoutQuizContainedButton variant="contained" onClick={() => navigate(Routes.EXPLORE)}>{t('actions.return')}</BurnoutQuizContainedButton>
                         </Box>
                     </Box>
                 </Box>
