@@ -43,6 +43,7 @@
     },
     "menu": {
       "back_website": "Vers le site",
+      "blog": "Blog",
       "career": "Parcours",
       "conferences": "Conférences",
       "contact": "Me contacter",
@@ -88,7 +89,7 @@
       }
     },
     "career": {
-      "title": "Tech!",
+      "title": "The Path",
       "subtitle": "Voyage de dev",
       "description": "Ici, vous pouvez suivre mes pas dans la tech",
       "type": {
@@ -141,7 +142,7 @@
       }
     },
     "confs": {
-      "title": "Speak!",
+      "title": "The Talks",
       "subtitle": "J'y ai pris le micro",
       "description": "Retrouvez ici l'ensemble des conférences à (re)voir !"
     },
@@ -182,7 +183,7 @@
     },
     "explore": {
       "title": "Playground",
-      "subtitle": "Play!",
+      "subtitle": "The Hub",
       "description": "Ici, mon terrain de jeu. Enjoy :)!",
       "fallout_on_passion": {
         "link_article": "https://selfdeterminationtheory.org/SDT/documents/2003_VallerancBlanchardMageauKoesnterRatelleLeonardGagneMacolais_JPSP.pdf",
@@ -612,7 +613,7 @@
       }
     },
     "lives": {
-      "title": "Live!",
+      "title": "The Lives",
       "subtitle": "Vu sur YouTube",
       "description": "Retrouvez ici l'ensemble des lives à (re)voir !",
       "tags": {
@@ -624,7 +625,7 @@
       }
     },
     "press": {
-      "title": "Read!",
+      "title": "The Press",
       "subtitle": "J'y suis mentionnée",
       "description": "Retrouvez ici l'ensemble des articles me concernant",
       "tags": {
@@ -633,6 +634,11 @@
         "retraining": "reconversion",
         "solidarity": "solidarité"
       }
+    },
+    "blog": {
+      "title": "The Blog",
+      "subtitle": "Mes écrits",
+      "description": "Retrouvez ici l'ensemble de mes articles de blog !"
     },
     "quotes": {
       "career": "It's not the destination, it's the journey | Ralph Waldo Emerson",

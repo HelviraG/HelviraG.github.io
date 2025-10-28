@@ -45,6 +45,7 @@
     },
     "menu": {
       "back_website": "Back Home",
+      "blog": "Blog",
       "career": "Career",
       "conferences": "Conferences",
       "contact": "Have a talk",
@@ -90,7 +91,7 @@
       }
     },
     "career": {
-      "title": "Tech!",
+      "title": "The Path",
       "subtitle": "Developer Journey",
       "description": "Here, you can follow my tracks on my tech journey",
       "type": {
@@ -143,7 +144,7 @@
       }
     },
     "confs": {
-      "title": "Speak!",
+      "title": "The Talks",
       "subtitle": "Talked these talks",
       "description": "You can find here all my conferences!"
     },
@@ -179,7 +180,7 @@
     },
     "explore": {
       "title": "Playground",
-      "subtitle": "Play!",
+      "subtitle": "The Hub",
       "description": "THE playground. Enjoy :)!",
       "fallout_on_passion": {
         "link_article": "https://selfdeterminationtheory.org/SDT/documents/2003_VallerancBlanchardMageauKoesnterRatelleLeonardGagneMacolais_JPSP.pdf",
@@ -609,7 +610,7 @@
       }
     },
     "lives": {
-      "title": "Live!",
+      "title": "The Lives",
       "subtitle": "Seen on YouTube",
       "description": "You can find here all the lives I was on !",
       "tags": {
@@ -621,7 +622,7 @@
       }
     },
     "press": {
-      "title": "Read!",
+      "title": "The Press",
       "subtitle": "All to read about",
       "description": "You can find here all the article I was mentioned on/wrote !",
       "tags": {
@@ -630,6 +631,11 @@
         "retraining": "retraining",
         "solidarity": "solidarity"
       }
+    },
+    "blog": {
+      "title": "The Blog",
+      "subtitle": "Articles to read",
+      "description": "You can find here all my blog articles!"
     },
     "quotes": {
       "career": "It's not the destination, it's the journey | Ralph Waldo Emerson",
