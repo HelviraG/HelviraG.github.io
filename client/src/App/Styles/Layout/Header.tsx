@@ -63,5 +63,7 @@ export const AppHeader = styled(Box, {
   position: 'fixed',
   width: '100%',
   top: 0,
-  zIndex: 100000000
+  zIndex: 100000000,
+
+  transition: 'all .6s linear',
 }));
