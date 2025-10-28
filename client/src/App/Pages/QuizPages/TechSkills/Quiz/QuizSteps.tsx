@@ -23,19 +23,19 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 export const getFreshnessLevel = (percentage: number) => {
-    const { t } = useTranslation('translation');
-    if (percentage >= 87.5) return { label: t('app.explore.skills.quiz.freshnessLevel.ultraFresh'), icon: WhatshotIcon, color: "#10b981" };
-    if (percentage >= 70) return { label: t('app.explore.skills.quiz.freshnessLevel.fresh'), icon: TrendingUpIcon, color: "#14b8a6" };
-    if (percentage >= 50) return { label: t('app.explore.skills.quiz.freshnessLevel.stable'), icon: RemoveIcon, color: "#f59e0b" };
-    if (percentage >= 30) return { label: t('app.explore.skills.quiz.freshnessLevel.aging'), icon: TrendingDownIcon, color: "#f97316" };
-    return { label: t('app.explore.skills.quiz.freshnessLevel.expired'), icon: TrendingDownIcon, color: "#ef4444" };
+    const { t } = useTranslation('techSkillsQuiz');
+    if (percentage >= 87.5) return { label: t('quiz.freshnessLevel.ultraFresh'), icon: WhatshotIcon, color: "#10b981" };
+    if (percentage >= 70) return { label: t('quiz.freshnessLevel.fresh'), icon: TrendingUpIcon, color: "#14b8a6" };
+    if (percentage >= 50) return { label: t('quiz.freshnessLevel.stable'), icon: RemoveIcon, color: "#f59e0b" };
+    if (percentage >= 30) return { label: t('quiz.freshnessLevel.aging'), icon: TrendingDownIcon, color: "#f97316" };
+    return { label: t('quiz.freshnessLevel.expired'), icon: TrendingDownIcon, color: "#ef4444" };
 }
 
 export const QuizSteps = () => {
     const params = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation(['translation', 'techSkillsQuiz']);
 
     const currentStep = params.id;
     const [activeStep, setActiveStep] = useState(
@@ -51,11 +51,11 @@ export const QuizSteps = () => {
     const hasAnswer = currentAnswers.length > 0;
 
     const getCurrentFreshnessLevel = (percentage: number) => {
-        if (percentage >= 87.5) return { label: t('app.explore.skills.quiz.freshnessLevel.ultraFresh'), icon: WhatshotIcon, color: "#10b981" };
-        if (percentage >= 70) return { label: t('app.explore.skills.quiz.freshnessLevel.fresh'), icon: TrendingUpIcon, color: "#14b8a6" };
-        if (percentage >= 50) return { label: t('app.explore.skills.quiz.freshnessLevel.stable'), icon: RemoveIcon, color: "#f59e0b" };
-        if (percentage >= 30) return { label: t('app.explore.skills.quiz.freshnessLevel.aging'), icon: TrendingDownIcon, color: "#f97316" };
-        return { label: t('app.explore.skills.quiz.freshnessLevel.expired'), icon: TrendingDownIcon, color: "#ef4444" };
+        if (percentage >= 87.5) return { label: t('techSkillsQuiz:quiz.freshnessLevel.ultraFresh'), icon: WhatshotIcon, color: "#10b981" };
+        if (percentage >= 70) return { label: t('techSkillsQuiz:quiz.freshnessLevel.fresh'), icon: TrendingUpIcon, color: "#14b8a6" };
+        if (percentage >= 50) return { label: t('techSkillsQuiz:quiz.freshnessLevel.stable'), icon: RemoveIcon, color: "#f59e0b" };
+        if (percentage >= 30) return { label: t('techSkillsQuiz:quiz.freshnessLevel.aging'), icon: TrendingDownIcon, color: "#f97316" };
+        return { label: t('techSkillsQuiz:quiz.freshnessLevel.expired'), icon: TrendingDownIcon, color: "#ef4444" };
     }
 
     const currentScore = Object.values(answers).reduce((sum, answer) => sum + answer.answer, 0);
@@ -65,93 +65,93 @@ export const QuizSteps = () => {
 
     const quizQuestions = [
         {
-            question:t('app.explore.skills.quiz.questions.1.q'),
+            question:t('techSkillsQuiz:quiz.questions.1.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.1.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.1.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.1.options.3'), points: 2 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.1.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.1.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.1.options.2'), points: 3 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.1.options.3'), points: 2 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.1.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.2.q'),
+            question: t('techSkillsQuiz:quiz.questions.2.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.2.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.2.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.2.options.3'), points: 2 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.2.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.2.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.2.options.2'), points: 3 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.2.options.3'), points: 2 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.2.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.3.q'),
+            question: t('techSkillsQuiz:quiz.questions.3.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.3.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.3.options.2'), points: 4 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.3.options.3'), points: 3 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.3.options.4'), points: 1 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.3.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.3.options.2'), points: 4 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.3.options.3'), points: 3 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.3.options.4'), points: 1 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.4.q'),
+            question: t('techSkillsQuiz:quiz.questions.4.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.4.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.4.options.2'), points: 4 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.4.options.3'), points: 2 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.4.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.4.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.4.options.2'), points: 4 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.4.options.3'), points: 2 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.4.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.5.q'),
+            question: t('techSkillsQuiz:quiz.questions.5.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.5.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.5.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.5.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.5.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.5.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.5.options.2'), points: 3 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.5.options.3'), points: 1 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.5.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.6.q'),
+            question: t('techSkillsQuiz:quiz.questions.6.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.6.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.6.options.2'), points: 4 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.6.options.3'), points: 2 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.6.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.6.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.6.options.2'), points: 4 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.6.options.3'), points: 2 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.6.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.7.q'),
+            question: t('techSkillsQuiz:quiz.questions.7.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.7.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.7.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.7.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.7.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.7.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.7.options.2'), points: 3 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.7.options.3'), points: 1 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.7.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.8.q'),
+            question: t('techSkillsQuiz:quiz.questions.8.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.8.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.8.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.8.options.3'), points: 2 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.8.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.8.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.8.options.2'), points: 3 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.8.options.3'), points: 2 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.8.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.9.q'),
+            question: t('techSkillsQuiz:quiz.questions.9.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.9.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.9.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.9.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.9.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.9.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.9.options.2'), points: 3 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.9.options.3'), points: 1 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.9.options.4'), points: 0 }
             ]
         },
         {
-            question: t('app.explore.skills.quiz.questions.10.q'),
+            question: t('techSkillsQuiz:quiz.questions.10.q'),
             options: [
-                { id: 1, text: t('app.explore.skills.quiz.questions.10.options.1'), points: 5 },
-                { id: 2, text: t('app.explore.skills.quiz.questions.10.options.2'), points: 3 },
-                { id: 3, text: t('app.explore.skills.quiz.questions.10.options.3'), points: 1 },
-                { id: 4, text: t('app.explore.skills.quiz.questions.10.options.4'), points: 0 }
+                { id: 1, text: t('techSkillsQuiz:quiz.questions.10.options.1'), points: 5 },
+                { id: 2, text: t('techSkillsQuiz:quiz.questions.10.options.2'), points: 3 },
+                { id: 3, text: t('techSkillsQuiz:quiz.questions.10.options.3'), points: 1 },
+                { id: 4, text: t('techSkillsQuiz:quiz.questions.10.options.4'), points: 0 }
             ]
         }
     ];
@@ -210,11 +210,11 @@ export const QuizSteps = () => {
                         sx={{ borderRadius: '99999px' }}
                         onClick={() => handlePrev()}
                     >
-                        {t('app.explore.battery.quiz.buttons.prev')}
+                        {t('techSkillsQuiz:quiz.buttons.prev')}
                     </Button>
                     <Box>
                         <Typography variant="caption">
-                            <Trans i18nKey="app.explore.battery.quiz.footer.caption" values={{ activeStep: activeStep, totalQuestions: quizQuestions.length }} />
+                            <Trans i18nKey="techSkillsQuiz:quiz.footer.caption" values={{ activeStep: activeStep, totalQuestions: quizQuestions.length }} />
                         </Typography>
                     </Box>
                 </Box>
@@ -224,7 +224,7 @@ export const QuizSteps = () => {
                     <Box>
                         <Box>
                             <Typography variant="h6">
-                                <Trans i18nKey="app.explore.battery.quiz.question" values={{ questionNumber: activeStep }} />
+                                <Trans i18nKey="techSkillsQuiz:quiz.question" values={{ questionNumber: activeStep }} />
                             </Typography>
                         </Box>
                          <Box><Typography variant="h5">{quizQuestions[activeStep - 1].question}</Typography></Box>
@@ -277,7 +277,7 @@ export const QuizSteps = () => {
                         <BorderLinearProgress variant="determinate" value={(answers.length / quizQuestions.length) * 100} />
                         <Box sx={{ padding: '0 10px', textAlign: 'right' }}>
                             <Typography variant="caption">
-                                <Trans i18nKey="app.explore.battery.quiz.currentLevel.complete" values={{ progress: Math.round((answers.length / quizQuestions.length) * 100) }} />
+                                <Trans i18nKey="techSkillsQuiz:quiz.currentLevel.complete" values={{ progress: Math.round((answers.length / quizQuestions.length) * 100) }} />
                             </Typography>
                         </Box>
                     </Box>
@@ -294,7 +294,7 @@ export const QuizSteps = () => {
                         })}
                     >
                         <Box sx={{ textAlign: 'center' }}>
-                            <Typography variant="h6">{t('app.explore.skills.quiz.currentFreshness')}</Typography>
+                            <Typography variant="h6">{t('techSkillsQuiz:quiz.currentFreshness')}</Typography>
                         </Box>
                         <Box
                             sx={{
@@ -355,10 +355,10 @@ export const QuizSteps = () => {
                             </Box>
                         </Box>
                         <Box>
-                            {activeStep === 1 && <Typography variant="body2" sx={{ textAlign: 'center' }}>{t('app.explore.skills.quiz.startCaption')}</Typography>}
+                            {activeStep === 1 && <Typography variant="body2" sx={{ textAlign: 'center' }}>{t('techSkillsQuiz:quiz.startCaption')}</Typography>}
                             {activeStep > 1 && (
                                 <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
-                                    <Trans i18nKey="app.explore.battery.quiz.currentLevel.caption" values={{ activeStep: activeStep - 1, totalQuestions: quizQuestions.length }} />
+                                    <Trans i18nKey="techSkillsQuiz:quiz.currentLevel.caption" values={{ activeStep: activeStep - 1, totalQuestions: quizQuestions.length }} />
                                 </Typography>
                             )}
                         </Box>
