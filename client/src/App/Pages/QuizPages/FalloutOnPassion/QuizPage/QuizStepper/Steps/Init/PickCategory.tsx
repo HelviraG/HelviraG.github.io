@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { SyntheticEvent } from "react";
 
 export const PickCategory = ({ handleSelectField }: { handleSelectField: (e: SyntheticEvent, field: string) => void }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
 
     return (
         <>
