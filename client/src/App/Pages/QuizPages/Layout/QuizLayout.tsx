@@ -28,7 +28,7 @@ export const QuizLayout = ({
     isBurnoutQuiz?: boolean;
     isTechSkillsQuiz?: boolean;
 }) => {
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation(['translation', 'techSkillsQuiz']);
     const navigate = useNavigate();
     const { appLang: lang, changeLang: changeLanguage } = useChangeLangage();
     const isTablet = useMediaQuery("(max-width: 800px");
@@ -139,7 +139,7 @@ export const QuizLayout = ({
                                         }
                                     })}
                                 >
-                                    <Typography variant="body2" sx={{ color: '#6b7280' }}>{t('app.explore.skills.quiz.subText')}</Typography>
+                                    <Typography variant="body2" sx={{ color: '#6b7280' }}>{t('techSkillsQuiz:quiz.subText')}</Typography>
                                 </Box>
                             )}
 
