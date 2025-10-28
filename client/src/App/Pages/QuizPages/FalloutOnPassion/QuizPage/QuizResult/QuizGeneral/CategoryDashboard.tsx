@@ -15,7 +15,7 @@ import {
 import { useTranslation } from "react-i18next";
 
 export const CategoryDashboard = ({ cat }: { cat: string }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     const { data } = useListResultQuery({ category: cat });
     const isMobile = useMediaQuery("(max-width: 500px)")
     
