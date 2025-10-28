@@ -8,10 +8,10 @@ import { QuizSteps } from "./Quiz/QuizSteps";
 import { listAnswers } from "@/Redux/Slices/TechSkillsQuizSlice";
 
 export const TechSkillsQuizSteps = ({ isTablet }: { isTablet: boolean }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     const dispatch = useDispatch();
 
-    useDocumentTitle(`Helvira Goma | 🧰​ ${t("app.menu.skills")}`);
+    useDocumentTitle(`Helvira Goma | 🧰​ ${t("menu.skills")}`);
 
     useEffect(() => {
         dispatch(listAnswers());
