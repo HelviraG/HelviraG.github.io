@@ -14,7 +14,7 @@ import React from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 export const InfoPanel = ({ value }: { value: number }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
 
   return (
     <CustomTabPanel value={value} index={0}>
