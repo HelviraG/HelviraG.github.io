@@ -26,7 +26,7 @@ export const PressListItem = ({
   writtenBy,
   caption,
 }: IPress) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [isVisible, setIsVisible] = useState(false);
   const itemRef = useRef<HTMLDivElement>(null);
 
@@ -88,7 +88,7 @@ export const PressListItem = ({
         <CardContentCaption>{caption}</CardContentCaption>
         <CardContentAction>
           <CardContentButton href={link} startIcon={<FeedRoundedIcon />}>
-            {t("app.general.actions.read_more")}
+            {t("actions.read_more")}
           </CardContentButton>
         </CardContentAction>
       </CardContentWrapper>
