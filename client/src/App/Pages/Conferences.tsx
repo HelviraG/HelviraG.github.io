@@ -9,9 +9,9 @@ import { ConferencesList } from "./Conferences/ConferencesList";
 import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 
 export const Conferences = ({ isTablet }: { isTablet: boolean }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
 
-  useDocumentTitle(`Helvira Goma | 🎤 ${t("app.menu.conferences")}`);
+  useDocumentTitle(`Helvira Goma | 🎤 ${t("menu.conferences")}`);
 
   return (
     <>
@@ -19,8 +19,8 @@ export const Conferences = ({ isTablet }: { isTablet: boolean }) => {
         <Mobile>
           <HeroTitle
             imgUrl={Covers.CONFS}
-            quote={t("app.quotes.confs")}
-            title={t("app.confs.title")}
+            quote={t("quotes.confs")}
+            title={t("translation:app.confs.title")}
             titleColor="warning"
           />
           <ConferencesList />
@@ -30,8 +30,8 @@ export const Conferences = ({ isTablet }: { isTablet: boolean }) => {
         <Desktop>
           <HeroTitle
             imgUrl={Covers.CONFS}
-            quote={t("app.quotes.confs")}
-            title={t("app.confs.title")}
+            quote={t("quotes.confs")}
+            title={t("translation:app.confs.title")}
             titleColor="warning"
           />
           <ConferencesList />
