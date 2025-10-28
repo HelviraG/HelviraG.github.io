@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import useSound from "use-sound";
 
 export const Init = () => {
-  const { t } = useTranslation('translation');
+  const { t } = useTranslation('falloutQuiz');
   const navigate = useNavigate();
   const [play] = useSound(Sounds.SELECT_FIELD);
   const [hasEnterName, setHasEnterName] = useState<boolean>(false);
@@ -98,8 +98,8 @@ export const Init = () => {
               deleteIcon={<ReceiptIcon />}
               label={
                 hasEnterName || hasStoredUser
-                  ? t("app.explore.fallout_on_passion.quiz.chip")
-                  : t("app.explore.fallout_on_passion.quiz.chip_name")
+                  ? t("quiz.chip")
+                  : t("quiz.chip_name")
               }
             />
           </Divider>
@@ -107,7 +107,7 @@ export const Init = () => {
             <InitPromptIndicator hasUsername>
               <Trans
                 i18nKey={
-                  "app.explore.fallout_on_passion.quiz.indicators.say_hi"
+                  "quiz.indicators.say_hi"
                 }
                 values={{ userName: userName ? userName : storedUserName }}
               />
@@ -116,13 +116,13 @@ export const Init = () => {
           {!hasError && !hasEnterName && userName && userName.length > 0 && (
             <InitPromptIndicator isSuccess>
               {t(
-                "app.explore.fallout_on_passion.quiz.indicators.press_confirm",
+                "quiz.indicators.press_confirm",
               )}
             </InitPromptIndicator>
           )}
           {hasError && (
             <InitPromptIndicator isError>
-              {t("app.explore.fallout_on_passion.quiz.indicators.error")}
+              {t("quiz.indicators.error")}
             </InitPromptIndicator>
           )}
           <InitPromptBelow>
