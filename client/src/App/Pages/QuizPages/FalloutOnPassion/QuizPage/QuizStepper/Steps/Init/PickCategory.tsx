@@ -8,13 +8,13 @@ import { useTranslation } from "react-i18next";
 import { SyntheticEvent } from "react";
 
 export const PickCategory = ({ handleSelectField }: { handleSelectField: (e: SyntheticEvent, field: string) => void }) => {
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation('falloutQuiz');
 
     return (
         <>
             <InitPromptBelowTypoWrapper>
                 <InitPromptBelowTypo variant={"h3"}>
-                    {t('app.explore.fallout_on_passion.quiz.label')}
+                    {t('quiz.label')}
                 </InitPromptBelowTypo>
             </InitPromptBelowTypoWrapper>
             <Box>
