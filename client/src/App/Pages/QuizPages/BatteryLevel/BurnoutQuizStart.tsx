@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { QuizStartLayout } from "../Layout/QuizStartLayout";
 
 export const BurnoutQuizStart = () => {
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation(['translation', 'burnoutQuiz']);
     const navigate = useNavigate();
 
     return (
@@ -11,7 +11,7 @@ export const BurnoutQuizStart = () => {
             backgroundImg="https://i.ibb.co/ptZtcQh/Copie-de-GIT-INIT-4.png" 
             iconImg="https://i.ibb.co/ynx2gpTr/Copie-de-GIT-INIT-11-removebg-preview.png"
             title={`${t('app.explore.battery.title')}`}
-            subText={`${t('app.explore.battery.quiz.subText')}`}
+            subText={`${t('burnoutQuiz:quiz.subText')}`}
             caption={`${t('app.explore.skills.caption')}`}
             startRoute='/explore/burnout/1'
         />
