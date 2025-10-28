@@ -23,13 +23,13 @@ export const EnterName = ({
   hasError,
   setHasError,
 }: EnterNameProps) => {
-  const { t } = useTranslation('translation');
+  const { t } = useTranslation('falloutQuiz');
 
   return (
     <>
       <InitPromptBelowTypoWrapper>
         <InitPromptBelowTypo variant={"h3"}>
-          {t("app.explore.fallout_on_passion.quiz.label_name")}
+          {t("quiz.label_name")}
         </InitPromptBelowTypo>
       </InitPromptBelowTypoWrapper>
       <Box>
