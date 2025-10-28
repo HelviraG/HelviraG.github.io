@@ -14,16 +14,16 @@ import {
 import { useTranslation } from "react-i18next";
 
 export const GeneralDashboard = () => {
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation('falloutQuiz');
     const { data } = useListResultQuery({});
     const isMobile = useMediaQuery("(max-width: 500px)")
 
     if (!data?.percentages) return <EmptyBoxWrapper></EmptyBoxWrapper>;
 
     const dataToChart = [
-        { value: parseInt(data.percentages.citizen, 10), label: t('app.explore.fallout_on_passion.quiz.result.types.citizen'), labelMarkType: 'square' as const },
-        { value: parseInt(data.percentages.paladin, 10), label: t('app.explore.fallout_on_passion.quiz.result.types.paladin'), labelMarkType: 'square' as const },
-        { value: parseInt(data.percentages.superMutant, 10), label: t('app.explore.fallout_on_passion.quiz.result.types.superMutant'), labelMarkType: 'square' as const },
+        { value: parseInt(data.percentages.citizen, 10), label: t('quiz.result.types.citizen'), labelMarkType: 'square' as const },
+        { value: parseInt(data.percentages.paladin, 10), label: t('quiz.result.types.paladin'), labelMarkType: 'square' as const },
+        { value: parseInt(data.percentages.superMutant, 10), label: t('quiz.result.types.superMutant'), labelMarkType: 'square' as const },
     ];
 
     const getArcLabel = (params: DefaultizedPieValueType) => {
@@ -52,7 +52,7 @@ export const GeneralDashboard = () => {
             <DashboardContentInner>
                 <Box>
                     <DashboardContentInnerPill>
-                        <DashboardContentInnerPillTypo>{t('app.explore.fallout_on_passion.quiz.result.chart.allCategory')}</DashboardContentInnerPillTypo>
+                        <DashboardContentInnerPillTypo>{t('quiz.result.chart.allCategory')}</DashboardContentInnerPillTypo>
                     </DashboardContentInnerPill>
                 </Box>
                 <Box sx={(theme) => ({ 
@@ -60,7 +60,7 @@ export const GeneralDashboard = () => {
                         marginTop: '10px'
                     }
                  })}>
-                    <DashboardContentTypo>{t('app.explore.fallout_on_passion.quiz.result.chart.subText')}</DashboardContentTypo>
+                    <DashboardContentTypo>{t('quiz.result.chart.subText')}</DashboardContentTypo>
                     <DashboardContentDivider />
                 </Box>
                 <DashboardContentChartWrapper>
@@ -93,7 +93,7 @@ export const GeneralDashboard = () => {
                             })}
                             slotProps={{
                                 noDataOverlay: { 
-                                    message: t('app.explore.fallout_on_passion.quiz.result.chart.noData'),
+                                    message: t('quiz.result.chart.noData'),
                                     sx: {
                                         fontSize: 18,
                                         fontWeight: 'bold',
