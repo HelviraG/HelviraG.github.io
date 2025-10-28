@@ -29,7 +29,7 @@ export const getBatteryColor = (level: number) => {
 export const QuizSteps = () => {
     const params = useParams();
     const dispatch = useDispatch();
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation(['burnoutQuiz', 'translation']);
     const navigate = useNavigate();
 
     const currentStep = params.id;
@@ -48,42 +48,42 @@ export const QuizSteps = () => {
     // 22 questions based on MBI structure: 9 Emotional Exhaustion, 5 Depersonalization, 8 Personal Accomplishment
     const questions = [
         // Emotional Exhaustion (9 items)
-        { text: t('app.explore.battery.quiz.questions.1'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.2'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.3'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.4'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.5'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.6'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.7'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.8'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.9'), domain: "exhaustion" },
+        { text: t('quiz.questions.1'), domain: "exhaustion" },
+        { text: t('quiz.questions.2'), domain: "exhaustion" },
+        { text: t('quiz.questions.3'), domain: "exhaustion" },
+        { text: t('quiz.questions.4'), domain: "exhaustion" },
+        { text: t('quiz.questions.5'), domain: "exhaustion" },
+        { text: t('quiz.questions.6'), domain: "exhaustion" },
+        { text: t('quiz.questions.7'), domain: "exhaustion" },
+        { text: t('quiz.questions.8'), domain: "exhaustion" },
+        { text: t('quiz.questions.9'), domain: "exhaustion" },
         
         // Depersonalization (5 items)
-        { text: t('app.explore.battery.quiz.questions.10'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.11'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.12'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.13'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.14'), domain: "cynicism" },
+        { text: t('quiz.questions.10'), domain: "cynicism" },
+        { text: t('quiz.questions.11'), domain: "cynicism" },
+        { text: t('quiz.questions.12'), domain: "cynicism" },
+        { text: t('quiz.questions.13'), domain: "cynicism" },
+        { text: t('quiz.questions.14'), domain: "cynicism" },
         
         // Personal Accomplishment (8 items) - reverse scored
-        { text: t('app.explore.battery.quiz.questions.15'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.16'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.17'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.18'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.19'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.20'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.21'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.22'), domain: "efficacy", reverse: true }
+        { text: t('quiz.questions.15'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.16'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.17'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.18'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.19'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.20'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.21'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.22'), domain: "efficacy", reverse: true }
     ];
 
     const options = [
-        { label: t('app.explore.battery.quiz.options.0'), value: 0 },
-        { label: t('app.explore.battery.quiz.options.1'), value: 1 },
-        { label: t('app.explore.battery.quiz.options.2'), value: 2 },
-        { label: t('app.explore.battery.quiz.options.3'), value: 3 },
-        { label: t('app.explore.battery.quiz.options.4'), value: 4 },
-        { label: t('app.explore.battery.quiz.options.5'), value: 5 },
-        { label: t('app.explore.battery.quiz.options.6'), value: 6 }
+        { label: t('quiz.options.0'), value: 0 },
+        { label: t('quiz.options.1'), value: 1 },
+        { label: t('quiz.options.2'), value: 2 },
+        { label: t('quiz.options.3'), value: 3 },
+        { label: t('quiz.options.4'), value: 4 },
+        { label: t('quiz.options.5'), value: 5 },
+        { label: t('quiz.options.6'), value: 6 }
     ];
 
     const getCurrentBatteryLevel = () => {
@@ -164,7 +164,7 @@ export const QuizSteps = () => {
     return (
         <QuizContent 
             isBurnoutQuiz
-            title={`🔋​ ${t('app.explore.battery.title')}`}
+            title={`🔋​ ${t('translation:app.explore.battery.title')}`}
             footer={
                 <Box sx={{ alignItems: 'center', display: 'flex', flex: 1, justifyContent: 'space-between' }}>
                     <Button 
@@ -174,11 +174,11 @@ export const QuizSteps = () => {
                         sx={{ borderRadius: '99999px' }}
                         onClick={() => handlePrev()}
                     >
-                        {t('app.explore.battery.quiz.buttons.prev')}
+                        {t('quiz.buttons.prev')}
                     </Button>
                     <Box>
                         <Typography variant="caption">
-                            <Trans i18nKey="app.explore.battery.quiz.footer.caption" values={{ activeStep: activeStep, totalQuestions: questions.length }} />
+                            <Trans i18nKey="quiz.footer.caption" ns="burnoutQuiz" values={{ activeStep: activeStep, totalQuestions: questions.length }} />
                         </Typography>
                     </Box>
                 </Box>
@@ -188,7 +188,7 @@ export const QuizSteps = () => {
                     <Box>
                         <Box>
                             <Typography variant="h6">
-                                <Trans i18nKey="app.explore.battery.quiz.question" values={{ questionNumber: activeStep }} />
+                                <Trans i18nKey="quiz.question" ns="burnoutQuiz" values={{ questionNumber: activeStep }} />
                             </Typography>
                         </Box>
                             <Box><Typography variant="h5">{questions[activeStep - 1].text}</Typography></Box>
@@ -234,7 +234,7 @@ export const QuizSteps = () => {
                         </Box>
                     </Box>
                     <Box sx={{ textAlign: 'center', marginTop: '.5rem', color: '#6b7280', fontStyle: 'italic' }}>
-                        <Typography variant="body2">{t('app.explore.battery.caption')}</Typography>
+                        <Typography variant="body2">{t('translation:app.explore.battery.caption')}</Typography>
                     </Box>
                 </>
             } 
@@ -244,7 +244,7 @@ export const QuizSteps = () => {
                         <BorderLinearProgress variant="determinate" value={(answers.length / questions.length) * 100} />
                         <Box sx={{ padding: '0 10px', textAlign: 'right' }}>
                             <Typography variant="caption">
-                                <Trans i18nKey="app.explore.battery.quiz.currentLevel.complete" values={{ progress: Math.round((answers.length / questions.length) * 100) }} />
+                                <Trans i18nKey="quiz.currentLevel.complete" ns="burnoutQuiz" values={{ progress: Math.round((answers.length / questions.length) * 100) }} />
                             </Typography>
                         </Box>
                     </Box>
@@ -265,9 +265,9 @@ export const QuizSteps = () => {
                                 }
                             })}
                         >
-                            <Typography>{t('app.explore.battery.quiz.currentLevel.title')}</Typography>
+                            <Typography>{t('quiz.currentLevel.title')}</Typography>
                             <Typography variant="body2" sx={{ marginBottom: '1rem' }}>
-                                <Trans i18nKey="app.explore.battery.quiz.currentLevel.caption" values={{ activeStep: activeStep - 1, totalQuestions: questions.length }} />
+                                <Trans i18nKey="quiz.currentLevel.caption" ns="burnoutQuiz" values={{ activeStep: activeStep - 1, totalQuestions: questions.length }} />
                             </Typography>
                         </Box>
                     </Box>
