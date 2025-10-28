@@ -6,9 +6,9 @@ import { Mobile } from "@/App/Layout/Mobile/Mobile";
 import { FalloutQuiz } from "../FalloutQuiz";
 
 export const QuizStartPage = ({ isTablet }: { isTablet: boolean }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   
-  useDocumentTitle(`Helvira Goma | 💓 ${t("app.menu.passion")}`);
+  useDocumentTitle(`Helvira Goma | 💓 ${t("menu.passion")}`);
   
   return (
     <>
