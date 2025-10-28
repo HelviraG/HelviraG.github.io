@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import useSound from "use-sound";
 
 export const Init = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
   const navigate = useNavigate();
   const [play] = useSound(Sounds.SELECT_FIELD);
   const [hasEnterName, setHasEnterName] = useState<boolean>(false);
