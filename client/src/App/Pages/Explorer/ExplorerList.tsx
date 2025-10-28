@@ -30,7 +30,7 @@ export const ExplorerList = () => {
       <ListTitleWrapper>
         <TitleWrapper textAlign="right">
           <img src={SubTitle.EXPLORER} alt="Explore page subtitle icon" />
-          <TitleTypography variant="h3" shadowColor="#ff4757">
+          <TitleTypography variant="h3" shadowColor="#32ff7e">
             {t("app.explore.description")}
           </TitleTypography>
         </TitleWrapper>
