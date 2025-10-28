@@ -8,39 +8,39 @@ import { useNavigate } from "react-router-dom";
 import { BuyCoffeeLink } from "@/App/Components/Link/BuyCoffeeLink";
 
 export const QuizResult = () => {
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation(['burnoutQuiz', 'translation']);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const answers = useSelector(listBurnoutAnswers);
 
     const questions = [
         // Emotional Exhaustion (9 items)
-        { text: t('app.explore.battery.quiz.questions.1'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.2'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.3'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.4'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.5'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.6'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.7'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.8'), domain: "exhaustion" },
-        { text: t('app.explore.battery.quiz.questions.9'), domain: "exhaustion" },
+        { text: t('quiz.questions.1'), domain: "exhaustion" },
+        { text: t('quiz.questions.2'), domain: "exhaustion" },
+        { text: t('quiz.questions.3'), domain: "exhaustion" },
+        { text: t('quiz.questions.4'), domain: "exhaustion" },
+        { text: t('quiz.questions.5'), domain: "exhaustion" },
+        { text: t('quiz.questions.6'), domain: "exhaustion" },
+        { text: t('quiz.questions.7'), domain: "exhaustion" },
+        { text: t('quiz.questions.8'), domain: "exhaustion" },
+        { text: t('quiz.questions.9'), domain: "exhaustion" },
         
         // Depersonalization (5 items)
-        { text: t('app.explore.battery.quiz.questions.10'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.11'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.12'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.13'), domain: "cynicism" },
-        { text: t('app.explore.battery.quiz.questions.14'), domain: "cynicism" },
+        { text: t('quiz.questions.10'), domain: "cynicism" },
+        { text: t('quiz.questions.11'), domain: "cynicism" },
+        { text: t('quiz.questions.12'), domain: "cynicism" },
+        { text: t('quiz.questions.13'), domain: "cynicism" },
+        { text: t('quiz.questions.14'), domain: "cynicism" },
         
         // Personal Accomplishment (8 items) - reverse scored
-        { text: t('app.explore.battery.quiz.questions.15'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.16'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.17'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.18'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.19'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.20'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.21'), domain: "efficacy", reverse: true },
-        { text: t('app.explore.battery.quiz.questions.22'), domain: "efficacy", reverse: true }
+        { text: t('quiz.questions.15'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.16'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.17'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.18'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.19'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.20'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.21'), domain: "efficacy", reverse: true },
+        { text: t('quiz.questions.22'), domain: "efficacy", reverse: true }
     ];
 
     const calculateBatteryLevel = () => {
@@ -72,42 +72,42 @@ export const QuizResult = () => {
     const getBatteryResult = (level: number) => {
         if (level >= 80) {
             return {
-                title: t('app.explore.battery.quiz.results.full.title'),
-                description: t('app.explore.battery.quiz.results.full.description'),
-                advice: t('app.explore.battery.quiz.results.full.advice'),
-                personality: t('app.explore.battery.quiz.results.full.personality'),
+                title: t('quiz.results.full.title'),
+                description: t('quiz.results.full.description'),
+                advice: t('quiz.results.full.advice'),
+                personality: t('quiz.results.full.personality'),
                 color: "#f0fdf4"
             };
         } else if (level >= 60) {
             return {
-                title: t('app.explore.battery.quiz.results.optimal.title'),
-                description: t('app.explore.battery.quiz.results.optimal.description'),
-                advice: t('app.explore.battery.quiz.results.optimal.advice'),
-                personality: t('app.explore.battery.quiz.results.optimal.personality'),
+                title: t('quiz.results.optimal.title'),
+                description: t('quiz.results.optimal.description'),
+                advice: t('quiz.results.optimal.advice'),
+                personality: t('quiz.results.optimal.personality'),
                 color: "#eff6ff"
             };
         } else if (level >= 40) {
             return {
-                title: t('app.explore.battery.quiz.results.low.title'),
-                description: t('app.explore.battery.quiz.results.low.description'),
-                advice: t('app.explore.battery.quiz.results.low.advice'),
-                personality: t('app.explore.battery.quiz.results.low.personality'),
+                title: t('quiz.results.low.title'),
+                description: t('quiz.results.low.description'),
+                advice: t('quiz.results.low.advice'),
+                personality: t('quiz.results.low.personality'),
                 color: "#fefce8"
             };
         } else if (level >= 20) {
             return {
-                title: t('app.explore.battery.quiz.results.critical.title'),
-                description: t('app.explore.battery.quiz.results.critical.description'),
-                advice: t('app.explore.battery.quiz.results.critical.advice'),
-                personality: t('app.explore.battery.quiz.results.critical.personality'),
+                title: t('quiz.results.critical.title'),
+                description: t('quiz.results.critical.description'),
+                advice: t('quiz.results.critical.advice'),
+                personality: t('quiz.results.critical.personality'),
                 color: "#fff7ed"
             };
         } else {
             return {
-                title: t('app.explore.battery.quiz.results.emergency.title'),
-                description: t('app.explore.battery.quiz.results.emergency.description'),
-                advice: t('app.explore.battery.quiz.results.emergency.advice'),
-                personality: t('app.explore.battery.quiz.results.emergency.personality'),
+                title: t('quiz.results.emergency.title'),
+                description: t('quiz.results.emergency.description'),
+                advice: t('quiz.results.emergency.advice'),
+                personality: t('quiz.results.emergency.personality'),
                 color: "#fef2f2"
             };
         }
@@ -125,7 +125,7 @@ export const QuizResult = () => {
     return (
         <QuizContent 
             isBurnoutQuiz
-            title={`🔋​ ${t('app.explore.battery.title')}`}
+            title={`🔋​ ${t('translation:app.explore.battery.title')}`}
             leftSide={
                 <Box 
                     sx={(theme) => ({ 
@@ -149,7 +149,7 @@ export const QuizResult = () => {
                         </Box>
                         <Divider sx={{ margin: '1rem 0' }} />
                         <Box>
-                            <Typography sx={{ marginBottom: '.5rem' }}>{t('app.explore.battery.quiz.results.todo')}</Typography>
+                            <Typography sx={{ marginBottom: '.5rem' }}>{t('quiz.results.todo')}</Typography>
                             <Typography variant="body1" sx={{ fontWeight: 300 }}>{result.advice}</Typography>
                         </Box>
                     </Box>
@@ -164,13 +164,14 @@ export const QuizResult = () => {
                                 width: '100%' 
                             }}
                             onClick={() => handleRedo()}
-                        >{t('app.explore.battery.quiz.buttons.redo')}</Button>
+                        >{t('quiz.buttons.redo')}</Button>
                     </Box>
                     <Box sx={{ backgroundColor: '#f9fafb', borderRadius: '.5rem', color: '#6b7280', padding: '1rem', textAlign: 'center' }}>
-                        <Typography variant="body2" sx={{ marginBottom: '.5em' }}>{t('app.explore.battery.quiz.results.caption')}</Typography>
+                        <Typography variant="body2" sx={{ marginBottom: '.5em' }}>{t('quiz.results.caption')}</Typography>
                         <Typography variant="body2" sx={{ fontWeight: 300 }}>
                             <Trans 
-                                i18nKey='app.explore.battery.quiz.results.subCaption'
+                                i18nKey='quiz.results.subCaption'
+                                ns="burnoutQuiz"
                                 components={[
                                     <Link href="https://www.researchgate.net/publication/227634716_The_Measurement_of_Experienced_Burnout" sx={{ color: '#4834d4', textDecoration: 'none' }} />
                                 ]}
@@ -199,8 +200,7 @@ export const QuizResult = () => {
                             }
                         })}
                     >
-                        <Typography sx={{ marginBottom: '2rem' }}>{t('app.explore.battery.quiz.final.title')}</Typography>
-                        <BuyCoffeeLink noAbsolute />
+                        <Typography sx={{ marginBottom: '2rem' }}>{t('quiz.final.title')}</Typography>
                     </Box>
                 </>
             } 
