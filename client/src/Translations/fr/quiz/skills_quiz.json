@@ -1,0 +1,143 @@
+{
+    "quiz": {
+        "advice": "💡 Conseil:",
+        "currentFreshness": "Degré de Fraîcheur",
+        "startCaption": "Commencez le test pour voir le degré de fraîcheur de vos compétences tech!",
+        "subText": "Test Compétences Tech",
+        "freshnessLevel": {
+        "ultraFresh": "Ultra Frais",
+        "fresh": "Frais",
+        "stable": "Stable",
+        "aging": "Expirant",
+        "expired": "Périmé"
+        },
+        "questions": {
+            "1": {
+                "q": "Quand avez-vous appris un nouveau langage de programmation ou framework pour la dernière fois ?",
+                "options": {
+                    "1": "Au cours des 3 derniers mois",
+                    "2": "Il y a 6 mois à un an",
+                    "3": "Il y a 1 à 2 ans",
+                    "4": "Il y a plus de 2 ans"
+                }
+            },
+            "2": {
+                "q": "À quelle fréquence lisez-vous des blogs techniques, de la documentation ou suivez-vous l'actualité tech ?",
+                "options": {
+                    "1": "Quotidiennement ou plusieurs fois par semaine",
+                    "2": "Une fois par semaine",
+                    "3": "Une fois par mois",
+                    "4": "Rarement ou jamais"
+                }
+            },
+            "3": {
+                "q": "Quelle est la pertinence de votre stack technique principal ?",
+                "options": {
+                    "1": "Technologies de pointe et tendances",
+                    "2": "Outils modernes et largement utilisés",
+                    "3": "Technologies matures encore demandées",
+                    "4": "Systèmes legacy ou outils obsolètes"
+                }
+            },
+            "4": {
+                "q": "Comment réagissez-vous face à une technologie complètement inconnue ?",
+                "options": {
+                    "1": "Enthousiaste ! J'adore apprendre de nouvelles choses",
+                    "2": "Confiant(e), je peux comprendre",
+                    "3": "Anxieux(se) mais prêt(e) à essayer",
+                    "4": "Je préfère rester sur ce que je connais"
+                }
+            },
+            "5": {
+                "q": "Quelle est votre participation dans les communautés tech ?",
+                "options": {
+                    "1": "Très actif : je contribue, réponds aux questions, participe régulièrement",
+                    "2": "Modérément : je participe ou observe occasionnellement",
+                    "3": "Minimalement : seulement quand j'ai besoin d'aide",
+                    "4": "Pas actif du tout"
+                }
+            },
+            "6": {
+                "q": "Lorsque vous résolvez des problèmes, vous avez tendance à :",
+                "options": {
+                    "1": "Explorer les bonnes pratiques modernes et nouvelles approches",
+                    "2": "Mélanger méthodes éprouvées et techniques plus récentes",
+                    "3": "M'appuyer sur des approches qui ont déjà fonctionné",
+                    "4": "M'en tenir à 'la façon dont on l'a toujours fait'"
+                }
+            },
+            "7": {
+                "q": "Combien de temps consacrez-vous à l'apprentissage par rapport au travail familier ?",
+                "options": {
+                    "1": "20%+ de mon temps à l'apprentissage continu",
+                    "2": "Environ 10% apprentissage, 90% exécution",
+                    "3": "5% ou moins pour l'apprentissage",
+                    "4": "Presque entièrement concentré sur des tâches familières"
+                }
+            },
+            "8": {
+                "q": "Quand avez-vous réalisé votre dernier projet personnel ou contribution open-source ?",
+                "options": {
+                    "1": "J'en ai un en cours actuellement",
+                    "2": "Au cours des 6 derniers mois",
+                    "3": "Au cours des 1 à 2 dernières années",
+                    "4": "Il y a des années ou jamais"
+                }
+            },
+            "9": {
+                "q": "Quelle est votre familiarité avec les outils d'IA/ML dans votre workflow ?",
+                "options": {
+                    "1": "Je les utilise activement au quotidien (GitHub Copilot, ChatGPT, etc.)",
+                    "2": "Je les ai essayés, je les utilise occasionnellement",
+                    "3": "Je les connais mais ne les ai pas vraiment utilisés",
+                    "4": "Pas intéressé(e) ou je n'en vois pas l'utilité"
+                }
+            },
+            "10": {
+                "q": "Êtes-vous à l'aise avec les technologies cloud ?",
+                "options": {
+                    "1": "Je déploie et gère régulièrement l'infrastructure cloud",
+                    "2": "J'utilise les services cloud mais seulement les bases",
+                    "3": "Exposition limitée au cloud",
+                    "4": "Je travaille principalement avec des solutions on-premise"
+                }
+            }
+            },
+            "result": {
+            "final": "Degré de Fraîcheur Final",
+            "title": "{{ resultCategory }}!",
+            "share": "Partager votre résultat",
+            "linkText": "J'ai terminé le test \"Quel produit laitier représente vos compétences techniques ?\" et je suis {{ resultName }}! 🎯 Score: {{ score }}/50 ({{ percentage }}%)",
+            "cream": {
+                "pronoun": "une",
+                "name": "Crème Fraîche",
+                "description": "Vous êtes à la pointe ! Vos compétences sont fraîches et constamment renouvelées, mais rappelez-vous : vous devez les rafraîchir régulièrement pour maintenir ce niveau. Gardez cet élan !",
+                "advice": "Envisagez de mentorer d'autres personnes pour approfondir vos connaissances tout en restant à jour."
+            },
+            "yoghurt": {
+                "pronoun": "un",
+                "name": "Yaourt",
+                "description": "Vous cultivez activement vos compétences par la pratique et l'apprentissage réguliers. Vous avez de bonnes cultures en développement, et en étant régulier, vous ne ferez que progresser !",
+                "advice": "Concentrez-vous sur l'approfondissement de quelques domaines tout en restant vigilant."
+            },
+            "cheese": {
+                "pronoun": "un",
+                "name": "Fromage Affiné",
+                "description": "Vos compétences fondamentales sont solides et s'améliorent réellement avec le temps. Comme un bon fromage, votre expertise s'approfondit. Assurez-vous simplement de ne pas devenir trop croûteux sur les bords !",
+                "advice": "Équilibrez votre expertise approfondie avec une exposition aux tendances émergentes dans votre domaine."
+            },
+            "butter": {
+                "pronoun": "une motte de",
+                "name": "Beurre",
+                "description": "Vous êtes polyvalent et stable, survivant dans la plupart des environnements. Vos compétences sont fiables mais pourraient avoir besoin d'être rafraîchies pour s'étendre vers de nouveaux domaines.",
+                "advice": "Réservez du temps dédié chaque semaine pour apprendre quelque chose de nouveau."
+            },
+            "iceCream": {
+                "pronoun": "une",
+                "name": "Glace",
+                "description": "Vos compétences pourraient fondre sous la pression ! Il est temps de retourner au congélateur et de préserver ce que vous avez tout en ajoutant de nouvelles saveurs. La bonne nouvelle ? Il n'est jamais trop tard pour se rafraîchir !",
+                "advice": "Commencez par de petites habitudes d'apprentissage cohérentes. Choisissez une nouvelle compétence sur laquelle vous concentrer ce mois-ci."
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+{
+    "quiz": {
+        "advice": "💡 Advice:",
+        "currentFreshness": "Tech Skills Freshness",
+        "startCaption": "Start answering to see your freshness level!",
+        "subText": "Tech Skills Assessment",
+        "freshnessLevel": {
+            "ultraFresh": "Ultra Fresh",
+            "fresh": "Fresh",
+            "stable": "Stable",
+            "aging": "Aging",
+            "expired": "Expired"
+        },
+        "questions": {
+        "1": {
+            "q": "When did you last learn a new programming language or framework?",
+            "options": {
+                "1": "Within the last 3 months",
+                "2": "6 months to a year ago",
+                "3": "1-2 years ago",
+                "4": "More than 2 years ago"
+            }
+        },
+        "2": {
+            "q": "How often do you read technical blogs, documentation, or follow tech news?",
+            "options": {
+                "1": "Daily or several times a week",
+                "2": "Once a week",
+                "3": "Once a month",
+                "4": "Rarely or never"
+            }
+        },
+        "3": {
+            "q": "What's your primary tech stack's relevance?",
+            "options": {
+                "1": "Cutting-edge, trending technologies",
+                "2": "Modern, widely-used stable tools",
+                "3": "Mature technologies still in demand",
+                "4": "Legacy systems or deprecated tools"
+            }
+        },
+        "4": {
+            "q": "How do you feel when facing completely unfamiliar technology?",
+            "options": {
+                "1": "Excited! I love learning new things",
+                "2": "Confident I can figure it out",
+                "3": "Anxious but willing to try",
+                "4": "Prefer to stick with what I know"
+            }
+        },
+        "5": {
+            "q": "How active are you in tech communities?",
+            "options": {
+                "1": "Very active: contribute, answer questions, engage regularly",
+                "2": "Moderately: occasionally participate or lurk",
+                "3": "Minimally: only when I need help",
+                "4": "Not active at all"
+            }
+        },
+        "6": {
+            "q": "When solving problems, you tend to:",
+            "options": {
+                "1": "Explore modern best practices and new approaches",
+                "2": "Mix proven methods with some newer techniques",
+                "3": "Rely on approaches that have worked before",
+                "4": "Stick to 'the way we've always done it'"
+            }
+        },
+        "7": {
+            "q": "How much time do you dedicate to learning vs. doing familiar work?",
+            "options": {
+                "1": "20%+ of my time on continuous learning",
+                "2": "About 10% learning, 90% execution",
+                "3": "5% or less on learning",
+                "4": "Almost entirely focused on familiar tasks"
+            }
+        },
+        "8": {
+            "q": "When was your last side project or open-source contribution?",
+            "options": {
+                "1": "Currently working on one",
+                "2": "Within the last 6 months",
+                "3": "Within the last 1-2 years",
+                "4": "Years ago or never"
+            }
+        },
+        "9": {
+            "q": "How familiar are you with AI/ML tools in your workflow?",
+            "options": {
+                "1": "Actively using them daily (GitHub Copilot, ChatGPT, etc.)",
+                "2": "Tried them, use occasionally",
+                "3": "Aware of them but haven't really used them",
+                "4": "Not interested or don't see the value"
+            }
+        },
+        "10": {
+            "q": "How comfortable are you with cloud technologies?",
+            "options": {
+                "1": "Deploy and manage cloud infrastructure regularly",
+                "2": "Use cloud services but basics only",
+                "3": "Limited exposure to cloud",
+                "4": "Primarily work with on-premise solutions"
+            }
+        }
+        },
+        "result": {
+            "final": "Final Tech Skills Freshness",
+            "title": "You're {{ resultCategory }}!",
+            "share": "Share your result",
+            "linkText": "I took the \"Which dairy embodies your tech skills?\" quiz and I'm {{ resultName }}! 🎯 Score: {{ score }}/50 ({{ percentage }}%)",
+            "cream": {
+                "pronoun": "a",
+                "name": "Fresh Cream",
+                "description": "You're at the cutting edge! Your skills are fresh and constantly being renewed, but remember: you need regular refreshing to stay this way. Keep that momentum going!",
+                "advice": "Consider mentoring others to deepen your knowledge while staying current."
+            },
+            "yogurt": {
+                "pronoun": "some",
+                "name": "Yogurt",
+                "description": "You're actively cultivating your skills through regular practice and learning. You've got good cultures growing, and with consistent care, you'll keep getting better!",
+                "advice": "Focus on depth in a few areas while maintaining breadth awareness."
+            },
+            "cheese": {
+                "pronoun": "just",
+                "name": "Aged Cheese",
+                "description": "Your foundational skills are solid and actually improve with time. Like a fine cheese, you've got expertise that deepens. Just make sure you're not getting too crusty around the edges!",
+                "advice": "Balance your deep expertise with exposure to emerging trends in your field."
+            },
+            "butter": {
+                "pronoun": "plain",
+                "name": "Butter",
+                "description": "You're versatile and stable, surviving most environments. Your skills are reliable but might need some freshening up to spread into new areas.",
+                "advice": "Set aside dedicated time each week for learning something new."
+            },
+            "iceCream": {
+                "pronoun": "an",
+                "name": "Ice Cream",
+                "description": "Your skills might be melting under pressure! Time to get back in the freezer and preserve what you have while adding new flavors. The good news? It's never too late to refresh!",
+                "advice": "Start with small, consistent learning habits. Pick one new skill to focus on this month."
+            }
+        }      
+    }
+}
