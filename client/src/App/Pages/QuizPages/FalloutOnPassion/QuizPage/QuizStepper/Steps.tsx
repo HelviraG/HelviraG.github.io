@@ -75,7 +75,7 @@ export const Steps = () => {
   const [openSettings, setOpenSettings] = useState<boolean>(false);
 
   const params = useParams();
-  const { t } = useTranslation(['common', 'translation']);
+  const { t } = useTranslation(['common', 'translation', 'falloutQuiz']);
   const currentStep = params.id;
   const [activeStep, setActiveStep] = useState(
     currentStep ? parseInt(currentStep, 10) : 0,
@@ -243,10 +243,10 @@ export const Steps = () => {
                 <QuizContentTitleBox>
                   {dataFile.survey[activeStep].q.map((q: string, index) => {
                     const formattedQ = formatQuestion(q, { 
-                      cat_job: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_job`),
-                      cat_verb: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_verb`),
-                      cat_hobby: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_hobby`),
-                      cat_action: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_action`),
+                      cat_job: t(`falloutQuiz:quiz.activity.cat.${stripQuotes(cat)}.cat_job`),
+                      cat_verb: t(`falloutQuiz:quiz.activity.cat.${stripQuotes(cat)}.cat_verb`),
+                      cat_hobby: t(`falloutQuiz:quiz.activity.cat.${stripQuotes(cat)}.cat_hobby`),
+                      cat_action: t(`falloutQuiz:quiz.activity.cat.${stripQuotes(cat)}.cat_action`),
                     });
 
                     return (
