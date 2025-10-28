@@ -18,7 +18,7 @@ export const TabNavigation = ({
   value: number;
   handleTabNavigation: (event: SyntheticEvent, value: number) => void;
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
   const isMobile = useMediaQuery("(max-width: 500px)");
 
   return (
