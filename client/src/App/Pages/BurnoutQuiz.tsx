@@ -5,9 +5,9 @@ import { Desktop } from "../Layout/Desktop/Desktop";
 import { Mobile } from "../Layout/Mobile/Mobile";
 
 export const BurnoutQuiz = ({ isTablet }: { isTablet: boolean }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
       
-    useDocumentTitle(`Helvira Goma | 🔌 ${t("app.menu.battery")}`);
+    useDocumentTitle(`Helvira Goma | 🔌 ${t("menu.battery")}`);
     
     return (
         <>
