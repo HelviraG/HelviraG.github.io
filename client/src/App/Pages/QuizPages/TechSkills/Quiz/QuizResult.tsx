@@ -16,7 +16,7 @@ import { CopyAll } from "@mui/icons-material";
 
 export const QuizResult = () => {
     const [searchParams] = useSearchParams();
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation(['techSkillsQuiz', 'translation']);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -36,48 +36,48 @@ export const QuizResult = () => {
     const dairyResults = [
         {
             short: "cream",
-            name: t('app.explore.skills.quiz.result.cream.name'),
+            name: t('quiz.result.cream.name'),
             range: [44, 50],
             emoji: "🥛",
             color: "#10b981",
-            description: t('app.explore.skills.quiz.result.cream.description'),
-            advice: t('app.explore.skills.quiz.result.cream.advice')
+            description: t('quiz.result.cream.description'),
+            advice: t('quiz.result.cream.advice')
         },
         {
             short: "yogurt",
-            name: t('app.explore.skills.quiz.result.yogurt.name'),
+            name: t('quiz.result.yogurt.name'),
             range: [35, 43],
             emoji: "🥄",
             color: "#14b8a6",
-            description: t('app.explore.skills.quiz.result.yogurt.description'),
-            advice: t('app.explore.skills.quiz.result.yogurt.advice')
+            description: t('quiz.result.yogurt.description'),
+            advice: t('quiz.result.yogurt.advice')
         },
         {
             short: "cheese",
-            name: t('app.explore.skills.quiz.result.cheese.name'),
+            name: t('quiz.result.cheese.name'),
             range: [25, 34],
             emoji: "🧀",
             color: "#f59e0b",
-            description: t('app.explore.skills.quiz.result.cheese.description'),
-            advice: t('app.explore.skills.quiz.result.cheese.advice')
+            description: t('quiz.result.cheese.description'),
+            advice: t('quiz.result.cheese.advice')
         },
         {
             short: "butter",
-            name: t('app.explore.skills.quiz.result.butter.name'),
+            name: t('quiz.result.butter.name'),
             range: [15, 24],
             emoji: "🧈",
             color: "#f97316",
-            description: t('app.explore.skills.quiz.result.butter.description'),
-            advice:  t('app.explore.skills.quiz.result.butter.advice')
+            description: t('quiz.result.butter.description'),
+            advice:  t('quiz.result.butter.advice')
         },
         {
             short: "iceCream",
-            name: t('app.explore.skills.quiz.result.iceCream.name'),
+            name: t('quiz.result.iceCream.name'),
             range: [0, 14],
             emoji: "🍨",
             color: "#ef4444",
-            description: t('app.explore.skills.quiz.result.iceCream.description'),
-            advice: t('app.explore.skills.quiz.result.iceCream.advice')
+            description: t('quiz.result.iceCream.description'),
+            advice: t('quiz.result.iceCream.advice')
         }
     ];
 
@@ -101,8 +101,8 @@ export const QuizResult = () => {
 
     const copyToClipboard = async (result: any) => {
         try {
-            const pronoun = t(`app.explore.skills.quiz.result.${result.short}.pronoun`);
-            const text = t("app.explore.skills.quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
+            const pronoun = t(`quiz.result.${result.short}.pronoun`);
+            const text = t("quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
             const url = generateShareableLink(result);
 
             await navigator.clipboard.writeText(`${text}\n${url}`);
@@ -114,13 +114,13 @@ export const QuizResult = () => {
     };
 
     const shareResults = async (result: any) => {
-        const pronoun = t(`app.explore.skills.quiz.result.${result.short}.pronoun`);
-        const text = t("app.explore.skills.quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
+        const pronoun = t(`quiz.result.${result.short}.pronoun`);
+        const text = t("quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
         const url = generateShareableLink(result);
         
         if (navigator.share) {
             try {
-                await navigator.share({ title: t('app.explore.skills.title'), text, url });
+                await navigator.share({ title: t('translation:app.explore.skills.title'), text, url });
             } catch (err: any) {
                 if (err.name !== 'AbortError') {
                     try { await navigator.clipboard.writeText(`${text}\n${url}`); } catch {}
@@ -132,8 +132,8 @@ export const QuizResult = () => {
     };
 
     const shareToTwitter = (result: any) => {
-        const pronoun = t(`app.explore.skills.quiz.result.${result.short}.pronoun`);
-        const text = t("app.explore.skills.quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
+        const pronoun = t(`quiz.result.${result.short}.pronoun`);
+        const text = t("quiz.result.linkText", { resultName: pronoun + " " + result.name, score: currentScore, percentage: Math.round((currentScore/50)*100) });
 
         const url = generateShareableLink(result);
         window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
@@ -163,7 +163,7 @@ export const QuizResult = () => {
 
     return (
         <QuizContent 
-            title={`​🥛 ${t('app.explore.skills.title')}`} 
+            title={`​🥛 ${t('translation:app.explore.skills.title')}`} 
             footer={<></>} 
             leftSide={
                 <>
@@ -174,7 +174,7 @@ export const QuizResult = () => {
                         <Box>
                             <Box>
                                 <Typography variant="h2" sx={{ fontWeight: 200 }}>
-                                    <Trans i18nKey="app.explore.skills.quiz.result.title" values={{ resultCategory: result?.name }} />
+                                    <Trans i18nKey="quiz.result.title" ns="techSkillsQuiz" values={{ resultCategory: result?.name }} />
                                 </Typography>
                             </Box>
                             <Box sx={{ marginBottom: '1rem' }}>
@@ -184,7 +184,7 @@ export const QuizResult = () => {
                                 <Typography variant="h6" sx={{ fontWeight: 200 }}>{result?.description}</Typography>
                             </Box>
                             <Box sx={{ padding: '1rem', backgroundColor: '#f0fdfa', borderLeft: '4px solid', borderColor: '#14b8a6' }}>
-                                <Typography sx={{ fontWeight: 200 }}>{t('app.explore.skills.quiz.advice')} {result?.advice}</Typography>
+                                <Typography sx={{ fontWeight: 200 }}>{t('quiz.advice')} {result?.advice}</Typography>
                             </Box>
                         </Box>
                         <Box 
@@ -202,7 +202,7 @@ export const QuizResult = () => {
                             })}
                         >
                             <Box>
-                                <Typography>{t('app.explore.skills.quiz.result.share')}</Typography>
+                                <Typography>{t('quiz.result.share')}</Typography>
                             </Box>
                             <SocialMediaWrapper isShareButton>
                                 <IconButton onClick={() => shareToLinkedIn(result)}>
@@ -233,7 +233,7 @@ export const QuizResult = () => {
                                     width: '100%' 
                                 }}
                                 onClick={() => handleRedo()}
-                            >{t('app.explore.battery.quiz.buttons.redo')}</Button>
+                            >{t('quiz.buttons.redo')}</Button>
                         </Box>
                     </Box>
                 </>
@@ -253,7 +253,7 @@ export const QuizResult = () => {
                         })}
                     >
                         <Box sx={{ textAlign: 'center' }}>
-                            <Typography variant="h6">{t('app.explore.skills.quiz.result.final')}</Typography>
+                            <Typography variant="h6">{t('quiz.result.final')}</Typography>
                         </Box>
                         <Box
                             sx={{
