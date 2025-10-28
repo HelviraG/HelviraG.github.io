@@ -28,7 +28,7 @@ export const QuizLayout = ({
     isBurnoutQuiz?: boolean;
     isTechSkillsQuiz?: boolean;
 }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     const navigate = useNavigate();
     const { appLang: lang, changeLang: changeLanguage } = useChangeLangage();
     const isTablet = useMediaQuery("(max-width: 800px");
