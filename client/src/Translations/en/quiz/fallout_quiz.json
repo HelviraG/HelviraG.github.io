@@ -1,0 +1,141 @@
+{
+    "quiz": {
+        "welcome_title": "🖖​ Hello there!",
+        "welcome_subtitle_1": "Welcome to the unique test that will tell you the Fallout faction you belong to according to the degree of your passion.",
+        "welcome_subtitle_2": "Shall we start?",
+        "welcome_back_title": "🖖​ Welcome Back!",
+        "welcome_back_subtitle_1": "It seems that you have already started the quiz.",
+        "welcome_back_subtitle_2": "You can either resume where you left off or start over.",
+        "chip": "Choose a field",
+        "chip_name": "Enter your name",
+        "label": "Pick up the tech field you work in :)",
+        "label_name": "What's your (nick)name :)?",
+        "indicators": {
+        "say_hi": "Hi, {{ userName }} \uD83D\uDC4B!",
+        "press_confirm": "\uD83D\uDC7E Press Enter To Confirm",
+        "error": "\uD83E\uDE84 Please Fix The Error",
+        "error_tip": "Only letters allowed"
+        },
+        "activity": {
+        "cat": {
+            "coding": {
+            "cat_job": "programmer",
+            "cat_hobby": "coding",
+            "cat_action": "code",
+            "cat_verb": "code"
+            },
+            "gaming": {
+            "cat_job": "gamer",
+            "cat_hobby": "gaming",
+            "cat_action": "play",
+            "cat_verb": "play"
+            },
+            "design": {
+            "cat_job": "designer",
+            "cat_hobby": "creating designs",
+            "cat_action": "sketch on Figma or Adobe",
+            "cat_verb": "design"
+            },
+            "machine_learning": {
+            "cat_job": "machine learning engineer",
+            "cat_hobby": "training bots",
+            "cat_action": "train AI models",
+            "cat_verb": "train AI models"
+            }
+        },
+        "fields": {
+            "coding": "coding",
+            "gaming": "gaming",
+            "designing": "design",
+            "machine_learning": "machine learning"
+        },
+        "coding": {
+            "field": [
+            "Coding",
+            "Programming"
+            ],
+            "nameField": [
+            "Coder",
+            "Programmer"
+            ],
+            "longNameField": "programmer/coder"
+        },
+        "gaming": {
+            "field": [
+            "Gaming"
+            ],
+            "nameField": [
+            "Gamer"
+            ],
+            "longNameField": "gaming"
+        },
+        "design": {
+            "field": [
+            "Designing"
+            ],
+            "nameField": [
+            "Designer"
+            ],
+            "longNameField": "designing"
+        },
+        "machine learning": {
+            "field": [
+            "Machine Learning"
+            ],
+            "nameField": [
+            "Machine Learning Engineer"
+            ],
+            "longNameField": "machine learning"
+        }
+        },
+        "result": {
+        "all": "All the results",
+        "title": "Pick Up Your Lane!",
+        "types": {
+            "citizen": "Vault Dweller",
+            "paladin": "Brotherhood of Steel",
+            "superMutant": "Super Mutant"
+        },
+        "chart": {
+            "allCategory": "all teams",
+            "subText": "All the types in proportion",
+            "noData": "No test result submitted in this category!"
+        },
+        "img": {
+            "citizen": "https://i.ibb.co/n84wCVZn/result-citizen-en.png",
+            "paladin": "https://i.ibb.co/Q3YjwzYt/result-paladin-en.png",
+            "superMutant": "https://i.ibb.co/23ZPWRyr/result-supermutant-en.png"
+        },
+        "label": {
+            "coding": {
+            "approach": "Coding Approach",
+            "work_life": "Work-Life Balance",
+            "favorite_tools": "Favorite Tools",
+            "key_traits": "Key Traits",
+            "social_style": "Social Style"
+            },
+            "gaming": {
+            "approach": "Gaming Approach",
+            "work_life": "Work-Life Balance",
+            "favorite_tools": "Favorite Games",
+            "key_traits": "Key Traits",
+            "social_style": "Social Style"
+            },
+            "design": {
+            "approach": "Design Approach",
+            "work_life": "Work-Life Balance",
+            "favorite_tools": "Favorite Tools",
+            "key_traits": "Key Traits",
+            "social_style": "Social Style"
+            },
+            "machine_learning": {
+            "approach": "Approach to Machine Learning",
+            "work_life": "Work-Life Balance",
+            "favorite_tools": "Favorite Tools",
+            "key_traits": "Key Traits",
+            "social_style": "Social Style"
+            }
+        }
+        }
+    }
+}

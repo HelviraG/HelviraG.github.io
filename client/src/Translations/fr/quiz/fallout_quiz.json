@@ -1,0 +1,141 @@
+{
+    "quiz": {
+        "welcome_title": "🖖​ Hello !",
+        "welcome_subtitle_1": "Bienvenue dans LE test qui vous indiquera la faction Fallout à laquelle vous appartenez en fonction du degré de votre passion.",
+        "welcome_subtitle_2": "Commençons donc?",
+        "welcome_back_title": "🖖​ Bienvenue!",
+        "welcome_back_subtitle_1": "Il semble que vous ayez déjà commencé le quiz.",
+        "welcome_back_subtitle_2": "Vous pouvez soit reprendre là où vous vous étiez arrêté, soit recommencer.",
+        "chip": "Sélectionner une industrie",
+        "label": "Choisis ta spécialité tech :)",
+        "chip_name": "S'identifier",
+        "label_name": "Ton (sur)nom :)?",
+        "indicators": {
+        "say_hi": "Salut, {{ userName }} \uD83D\uDC4B!",
+        "press_confirm": "\uD83D\uDC7E Appuies Sur Entrer",
+        "error": "\uD83E\uDE84 Une Erreur À Réparer",
+        "error_tip": "Seules les lettres comptent"
+        },
+        "activity": {
+            "cat": {
+            "coding": {
+            "cat_job": "de dev",
+            "cat_hobby": "en codant",
+            "cat_action": "de coder",
+            "cat_verb": "coder"
+            },
+            "gaming": {
+            "cat_job": "de gamer/gameuse",
+            "cat_hobby": "en jouant",
+            "cat_action": "de jouer",
+            "cat_verb": "jouer"
+            },
+            "design": {
+            "cat_job": "de designer",
+            "cat_hobby": "en multipliant les Figma",
+            "cat_action": "de multiplier les Figma",
+            "cat_verb": "designer"
+            },
+            "machine_learning": {
+            "cat_job": "d'ingénieur(e) en machine learning",
+            "cat_hobby": "en entraînant des bots",
+            "cat_action": "d'entraîner des bots",
+            "cat_verb": "créer des IAs/modèles"
+            }
+        },
+        "fields": {
+            "coding": "coding",
+            "gaming": "gaming",
+            "designing": "designing",
+            "machine_learning": "machine learning"
+        },
+        "coding": {
+            "field": [
+                "Coding",
+                "Programming"
+            ],
+            "nameField": [
+                "Coder",
+                "Programmer"
+            ],
+            "longNameField": "programmer/coder"
+        },
+        "gaming": {
+            "field": [
+            "Gaming"
+            ],
+            "nameField": [
+            "Gamer"
+            ],
+            "longNameField": "gaming"
+        },
+        "designing": {
+            "field": [
+            "Designing"
+            ],
+            "nameField": [
+            "Designer"
+            ],
+            "longNameField": "designing"
+        },
+        "machine learning": {
+            "field": [
+            "Machine Learning"
+            ],
+            "nameField": [
+            "Machine Learning Engineer"
+            ],
+            "longNameField": "machine learning"
+        }
+        },
+        "result": {
+        "all": "Tous les résultats",
+        "title": "Choisissez votre catégorie!",
+        "types": {
+            "citizen": "Habitant de l'Abri",
+            "paladin": "Confrérie de l'Acier",
+            "superMutant": "Super Mutant"
+        },
+        "chart": {
+            "allCategory": "toutes teams",
+            "subText": "Tous les types en pourcentage",
+            "noData": "Aucun test réalisé pour cette catégorie!"
+        },
+        "img": {
+            "citizen": "https://i.ibb.co/yFHBTrtK/result-citizen-fr.png",
+            "paladin": "https://i.ibb.co/ZzWtczs3/result-paladin-fr.png",
+            "superMutant": "https://i.ibb.co/W4x75kyg/result-supermutant-fr-1.png"
+        },
+        "label": {
+            "coding": {
+                "approach": "Vision",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Outils favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+            },
+            "gaming": {
+                "approach": "Gaming Approach",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Jeux favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+            },
+            "design": {
+                "approach": "Design Approach",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Outils favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+            },
+            "machine_learning": {
+                "approach": "Approach to Machine Learning",
+                "work_life": "Équilibre vie/travail",
+                "favorite_tools": "Outils favoris",
+                "key_traits": "Key Traits",
+                "social_style": "Social Style"
+            }
+        }
+        }
+    }
+}
