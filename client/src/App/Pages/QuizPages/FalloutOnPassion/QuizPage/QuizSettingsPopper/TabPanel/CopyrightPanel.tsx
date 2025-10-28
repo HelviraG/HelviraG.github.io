@@ -16,7 +16,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 export const CopyrightPanel = ({ value }: { value: number }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translation');
 
   return (
     <CustomTabPanel value={value} index={2}>
