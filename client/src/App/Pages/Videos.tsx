@@ -9,9 +9,9 @@ import { BuyCoffeeSection } from "./Home/BuyCoffeeSection";
 import { VideosList } from "./Videos/VideosList";
 
 export const Videos = ({ isTablet }: { isTablet: boolean }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
 
-  useDocumentTitle(`Helvira Goma | 📼 ${t("app.menu.live")}`);
+  useDocumentTitle(`Helvira Goma | 📼 ${t("menu.live")}`);
 
   return (
     <>
@@ -19,8 +19,8 @@ export const Videos = ({ isTablet }: { isTablet: boolean }) => {
         <Mobile>
           <HeroTitle
             imgUrl={Covers.LIVE}
-            quote={t("app.quotes.lives")}
-            title={t("app.lives.title")}
+            quote={t("quotes.lives")}
+            title={t("translation:app.lives.title")}
             titleColor="primary"
           />
           <VideosList />
@@ -30,8 +30,8 @@ export const Videos = ({ isTablet }: { isTablet: boolean }) => {
         <Desktop>
           <HeroTitle
             imgUrl={Covers.LIVE}
-            quote={t("app.quotes.lives")}
-            title={t("app.lives.title")}
+            quote={t("quotes.lives")}
+            title={t("translation:app.lives.title")}
             titleColor="primary"
           />
           <VideosList />
