@@ -75,7 +75,7 @@ export const Steps = () => {
   const [openSettings, setOpenSettings] = useState<boolean>(false);
 
   const params = useParams();
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
   const currentStep = params.id;
   const [activeStep, setActiveStep] = useState(
     currentStep ? parseInt(currentStep, 10) : 0,
@@ -153,7 +153,7 @@ export const Steps = () => {
 
   return (
     <QuizLayout  
-      title={`🔥​ ${t("app.explore.fallout_on_passion.title")}`}
+      title={`🔥​ ${t("translation:app.explore.fallout_on_passion.title")}`}
       buttons={
         <>
           {activeStep !== 18 && maxSteps && (
@@ -185,14 +185,14 @@ export const Steps = () => {
                 variant="outlined" 
                 onClick={() => navigate(Routes.QUIZ_INIT)}
               >
-                {t('app.general.actions.redo')}
+                {t('actions.redo')}
               </QuizOutlinedButton>
               <QuizContainedButton 
                 hasFullWidth
                 variant="contained" 
                 onClick={() => navigate(Routes.QUIZ_RESULT)}
               >
-                {t('app.general.actions.results')}
+                {t('actions.results')}
               </QuizContainedButton>
             </Box>
           )}
@@ -243,10 +243,10 @@ export const Steps = () => {
                 <QuizContentTitleBox>
                   {dataFile.survey[activeStep].q.map((q: string, index) => {
                     const formattedQ = formatQuestion(q, { 
-                      cat_job: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_job`),
-                      cat_verb: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_verb`),
-                      cat_hobby: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_hobby`),
-                      cat_action: t(`app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_action`),
+                      cat_job: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_job`),
+                      cat_verb: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_verb`),
+                      cat_hobby: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_hobby`),
+                      cat_action: t(`translation:app.explore.fallout_on_passion.quiz.activity.cat.${stripQuotes(cat)}.cat_action`),
                     });
 
                     return (
