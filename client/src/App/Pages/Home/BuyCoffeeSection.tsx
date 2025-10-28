@@ -15,7 +15,8 @@ export const BuyCoffeeSection = () => {
       <BuyCoffeeTitleBox>
         <BuyCoffeeTitleTypo>
           <Trans
-            i18nKey="app.general.buy_coffee.title"
+            i18nKey="buy_coffee.title"
+            ns="common"
             components={[
               <BuyCoffeeLink href="https://motivher.fr" />,
             ]}
