@@ -32,7 +32,7 @@ import {
   ItemEvent,
   ItemEventWrapper,
 } from "@styles/Pages/ConferencesStyle";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const ConferencesListItem = ({
@@ -45,6 +45,8 @@ export const ConferencesListItem = ({
   const { t } = useTranslation();
   const [showVideo, setShowVideo] = useState(false);
   const hasTag = lang === value;
+  const [isVisible, setIsVisible] = useState(false);
+  const itemRef = useRef<HTMLDivElement>(null);
 
   const [expanded, setExpanded] = React.useState<string | false>("");
 
@@ -65,11 +67,45 @@ export const ConferencesListItem = ({
     window.open(`${url}`, "_blank", "rel=noopener noreferrer");
   };
 
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (itemRef.current) {
+            observer.unobserve(itemRef.current);
+          }
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    if (itemRef.current) {
+      observer.observe(itemRef.current);
+    }
+
+    return () => {
+      if (itemRef.current) {
+        observer.unobserve(itemRef.current);
+      }
+    };
+  }, []);
+
   return (
     <CardWrapper
+      ref={itemRef}
       role="tabpanel"
       hidden={!hasTag && value !== Tags.ALL}
       isConference
+      sx={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
+        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+      }}
     >
       <CardEventMedia component='div' imgUrl={cover} />
       <ConferenceCardWrapper>

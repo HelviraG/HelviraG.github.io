@@ -12,7 +12,7 @@ import {
   CardWrapper,
 } from "@styles/Components/List/ListItem";
 import { ChipWrapper } from "@styles/Pages/ConferencesStyle";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const PressListItem = ({
@@ -27,9 +27,45 @@ export const PressListItem = ({
   caption,
 }: IPress) => {
   const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
+  const itemRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (itemRef.current) {
+            observer.unobserve(itemRef.current);
+          }
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    if (itemRef.current) {
+      observer.observe(itemRef.current);
+    }
+
+    return () => {
+      if (itemRef.current) {
+        observer.unobserve(itemRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <CardWrapper>
+    <CardWrapper
+      ref={itemRef}
+      sx={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
+        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+      }}
+    >
       <CardContentMedia component={"span"} imgUrl={imgUrl} />
       <CardContentWrapper>
         <ChipWrapper>

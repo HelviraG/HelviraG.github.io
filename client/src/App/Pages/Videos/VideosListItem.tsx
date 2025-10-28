@@ -12,7 +12,7 @@ import {
   CardWrapper,
 } from "@styles/Components/List/ListItem";
 import { ChipWrapper } from "@styles/Pages/ConferencesStyle";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface LiveItemProps {
@@ -33,6 +33,8 @@ export const VideosListItem = ({
   const { t } = useTranslation();
   const [showVideo, setShowVideo] = useState(false);
   const hasTag = tags.filter((tag) => tag === value).length > 0;
+  const [isVisible, setIsVisible] = useState(false);
+  const itemRef = useRef<HTMLDivElement>(null);
 
   const handleShowVideo = () => {
     setShowVideo(true);
@@ -42,8 +44,45 @@ export const VideosListItem = ({
     setShowVideo(false);
   };
 
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (itemRef.current) {
+            observer.unobserve(itemRef.current);
+          }
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    if (itemRef.current) {
+      observer.observe(itemRef.current);
+    }
+
+    return () => {
+      if (itemRef.current) {
+        observer.unobserve(itemRef.current);
+      }
+    };
+  }, []);
+  
+
   return (
-    <CardWrapper role="tabpanel" hidden={!hasTag}>
+    <CardWrapper
+      ref={itemRef}
+      role="tabpanel" hidden={!hasTag}
+       sx={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
+        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+      }}
+    >
       <CardContentMedia component={"span"} imgUrl={imgUrl} />
       <CardContentWrapper>
         <ChipWrapper>
