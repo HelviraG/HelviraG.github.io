@@ -60,7 +60,7 @@ function stripQuotes(str: string) {
 }
 
 export const QuizPersonal = ({ cat }: { cat: string }) => {
-  const { t } = useTranslation('translation');
+  const { t } = useTranslation('falloutQuiz');
   const isMobile = useMediaQuery("(max-width: 767px)");
   const dispatch = useDispatch();
   const answers = useSelector(listAllAnswers);
@@ -129,7 +129,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
     <QuizPersonalWrapperBox>
       <QuizPersonalHeaderWrapper>
         <QuizPersonalImgBox
-          imgUrl={t(`app.explore.fallout_on_passion.quiz.result.img.${type}`)}
+          imgUrl={t(`quiz.result.img.${type}`)}
         ></QuizPersonalImgBox>
         <QuizPersonalHeader>
           <Typography variant={"h5"} align={"right"}>
@@ -182,7 +182,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
               <TabPanel value={value} index={0}>
                 <Typography variant="h6" align={"right"} sx={{ marginBottom: 2 }}>
                   {t(
-                    `app.explore.fallout_on_passion.quiz.result.label.${stripQuotes(cat)}.approach`,
+                    `quiz.result.label.${stripQuotes(cat)}.approach`,
                   )}
                 </Typography>
                 <Trans
@@ -204,7 +204,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
               <TabPanel value={value} index={1}>
                 <Typography variant="h6" align={"right"} sx={{ marginBottom: 2 }}>
                   {t(
-                    `app.explore.fallout_on_passion.quiz.result.label.${stripQuotes(cat)}.work_life`,
+                    `quiz.result.label.${stripQuotes(cat)}.work_life`,
                   )}
                 </Typography>
                 <Trans
@@ -226,7 +226,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
               <TabPanel value={value} index={2}>
                 <Typography variant="h6" align={"right"} sx={{ marginBottom: 2 }}>
                   {t(
-                    `app.explore.fallout_on_passion.quiz.result.label.${stripQuotes(cat)}.favorite_tools`,
+                    `quiz.result.label.${stripQuotes(cat)}.favorite_tools`,
                   )}
                 </Typography>
                 <Trans
@@ -248,7 +248,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
               <TabPanel value={value} index={3}>
                 <Typography variant="h6" align={"right"} sx={{ marginBottom: 2 }}>
                   {t(
-                    `app.explore.fallout_on_passion.quiz.result.label.${stripQuotes(cat)}.key_traits`,
+                    `quiz.result.label.${stripQuotes(cat)}.key_traits`,
                   )}
                 </Typography>
                 <Trans
@@ -270,7 +270,7 @@ export const QuizPersonal = ({ cat }: { cat: string }) => {
               <TabPanel value={value} index={4}>
                 <Typography variant="h6" align={"right"} sx={{ marginBottom: 2 }}>
                   {t(
-                    `app.explore.fallout_on_passion.quiz.result.label.${stripQuotes(cat)}.social_style`,
+                    `quiz.result.label.${stripQuotes(cat)}.social_style`,
                   )}
                 </Typography>
                 <Trans
