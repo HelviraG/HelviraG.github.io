@@ -23,7 +23,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 export const ExplorerList = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common', 'translation']);
 
   return (
     <ListWrapper>
@@ -31,7 +31,7 @@ export const ExplorerList = () => {
         <TitleWrapper textAlign="right">
           <img src={SubTitle.EXPLORER} alt="Explore page subtitle icon" />
           <TitleTypography variant="h3" shadowColor="#32ff7e">
-            {t("app.explore.description")}
+            {t("translation:app.explore.description")}
           </TitleTypography>
         </TitleWrapper>
       </ListTitleWrapper>
@@ -61,7 +61,7 @@ export const ExplorerList = () => {
                 borderBottomRightRadius: "15px",
               },
             })}
-            image={t("app.explore.fallout_on_passion.miniature")}
+            image={t("translation:app.explore.fallout_on_passion.miniature")}
             alt="Fallout on Passion"
           />
           <Box
@@ -77,7 +77,7 @@ export const ExplorerList = () => {
                 variant="h5"
                 sx={{ fontWeight: 800, marginTop: "0.5em" }}
               >
-                {t("app.explore.fallout_on_passion.title")}
+                {t("translation:app.explore.fallout_on_passion.title")}
               </Typography>
               <Typography
                 variant="body1"
@@ -85,21 +85,21 @@ export const ExplorerList = () => {
                 component="div"
                 sx={{ fontWeight: 800 }}
               >
-                {t("app.explore.fallout_on_passion.subtitle")}
+                {t("translation:app.explore.fallout_on_passion.subtitle")}
               </Typography>
               <CardContentAction isExplorerList>
                 <CardContentButton
                   href={`${Routes.QUIZ_RESULT}`}
                   startIcon={<LineAxisIcon />}
                 >
-                  {t("app.general.actions.check")}
+                  {t("actions.check")}
                 </CardContentButton>
                 <CardContentButton
                   href={`${Routes.PASSION}`}
                   startIcon={<VideogameAssetIcon />}
                   isPlayground
                 >
-                  {t("app.general.actions.play")}
+                  {t("actions.play")}
                 </CardContentButton>
               </CardContentAction>
             </CardContent>
@@ -122,7 +122,7 @@ export const ExplorerList = () => {
                 borderBottomRightRadius: "15px",
               },
             })}
-            image={t("app.explore.battery.miniature")}
+            image={t("translation:app.explore.battery.miniature")}
             alt="Burnout Assessment"
           />
           <Box
@@ -138,7 +138,7 @@ export const ExplorerList = () => {
                 variant="h5"
                 sx={{ fontWeight: 800, marginTop: "0.5em" }}
               >
-                {t("app.explore.battery.title")}
+                {t("translation:app.explore.battery.title")}
               </Typography>
               <Typography
                 variant="body1"
@@ -146,7 +146,7 @@ export const ExplorerList = () => {
                 component="div"
                 sx={{ fontWeight: 800 }}
               >
-                {t("app.explore.battery.subtitle")}
+                {t("translation:app.explore.battery.subtitle")}
               </Typography>
               <CardContentAction isExplorerList>
                 <CardContentButton
@@ -154,7 +154,7 @@ export const ExplorerList = () => {
                   startIcon={<ElectricalServicesIcon />}
                   isPlayground
                 >
-                  {t("app.general.actions.start")}
+                  {t("actions.start")}
                 </CardContentButton>
               </CardContentAction>
             </CardContent>
@@ -177,7 +177,7 @@ export const ExplorerList = () => {
                 borderBottomRightRadius: "15px",
               },
             })}
-            image={t("app.explore.skills.miniature")}
+            image={t("translation:app.explore.skills.miniature")}
             alt="Tech Skills Expiration Assessment"
           />
           <Box
@@ -193,7 +193,7 @@ export const ExplorerList = () => {
                 variant="h5"
                 sx={{ fontWeight: 800, marginTop: "0.5em" }}
               >
-                {t("app.explore.skills.title")}
+                {t("translation:app.explore.skills.title")}
               </Typography>
               <Typography
                 variant="body1"
@@ -201,7 +201,7 @@ export const ExplorerList = () => {
                 component="div"
                 sx={{ fontWeight: 800 }}
               >
-                {t("app.explore.skills.subtitle")}
+                {t("translation:app.explore.skills.subtitle")}
               </Typography>
               <CardContentAction isExplorerList>
                 <CardContentButton
@@ -209,7 +209,7 @@ export const ExplorerList = () => {
                   startIcon={<HandymanIcon />}
                   isPlayground
                 >
-                  {t("app.general.actions.start")}
+                  {t("actions.start")}
                 </CardContentButton>
               </CardContentAction>
             </CardContent>
