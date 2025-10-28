@@ -42,7 +42,7 @@ export const ConferencesListItem = ({
   lang,
   value,
 }: { value?: string } & IConference) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   const [showVideo, setShowVideo] = useState(false);
   const hasTag = lang === value;
   const [isVisible, setIsVisible] = useState(false);
@@ -206,7 +206,7 @@ export const ConferencesListItem = ({
                             }
                             startIcon={<MenuBookIcon />}
                           >
-                            {t("app.general.actions.resources")}
+                            {t("actions.resources")}
                           </CardContentButton>
                         </CardContentAction>
                       </CardContentWrapper>
@@ -219,7 +219,7 @@ export const ConferencesListItem = ({
                               onClick={handleShowVideo}
                               startIcon={<VisibilityRoundedIcon />}
                             >
-                              {t("app.general.actions.watch")}
+                              {t("actions.watch")}
                             </CardContentButton>
                           </CardContentAction>
                         </CardContentWrapper>
