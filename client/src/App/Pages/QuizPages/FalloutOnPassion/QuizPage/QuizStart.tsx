@@ -12,7 +12,7 @@ import { QuizLayout } from "../../Layout/QuizLayout";
 import { QuizContainedButton, QuizOutlinedButton } from "@/App/Styles/Pages/FalloutOnPassionStyle/QuizLayoutStyle";
 
 export const QuizStart = () => {
-    const { t } = useTranslation(['common', 'translation']);
+    const { t } = useTranslation(['common', 'translation', 'falloutQuiz']);
     const navigate = useNavigate();
     const [openSettings, setOpenSettings] = useState<boolean>(false);
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -158,14 +158,14 @@ export const QuizStart = () => {
                         })}
                     >
                         <Typography variant="h3" sx={{ textAlign: 'left' }}>
-                        {field ? t('translation:app.explore.fallout_on_passion.quiz.welcome_back_title') : t('translation:app.explore.fallout_on_passion.quiz.welcome_title')}
+                        {field ? t('falloutQuiz:quiz.welcome_back_title') : t('falloutQuiz:quiz.welcome_title')}
                         </Typography>
                         <Divider sx={{ margin: '1em 0 2em 0' }} />
                         <Typography variant="h6" sx={{ textAlign: 'justify'  }}>
-                            {field ? t('translation:app.explore.fallout_on_passion.quiz.welcome_back_subtitle_1') : t('translation:app.explore.fallout_on_passion.quiz.welcome_subtitle_1')}
+                            {field ? t('falloutQuiz:quiz.welcome_back_subtitle_1') : t('falloutQuiz:quiz.welcome_subtitle_1')}
                         </Typography>
                         <Typography variant="h6" sx={{ textAlign: 'justify' }}>
-                            {field ? t('translation:app.explore.fallout_on_passion.quiz.welcome_back_subtitle_2') : t('translation:app.explore.fallout_on_passion.quiz.welcome_subtitle_2')}
+                            {field ? t('falloutQuiz:quiz.welcome_back_subtitle_2') : t('falloutQuiz:quiz.welcome_subtitle_2')}
                         </Typography>
                     </Box>                    
                 </Box>
