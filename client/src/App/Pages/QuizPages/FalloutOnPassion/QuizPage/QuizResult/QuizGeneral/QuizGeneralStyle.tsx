@@ -48,7 +48,7 @@ export const DashboardLeftWrapperBox = styled(Box, {
         width: '70%'
     },
 
-    [theme.breakpoints.down(800)]: {
+    [theme.breakpoints.down(1050)]: {
         width: '100%'
     },
     
@@ -81,7 +81,7 @@ export const DashboardRightWrapperBox = styled(Box)(({ theme }) => ({
         width: '40%'
     },
 
-    [theme.breakpoints.down(800)]: {
+    [theme.breakpoints.down(1050)]: {
         flex: 0,
         width: '-webkit-fill-available'
     }
@@ -94,7 +94,7 @@ export const DashboardRightBox = styled(Box)(({ theme }) => ({
     borderRadius: '32px', 
     width: '70%',
 
-    [theme.breakpoints.down(800)]: {
+    [theme.breakpoints.down(1050)]: {
         padding: '2em',
         margin: '2em'
     },
