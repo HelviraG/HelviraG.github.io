@@ -16,13 +16,11 @@ export const QuizStepsPage = ({ isTablet }: { isTablet: boolean }) => {
       {isTablet ? (
         <Mobile withFooter={false} withHeader={false} withTopButton={false}>
           <Steps />
-          <BuyCoffeeLink />
           
         </Mobile>
       ) : (
         <Desktop withFooter={false} withHeader={false} withTopButton={false}>
           <Steps />
-          <BuyCoffeeLink />
           
         </Desktop>
       )}

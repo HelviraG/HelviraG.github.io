@@ -16,13 +16,11 @@ export const FalloutPassionPage = ({ isTablet }: { isTablet: boolean }) => {
       {isTablet ? (
         <Mobile withTopButton={false} withHeader={false} withFooter={false}>
           <FalloutQuiz />
-          <BuyCoffeeLink />
           
         </Mobile>
       ) : (
         <Desktop withTopButton={false} withHeader={false} withFooter={false}>
           <FalloutQuiz />
-          <BuyCoffeeLink />
           
         </Desktop>
       )}

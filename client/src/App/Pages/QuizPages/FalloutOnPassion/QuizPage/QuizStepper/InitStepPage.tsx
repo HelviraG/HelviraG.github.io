@@ -16,13 +16,11 @@ export const InitStepsPage = ({ isTablet }: { isTablet: boolean }) => {
         {isTablet ? (
           <Mobile withFooter={false} withHeader={false} withTopButton={false}>
             <InitStep />
-            <BuyCoffeeLink />
             
           </Mobile>
         ) : (
           <Desktop withFooter={false} withHeader={false} withTopButton={false}>
             <InitStep />
-            <BuyCoffeeLink />
             
           </Desktop>
         )}
