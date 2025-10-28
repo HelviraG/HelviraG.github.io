@@ -8,10 +8,10 @@ import { listAnswers } from "@/Redux/Slices/BurnoutQuizSlice";
 import { QuizResult } from "./Quiz/QuizResult";
 
 export const BurnoutQuizResult = ({ isTablet }: { isTablet: boolean }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('common');
     const dispatch = useDispatch();
 
-    useDocumentTitle(`Helvira Goma | 🔌 ${t("app.menu.battery")}`);
+    useDocumentTitle(`Helvira Goma | 🔌 ${t("menu.battery")}`);
 
     useEffect(() => {
         dispatch(listAnswers());
