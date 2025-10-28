@@ -1,18 +1,6 @@
 {
   "press": [
     {
-      "media": "L'Express Éducation",
-      "mediaImg": "https://i.ibb.co/16HF3J1/obeoblog-media.png",
-      "title": "Ce que l'on ne vous dit jamais sur la reconversion professionnelle",
-      "tags": ["INSPIRATION"],
-      "imgUrl": "https://i.ibb.co/tKRmnmp/obeoblog-article.jpg",
-      "lightColor": "#f783ac",
-      "darkColor": "#f783ac",
-      "link": "https://blog.obeosoft.com/le-devfest-nantes-2023-on-y-etait",
-      "writtenBy": "Sylvie Laidet",
-      "caption": "'Plus que les autres, on doit montrer de quel bois, on se chauffe', regrette Helvira Goma. Après une reconversion, dur dur de faire machine arrière"
-    },
-    {
       "media": "Obeo Blog",
       "mediaImg": "https://i.ibb.co/16HF3J1/obeoblog-media.png",
       "title": "Le DevFest Nantes 2023, on y était!",
