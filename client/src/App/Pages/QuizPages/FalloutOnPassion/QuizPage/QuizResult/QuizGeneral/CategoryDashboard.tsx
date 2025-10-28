@@ -15,16 +15,16 @@ import {
 import { useTranslation } from "react-i18next";
 
 export const CategoryDashboard = ({ cat }: { cat: string }) => {
-    const { t } = useTranslation('translation');
+    const { t } = useTranslation('falloutQuiz');
     const { data } = useListResultQuery({ category: cat });
     const isMobile = useMediaQuery("(max-width: 500px)")
     
     if (!data?.percentages) return <EmptyBoxWrapper></EmptyBoxWrapper>;
 
     const categories: { key: 'citizen' | 'paladin' | 'superMutant', label: string, labelMarkType: 'square' }[] = [
-        { key: 'citizen', label: t('app.explore.fallout_on_passion.quiz.result.types.citizen'), labelMarkType: 'square' },
-        { key: 'paladin', label: t('app.explore.fallout_on_passion.quiz.result.types.paladin'), labelMarkType: 'square' },
-        { key: 'superMutant', label: t('app.explore.fallout_on_passion.quiz.result.types.superMutant'), labelMarkType: 'square' },
+        { key: 'citizen', label: t('quiz.result.types.citizen'), labelMarkType: 'square' },
+        { key: 'paladin', label: t('quiz.result.types.paladin'), labelMarkType: 'square' },
+        { key: 'superMutant', label: t('quiz.result.types.superMutant'), labelMarkType: 'square' },
     ];
 
     const dataToChart = categories
@@ -69,7 +69,7 @@ export const CategoryDashboard = ({ cat }: { cat: string }) => {
                         marginTop: '10px'
                     }
                  })}>
-                    <DashboardContentTypo>{t('app.explore.fallout_on_passion.quiz.result.chart.subText')}</DashboardContentTypo>
+                    <DashboardContentTypo>{t('quiz.result.chart.subText')}</DashboardContentTypo>
                     <DashboardContentDivider />
                 </Box>
                 <DashboardContentChartWrapper>
@@ -102,7 +102,7 @@ export const CategoryDashboard = ({ cat }: { cat: string }) => {
                             })}
                             slotProps={{
                                 noDataOverlay: { 
-                                    message: t('app.explore.fallout_on_passion.quiz.result.chart.noData'),
+                                    message: t('quiz.result.chart.noData'),
                                     sx: {
                                         fontSize: 18,
                                         fontWeight: 'bold',
