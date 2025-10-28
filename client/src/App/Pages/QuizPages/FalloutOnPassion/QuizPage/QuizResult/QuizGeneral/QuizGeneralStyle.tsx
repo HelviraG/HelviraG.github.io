@@ -111,7 +111,7 @@ export const DashboardButtonsWrapper = styled(Box)(({ theme }) => ({
     gap: theme.spacing(3), 
     marginTop: theme.spacing(4),
 
-    [theme.breakpoints.down(800)]: {
+    [theme.breakpoints.down(1050)]: {
         flexDirection: 'row',
         gap: theme.spacing(1)
     },
