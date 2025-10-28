@@ -12,7 +12,7 @@ import { QuizLayout } from "../../Layout/QuizLayout";
 import { QuizContainedButton, QuizOutlinedButton } from "@/App/Styles/Pages/FalloutOnPassionStyle/QuizLayoutStyle";
 
 export const QuizStart = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation(['common', 'translation']);
     const navigate = useNavigate();
     const [openSettings, setOpenSettings] = useState<boolean>(false);
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -26,12 +26,12 @@ export const QuizStart = () => {
     const popperRef = useRef(null);
 
     const startImage = isMobile
-        ? t('app.explore.fallout_on_passion.cover_sm')
-        : t('app.explore.fallout_on_passion.cover');
+        ? t('translation:app.explore.fallout_on_passion.cover_sm')
+        : t('translation:app.explore.fallout_on_passion.cover');
 
     const resumeImage = isMobile
-        ? t('app.explore.fallout_on_passion.resume_sm')
-        : t('app.explore.fallout_on_passion.resume');
+        ? t('translation:app.explore.fallout_on_passion.resume_sm')
+        : t('translation:app.explore.fallout_on_passion.resume');
 
     useClickOutside(popperRef, () => { setOpenSettings(false) });
 
@@ -58,7 +58,7 @@ export const QuizStart = () => {
 
     return (
         <QuizLayout 
-            title={`🔥​ ${t("app.explore.fallout_on_passion.title")}`}
+            title={`🔥​ ${t("translation:app.explore.fallout_on_passion.title")}`}
             buttons={
                 <>
                     {field && (
@@ -68,7 +68,7 @@ export const QuizStart = () => {
                                     variant="outlined" 
                                     onClick={handleClickStart}
                                 >
-                                    {t('app.general.actions.start_again')}
+                                    {t('actions.start_again')}
                                 </QuizOutlinedButton>
                             </Box>
                             <Box>
@@ -76,7 +76,7 @@ export const QuizStart = () => {
                                     variant="contained" 
                                     onClick={handleClickResume}
                                 >
-                                    {t('app.general.actions.resume')}
+                                    {t('actions.resume')}
                                 </QuizContainedButton>
                             </Box>
                         </>
@@ -99,7 +99,7 @@ export const QuizStart = () => {
                                 hasFullWidth
                                 onClick={handleClickStart}
                             >
-                                {t('app.general.actions.start')}
+                                {t('actions.start')}
                             </QuizContainedButton>
                         </Box>
                     }
@@ -158,14 +158,14 @@ export const QuizStart = () => {
                         })}
                     >
                         <Typography variant="h3" sx={{ textAlign: 'left' }}>
-                        {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_title') : t('app.explore.fallout_on_passion.quiz.welcome_title')}
+                        {field ? t('translation:app.explore.fallout_on_passion.quiz.welcome_back_title') : t('translation:app.explore.fallout_on_passion.quiz.welcome_title')}
                         </Typography>
                         <Divider sx={{ margin: '1em 0 2em 0' }} />
                         <Typography variant="h6" sx={{ textAlign: 'justify'  }}>
-                            {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_subtitle_1') : t('app.explore.fallout_on_passion.quiz.welcome_subtitle_1')}
+                            {field ? t('translation:app.explore.fallout_on_passion.quiz.welcome_back_subtitle_1') : t('translation:app.explore.fallout_on_passion.quiz.welcome_subtitle_1')}
                         </Typography>
                         <Typography variant="h6" sx={{ textAlign: 'justify' }}>
-                            {field ? t('app.explore.fallout_on_passion.quiz.welcome_back_subtitle_2') : t('app.explore.fallout_on_passion.quiz.welcome_subtitle_2')}
+                            {field ? t('translation:app.explore.fallout_on_passion.quiz.welcome_back_subtitle_2') : t('translation:app.explore.fallout_on_passion.quiz.welcome_subtitle_2')}
                         </Typography>
                     </Box>                    
                 </Box>
