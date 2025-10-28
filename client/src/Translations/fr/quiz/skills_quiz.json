@@ -4,12 +4,25 @@
         "currentFreshness": "Degré de Fraîcheur",
         "startCaption": "Commencez le test pour voir le degré de fraîcheur de vos compétences tech!",
         "subText": "Test Compétences Tech",
+        "question": "Question ({{ questionNumber }})",
+        "buttons": {
+            "back": "Retour",
+            "prev": "Préc",
+            "redo": "Refaire le test"
+        },
+        "currentLevel": {
+            "complete": "{{ progress }}% terminé",
+            "caption": "D'après {{ activeStep }} de vos {{ totalQuestions }} réponses" 
+        },
+        "footer": {
+            "caption": "{{ activeStep }} sur {{ totalQuestions }}"
+        },
         "freshnessLevel": {
-        "ultraFresh": "Ultra Frais",
-        "fresh": "Frais",
-        "stable": "Stable",
-        "aging": "Expirant",
-        "expired": "Périmé"
+            "ultraFresh": "Ultra Frais",
+            "fresh": "Frais",
+            "stable": "Stable",
+            "aging": "Expirant",
+            "expired": "Périmé"
         },
         "questions": {
             "1": {
@@ -102,8 +115,8 @@
                     "4": "Je travaille principalement avec des solutions on-premise"
                 }
             }
-            },
-            "result": {
+        },
+        "result": {
             "final": "Degré de Fraîcheur Final",
             "title": "{{ resultCategory }}!",
             "share": "Partager votre résultat",

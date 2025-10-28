@@ -4,6 +4,19 @@
         "currentFreshness": "Tech Skills Freshness",
         "startCaption": "Start answering to see your freshness level!",
         "subText": "Tech Skills Assessment",
+        "question": "Question ({{ questionNumber }})",
+        "buttons": {
+            "back": "Back",
+            "prev": "Prev",
+            "redo": "Take Quiz Again"
+        },
+        "currentLevel": {
+            "complete": "{{ progress }}% complete",
+            "caption": "Based on {{ activeStep }} of {{ totalQuestions }} answers"
+        },
+        "footer": {
+            "caption": "{{ activeStep }} of {{ totalQuestions }}"
+        },
         "freshnessLevel": {
             "ultraFresh": "Ultra Fresh",
             "fresh": "Fresh",
