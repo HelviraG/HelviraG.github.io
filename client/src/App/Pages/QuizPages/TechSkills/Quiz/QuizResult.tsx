@@ -16,7 +16,7 @@ import { CopyAll } from "@mui/icons-material";
 
 export const QuizResult = () => {
     const [searchParams] = useSearchParams();
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
