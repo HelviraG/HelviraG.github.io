@@ -74,6 +74,15 @@ export default function useScrollText() {
                         "last_section": t('scroll.passion.last_section')
                     }
                 ];
+            case Routes.PLAYER:
+                return [
+                    {
+                        "first_section": t('scroll.player.first_section'),
+                        "second_section": t('scroll.player.second_section'),
+                        "third_section": t('scroll.player.third_section'),
+                        "last_section": t('scroll.player.last_section')
+                    }
+                ];
             default:
                 return [
                     {
