@@ -134,6 +134,12 @@
       "second_section": "🧩 The Test",
       "third_section": "🧩 The Test",
       "last_section": "That's it, for now"
+    },
+    "player": {
+      "first_section": " < 🍿Replay! /> ",
+      "second_section": "🍿 The Replay",
+      "third_section": "🍿 The Replay",
+      "last_section": "That's it, for now"
     }
   }
 }

@@ -132,6 +132,12 @@
         "second_section": "🧩 Le Quiz",
         "third_section": "🧩 Le Quiz",
         "last_section": "C'est tout pour l'instant"
+      },
+      "player": {
+        "first_section": " < 🍿Replay! /> ",
+        "second_section": "🍿 The Replay",
+        "third_section": "🍿 The Replay",
+        "last_section": "That's it, for now"
       }
     }
 }
