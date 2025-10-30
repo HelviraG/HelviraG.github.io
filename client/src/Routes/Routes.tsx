@@ -19,19 +19,21 @@ import { BurnoutQuizResult } from "@/App/Pages/QuizPages/BatteryLevel/BurnoutQui
 import { TechSkillsQuiz } from "@/App/Pages/TechSkillsQuiz";
 import { TechSkillsQuizSteps } from "@/App/Pages/QuizPages/TechSkills/TechSkillsQuizSteps";
 import { TechSkillsQuizResult } from "@/App/Pages/QuizPages/TechSkills/TechSkillsQuizResult";
+import { VideosPlayer } from "@/App/Pages/VideoPlayer";
 
 export const AppRoutes = () => {
   const location = useLocation();
   const isPassionRoute = location.pathname.includes("/passion");
   const isBurnoutRoute = location.pathname.includes("/burnout");
   const isTechSkillsRoute = location.pathname.includes("/skills");
+  const isPlayerRoute = location.pathname.includes("/player");
   const isTablet = useMediaQuery("(max-width: 768px)");
 
   return (
     <div style={{ 
       backgroundColor: isPassionRoute ? "#FFF" : "transparent", 
       minHeight: "100vh", 
-      ...((isPassionRoute || isBurnoutRoute || isTechSkillsRoute) && {     
+      ...((isPassionRoute || isBurnoutRoute || isTechSkillsRoute || isPlayerRoute) && {     
         flex: 1,
         display: "flex",
         flexDirection: "column" 
@@ -61,6 +63,10 @@ export const AppRoutes = () => {
         <Route path={Links.SKILLS} element={<TechSkillsQuiz isTablet={isTablet} />} />
         <Route path={Links.SKILLS_QUIZ_STEP} element={<TechSkillsQuizSteps isTablet={isTablet} />} />
         <Route path={Links.SKILLS_QUIZ_RESULT} element={<TechSkillsQuizResult isTablet={isTablet} />} />
+        <Route 
+          path={Links.PLAYER} 
+          element={<VideosPlayer isTablet={isTablet} />} 
+          />
       </Routes>
     </div>
   );
