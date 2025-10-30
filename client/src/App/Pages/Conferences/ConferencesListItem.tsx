@@ -1,259 +1,223 @@
-import { AppChip } from "@component/Chip/Chip";
-import { VideoDialog } from "@component/VideoDialog/VideoDialog";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import MyLocationRoundedIcon from "@mui/icons-material/MyLocationRounded";
-import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
-import { AccordionDetails, Box, IconButton, Typography } from "@mui/material";
-import { Tags } from "@resources/Enums/Tags";
-import {
-  IConference,
-  IEvent,
-} from "@resources/Pages/General/ConferencesResource";
-import {
-  CardContentAction,
-  CardContentButton,
-  CardContentTitle,
-  CardContentWrapper,
-  CardWrapper,
-} from "@styles/Components/List/ListItem";
-import {
-  CardEvent,
-  CardEventDetailHeader,
-  CardEventMedia,
-  ChipWrapper,
-  ConferenceCardBody,
-  ConferenceCardHeader,
-  ConferenceCardWrapper,
-  EventBox,
-  EventDateDay,
-  EventDateMonth,
-  EventDateWrapper,
-  EventLocationWrapper,
-  ItemEvent,
-  ItemEventWrapper,
-} from "@styles/Pages/ConferencesStyle";
-import React, { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Tags } from "@/App/Resources/Enums/Tags";
+import { IConference } from "@/App/Resources/Pages/General/ConferencesResource";
+import { CardContentTitle, CardWrapper } from "@/App/Styles/Components/List/ListItem";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { Box, Chip, styled } from '@mui/material';
+import { ConferenceDrawer } from "./ConferenceDrawer";
+
+const match = (text: string, query: string, options?: { insideWords?: boolean }) => {
+  if (!query) return [];
+  const lowerText = text.toLowerCase();
+  const lowerQuery = query.toLowerCase();
+  const indices: number[][] = [];
+  let startIndex = 0;
+  while (true) {
+    const idx = lowerText.indexOf(lowerQuery, startIndex);
+    if (idx === -1) break;
+    indices.push([idx, idx + query.length]);
+    startIndex = idx + query.length;
+  }
+  return indices;
+};
+
+const parse = (text: string, matches: number[][]) => {
+  if (!matches || matches.length === 0) {
+    return [{ text, highlight: false }];
+  }
+  const parts: { text: string; highlight: boolean }[] = [];
+  let lastIndex = 0;
+  for (const [start, end] of matches) {
+    if (lastIndex < start) {
+      parts.push({ text: text.slice(lastIndex, start), highlight: false });
+    }
+    parts.push({ text: text.slice(start, end), highlight: true });
+    lastIndex = end;
+  }
+  if (lastIndex < text.length) {
+    parts.push({ text: text.slice(lastIndex), highlight: false });
+  }
+  return parts;
+};
+
+const drawerWidth = 500;
+
+export const Main = styled('div', { shouldForwardProp: (prop) => prop !== 'open' })<{
+  open?: boolean;
+}>(({ theme }) => ({
+  flexGrow: 1,
+  padding: theme.spacing(3),
+  transition: theme.transitions.create('margin', {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  marginLeft: -drawerWidth,
+  position: 'relative',
+  variants: [
+    {
+      props: ({ open }) => open,
+      style: {
+        transition: theme.transitions.create('margin', {
+          easing: theme.transitions.easing.easeOut,
+          duration: theme.transitions.duration.enteringScreen,
+        }),
+        marginRight: 0,
+      },
+    },
+  ],
+}));
 
 export const ConferencesListItem = ({
-  cover,
+  id,
   title,
-  events,
   lang,
   value,
 }: { value?: string } & IConference) => {
-  const { t } = useTranslation('common');
-  const [showVideo, setShowVideo] = useState(false);
-  const hasTag = lang === value;
-  const [isVisible, setIsVisible] = useState(false);
-  const itemRef = useRef<HTMLDivElement>(null);
+    const hasTag = lang === value;
+    const [isVisible, setIsVisible] = useState(false);
+    const [searchParams, setSearchParams] = useSearchParams();
+    
+    const itemRef = useRef<HTMLDivElement>(null);
 
-  const [expanded, setExpanded] = React.useState<string | false>("");
+    const searchQuery = searchParams.get('search') || '';
+    const selectedConference = searchParams.get('conference');
+    const isDrawerOpen = selectedConference === encodeURIComponent(id);
 
-  const handleChange =
-    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-      setExpanded(newExpanded ? panel : false);
+    const highlightedTitle = useMemo(() => {
+      if (!searchQuery) {
+        return [{ text: title, highlight: false }];
+      }
+
+      const matches = match(title, searchQuery, { insideWords: true });
+      const parts = parse(title, matches);
+      
+      return parts;
+    }, [title, searchQuery]);
+
+    const handleTitleClick = () => {
+      // Get current params
+      const params: Record<string, string> = {};
+      const search = searchParams.get('search');
+      const lang = searchParams.get('lang');
+      
+      if (search) params.search = search;
+      if (lang) params.lang = lang;
+      params.conference = encodeURIComponent(id);
+      
+      setSearchParams(params);
     };
 
-  const handleShowVideo = () => {
-    setShowVideo(true);
-  };
+    const handleCloseDrawer = () => {
+      // Remove conference param but keep other params
+      const params: Record<string, string> = {};
+      const search = searchParams.get('search');
+      const lang = searchParams.get('lang');
+      
+      if (search) params.search = search;
+      if (lang) params.lang = lang;
+      
+      setSearchParams(params);
+    };
 
-  const handleHideVideo = () => {
-    setShowVideo(false);
-  };
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                setIsVisible(true);
+                if (itemRef.current) {
+                    observer.unobserve(itemRef.current);
+                }
+                }
+            },
+            {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px',
+            }
+        );
 
-  const handleViewResources = (url: string | undefined) => {
-    window.open(`${url}`, "_blank", "rel=noopener noreferrer");
-  };
-
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (itemRef.current) {
-            observer.unobserve(itemRef.current);
-          }
+        if (itemRef.current) {
+            observer.observe(itemRef.current);
         }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
-      }
-    );
 
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
-    }
+        return () => {
+            if (itemRef.current) {
+                observer.unobserve(itemRef.current);
+            }
+        };
+    }, []);
 
-    return () => {
-      if (itemRef.current) {
-        observer.unobserve(itemRef.current);
-      }
-    };
-  }, []);
+    return (
+        <>
+            <CardWrapper
+                ref={itemRef}
+                role="tabpanel"
+                hidden={!hasTag && value !== Tags.ALL}
+                isConference
+                sx={(theme) => ({
+                    opacity: isVisible ? 1 : 0,
+                    transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
+                    transition: 'all 0.6s ease-out',
 
-  return (
-    <CardWrapper
-      ref={itemRef}
-      role="tabpanel"
-      hidden={!hasTag && value !== Tags.ALL}
-      isConference
-      sx={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
-        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
-      }}
-    >
-      <CardEventMedia component='div' imgUrl={cover} />
-      <ConferenceCardWrapper>
-        <ConferenceCardHeader isConference>
-          <CardContentTitle variant="h4" isConference>
-            {lang === "EN" ? '🇺🇸' : '🇫🇷'} {title}
-          </CardContentTitle>
-        </ConferenceCardHeader>
-        <ConferenceCardBody>
-          {events &&
-            events.map((event: IEvent, index) => (
-              <CardEvent
-                expanded={expanded === `panel${index}`}
-                onChange={handleChange(`panel${index}`)}
-                key={event.event}
-              >
-                <CardEventDetailHeader
-                  aria-controls="panel1d-content"
-                  id="panel1d-header"
+                    '&:hover': {
+                        border: '1px solid #444aff',
+                        boxShadow: (theme) => `0 4px 20px ${theme.palette.mode === 'light' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.5)'}`,
+                        cursor: 'pointer'
+                    },
+
+                    ...(selectedConference === encodeURIComponent(id) && {
+                        border: '1px solid #444aff',
+                        boxShadow: `0 4px 20px ${theme.palette.mode === 'light' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(0, 0, 0, 0.5)'}`
+                    })
+                })}
+                onClick={handleTitleClick}
+            >
+                <Box 
+                    sx={(theme) => ({ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: 2, 
+                        flexWrap: 'wrap', 
+                        width: '100%',
+
+                        [theme.breakpoints.down(644)]: { 
+                            flexDirection: 'column', 
+                            alignItems: 'flex-start',
+                        }
+                    })}
                 >
-                  <Box className={"accordion-summary-box"}>
-                    <Box className={"accordion-summary-box-item1"}>
-                      <AppChip
-                        chipBackground={""}
-                        chipBorder={""}
-                        chipColor={""}
-                        size="small"
-                        label={event.year}
-                        type={Tags.YEAR}
-                        key={event.tags[0]}
-                      />
-                    </Box>
-                    <Box className={"accordion-summary-box-item2"}>
-                      <Box>
-                        <Typography>{event.event}</Typography>
-                      </Box>
-                      <Box className={"accordion-summary-box-item2-actions"}>
-                        {event.link && (
-                          <IconButton onClick={handleShowVideo}>
-                            <VisibilityRoundedIcon
-                              fontSize={"small"}
-                              color={"info"}
-                            />
-                          </IconButton>
-                        )}
-                        {event.githubLink && (
-                          <IconButton
-                            onClick={() =>
-                              handleViewResources(event.githubLink)
+                    <Chip label={lang} sx={(theme) => ({ backgroundColor: theme.game.special.dark, color: '#A3FFEA' })} />
+                    <CardContentTitle 
+                        variant="h4" 
+                        isConference
+                        sx={{ 
+                            cursor: 'pointer',
+                            '&:hover': {
+                                opacity: 0.8,
                             }
-                          >
-                            <MenuBookIcon
-                              fontSize={"small"}
-                              color={"success"}
-                            />
-                          </IconButton>
-                        )}
-                      </Box>
-                    </Box>
-                  </Box>
-                </CardEventDetailHeader>
-                <AccordionDetails
-                  sx={{
-                    alignItems: "baseline",
-                    display: "flex",
-                    justifyContent: "space-around",
-                  }}
-                >
-                  <Box>
-                    <EventLocationWrapper>
-                      <MyLocationRoundedIcon
-                        fontSize="small"
-                        sx={{ color: "text.disabled" }}
-                      />
-                      <Typography variant="caption" sx={{ lineHeight: 1.2 }}>
-                        {event.location}
-                      </Typography>
-                    </EventLocationWrapper>
-                    <ChipWrapper sx={{ marginTop: "10px" }}>
-                      {event.tags.map((tag) => (
-                        <AppChip
-                          chipBackground={event.lightColor}
-                          chipBorder={event.darkColor}
-                          chipColor={event.darkColor}
-                          size="small"
-                          label={tag}
-                          type={tag}
-                          key={tag}
-                        />
-                      ))}
-                    </ChipWrapper>
-                    {event.githubLink && (
-                      <CardContentWrapper isConference>
-                        <CardContentAction flexRight>
-                          <CardContentButton
-                            onClick={() =>
-                              handleViewResources(event.githubLink)
-                            }
-                            startIcon={<MenuBookIcon />}
-                          >
-                            {t("actions.resources")}
-                          </CardContentButton>
-                        </CardContentAction>
-                      </CardContentWrapper>
-                    )}
-                    {event.link && (
-                      <>
-                        <CardContentWrapper isConference>
-                          <CardContentAction flexRight>
-                            <CardContentButton
-                              onClick={handleShowVideo}
-                              startIcon={<VisibilityRoundedIcon />}
-                            >
-                              {t("actions.watch")}
-                            </CardContentButton>
-                          </CardContentAction>
-                        </CardContentWrapper>
-                        <VideoDialog
-                          title={title}
-                          open={showVideo}
-                          close={handleHideVideo}
-                          src={event.link}
-                        />
-                      </>
-                    )}
-                  </Box>
-                  <EventBox isConference>
-                    <ItemEvent isConference>
-                      <ItemEventWrapper>
-                        <EventDateWrapper
-                          darkColor={event.darkColor}
-                          lightColor={event.lightColor}
+                        }}
+                    >
+                        {highlightedTitle.map((part, index) => (
+                        <span
+                            key={index}
+                            style={{
+                            color: part.highlight ? '#f53b57' : '#1E1E40',
+                            padding: part.highlight ? '0 1px' : '0',
+                            }}
                         >
-                          <EventDateDay component="span">
-                            {event.day}
-                          </EventDateDay>
-                          <EventDateMonth component="span">
-                            {event.month.slice(0, 3)}
-                          </EventDateMonth>
-                        </EventDateWrapper>
-                      </ItemEventWrapper>
-                    </ItemEvent>
-                  </EventBox>
-                </AccordionDetails>
-              </CardEvent>
-            ))}
-        </ConferenceCardBody>
-      </ConferenceCardWrapper>
-    </CardWrapper>
-  );
+                            {part.text}
+                        </span>
+                        ))}
+                    </CardContentTitle>
+                </Box>
+                
+            </CardWrapper>
+
+            {/* Drawer */}
+            <ConferenceDrawer
+                id={id}
+                isDrawerOpen={isDrawerOpen}
+                handleCloseDrawer={handleCloseDrawer}
+            />
+        </>
+    );
 };
