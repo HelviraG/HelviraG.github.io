@@ -1,6 +1,8 @@
  {
   "conferences": [
     {
+      "id": 1,
+      "abstract": "I thought I had learned my lesson the first time.\n\nI saw the warning signs, ignored them, and told myself I could handle this.\n\nSpoiler alert: I couldn’t. Burnout hit me not once but twice, and each time, I found myself running on empty, questioning everything, and wondering if I’d ever enjoy coding again.\n\nIn this talk, I’ll take you through my journey of burnout — what led to it, how I ignored the red flags, and what finally made me hit “Force Quit.”\n\nWe’ll explore why burnout is common in tech, why high performers are often the most vulnerable, and how we can break the cycle.\n\nBut this isn’t just a doom-and-gloom session — I’ll share the hard-earned lessons that helped me rise from the ashes (twice), rebuild my energy, and find a sustainable way to thrive in tech.\n\nExpect storytimes, hard truths, and maybe even a laugh or two as we learn how to recognize burnout before it’s too late, recover when we crash, and—most importantly—stop history from repeating itself.\n\nBecause if you’re anything like me, you don’t want to be singing Oops… I did it again.",
       "cover": " https://i.ibb.co/JwKPHCmC/Oops-I-burnt-out-again-3.png",
       "title": "Oops! I Burned Out Again",
       "lang": "EN",
@@ -22,6 +24,8 @@
       ]
     },
     {
+      "id": 2,
+      "abstract": "One day, you’re a cutting-edge developer. The next, you blink, and suddenly your favorite framework is “legacy,” job postings demand skills you’ve never heard of, and juniors are asking if you “really used jQuery back in the day.”\n\nIn a world where tech moves faster than a CI/CD pipeline on caffeine; how do developers keep up without losing their sanity?\n\nThis talk takes a humorous dive into the fear of becoming outdated, the questionable ways we try to stay relevant, and the surprising truth about what actually matters in the long run.\n\nThrough real stories, developer confessions, and a few existential crises about AI taking our jobs, we’ll uncover how to future-proof yourself—without falling into the trap of learning every new JavaScript framework just because Twitter says so.\n\nIf you’ve ever wondered whether you’re “falling behind” or if you (really) need to learn Rust, this talk is for you.",
       "cover": "https://i.ibb.co/mP0qLGd/54799705955-d82d3c2e8d-c.jpg",
       "title": "Help! My Tech Skills Have An Expiration Date",
       "lang": "EN",
@@ -57,6 +61,8 @@
       ]
     },
     {
+      "id": 3,
+      "abstract": "Everyone knows this developer, who is super duper passionate about his job. You can easily recognize this developer because he/she spends hours coding, even outside of work; mastering tech watch like no one else; whose topics of conversation often revolve around code.\n\nEven if we are passionate, we sometimes neither feel nor express this passion for the code. And easily, upon this developer's contact, unease can arise if we do not feel this passion.\n\nAnd this, even if you are a developer yourself.\n\nThis discomfort can be a source of worry and doubt about one's skills.\n\nIndeed, if the enthusiast devotes hours to personal projects, perhaps we should?\n\nBut then, do you have to be passionate to be a developer? Does passion truly add value?\n\nWouldn't the injunction to passion in dev ultimately be a trap?\n\nIs passion THE essential software for anyone wishing to code?\n\nHere, is the whole purpose of this conference!\n\nBonus: If you like Vikings, this is for you!",
       "cover": "https://i.ibb.co/xtFLrWVY/valhalla-planet-1-1.png",
       "title": "Firey Passion 🔥 VS Icy Reason ❄️: The Developers Great Divide",
       "lang": "EN",
@@ -65,7 +71,7 @@
           "year": "2025",
           "day": "21",
           "month": "march",
-          "event": "AppDev Con",
+          "event": "AppDevCon",
           "place": "Pathe Amsterdam Noord",
           "location": "Amsterdam, Netherlands",
           "tags": ["INSPIRATION", "TECH"],
@@ -108,6 +114,8 @@
       ]
     },
     {
+      "id": 5,
+      "abstract": "In the vast tech landscape, a silent forest conceals a remarkable group of individuals known as the Autistics. We navigate our unique world, driven by an unwavering coding passion.\n\nOnce voiceless, some of us have emerged as tech luminaries, vital to the industry's progress. Major tech firms now recognize the Autistics significance.\n\nThen, what connects us to Tech History? Why do exploring code lines appeal more to us than living human experiences?\n\nDuring this talk, we will explore the untold Autistic narrative in tech and envision a harmonious future where both autistic and tech worlds unite.\n\nThis is our unsung history, waiting to be heard.",
       "cover": "https://i.ibb.co/5cDwjGS/1715867191670.jpg",
       "title": "Silent Figures: The Secret History of Autistics in Tech",
       "lang": "EN",
@@ -145,6 +153,8 @@
       ]
     },
     {
+      "id": 6,
+      "abstract": "Tout le monde connait ce développeur, cette développeuse passionné(e) par son métier. Facilement reconnaissable du fait qu'il/elle passe des heures à coder, même en dehors du travail; se documente; dont les sujets de conversation tournent souvent autour du code.\n\nQuand bien même passionné(e), il arrive qu'on ne ressente, ni n'exprime cette passion pour le code. Et facilement, à son contact, le sentiment de malaise peut survenir si on ne ressent pas cette passion. Et ce, même en étant soi-même développeur ou développeuse.\n\nCe malaise peut être source d'inquiétude, de doute par rapport à ses propres compétences. En effet, si le passionné consacre des heures à des projets personnels, peut-être le devrions-nous ?\n\nMais alors, faut-il être passionné pour être développeur (se)? La passion apporte-t-elle réellement un plus ? L'injonction à la passion dans le dev ne serait-elle pas en fin de compte un piège ? La passion est-elle LE logiciel indispensable à toute personne souhaitant coder ?\n\nIci, tout l'objet de cette conférence.\n\nBonus: Si vous aimez les vikings, cette conférence est faite pour vous !",
       "cover": "https://i.ibb.co/7NvnNqGR/Whats-App-Image-2024-06-14-a-16-22-40-fe14e1b5.jpg",
       "title": "Vous n'êtes pas passionné(e) 🔥. Et alors ?",
       "lang": "FR",
@@ -166,6 +176,7 @@
       ]
     },
     {
+      "id": 7,
       "cover": "https://i.ibb.co/mDKYGtZ/sddefault.jpg",
       "title": "Si la reconversion m'était contée: itinéraire d'une reconversion",
       "lang": "FR",
@@ -177,16 +188,17 @@
           "event": "Asynconf",
           "place": "Terrasse Discovery",
           "location": "Paris, France",
-          "tags": ["DISCOVERY", "REPLAY"],
+          "tags": ["DISCOVERY"],
           "imgUrl": "https://i.ibb.co/mDKYGtZ/sddefault.jpg",
           "lightColor": "theme.event.primary.light",
           "darkColor": "theme.event.primary.dark",
-          "link": "https://www.youtube.com/embed/rOkFhYHl2rc",
           "lang": "FR"
         }
       ]
     },
     {
+      "id": 8,
+      "abstract": "Tout le monde connait ce développeur, cette développeuse passionné(e) par son métier. Facilement reconnaissable du fait qu'il/elle passe des heures à coder, même en dehors du travail; se documente; dont les sujets de conversation tournent souvent autour du code. Quand bien même passionné(e), il arrive qu'on ne ressente, ni n'exprime cette passion pour le code. Et facilement, à son contact, le sentiment de malaise peut survenir si on ne ressent pas cette passion. Et ce, même en étant soi-même développeur ou développeuse. Ce malaise peut être source d'inquiétude, de doute par rapport à ses propres compétences. En effet, si le passionné consacre des heures à des projets personnels, peut-être le devrions-nous ? Mais alors, faut-il être passionné pour être développeur (se)? La passion apporte-t-elle réellement un plus ? L'injonction à la passion dans le dev ne serait-elle pas en fin de compte un piège ? La passion est-elle LE logiciel indispensable à toute personne souhaitant coder ? Ici, tout l'objet de cette conférence !",
       "cover": "https://i.ibb.co/hdZ7JNw/1698420175427.jpg",
       "title": "Je ne suis pas passionnée 🔥 et alors ?",
       "lang": "FR",
@@ -221,6 +233,8 @@
       ]
     },
     {
+      "id": 9,
+      "abstract": "Il y a 4 ans, je ne savais pas ce qu’était le code ni même qu’on pouvait en faire un métier. C’est la curiosité qui m’y a attirée d’abord puis la passion qui m’a donné envie de devenir développeuse. Et cette reconversion n’a pas été un long fleuve tranquille. Bien au contraire !\n\nPlutôt une nage sportive en eaux troubles, entre syndrome de l’imposteur, vision de l’entourage sur les chances de réussite et découverte d’un monde inconnu avec ses codes, ses règles, ses enjeux. Sans compter la pression financière inhérente à une transition professionnelle.\n\nCe talk est l’occasion de revenir sur cette reconversion sans filet; en explorer les victoires comme les échecs ainsi que les réflexions qui l’ont jalonnée. Une conversation qui vous permettra de mieux comprendre ces parcours de reconvertis.\n\nIci, découvrons ce qu’implique la réussite d’une reconversion afin de mieux intégrer ces profils dans nos équipes. Essayons de comprendre en quoi ils diffèrent des parcours dits classiques ?\n\nComment pouvons-nous les valoriser ?\n\nVoyageons ensemble dans la tête d’une développeuse reconvertie !",
       "cover": "https://i.ibb.co/R9ZkYkN/1682695859511.jpg",
       "title": "Heureux accident: La reconversion ou quand le dev s'impose à soi !",
       "lang": "FR",
@@ -241,6 +255,8 @@
       ]
     },
     {
+      "id": 10,
+      "abstract": "Il y a 4 ans, je ne savais pas ce qu’était le code ni même qu’on pouvait en faire un métier. C’est la curiosité qui m’y a attirée d’abord puis la passion qui m’a donné envie de devenir développeuse. Et cette reconversion n’a pas été un long fleuve tranquille. Bien au contraire !\n\nPlutôt une nage sportive en eaux troubles, entre syndrome de l’imposteur, vision de l’entourage sur les chances de réussite et découverte d’un monde inconnu avec ses codes, ses règles, ses enjeux. Sans compter la pression financière inhérente à une transition professionnelle.\n\nCe talk est l’occasion de revenir sur cette reconversion sans filet; en explorer les victoires comme les échecs ainsi que les réflexions qui l’ont jalonnée. Une conversation qui vous permettra de mieux comprendre ces parcours de reconvertis.\n\nIci, découvrons ce qu’implique la réussite d’une reconversion afin de mieux intégrer ces profils dans nos équipes. Essayons de comprendre en quoi ils diffèrent des parcours dits classiques ?\n\nComment pouvons-nous les valoriser ?\n\nVoyageons ensemble dans la tête d’une développeuse reconvertie !",
       "cover": "https://i.ibb.co/Fg8vCQC/Fk-Bpzqj-WYAMk1-Nc.jpg",
       "title": "Les reconvertis: cette nouvelle vague 🌊 de profils dans le dev",
       "lang": "FR",
