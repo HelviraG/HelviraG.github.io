@@ -84,11 +84,15 @@ export const CardWrapper = styled(Card, {
     "&:nth-of-type(even)": {
       marginRight: "initial",
     },
+    "&:nth-of-type(odd)": {
+      marginLeft: "initial",
+    }
   },
 
   ...(isConference && {
-    [theme.breakpoints.up(1440)]: { width: "800px" },
-    [theme.breakpoints.down(450)]: { marginBottom: "100px!important" },
+    marginBottom: theme.spacing(5),
+    padding: theme.spacing(2),
+    width: '100%'
   }),
 
   ...(hidden && {
@@ -163,6 +167,7 @@ export const CardContentTitle = styled(Typography, {
 
   ...(isConference && {
     color: "#1E1E40",
+    marginBottom: 0
   }),
 }));
 
