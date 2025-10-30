@@ -19,7 +19,7 @@ import { BurnoutQuizResult } from "@/App/Pages/QuizPages/BatteryLevel/BurnoutQui
 import { TechSkillsQuiz } from "@/App/Pages/TechSkillsQuiz";
 import { TechSkillsQuizSteps } from "@/App/Pages/QuizPages/TechSkills/TechSkillsQuizSteps";
 import { TechSkillsQuizResult } from "@/App/Pages/QuizPages/TechSkills/TechSkillsQuizResult";
-import { VideosPlayer } from "@/App/Pages/VideoPlayer";
+import { VideoPlayer } from "@/App/Pages/VideoPlayer";
 
 export const AppRoutes = () => {
   const location = useLocation();
@@ -65,7 +65,7 @@ export const AppRoutes = () => {
         <Route path={Links.SKILLS_QUIZ_RESULT} element={<TechSkillsQuizResult isTablet={isTablet} />} />
         <Route 
           path={Links.PLAYER} 
-          element={<VideosPlayer isTablet={isTablet} />} 
+          element={<VideoPlayer isTablet={isTablet} />} 
           />
       </Routes>
     </div>
