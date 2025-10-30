@@ -77,7 +77,9 @@
     "confs": {
       "title": "The Talks",
       "subtitle": "Talked these talks",
-      "description": "You can find here all my conferences!"
+      "description": "You can find here all my conferences!",
+      "no_results": "No conferences found. Try another search or filter.",
+      "given_at": "Given at"
     },
     "contact": {
       "title": "Talk!",

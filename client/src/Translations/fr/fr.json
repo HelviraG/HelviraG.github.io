@@ -77,7 +77,9 @@
     "confs": {
       "title": "The Talks",
       "subtitle": "J'y ai pris le micro",
-      "description": "Retrouvez ici l'ensemble des conférences à (re)voir !"
+      "description": "Retrouvez ici l'ensemble des conférences à (re)voir !",
+      "no_results": "Aucune conférence trouvée. Modifiez votre recherche ou filtre.",
+      "given_at": "Donnée à"
     },
     "contact": {
       "title": "Talk!",
