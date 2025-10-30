@@ -20,5 +20,6 @@ export enum Routes {
   BATTER_QUIZ_RESULT = "/explore/burnout/result",
   SKILLS = "/explore/skills",
   SKILLS_QUIZ_STEP = "/explore/skills/:id",
-  SKILLS_QUIZ_RESULT = "/explore/skills/result"
+  SKILLS_QUIZ_RESULT = "/explore/skills/result",
+  PLAYER = "/player"
 }
