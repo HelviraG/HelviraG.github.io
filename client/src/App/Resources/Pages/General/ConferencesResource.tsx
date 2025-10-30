@@ -19,6 +19,8 @@ export interface IEvent {
 }
 
 export interface IConference {
+  id: number;
+  abstract?: string;
   cover: string;
   title: string;
   lang: string;
@@ -33,9 +35,9 @@ export const ListConferences = () => {
 
   if (data && data.conferences) {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     return data.conferences.map((conf: IConference) => {
       return {
+        id: conf.id,
         cover: conf.cover,
         title: conf.title,
         lang: conf.lang,
