@@ -70,7 +70,7 @@ export const TitleBox = styled(Box, {
       fontSize: "3.8em",
     },
 
-    [theme.breakpoints.down(420)]: {
+    [theme.breakpoints.down(330)]: {
       fontSize: "3em",
     },
   },
