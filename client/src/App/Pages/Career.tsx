@@ -1,5 +1,4 @@
 import { HeroTitle } from "@component/Hero/HeroTitle";
-import { Covers } from "@resources/Enums/Images";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import useDocumentTitle from "../../Hooks/useDocumentTitle";
@@ -18,10 +17,8 @@ export const Career = ({ isTablet }: { isTablet: boolean }) => {
       {isTablet ? (
         <Mobile>
           <HeroTitle
-            imgUrl={Covers.CAREER}
             quote={t("quotes.career")}
             title={t("translation:app.career.title")}
-            titleColor="error"
           />
           <CareerPage />
           <BuyCoffeeSection />
@@ -29,10 +26,8 @@ export const Career = ({ isTablet }: { isTablet: boolean }) => {
       ) : (
         <Desktop>
           <HeroTitle
-            imgUrl={Covers.CAREER}
             quote={t("quotes.career")}
             title={t("translation:app.career.title")}
-            titleColor="error"
           />
           <CareerPage />
           <BuyCoffeeSection />
