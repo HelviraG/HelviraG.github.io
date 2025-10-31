@@ -1,6 +1,5 @@
 import { HeroTitle } from "@component/Hero/HeroTitle";
 import useDocumentTitle from "@hooks/useDocumentTitle";
-import { Covers } from "@resources/Enums/Images";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Desktop } from "../Layout/Desktop/Desktop";
@@ -18,10 +17,8 @@ export const Press = ({ isTablet }: { isTablet: boolean }) => {
       {isTablet ? (
         <Mobile>
           <HeroTitle
-            imgUrl={Covers.PRESS}
             quote={t("quotes.press_title")}
             title={t("translation:app.press.title")}
-            titleColor="primary"
           />
           <PressList />
           <BuyCoffeeSection />
@@ -29,10 +26,8 @@ export const Press = ({ isTablet }: { isTablet: boolean }) => {
       ) : (
         <Desktop>
           <HeroTitle
-            imgUrl={Covers.PRESS}
             quote={t("quotes.press_title")}
             title={t("translation:app.press.title")}
-            titleColor="primary"
           />
           <PressList />
           <BuyCoffeeSection />
