@@ -139,5 +139,10 @@
         "third_section": "🍿 The Replay",
         "last_section": "That's it, for now"
       }
-    }
+    },
+  "not_found": {
+    "title": "Oops!",
+    "message": "La page à laquelle vous tentez d'accéder n'existe pas.\nRetournez à la page d'accueil via le bouton ci-dessous.",
+    "button": "Retour à l'accueil"
+  }
 }

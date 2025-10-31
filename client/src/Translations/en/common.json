@@ -141,5 +141,10 @@
       "third_section": "🍿 The Replay",
       "last_section": "That's it, for now"
     }
+  },
+  "not_found": {
+    "title": "Sorry!",
+    "message": "The page you are looking is not available.\nTry going to Homepage by using the button below.",
+    "button": "Back to Home"
   }
 }
