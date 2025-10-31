@@ -37,7 +37,7 @@ export const TitleBox = styled(Box, {
 
   h2: {
     fontFamily: "'Poppins', sans-serif",
-    color: '#A3FFEA',
+    color: titleColor === 'primary' ? '#0fbcf9' : '#A3FFEA',
     fontSize: "7em",
     position: "absolute",
     top: 0,
@@ -47,11 +47,11 @@ export const TitleBox = styled(Box, {
 
     "&:nth-of-type(1)": {
       color: "transparent",
-      WebkitTextStroke: `2px #A3FFEA`,
+      WebkitTextStroke: `2px ${titleColor === 'primary' ? '#0fbcf9' : '#A3FFEA'}`,
     },
 
     "&:nth-of-type(2)": {
-      color: '#A3FFEA',
+      color: titleColor === 'primary' ? '#0fbcf9' : '#A3FFEA',
       animation: "wave 4s ease-in-out infinite",
     },
 
@@ -106,9 +106,15 @@ export const AnimatedTitleBox = styled(Box)(() => ({
   flexDirection: "column",
 }));
 
-export const SubTitleBox = styled(Box)(({ theme }) => ({
+export const SubTitleBox = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "noPadding",
+})<{ noPadding?: boolean }>(({ noPadding, theme }) => ({
   marginTop: theme.spacing(6),
   padding: theme.spacing(4),
+
+  ...(noPadding && {
+    padding: 0
+  }),
 
   [theme.breakpoints.down("md")]: {
     marginTop: theme.spacing(2),
