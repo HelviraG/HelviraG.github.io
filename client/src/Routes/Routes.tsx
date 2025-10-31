@@ -20,6 +20,7 @@ import { TechSkillsQuiz } from "@/App/Pages/TechSkillsQuiz";
 import { TechSkillsQuizSteps } from "@/App/Pages/QuizPages/TechSkills/TechSkillsQuizSteps";
 import { TechSkillsQuizResult } from "@/App/Pages/QuizPages/TechSkills/TechSkillsQuizResult";
 import { VideoPlayer } from "@/App/Pages/VideoPlayer";
+import { NotFoundPage } from "@/App/Pages/NotFound/NotFoundPage";
 
 export const AppRoutes = () => {
   const location = useLocation();
@@ -66,7 +67,8 @@ export const AppRoutes = () => {
         <Route 
           path={Links.PLAYER} 
           element={<VideoPlayer isTablet={isTablet} />} 
-          />
+        />
+        <Route path="*" element={<NotFoundPage isTablet={isTablet} />} />
       </Routes>
     </div>
   );
