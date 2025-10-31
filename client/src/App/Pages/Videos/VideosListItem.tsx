@@ -1,5 +1,4 @@
 import { AppChip } from "@component/Chip/Chip";
-import { VideoDialog } from "@component/VideoDialog/VideoDialog";
 import PlayCircleuOtlineRoundedIcon from "@mui/icons-material/PlayCircleOutlineRounded";
 import { ILive } from "@resources/Pages/General/VideosResource";
 import {
@@ -14,6 +13,7 @@ import {
 import { ChipWrapper } from "@styles/Pages/ConferencesStyle";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 interface LiveItemProps {
   index?: number;
@@ -31,19 +31,18 @@ export const VideosListItem = ({
   value,
 }: ILive & LiveItemProps) => {
   const { t } = useTranslation('common');
-  const [showVideo, setShowVideo] = useState(false);
+  const navigate = useNavigate();
   const hasTag = tags.filter((tag) => tag === value).length > 0;
   const [isVisible, setIsVisible] = useState(false);
   const itemRef = useRef<HTMLDivElement>(null);
 
-  const handleShowVideo = () => {
-    setShowVideo(true);
-  };
+   const handleShowVideo = (videoLink?: string) => {
+    if (!videoLink) return;
 
-  const handleHideVideo = () => {
-    setShowVideo(false);
+    // Encode the video URL to safely pass it as a query parameter
+    const encodedLink = encodeURIComponent(videoLink);
+    navigate(`/player?link=${encodedLink}`);
   };
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -102,21 +101,13 @@ export const VideosListItem = ({
         <CardContentTitle variant="h4">{title}</CardContentTitle>
         <CardContentAction>
           <CardContentButton
-            onClick={handleShowVideo}
+            onClick={() => handleShowVideo(link)}
             startIcon={<PlayCircleuOtlineRoundedIcon />}
           >
             {t("actions.watch")}
           </CardContentButton>
         </CardContentAction>
       </CardContentWrapper>
-      {link && showVideo && (
-        <VideoDialog
-          title={title}
-          open={showVideo}
-          close={handleHideVideo}
-          src={link}
-        />
-      )}
     </CardWrapper>
   );
 };
