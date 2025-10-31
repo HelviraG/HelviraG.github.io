@@ -11,13 +11,12 @@ import {
 } from '@styles/Components/HeroTitleStyle';
 
 interface HeroTitleProps {
-    imgUrl: string;
     quote: string;
     title: string;
     titleColor?: PaletteKey
 }
 
-export const HeroTitle = ({ imgUrl, quote, title, titleColor }: HeroTitleProps) => {    
+export const HeroTitle = ({ quote, title, titleColor }: HeroTitleProps) => {    
     return (
         <HeroTitleWrapper>
             <HeroTitleBox>
@@ -28,7 +27,7 @@ export const HeroTitle = ({ imgUrl, quote, title, titleColor }: HeroTitleProps) 
                             <Typography variant="h2">{title}</Typography>
                         </TitleBox>
                     </TitleWrapper>
-                    <SubTitleBox>
+                    <SubTitleBox noPadding={quote.length === 0}>
                         <SubTitle variant="body1">{quote}</SubTitle>
                     </SubTitleBox>
                 </AnimatedTitleBox>
