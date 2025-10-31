@@ -1,5 +1,4 @@
 import { HeroTitle } from "@component/Hero/HeroTitle";
-import { Covers } from "@resources/Enums/Images";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import useDocumentTitle from "../../Hooks/useDocumentTitle";
@@ -18,10 +17,8 @@ export const Videos = ({ isTablet }: { isTablet: boolean }) => {
       {isTablet ? (
         <Mobile>
           <HeroTitle
-            imgUrl={Covers.LIVE}
             quote={t("quotes.lives")}
             title={t("translation:app.lives.title")}
-            titleColor="primary"
           />
           <VideosList />
           <BuyCoffeeSection />
@@ -29,10 +26,8 @@ export const Videos = ({ isTablet }: { isTablet: boolean }) => {
       ) : (
         <Desktop>
           <HeroTitle
-            imgUrl={Covers.LIVE}
             quote={t("quotes.lives")}
             title={t("translation:app.lives.title")}
-            titleColor="primary"
           />
           <VideosList />
           <BuyCoffeeSection />
