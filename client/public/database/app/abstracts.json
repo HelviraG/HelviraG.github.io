@@ -1,0 +1,71 @@
+{
+    "abstracts": [
+        {
+            "id": 1,
+            "lang": "en",
+            "isNew": "false",
+            "title": "Silent Figures: The Secret History of Autistics in Tech",
+            "content": "In the vast tech landscape, a silent forest conceals a remarkable group of individuals known as the Autistics. We navigate our unique world, driven by an unwavering coding passion.\n\nOnce voiceless, some of us have emerged as tech luminaries, vital to the industry's progress. Major tech firms now recognize the Autistics significance.\n\nThen, what connects us to Tech History? Why do exploring code lines appeal more to us than living human experiences?\n\nDuring this talk, we will explore the untold Autistic narrative in tech and envision a harmonious future where both autistic and tech worlds unite.\n\nThis is our unsung history, waiting to be heard.",
+            "confId": 5
+        },
+        {
+            "id": 2,
+            "lang": "en",
+            "isNew": "false",
+            "title": "Firy Passion VS Icy Reason: The Great Developers Divide",
+            "content": "Everyone knows this developer, who is super duper passionate about his job. You can easily recognize this developer because he/she spends hours coding, even outside of work; mastering tech watch like no one else; whose topics of conversation often revolve around code.\n\nEven if we are passionate, we sometimes neither feel nor express this passion for the code. And easily, upon this developer's contact, unease can arise if we do not feel this passion.\nAnd this, even if you are a developer yourself.\n\nThis discomfort can be a source of worry and doubt about one's skills.\n\nIndeed, if the enthusiast devotes hours to personal projects, perhaps we should?\n\nBut then, do you have to be passionate to be a developer?\nDoes passion truly add value?\n\nWouldn't the injunction to passion in dev ultimately be a trap?\n\nIs passion THE essential software for anyone wishing to code?\n\nHere, is the whole purpose of this conference!\n\nBonus: If you like Vikings, this is for you !",
+            "confId": 3
+        },
+        {
+            "id": 3,
+            "lang": "en",
+            "isNew": "true",
+            "title": "Nuka-Cola Breaks: How I Developed A Video Game In A Remote Work Tool",
+            "content": "Or should we say \"From Remote Work to Game Creation: How I Transformed Gather into a Gaming Platform and Built a Package for Fellow Developers\"?\n\nWith its flashy, 80s-like, slightly pixelated, Gather is a platform mixing videoconferencing and movement in a 2D virtual universe. It can be presented as a mix between Zoom or Teams and a retro RPG; allowing users to create permanent virtual spaces using existing models.\n\nJoin me on my unexpected journey from using Gather as a remote work tool to unlocking its hidden potential for game development.\n\nDiscover how my curiosity led me to dig into Gather's game client, sparking the creation of my own video game and inspiring the development of a user-friendly package to help other developers create their own Gather games.\n\nThis personal tale of innovation and creativity will show you the surprising possibilities that can emerge from everyday tools. Don't miss this session full of insights, challenges, and breakthroughs!"
+        },
+        {
+            "id": 4,
+            "lang": "en",
+            "isNew": "true",
+            "title": "Coding the Gap: The Science Behind Women's Underrepresentation in Tech",
+            "content": "Why do some countries have a higher percentage of women in tech than others? Is it a matter of culture, education, policies, or hidden biases in the industry?\n\nThis talk takes a scientific and data-driven approach to uncover the global disparities in women’s representation in technology.\n\nWe will use worldwide statistics, historical trends, and sociological research to explore key factors influencing women’s participation in tech, from early education to workplace culture.\n\nWe’ll examine surprising patterns—why Eastern Europe has more women in STEM than Western Europe, why some developing countries have a higher proportion of female computer science graduates than Silicon Valley, and how societal expectations shape career choices.\n\nBy debugging these disparities, we’ll discuss actionable insights and policies that have proven to work in closing the gender gap.\n\nWhether you're a tech leader, educator, or advocate for diversity, this talk will provide a fresh, evidence-based perspective on building a more inclusive future in technology."
+        },
+        {
+            "id": 5,
+            "lang": "en",
+            "isNew": "true",
+            "title": "The Myth of the Rational Developer: How Emotions Influence Technical Decisions (More Than We Admit)",
+            "content": "We, as developers love to think we are purely logical beings, making decisions based on clean architecture; lessons learned from previous experiences; best practices; and cold, hard facts.\n\nBut let’s be honest—how many of our tech choices are solely based on reason? Why do we cling to bad code like it’s a beloved pet? Why do we chase the latest frameworks like they’re Pokemon? And why does every developer have an irrational hatred for at least one programming language?\n\nThis talk dives into the hidden psychology of software development, revealing how cognitive biases, fear of failure, and pure developer stubbornness influence our choices more than we’d like to admit.\n\nFrom the Sunk Cost Fallacy (aka “I spent two weeks on this refactor, so we have to use it”) to Loss Aversion (aka “I know this function is useless, but what if we need it someday?”), we’ll explore the surprisingly human side of coding.\n\nExpect real-world examples, and hard-hitting truths about why we write, delete, and rewrite code the way we do.\n\nBy the end, you’ll walk away with maybe, just maybe, the courage to delete that ancient, commented-out function from 2017, finally!"
+        },
+        {
+            "id": 6,
+            "lang": "en",
+            "isNew": "false",
+            "title": "Help! My Tech Skills Have an Expiration Date",
+            "content": "One day, you’re a cutting-edge developer. The next, you blink, and suddenly your favorite framework is “legacy,” job postings demand skills you’ve never heard of, and juniors are asking if you \"really used jQuery back in the day.\"\n\nIn a world where tech moves faster than a CI/CD pipeline on caffeine; how do developers keep up without losing their sanity?\n\nThis talk takes a humorous dive into the fear of becoming outdated, the questionable ways we try to stay relevant, and the surprising truth about what actually matters in the long run.\n\nThrough real stories, developer confessions, and a few existential crises about AI taking our jobs, we’ll uncover how to future-proof yourself—without falling into the trap of learning every new JavaScript framework just because Twitter says so.\n\nIf you’ve ever wondered whether you’re “falling behind” or if you (really) need to learn Rust, this talk is for you.",
+            "confId": 2
+        },
+        {
+            "id": 7,
+            "lang": "en",
+            "isNew": "true",
+            "title": "404: Silence Not Found – Why Developers Need A Soundtrack",
+            "content": "Why do developers have an almost religious attachment to their headphones? From Lo-Fi beats to heavy metal, from synthwave to classical, music isn’t just background noise—it’s a crucial part of the coding experience. But does blasting Master of Puppets make you a master of commits? Can Lo-Fi Beats help you debug that production issue faster?\n\nThis talk will explore the science behind music and coding—how different genres impact focus, creativity, and stress levels. We’ll break down the great \"Silence vs. Soundtrack\" question, dive into the psychology and neuroscience behind why music helps (or hinders) focus, creativity, and problem-solving in coding. We’ll explore the great “Silence vs. Soundtrack” debate, the rise of AI-generated music for deep work, and whether blasting Doom Eternal soundtracks speeds up debugging. Expect a mix of humor, real-world anecdotes, and maybe even a few surprise musical experiments.\n\nWhether you’re a “headphones-on, world-off” coder or a silence purist, you’ll walk away with a fresh perspective—and maybe a new playlist to test at your next coding session. Because in the end, every developer is a DJ of their productivity.\n\n🚀 Warning: This talk may cause spontaneous playlist sharing among attendees."
+        },
+        {
+            "id": 8,
+            "lang": "en",
+            "isNew": "false",
+            "title": "Oops, I Burned Out Again!",
+            "content": "I thought I had learned my lesson the first time. I saw the warning signs, ignored them, and told myself I could handle this. Spoiler alert: I couldn’t. Burnout hit me not once but twice, and each time, I found myself running on empty, questioning everything, and wondering if I’d ever enjoy coding again.\n\nIn this talk, I’ll take you through my journey of burnout—what led to it, how I ignored the red flags, and what finally made me hit “Force Quit.” We’ll explore why burnout is common in tech, why high performers are often the most vulnerable, and how we can break the cycle.\n\nBut this isn’t just a doom-and-gloom session—I’ll share the hard-earned lessons that helped me rise from the ashes (twice), rebuild my energy, and find a sustainable way to thrive in tech.\n\nExpect storytimes, hard truths, and maybe even a laugh or two as we learn how to recognize burnout before it’s too late, recover when we crash, and—most importantly—stop history from repeating itself. Because if you’re anything like me, you don’t want to be singing Oops… I did it again.",
+            "confId": 1
+        },
+        {
+            "id": 9,
+            "lang": "en",
+            "isNew": "true",
+            "title": "Breaking (Bad) Frontend: Chemistry Recipes for Backend Minds",
+            "content": "To many backend engineers, frontend development feels like unstable chemistry — a mysterious lab where one misplaced CSS rule or React re-render can blow up the entire interface.\n\nIn this talk, we’ll unpack the science behind the chaos. You’ll learn the “chemistry” of modern frontend engineering through the eyes of a backend developer: how data reacts with UI, how reactivity and the DOM interact, and why CSS can behave like an unpredictable catalyst.\n\nWe’ll explore the chemical reactions that power React’s state model, the forces of the CSS cascade, and what happens when the two mix — sometimes explosively. Each section includes real-world examples, debugging techniques, and clear mental models for predicting frontend behavior before it goes wrong.\n\nBy the end of this session, backend minds will leave with practical formulas for:\n- Building predictable, stable React components;\n- Structuring CSS that doesn’t leak or collide;\n- Debugging frontend issues with the same confidence as server-side logic\n\nNo design skills required — just curiosity, a willingness to experiment, and a love for clean code."
+        }
+    ]
+}
