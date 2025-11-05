@@ -99,9 +99,11 @@ export const ConferencesListItem = ({
       const params: Record<string, string> = {};
       const search = searchParams.get('search');
       const lang = searchParams.get('lang');
+      const menu = searchParams.get('menu');
       
       if (search) params.search = search;
       if (lang) params.lang = lang;
+      if (menu) params.menu = menu;
       params.conference = encodeURIComponent(id);
       
       setSearchParams(params);
@@ -112,9 +114,11 @@ export const ConferencesListItem = ({
       const params: Record<string, string> = {};
       const search = searchParams.get('search');
       const lang = searchParams.get('lang');
+      const menu = searchParams.get('menu');
       
       if (search) params.search = search;
       if (lang) params.lang = lang;
+      if (menu) params.menu = menu;
       
       setSearchParams(params);
     };
