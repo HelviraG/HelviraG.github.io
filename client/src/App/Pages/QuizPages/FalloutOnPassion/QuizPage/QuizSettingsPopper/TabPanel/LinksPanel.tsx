@@ -42,7 +42,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
           <ListItemButton
             sx={{ "&:hover": { backgroundColor: "transparent" } }}
           >
-            <MenuItemText isFirstItem primary={t("menu.passion")} />
+            <MenuItemText isFirstItem primary={t("menu.passion")} passionItem />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -54,7 +54,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <ReplayIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("menu.passion_quiz.start")} />
+            <MenuItemText primary={t("menu.passion_quiz.start")} passionItem />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -66,7 +66,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <PlaylistAddCheckIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("menu.passion_quiz.test")} />
+            <MenuItemText primary={t("menu.passion_quiz.test")} passionItem />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -81,14 +81,14 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <EmojiEventsIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("menu.passion_quiz.result")} />
+            <MenuItemText primary={t("menu.passion_quiz.result")} passionItem />
           </ListItemButton>
         </TabsListItem>
         <TabsListItem disablePadding>
           <ListItemButton
             sx={{ "&:hover": { backgroundColor: "transparent" } }}
           >
-            <MenuItemText isFirstItem primary={t("menu.universe")} />
+            <MenuItemText isFirstItem primary={t("menu.universe")} passionItem />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -100,7 +100,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <WavingHandRoundedIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("menu.back_website")} />
+            <MenuItemText primary={t("menu.back_website")} passionItem />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -112,7 +112,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <VolumeUpRoundedIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("menu.conferences")} />
+            <MenuItemText primary={t("menu.conferences")} passionItem />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -124,7 +124,7 @@ export const LinksPanel = ({ value }: { value: number }) => {
             <MenuListIcon>
               <SportsEsportsIcon />
             </MenuListIcon>
-            <MenuItemText primary={t("menu.explorer")} />
+            <MenuItemText primary={t("menu.explorer")} passionItem />
           </ListItemButton>
         </TabsListItem>
       </Box>
