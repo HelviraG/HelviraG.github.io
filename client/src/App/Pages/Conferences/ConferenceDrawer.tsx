@@ -48,7 +48,7 @@ export const ConferenceDrawer = ({
             }}
         >
             <Box sx={{ position: 'fixed', right: 10, top: 10, color: '#FFF' }}>
-                <IconButton sx={(theme) => ({ backgroundColor: '#000', color: '#A3FFEA' })} onClick={handleCloseDrawer}>
+                <IconButton sx={(theme) => ({ backgroundColor: '#000', color: '#00C79A', '&:hover': { backgroundColor: '#00C79A', color: '#000' } })} onClick={handleCloseDrawer}>
                     <Close />
                 </IconButton>
             </Box>
