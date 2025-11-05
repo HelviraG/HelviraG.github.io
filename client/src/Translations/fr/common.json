@@ -139,7 +139,13 @@
         "first_section": " < 🍿Replay! /> ",
         "second_section": "🍿 The Replay",
         "third_section": "🍿 The Replay",
-        "last_section": "That's it, for now"
+        "last_section": "C'est tout pour l'instant"
+      },
+      "abstracts": {
+        "first_section": " < Abstracts! /> ",
+        "second_section": "​📝 Les Abstracts",
+        "third_section": "​📝 Les Abstracts",
+        "last_section": "C'est tout pour l'instant"
       }
     },
   "not_found": {
