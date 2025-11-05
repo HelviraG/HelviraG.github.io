@@ -1,41 +1,26 @@
 import HdrWeakRoundedIcon from "@mui/icons-material/HdrWeakRounded";
-import { Box, IconButton, Link, Typography, useMediaQuery } from "@mui/material";
+import { Box, IconButton, Link, Typography } from "@mui/material";
 import { Routes } from "@resources/Enums/Routes";
 import { AppHeader } from "@styles/Layout/Header";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { AppAvatar } from "../Avatar/Avatar";
-import { Menu } from "./Menu/Menu";
 import { ScrollText } from "./ScrollText/ScrollText";
 
-const tabletDrawer = 600;
-const smartphoneDrawer = 320;
-
-export const Header = () => {
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
-  const [headerBackground, setHeaderBackground] = useState<string>("#00C79A");
+export const Header = ({ handleOpenMenu, openMenu }: { handleOpenMenu: () => void; openMenu: boolean }) => {
   const location = useLocation();
   const pathname = location.pathname;
-
-  const isSmartphone = useMediaQuery("(max-width: 425px)");
-
-  const handleOpenMenu = () => {
-    setOpenMenu(true);
-  };
-
-  const handleCloseMenu = () => {
-    setOpenMenu(false);
-  };
+  const [headerBackground, setHeaderBackground] = useState<string>(pathname === Routes.BLOG ? "#3C40C6" : "#00C79A");
 
   return (
     <>
-      <AppHeader component="header" isHomePage={pathname === Routes.HOME} data-testid={"app-header"} headerBackground={headerBackground}>
+      <AppHeader component="header" isHomePage={pathname === Routes.HOME} data-testid={"app-header"} headerBackground={headerBackground} openMenu={openMenu} drawerWidth={410}>
         <Box>
           <AppAvatar />
           {pathname !== Routes.HOME && 
             <Link href="/" sx={{ textDecoration: 'none' }}>
               <Typography sx={{ display: 'flex' }}>helvira
-                <Typography component="span" sx={{ color: '#3B3B98' }}>.dev</Typography>
+                <Typography component="span" sx={{ color: pathname === Routes.BLOG ? '#0fbcf9' : '#3B3B98' }}>.dev</Typography>
               </Typography>
             </Link>
           }
@@ -44,6 +29,7 @@ export const Header = () => {
         <Box>
           <IconButton
             onClick={handleOpenMenu}
+            disableRipple
             sx={(theme) => ({
               "&:hover": {
                 backgroundColor: theme.game.special.dark,
@@ -54,20 +40,16 @@ export const Header = () => {
               },
             })}
           >
-            <HdrWeakRoundedIcon
-              sx={(theme) => ({
-                color: theme.game.special.dark
-              })}
-            />
+            {!openMenu && 
+              <HdrWeakRoundedIcon
+                sx={(theme) => ({
+                  color: theme.game.special.dark
+                })}
+              />
+            }
           </IconButton>
         </Box>
       </AppHeader>
-      <Menu
-        openMenu={openMenu}
-        menuWidth={isSmartphone ? smartphoneDrawer : tabletDrawer}
-        onClose={handleCloseMenu}
-        closeDrawer={handleCloseMenu}
-      />
     </>
   );
 };
