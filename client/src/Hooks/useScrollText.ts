@@ -83,6 +83,15 @@ export default function useScrollText() {
                         "last_section": t('scroll.player.last_section')
                     }
                 ];
+            case Routes.ABSTRACT:
+                return [
+                    {
+                        "first_section": t('scroll.abstracts.first_section'),
+                        "second_section": t('scroll.abstracts.second_section'),
+                        "third_section": t('scroll.abstracts.third_section'),
+                        "last_section": t('scroll.abstracts.last_section')
+                    }
+                ];
             default:
                 return [
                     {
