@@ -13,7 +13,7 @@ export const VideoPlayer = ({ isTablet }: { isTablet: boolean }) => {
   const navigate = useNavigate();
   const videoLink = searchParams.get('link');
 
-  useDocumentTitle('Helvira Goma | 💓 Video Player');
+  useDocumentTitle('Helvira Goma | ​📺 Video Player');
   
 
   const handleGoBack = () => {
