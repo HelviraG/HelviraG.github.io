@@ -50,7 +50,6 @@ export const ConferencesList = () => {
   );
   
   const selectedConference = searchParams.get('conference');
-  const isDrawerOpen = !!selectedConference;
   
   const handleFilterTag = (
     event: SyntheticEvent<Element, Event>,
@@ -80,14 +79,6 @@ export const ConferencesList = () => {
     if (value) params.search = value;
     if (currentTab !== Tags.ALL) params.lang = currentTab;
     if (selectedConference) params.conference = selectedConference;
-    
-    setSearchParams(params);
-  };
-
-  const handleCloseDrawer = () => {
-    const params: Record<string, string> = {};
-    if (searchInput) params.search = searchInput;
-    if (currentTab !== Tags.ALL) params.lang = currentTab;
     
     setSearchParams(params);
   };
