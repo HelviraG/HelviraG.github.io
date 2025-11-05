@@ -43,8 +43,8 @@ export const StyledBadge = styled(Badge, {
 }));
 
 export const AppHeader = styled(Box, {
-  shouldForwardProp: (prop) => prop !== 'isHomePage' && prop !== 'headerBackground',
-})<{ isHomePage: boolean, headerBackground?: string }>(({ theme, isHomePage, headerBackground }) => ({
+  shouldForwardProp: (prop) => prop !== 'isHomePage' && prop !== 'headerBackground' && prop !== 'openMenu' && prop !== 'drawerWidth',
+})<{ isHomePage: boolean, headerBackground?: string; openMenu?: boolean; drawerWidth: number }>(({ theme, isHomePage, headerBackground, openMenu, drawerWidth }) => ({
   alignItems: 'center',
   backgroundColor: isHomePage ? theme.game.special.iceBlue.medium : theme.palette.background.default,
   borderBottom: `1px solid ${alpha(theme.palette.info.main, 0.1)}`,
@@ -58,6 +58,7 @@ export const AppHeader = styled(Box, {
   }),
 
   display: 'flex', 
+  height: '81px',
   justifyContent: 'space-between', 
   padding: `${theme.spacing(2.5)} ${theme.spacing(4)}`,
   position: 'fixed',
@@ -65,5 +66,17 @@ export const AppHeader = styled(Box, {
   top: 0,
   zIndex: 100000000,
 
-  transition: 'all .6s linear',
+  transition: 'bawkground-color .6s linear',
+
+  ...(openMenu && {
+    [theme.breakpoints.up(1200)]: {
+      transition: theme.transitions.create(['margin', 'width'], {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginRight: drawerWidth
+    }
+  })
 }));
