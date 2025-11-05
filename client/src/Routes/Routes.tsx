@@ -21,6 +21,7 @@ import { TechSkillsQuizSteps } from "@/App/Pages/QuizPages/TechSkills/TechSkills
 import { TechSkillsQuizResult } from "@/App/Pages/QuizPages/TechSkills/TechSkillsQuizResult";
 import { VideoPlayer } from "@/App/Pages/VideoPlayer";
 import { NotFoundPage } from "@/App/Pages/NotFound/NotFoundPage";
+import { Abstracts } from "@/App/Pages/Abstracts";
 
 export const AppRoutes = () => {
   const location = useLocation();
@@ -68,6 +69,7 @@ export const AppRoutes = () => {
           path={Links.PLAYER} 
           element={<VideoPlayer isTablet={isTablet} />} 
         />
+        <Route path={Links.ABSTRACT} element={<Abstracts isTablet={isTablet} />} />
         <Route path="*" element={<NotFoundPage isTablet={isTablet} />} />
       </Routes>
     </div>
