@@ -31,5 +31,7 @@ export enum Tags {
   YEAR = "year",
   INSPIRATION = "inspiration",
   BURNOUT = "burn-out",
-  SKILLS = "skills"
+  SKILLS = "skills",
+  NEW = "new",
+  GIVEN ="given"
 }
