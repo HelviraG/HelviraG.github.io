@@ -44,7 +44,7 @@ export const HeroSection = () => {
                         speed={50}
                         repeat={Infinity}
                         style={{ 
-                            fontSize: isScreen ? '0.7em' : '1.2em',
+                            fontSize: isScreen ? '0.7em' : '1.1em',
                             background: 'linear-gradient(120deg, rgb(0 0 0), rgb(0 0 0))',
                             WebkitBackgroundClip: 'text',
                             textAlign: 'left',
