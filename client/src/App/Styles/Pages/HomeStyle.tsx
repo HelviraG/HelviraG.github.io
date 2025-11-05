@@ -37,7 +37,11 @@ export const HeroSectionBox = styled(Box)(({ theme }) => ({
     justifyContent: 'center', 
     fontSize: '2em', 
     fontWeight: 'bold', 
-    padding: '0 2em',
+    padding: 0,
+
+    [theme.breakpoints.down(1200)]: {
+        padding: '0 2em'
+    },
 
     [theme.breakpoints.down('lg')]: {
         padding: '0 16px',
