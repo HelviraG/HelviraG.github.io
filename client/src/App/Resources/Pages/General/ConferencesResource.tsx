@@ -1,5 +1,5 @@
 import { convertTags } from "@hooks/useConverters";
-import { useListConferencesQuery } from "@services/ConferencesApi";
+import { useListAbstractsQuery, useListConferencesQuery } from "@services/ConferencesApi";
 import { useTranslation } from "react-i18next";
 
 export interface IEvent {
@@ -25,6 +25,15 @@ export interface IConference {
   title: string;
   lang: string;
   events: IEvent[];
+}
+
+export interface IAbstract {
+  id: number;
+  content: string;
+  title: string;
+  lang: string;
+  isNew: boolean;
+  confId?: number;
 }
 
 export const ListConferences = () => {
@@ -58,6 +67,25 @@ export const ListConferences = () => {
             githubLink: event.githubLink,
           };
         }),
+      };
+    });
+  }
+
+  return [];
+};
+
+export const ListAbstracts = () => {
+  const { data } = useListAbstractsQuery();
+
+  if (data && data.abstracts) {
+    return data.abstracts.map((abstract) => {
+      return {
+        id: abstract.id,
+        content: abstract.content,
+        title: abstract.title,
+        lang: abstract.lang,
+        isNew: abstract.isNew,
+        confId: abstract?.confId
       };
     });
   }
