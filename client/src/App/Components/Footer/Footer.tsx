@@ -3,12 +3,12 @@ import { FooterLang, FooterTextTypography, FooterTextWrapper, FooterToolbar, Foo
 import { DigitalClock } from '../DigitalClock/DigitalClock';
 import useChangeLangage from "@hooks/useChangeLangage";
 
-export const Footer = () => {
+export const Footer = ({ openMenu }: { openMenu: boolean }) => {
   const { appLang: lang, changeLang: changeLanguage } = useChangeLangage();
   const isTablet = useMediaQuery("(max-width: 800px");
 
   return (
-    <FooterWrapper component="footer" position="fixed" color="primary">
+    <FooterWrapper component="footer" position="fixed" color="primary" sx={{ zIndex: 30000 }} openMenu={openMenu} drawerWidth={410}>
       <FooterToolbar>
         <DigitalClock />
         <FooterLang>
