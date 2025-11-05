@@ -8,11 +8,28 @@ import {
   Typography 
 } from '@mui/material';
 
-export const FooterWrapper = styled(AppBar)<AppBarProps>(({ theme }) => ({
+export const FooterWrapper = styled(AppBar, {
+  shouldForwardProp: (prop) => prop !== 'openMenu' && prop !== 'drawerWidth'
+})<{ openMenu: boolean; drawerWidth: number } & AppBarProps>(({ drawerWidth, openMenu, theme }) => ({
   top: 'auto', 
   bottom: 0, 
   backgroundColor: theme.palette.background.default, 
-  minHeight: '50px'
+  minHeight: '50px',
+
+  ...(openMenu && {
+    '&.MuiAppBar-root': {
+      [theme.breakpoints.up(1200)]: {
+        left: 0,
+        transition: theme.transitions.create(['margin', 'width'], {
+          easing: theme.transitions.easing.easeOut,
+          duration: theme.transitions.duration.enteringScreen,
+        }),
+
+        width: `calc(100% - ${drawerWidth}px)`,
+        marginRight: drawerWidth
+      }
+    }
+  })
 }));
 
 export const FooterToolbar = styled(Toolbar)(({
