@@ -15,7 +15,7 @@
       },
       "welcome": {
         "actions": {
-          "confs": "Watch my talks",
+          "confs": "Watch",
           "contact": "Contact me",
           "explore": "Playground"
         }
@@ -198,9 +198,27 @@
       }
     },
     "blog": {
-      "title": "The Blog",
+      "title": "The Logs",
       "subtitle": "Articles to read",
       "description": "You can find here all my blog articles!"
+    },
+    "facts": {
+      "title": "The Facts",
+      "subtitle": "Fun Tech Facts",
+      "description": "Retrouvez ici l'ensemble de mes articles de blog !"
+    },
+    "abstracts": {
+      "buttons": {
+        "more": "View more"
+      },
+      "title": "Abstracts",
+      "subtitle": "All the papers",
+      "description": "Find here all of my talks abstracts",
+      "tags": {
+        "all": "all",
+        "given": "given",
+        "unseen": "new"
+      }
     }
   }
 }

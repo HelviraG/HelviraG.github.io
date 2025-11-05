@@ -40,11 +40,13 @@
       "title": "Bienvenue"
     },
     "menu": {
+      "abstract": "Abstracts",
       "back_website": "Vers le site",
-      "blog": "Blog",
+      "blog": "Logs",
       "career": "Parcours",
       "conferences": "Conférences",
       "contact": "Me contacter",
+      "facts": "Tech Fun Facts",
       "home": "Hello World !",
       "live": "Lives",
       "mobile_text": " < Hello World ! /> ",

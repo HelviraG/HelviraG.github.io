@@ -42,11 +42,13 @@
     "title": "Welcome"
   },
   "menu": {
+    "abstract": "Abstracts",
     "back_website": "Back Home",
-    "blog": "Blog",
+    "blog": "Logs",
     "career": "Career",
     "conferences": "Conferences",
     "contact": "Have a talk",
+    "facts": "Tech Fun Facts",
     "home": "Hello World !",
     "live": "Lives",
     "mobile_text": " < Hello World ! /> ",

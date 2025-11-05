@@ -15,7 +15,7 @@
       },
       "welcome": {
         "actions": {
-          "confs": "Voir mes confs",
+          "confs": "Replay",
           "contact": "M'écrire",
           "explore": "Arcade"
         }
@@ -203,9 +203,27 @@
       }
     },
     "blog": {
-      "title": "The Blog",
+      "title": "The Logs",
       "subtitle": "Mes écrits",
       "description": "Retrouvez ici l'ensemble de mes articles de blog !"
+    },
+    "facts": {
+      "title": "The Facts",
+      "subtitle": "Fun Tech Facts",
+      "description": "Histoires courtes du monde de la tech"
+    },
+    "abstracts": {
+      "buttons": {
+        "more": "En voir plus"
+      },
+      "title": "Abstracts",
+      "subtitle": "Tous les écrits",
+      "description": "Ici, tous les abstracts de conférence",
+      "tags": {
+        "all": "toutes",
+        "given": "données",
+        "unseen": "inédites"
+      }
     }
   }
 }
