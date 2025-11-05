@@ -122,13 +122,22 @@ export const TabsListItemButton = () => {
 
   return {
     listItemButtonProps: {
+      "& .MuiListItemButton-root": {
+        color: '#FFF'
+      },
+
       "& .MuiSvgIcon-root": {
         display: "none",
         transition: "all 700ms",
+        color: '#FFF'
       },
 
       "& .MuiListItemText-root": {
         transition: "all 700ms",
+
+        "& .MuiTypography-root": {
+          color: '#FFF'
+        },
       },
 
       "&:hover": {
