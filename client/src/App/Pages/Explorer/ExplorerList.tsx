@@ -21,9 +21,12 @@ import { TitleTypography, TitleWrapper } from "@styles/Layout/TitleStyle";
 import { ChipWrapper } from "@styles/Pages/ConferencesStyle";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
 
 export const ExplorerList = () => {
   const { t } = useTranslation(['common', 'translation']);
+  const [searchParams] = useSearchParams();
+  const openMenu = searchParams.get('menu');
 
   return (
     <ListWrapper>
@@ -87,7 +90,7 @@ export const ExplorerList = () => {
               >
                 {t("translation:app.explore.fallout_on_passion.subtitle")}
               </Typography>
-              <CardContentAction isExplorerList>
+              <CardContentAction isExplorerList openMenu={openMenu === 'open'}>
                 <CardContentButton
                   href={`${Routes.QUIZ_RESULT}`}
                   startIcon={<LineAxisIcon />}
