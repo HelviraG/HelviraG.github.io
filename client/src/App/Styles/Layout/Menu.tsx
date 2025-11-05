@@ -22,7 +22,8 @@ interface MenuDrawerProps extends DrawerProps {
 }
 
 interface MenuItemProps extends ListItemTextProps {
-    isFirstItem?: boolean
+    isFirstItem?: boolean;
+    passionItem?: boolean;
 }
 
 interface MenuListItemProps extends ListItemProps {
@@ -42,24 +43,37 @@ export const MenuWrapper = styled(Drawer, {
     shouldForwardProp: (prop) => prop !== 'menuWidth' && prop !== 'menuColor',
 })<MenuDrawerProps>(({ menuWidth, menuColor, theme }) => ({
     cursor: 'none',
-    zIndex: 1200000000,
     '.MuiDrawer-paper': { 
+        border: 'none',
         backgroundColor: alpha(theme.palette.text.primary, 0.96),
+
         ...(menuColor !== '' && menuColor && {
-            backgroundColor: alpha(menuColor, 0.96),
+            backgroundColor: alpha(menuColor, 0.3),
         }),
-        width: `60%`, 
+
+        width: `${menuWidth}px`, 
+
+        [theme.breakpoints.down(1200)]: {
+            ...(menuColor !== '' && menuColor && {
+                backgroundColor: alpha(theme.palette.info.main, 0.98)
+            }),
+
+            width: '60%'
+        },
 
         [theme.breakpoints.down('md')]: {
             width: '100%'
         },
+    },
+    
+    '.MuiPaper-root': {
+        zIndex: 140000000,
     }
 }));
 
 export const MenuIconBox = styled(Box)(({ theme }) => ({
     display: 'flex', 
     justifyContent: 'end', 
-    marginBottom: theme.spacing(5)
 }));
 
 export const MenuIconButton = styled(IconButton)(({ theme }) => ({
@@ -69,36 +83,63 @@ export const MenuIconButton = styled(IconButton)(({ theme }) => ({
 }));
 
 export const MenuList = styled(List)(({ theme }) => ({
-    padding: theme.spacing(4),
+    padding: `${theme.spacing(4)} ${theme.spacing(2)}`,
+
+    [theme.breakpoints.down('md')]: {
+        padding: theme.spacing(2)
+    }
 }));
 
 export const MenuItemText = styled(ListItemText, {
-    shouldForwardProp: (prop) => prop !== 'isFirstItem',
-})<MenuItemProps>(({ isFirstItem, theme }) => ({
+    shouldForwardProp: (prop) => prop !== 'isFirstItem' && prop !== 'passionItem',
+})<MenuItemProps>(({ isFirstItem, passionItem, theme }) => ({
     '.MuiTypography-root': {
-        color: theme.palette.background.default,
+        color: theme.game.special.dark,
     },
     ...(isFirstItem && {
         '.MuiTypography-root': {
-            color: alpha(theme.palette.background.default, 0.4),
+            color: alpha(theme.game.special.dark, 1),
         },
         '&:after': {
             content: '""',
             height: '1px',
-            border: `1px solid ${alpha(theme.palette.background.default, 0.2)}`,
+            border: `1px solid ${alpha(theme.game.special.dark, 0.5)}`,
             width: '50%',
             display: 'inline-block',
             marginBottom: '4px',
             marginLeft: '1em',
         }
     }),
+
+    ...(passionItem && {
+        '.MuiTypography-root': {
+            color: theme.palette.background.paper,
+        },
+
+        ...(isFirstItem && {
+            '.MuiTypography-root': {
+                color: alpha(theme.palette.background.paper, 1),
+            },
+            
+            '&:after': {
+                content: '""',
+                height: '1px',
+                border: `1px solid ${alpha(theme.palette.background.paper, 0.5)}`,
+                width: '50%',
+                display: 'inline-block',
+                marginBottom: '4px',
+                marginLeft: '1em',
+            }
+        }),
+    })
 }));
 
 export const MenuItem = styled(ListItem, {
     shouldForwardProp: (prop) => prop !== 'isFirstItem' && prop !== 'withMargin',
 })<MenuListItemProps>(({ isFirstItem, theme, withMargin }) => ({
     ...(!isFirstItem && {
-        paddingLeft: theme.spacing(4),
+        paddingLeft: 0,
+        paddingRight: 0
     }),
     ...(withMargin && {
         marginTop: theme.spacing(4),
@@ -114,8 +155,9 @@ export const MenuListItemButton = styled(ListItemButton, {
         fontWeight: 100,
     },
     ...(isActive && {
-        backgroundColor: alpha(theme.palette.background.default, 0.1),
-        borderRadius: '0.4em',
+        backgroundColor: alpha('#444aff', 0.2),
+        borderLeft: `4px solid #444aff`,
+        borderRadius: '0 0.4em 0.4em 0',
         paddingLeft: '2em',
 
         '& .MuiTypography-root': {
@@ -123,21 +165,21 @@ export const MenuListItemButton = styled(ListItemButton, {
         },
 
         '.MuiSvgIcon-root': {
-            color: theme.palette.background.default,
+            color: theme.game.special.dark,
         }
     }),
 
     '&:hover': {
-        backgroundColor: alpha(theme.palette.background.default, 0.1),
+        backgroundColor: alpha('#444aff', 0.2),
         borderRadius: '0.4em',
-        paddingLeft: '2em',
+        paddingLeft: '2.2em',
 
         '& .MuiTypography-root': {
             fontWeight: 'bold',
         },
 
         '.MuiSvgIcon-root': {
-            color: theme.palette.background.default,
+            color: theme.game.special.dark,
         }
     }
 })) as typeof ListItemButton;
@@ -146,7 +188,7 @@ export const MenuListIcon = styled(ListItemIcon, {
     shouldForwardProp: (prop) => prop !== 'iconColor',
 })<MenuListIconProps>(({ iconColor, theme }) => ({
     '.MuiSvgIcon-root': {
-        color: alpha(theme.palette.background.default, 0.5),
+        color: alpha(theme.game.special.dark, 0.8),
         ...(iconColor && {
             color: iconColor,
         })
