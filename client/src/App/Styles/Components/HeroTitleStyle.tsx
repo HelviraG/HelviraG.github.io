@@ -43,6 +43,7 @@ export const TitleBox = styled(Box, {
     top: 0,
     right: 0,
     textAlign: "center",
+    letterSpacing: '-14px',
     width: "-webkit-fill-available",
 
     "&:nth-of-type(1)": {
@@ -67,6 +68,7 @@ export const TitleBox = styled(Box, {
     },
 
     [theme.breakpoints.down("md")]: {
+      letterSpacing: '-2px',
       fontSize: "3.8em",
     },
 
@@ -85,7 +87,7 @@ export const TitleBox = styled(Box, {
 export const HeroTitleWrapper = styled(Box)(({ theme }) => ({
   backgroundColor: theme.game.special.dark, 
   display: 'flex',
-  padding: '7em 0 2em 0'
+  padding: '7em 0 2em 0',
 }));
 
 export const HeroTitleBox = styled(Box)(({ theme }) => ({
@@ -113,6 +115,7 @@ export const SubTitleBox = styled(Box, {
   padding: theme.spacing(4),
 
   ...(noPadding && {
+    marginTop: theme.spacing(12),
     padding: 0
   }),
 
