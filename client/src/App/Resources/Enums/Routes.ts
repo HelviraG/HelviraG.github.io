@@ -1,4 +1,5 @@
 export enum Routes {
+  ABSTRACT = "/abstracts",
   CAREER = "/career",
   CONFS = "/confs",
   COFFEE = "https://www.buymeacoffee.com/helvira",
