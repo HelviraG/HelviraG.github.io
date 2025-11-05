@@ -38,7 +38,7 @@ export const AbstractDrawer = ({
             }}
         >
             <Box sx={{ position: 'fixed', right: 10, top: 10, color: '#FFF' }}>
-                <IconButton sx={(theme) => ({ backgroundColor: '#000', color: '#A3FFEA' })} onClick={handleCloseDrawer}>
+                <IconButton sx={(theme) => ({ backgroundColor: '#000', color: '#00C79A', '&:hover': { backgroundColor: '#00C79A', color: '#000' } })} onClick={handleCloseDrawer}>
                     <Close />
                 </IconButton>
             </Box>
@@ -47,7 +47,7 @@ export const AbstractDrawer = ({
             {abstract && (
                 <Box sx={{ mb: 1 }}>
                     <img 
-                        src={'https://i.ibb.co/99dvkKw8/Copie-de-GIT-INIT-26.png'} 
+                        src={'https://i.ibb.co/mrKczDhd/Copie-de-GIT-INIT-32.png'} 
                         alt={'Abstract Cover'}
                         style={{ width: '100%', borderRadius: '8px 0 0 0' }}
                     />
