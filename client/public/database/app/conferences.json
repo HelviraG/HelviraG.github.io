@@ -1,6 +1,29 @@
  {
   "conferences": [
     {
+      "id": 0,
+      "abstract": "One day you’re a perfectly normal developer, writing code, minding your business. The next day you wake up and apparently… your favorite framework is now “legacy.” Job posts look like spell books. And a junior asks, with full innocence, “Wait… did you REALLY use jQuery?”\n\nWhen tech moves faster than my coffee disappears on a Monday morning, how are we supposed to keep up and stay sane?\n\nThis talk takes a very honest (and slightly chaotic) tour through the fear of becoming outdated, the weird rituals we all try to stay “up-to-date,” and the comforting truth behind what actually matters.\n\nThere will be real stories. A few developer confessions. Mild panicking about AI. And that moment we’ve all had at least once: “Do I… need to learn Rust… right now? Is that a thing??”\n\nIf you’ve ever felt like you’re one npm install away from a full existential crisis, this talk is absolutely for you.",
+      "cover": "https://i.ibb.co/kVGvcBmV/help-my-tech-skills-have-an-expiration-date-goma-1054651-banner.png",
+      "title": "Help! My Tech Skills Have An Expiration Date - v2",
+      "lang": "EN",
+      "events": [
+        {
+          "year": "2026",
+          "day": "04",
+          "month": "february",
+          "event": "Swetugg",
+          "place": "Lustikulla Konferens & Event",
+          "location": "Stockholm, Sweden",
+          "tags": ["HUMAN_TECH", "TALK"],
+          "imgUrl": "",
+          "lightColor": "theme.event.primary.light",
+          "darkColor": "theme.event.primary.dark",
+          "lang": "EN",
+          "githubLink": "https://github.com/HelviraG/conferences.resources/blob/main/%5BEN%5Dtech_skills_expiration/events/swetugg/README.md"
+        }
+      ]
+    },
+    {
       "id": 1,
       "abstract": "I thought I had learned my lesson the first time.\n\nI saw the warning signs, ignored them, and told myself I could handle this.\n\nSpoiler alert: I couldn’t. Burnout hit me not once but twice, and each time, I found myself running on empty, questioning everything, and wondering if I’d ever enjoy coding again.\n\nIn this talk, I’ll take you through my journey of burnout — what led to it, how I ignored the red flags, and what finally made me hit “Force Quit.”\n\nWe’ll explore why burnout is common in tech, why high performers are often the most vulnerable, and how we can break the cycle.\n\nBut this isn’t just a doom-and-gloom session — I’ll share the hard-earned lessons that helped me rise from the ashes (twice), rebuild my energy, and find a sustainable way to thrive in tech.\n\nExpect storytimes, hard truths, and maybe even a laugh or two as we learn how to recognize burnout before it’s too late, recover when we crash, and—most importantly—stop history from repeating itself.\n\nBecause if you’re anything like me, you don’t want to be singing Oops… I did it again.",
       "cover": " https://i.ibb.co/JwKPHCmC/Oops-I-burnt-out-again-3.png",
