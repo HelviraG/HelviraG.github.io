@@ -25,6 +25,7 @@ export interface IConference {
   title: string;
   lang: string;
   events: IEvent[];
+  isV2?: boolean;
 }
 
 export interface IAbstract {
@@ -67,6 +68,7 @@ export const ListConferences = () => {
             githubLink: event.githubLink,
           };
         }),
+        isV2: conf.isV2 || false,
       };
     });
   }

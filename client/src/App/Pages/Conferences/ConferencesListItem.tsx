@@ -72,6 +72,7 @@ export const ConferencesListItem = ({
   title,
   lang,
   value,
+  isV2,
 }: { value?: string } & IConference) => {
     const hasTag = lang === value;
     const [isVisible, setIsVisible] = useState(false);
@@ -189,29 +190,32 @@ export const ConferencesListItem = ({
                         }
                     })}
                 >
+                  <Box>
                     <Chip label={lang} sx={(theme) => ({ backgroundColor: theme.game.special.dark, color: '#A3FFEA' })} />
-                    <CardContentTitle 
-                        variant="h4" 
-                        isConference
-                        sx={{ 
-                            cursor: 'pointer',
-                            '&:hover': {
-                                opacity: 0.8,
-                            }
-                        }}
-                    >
-                        {highlightedTitle.map((part, index) => (
-                        <span
-                            key={index}
-                            style={{
-                            color: part.highlight ? '#f53b57' : '#1E1E40',
-                            padding: part.highlight ? '0 1px' : '0',
-                            }}
-                        >
-                            {part.text}
-                        </span>
-                        ))}
-                    </CardContentTitle>
+                    {isV2 && <Chip label={'v2'} sx={(theme) => ({ backgroundColor: theme.game.special.dark, color: '#FC427B', marginLeft: theme.spacing(1) })} />}
+                  </Box>
+                  <CardContentTitle 
+                      variant="h4" 
+                      isConference
+                      sx={{ 
+                          cursor: 'pointer',
+                          '&:hover': {
+                              opacity: 0.8,
+                          }
+                      }}
+                  >
+                      {highlightedTitle.map((part, index) => (
+                      <span
+                          key={index}
+                          style={{
+                          color: part.highlight ? '#f53b57' : '#1E1E40',
+                          padding: part.highlight ? '0 1px' : '0',
+                          }}
+                      >
+                          {part.text}
+                      </span>
+                      ))}
+                  </CardContentTitle>
                 </Box>
                 
             </CardWrapper>
